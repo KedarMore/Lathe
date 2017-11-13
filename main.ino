@@ -3,7 +3,7 @@
         |__ |  |   |  |  | |__
 */
 //............Global Variables
-int flag=0;
+//int flag=0;
 float array[];
 float tapperdownarray[]={200};
 int xPosCurrent,yPosCurrent;
@@ -97,7 +97,7 @@ void scan()
     {
         display("such a long w/p cant be made");//then what? will they reset the machine
     }
-    maxLength=i;
+    maxLength=i-1;
     display("your stock length should be");
     delay(2000);
     //display a number
@@ -117,26 +117,24 @@ void writePos(x,y)
 {
     if(x<xPosCurrent)//this is for x stepper
     {
-    for(i=xPosCurrent;i>=x;i--)
-    {
-        myStepperX.step(-1);
-    }
-    x=xPosCurrent;
+      for(i=xPosCurrent;i>=x;i--)
+      {
+          myStepperX.step(-1);                     //move 1 step towards the origin
+      }
     }
     else
     {
-        for(i=xPosCurrent;i<=x;i++)
-        {
-            myStepperX.step(1);
-        }
+      for(i=xPosCurrent;i<=x;i++)
+     {
+         myStepperX.step(1);                  //move 1 step away from origim.
+     }
     }
     if(y<yPosCurrent)//this is for x stepper
     {
-    for(i=yPosCurrent;i>=y;i--)
-    {
-        myStepperY.step(-1);
-    }
-    y=yPosCurrent;
+      for(i=yPosCurrent;i>=y;i--)
+      {
+          myStepperY.step(-1);
+      }
     }
     else
     {
@@ -144,7 +142,9 @@ void writePos(x,y)
         {
             myStepperY.step(1);
         }
-    }
+      }
+    xPosCurrent=x;
+    yPosCurrent=y;
 }
 
 void cut()
@@ -200,7 +200,6 @@ void forwardTaper(int start, int finish)
     tool(2);
     startDia=array[start];
     finishDia=array[finish];
-
     yInc=1*(finish-start)/(finishDia-startDia);//angle of taper
     /*this formula tell the myStepperY where to stop if it is at a particular diameter
                    /startDia
@@ -244,7 +243,7 @@ void backwardTaper(int start, int finish)
 }
 
 //tool change
-void tool(number)
+void tool(int number)
 {
     switch (number)
     {
@@ -253,18 +252,22 @@ void tool(number)
         display("change to the diffent fixed position");
         xPosCurrent=xPosCurrent-valeX;//here the current position is changed
         yPosCurrent=yPosCurrent-valeY;//due to the change in orientation of the tool
+                                      // possibly use a pin to check confirm that the tool is placed
         break;
         case 2://parting Tool for forwardTaper
         display("insert parting tool and fix properly");
         display("change to the diffent fixed position");
         xPosCurrent=xPosCurrent+valeX;//here the current position is changed
         yPosCurrent=yPosCurrent+valeY;//due to the change in orientation of the tool
+                                     // possibly use a pin to check confirm that the tool is placed
         break;
         case 3://parting Tool for backwardTaper
         display("insert parting tool and fix properly");
         display("change to the diffent fixed position");
         xPosCurrent=xPosCurrent+valeX;//here the current position is changed
         yPosCurrent=yPosCurrent+valeY;//due to the change in orientation of the tool
+                                      // possibly use a pin to check confirm that the tool is placed
         break;
+        default:break;
     }
 }
