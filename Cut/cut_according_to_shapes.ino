@@ -1,7 +1,8 @@
 float taperuparray[],taperdownarray[],normalarray[];  /*These arrays store the positions for all
                                                          three different shapes*/
-int t_up=0, t_down=0, n=0;                            
-while(int i<=maxLength)
+int t_up=0, t_down=0, n=0;         
+int i=0;                   
+for(int i=0;i<=maxLength;i++)
 {
     if(array[i]>array[i+1])                      // This indicates backwardTaper
     {
@@ -46,12 +47,11 @@ while(int i<=maxLength)
             }
         }
     }
-    i++;
 }
 void action()
 {
                                                     // First straight shapes should be cut
-int elments=n+1;
+int element=n+1;
 while(element!=0)
 {
     int temp=normalarray[0];                      //find largest Dia
