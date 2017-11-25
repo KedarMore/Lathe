@@ -1,5 +1,3 @@
-//changes were made
-
 //straight cut
 void straight(int start, int finish)
 {
