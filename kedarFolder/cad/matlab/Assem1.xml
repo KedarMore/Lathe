@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimMechanicsImportXML version="1.0" xmlns="urn:mathworks:simmechanics:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="01/13/18||09:06:16" using="SimMechanics Link Version 4.7" from="SolidWorks 24.2.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Assem1" uid="Assem1" version="4265">
+<AssemblyFile name="Assem1.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="tool base-1" uid="tool base-1" entityUid="tool base*:*Default">
+<Transform>
+<Rotation>1.0000000000000002 -1.6653345369377348e-016 0 -1.6653345369377348e-016 -1.0000000000000002 0 0 0 -1</Rotation>
+<Translation>0.13181761063641931 0.31264090449537291 0.40742866041583548</Translation>
+</Transform>
+</Instance>
+<Instance name="ledad screw-4" uid="ledad screw-4" entityUid="ledad screw*:*Default">
+<Transform>
+<Rotation>0 0 -1 0 1 0 1 0 0</Rotation>
+<Translation>0.33223232515885343 0.21264090449537229 0.15377811726297308</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-5" uid="bearing-5" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.23681761063641957 0.27264090449537282 0.51377811726297429</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-6" uid="bearing-6" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.23681761063641957 0.27264090449537282 0.13377811726297184</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-7" uid="bearing-7" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>-1 0 1.0960821954789346e-016 0 1 0 -1.0960821954789346e-016 0 -1</Rotation>
+<Translation>0.026817610636419381 0.27264090449537282 0.53377811726297431</Translation>
+</Transform>
+</Instance>
+<Instance name="cross slide-1" uid="cross slide-1" entityUid="cross slide*:*Default">
+<Transform>
+<Rotation>0 0 1 0 -1.0000000000000002 0 1.0000000000000002 0 0</Rotation>
+<Translation>0.13181761063641878 0.2526409044953728 0.33377811726297413</Translation>
+</Transform>
+</Instance>
+<Instance name="ledad screw-5" uid="ledad screw-5" entityUid="ledad screw*:*Default">
+<Transform>
+<Rotation>0.99999735994669914 -0.0022978467381407778 1.3244866786615414e-015 0.0022978467381407778 0.99999735994669914 0 -1.3244901716529422e-015 0 1</Rotation>
+<Translation>0.026817610636418993 0.27264090449537304 0.033778117262977025</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-8" uid="bearing-8" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>-1 0 1.0960821954789346e-016 0 1 0 -1.0960821954789346e-016 0 -1</Rotation>
+<Translation>0.026817610636419409 0.27264090449537282 0.15377811726297186</Translation>
+</Transform>
+</Instance>
+<Instance name="ledad screw-6" uid="ledad screw-6" entityUid="ledad screw*:*Default">
+<Transform>
+<Rotation>-0.99999735994669914 0.0022978467381408029 1.4340948982094342e-015 0.0022978467381408029 0.99999735994669914 0 -1.4340981018292938e-015 0 -1</Rotation>
+<Translation>0.23681761063641929 0.27264090449537304 0.53377811726297697</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-1" uid="bearing-1" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>0 0 -1.0000000000000002 0 -1 0 -1.0000000000000002 0 0</Rotation>
+<Translation>0.33223232515885343 0.21264090449537226 0.51377811726297307</Translation>
+</Transform>
+</Instance>
+<Instance name="base-1" uid="base-1" grounded="true" entityUid="base*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.13223232515885339 0.17264090449537228 0.33377811726297302</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-2" uid="bearing-2" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>0 0 1 0 -1 0 1 0 0</Rotation>
+<Translation>0.31223232515885341 0.21264090449537226 0.15377811726297308</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-3" uid="bearing-3" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>0 0 -1 0 -1 0 -1 0 0</Rotation>
+<Translation>-0.047767674841146579 0.21264090449537226 0.51377811726297307</Translation>
+</Transform>
+</Instance>
+<Instance name="ledad screw-3" uid="ledad screw-3" entityUid="ledad screw*:*Default">
+<Transform>
+<Rotation>0 0 1 0 1 0 -1 0 0</Rotation>
+<Translation>-0.16776767484114652 0.21264090449537221 0.51377811726297307</Translation>
+</Transform>
+</Instance>
+<Instance name="bearing-4" uid="bearing-4" entityUid="bearing*:*Default">
+<Transform>
+<Rotation>0 0 1 0 -1 0 1 0 0</Rotation>
+<Translation>-0.067767674841146597 0.21264090449537226 0.15377811726297308</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>bearing-1</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Assem1</Uid>
+</InstancePath>
+<Position>0.33223232515885343 0.23416818475204282 0.5049636997491731</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident5">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base-1</Uid>
+</InstancePath>
+<Position>0.20000000000000004 0.01999999999999999 0.20000000000000007</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident6">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base-1</Uid>
+</InstancePath>
+<Position>-0.20000000000000004 0.01999999999999999 0.20000000000000007</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-1</Uid>
+</InstancePath>
+<Position>-0.020000000000000018 -0.01999999999999999 0.020000000000000018</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident7">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base-1</Uid>
+</InstancePath>
+<Position>0 0.01999999999999999 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-1</Uid>
+</InstancePath>
+<Position>-0.020000000000000018 0.01999999999999999 0.020000000000000018</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>bearing-4</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000004</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cross slide-1</Uid>
+</InstancePath>
+<Position>-0.1800000000000001 0.040000000000000008 0.094999999999999973</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>bearing-3</Uid>
+</InstancePath>
+<Position>0 0 0.01999999999999999</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>cross slide-1</Uid>
+</InstancePath>
+<Position>0.1800000000000001 0.040000000000000008 0.094999999999999973</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>bearing-1</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>ledad screw-3</Uid>
+</InstancePath>
+<Position>0 0 0.5</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident8">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>ledad screw-3</Uid>
+</InstancePath>
+<Position>0 0 0.5</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric7">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>bearing-2</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>ledad screw-4</Uid>
+</InstancePath>
+<Position>0 0 0.5</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident9">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-2</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>ledad screw-4</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident10">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cross slide-1</Uid>
+</InstancePath>
+<Position>-0.20000000000000012 0.020000000000000018 0.12499999999999997</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-5</Uid>
+</InstancePath>
+<Position>0.01999999999999999 -0.020000000000000018 0.020000000000000018</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident11">
+<ConstraintGeometry geomType="line">
+<InstancePath>
+<Uid>cross slide-1</Uid>
+</InstancePath>
+<Position>0.20000000000000012 0.01999999999999999 0.094999999999999973</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-5</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident12">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>cross slide-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-5</Uid>
+</InstancePath>
+<Position>-0.01999999999999999 -0.020000000000000018 0.020000000000000018</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric8">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>bearing-7</Uid>
+</InstancePath>
+<Position>0 0 0.020000000000000018</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>ledad screw-5</Uid>
+</InstancePath>
+<Position>0 0 0.49999999999999989</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident13">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>bearing-7</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>ledad screw-5</Uid>
+</InstancePath>
+<Position>0 0 0.49999999999999989</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident14">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>ledad screw-5</Uid>
+</InstancePath>
+<Position>0 0 0.49999999999999989</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tool base-1</Uid>
+</InstancePath>
+<Position>-0.10500000000000007 0.03999999999999998 0.099999999999999978</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric9">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>ledad screw-6</Uid>
+</InstancePath>
+<Position>0 0 0.5</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>tool base-1</Uid>
+</InstancePath>
+<Position>0.10500000000000009 0.03999999999999998 -0.030000000000000027</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="base" uid="base*:*Default" version="107">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="base.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>3.2000000000000015</Mass>
+<CenterOfMass>0 0.01 0</CenterOfMass>
+<Inertia>0.042773333333333337 0.085333333333333372 0.042773333333333351 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="bearing" uid="bearing*:*Default" version="129">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="bearing.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.024091280483260414</Mass>
+<CenterOfMass>0 0 0.01</CenterOfMass>
+<Inertia>4.8208393840639969e-006 4.8208393840639969e-006 8.0355934025773014e-006 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="bearing_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="cross slide" uid="cross slide*:*Default" version="143">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="cross slide.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.1543008881569246</Mass>
+<CenterOfMass>0 0.012148737286492966 0</CenterOfMass>
+<Inertia>0.012515528406037363 0.043985952945132092 0.031910921391215069 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="cross slide_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="ledad screw" uid="ledad screw*:*Default" version="109">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="ledad screw.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.15707963267948968</Mass>
+<CenterOfMass>0 0 0.25</CenterOfMass>
+<Inertia>0.0032764193383063561 0.0032764193383063561 7.8539816339744837e-006 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="ledad screw_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="tool base" uid="tool base*:*Default" version="144">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="tool base.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.75716814692820389</Mass>
+<CenterOfMass>0 0.020189340953057421 0.05000000000000001</CenterOfMass>
+<Inertia>0.00084157610707590274 0.0061115148126634922 0.0056911440081923882 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="tool base_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimMechanicsImportXML>
