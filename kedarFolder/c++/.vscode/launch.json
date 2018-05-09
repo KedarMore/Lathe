@@ -1,0 +1,65 @@
+{
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "node",
+                "request": "attach",
+                "name": "Attach",
+                "port": 9229
+            },
+            {
+                "name": "Arduino",
+                "type": "arduino",
+                "request": "launch",
+                "program": "$${{file}}",
+                "cwd": "$${{workspaceRoot}}",
+                "MIMode": "gdb",
+                "targetArchitecture": "arm",
+                "miDebuggerPath": "",
+                "debugServerPath": "",
+                "debugServerArgs": "",
+                "customLaunchSetupCommands": [
+                    {
+                        "text": "target remote localhost:3333"
+                    },
+                    {
+                        "text": "file $${{file}}"
+                    },
+                    {
+                        "text": "load"
+                    },
+                    {
+                        "text": "monitor reset halt"
+                    },
+                    {
+                        "text": "monitor reset init"
+                    }
+                ],
+                "stopAtEntry": true,
+                "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+                "launchCompleteCommand": "exec-continue",
+                "filterStderr": true,
+                "args": []
+            },
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "enter program name, for example ${workspaceRoot}/a.exe",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceRoot}",
+                "environment": [],
+                "externalConsole": true,
+                "MIMode": "gdb",
+                "miDebuggerPath": "/path/to/gdb",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
+        ]
+    }
