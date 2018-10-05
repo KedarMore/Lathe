@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+
+
+    /* Print utilities */
+    @media print {
+        .hidden-print, .hidden-print * { 
+            display: none !important;    
+        }
+    }
+
+
+    /************************************** Product Page Print */
+    #textToShowOrHide {
+        display: block !important;
+    }
+    .showHideBtn, .showMoreBtn {
+        display: none !important;
+    }
+    
+    
+    /**************************************  Component Print Stles */
+    
+    .back-to-top {
+        display: none !important;
+    }
+    
+    
+    /************************************** Print Utilities */  
+    
+    [class*="span"], .row,
+    .row-fluid [class*="span"] {
+      float: none;
+      display: block;
+      width: auto;
+      margin-left: 0;
+    }
+    .span12,
+    .row-fluid .span12 {
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    img.print-small {
+        max-height: 25%;
+        max-width: 25%;
+    }
+    
+    img.print-med {
+        max-height: 50%;
+        max-width: 50%;
+    }
+
+       
+    /************************************** Print Reset */
+    * {
+    text-shadow: none !important;
+    // color: #000 !important; // Black prints faster: h5bp.com/s
+    background: transparent !important;
+    box-shadow: none !important;
+    }
+    
+    a,
+    a:visited {
+    text-decoration: underline;
+    }
+    
+    abbr[title]:after {
+    content: " (" attr(title) ")";
+    }
+    
+    // Don't show links for images, or javascript/internal links
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+    content: "";
+    }
+    
+    pre,
+    blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+    }
+    
+    thead {
+    display: table-header-group; // h5bp.com/t
+    }
+    
+    tr,
+    img {
+    page-break-inside: avoid;
+    }
+    
+    img {
+    max-width: 100% !important;
+    }
+    
+    @page {
+    margin: 0.5cm;
+    }
+    
+    p,
+    h2,
+    h3 {
+    orphans: 3;
+    widows: 3;
+    }
+    
+    h2,
+    h3 {
+    page-break-after: avoid;
+    }
+  
+

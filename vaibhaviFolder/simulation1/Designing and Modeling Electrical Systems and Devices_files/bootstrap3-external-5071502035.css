@@ -1,0 +1,1506 @@
+@import url('bootstrap3-external-blessed2-1510600174.css');@import url('bootstrap3-external-blessed1-1510600174.css');
+#memsSC-applicationframeNavBox li,
+#memsSC-applicationframeNavBox a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+#memsSC-applicationframeNavBox .scNavButton {
+  border-color: #797979;
+}
+#memsSC-applicationframeNavBox .scNavButton:hover {
+  border-color: #000000;
+}
+#memsSC-applicationframe {
+  padding: 130px 0px;
+  background-color: #fff;
+}
+#memsSC-applicationframe p,
+#memsSC-applicationframe h2,
+#memsSC-applicationframe h3 {
+  color: #2f2f2f;
+}
+/*
+ * Piezo Frame
+ */
+#memsSC-piezoframeNavBox {
+  background-color: #114d74;
+}
+#memsSC-piezoframeNavBox li,
+#memsSC-piezoframeNavBox a {
+  color: #7dcbf5;
+}
+#memsSC-piezoframeNavBox li,
+#memsSC-piezoframeNavBox a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+#memsSC-piezoframeNavBox .scNavButton {
+  border-color: #7dcbf5;
+}
+#memsSC-piezoframeNavBox .scNavButton:hover {
+  border-color: #ffffff;
+}
+#memsSC-piezoframe {
+  background-color: #145f8f;
+  padding: 130px 0px;
+}
+#memsSC-piezoframe h3,
+#memsSC-piezoframe h4,
+#memsSC-piezoframe a {
+  color: #7dcbf5;
+}
+#memsSC-piezoframe a:hover {
+  color: #ffffff;
+}
+#memsSC-piezoframe p,
+#memsSC-piezoframe h2,
+#memsSC-piezoframe .caption,
+#memsSC-piezoframe .title a {
+  color: #ffffff;
+}
+#memsSC-piezoframe .scdownloadButton {
+  background-color: #114d74;
+  color: #7dcbf5;
+}
+#memsSC-piezoframe .scdownloadButton:hover {
+  color: #ffffff;
+  background-color: #0f4467;
+}
+/*
+ * Sensor Frame
+ */
+#memsSC-sensorframeNavBox {
+  background-color: #227a3e;
+}
+#memsSC-sensorframeNavBox li,
+#memsSC-sensorframeNavBox a {
+  color: #d1f7b7;
+}
+#memsSC-sensorframeNavBox li,
+#memsSC-sensorframeNavBox a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+#memsSC-sensorframeNavBox .scNavButton {
+  border-color: #d1f7b7;
+}
+#memsSC-sensorframeNavBox .scNavButton:hover {
+  border-color: #ffffff;
+}
+#memsSC-sensorframe {
+  padding: 130px 0px;
+  background-color: #2e954e;
+}
+#memsSC-sensorframe h3,
+#memsSC-sensorframe h4,
+#memsSC-sensorframe a {
+  color: #d1f7b7;
+}
+#memsSC-sensorframe a:hover {
+  color: #ffffff;
+}
+#memsSC-sensorframe p,
+#memsSC-sensorframe h2,
+#memsSC-sensorframe .caption,
+#memsSC-sensorframe .title a {
+  color: #ffffff;
+}
+#memsSC-sensorframe .scdownloadButton {
+  background-color: #227a3e;
+  color: #d1f7b7;
+}
+#memsSC-sensorframe .scdownloadButton:hover {
+  color: #ffffff;
+  background-color: #1f6e38;
+}
+/*
+ * Resonant Frame
+ */
+#memsSC-resonantframeNavBox {
+  background-color: #b1780b;
+}
+#memsSC-resonantframeNavBox li,
+#memsSC-resonantframeNavBox a {
+  color: #edd3a5;
+}
+#memsSC-resonantframeNavBox li,
+#memsSC-resonantframeNavBox a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+#memsSC-resonantframeNavBox .scNavButton {
+  border-color: #edd3a5;
+}
+#memsSC-resonantframeNavBox .scNavButton:hover {
+  border-color: #ffffff;
+}
+#memsSC-resonantframe {
+  padding: 130px 0px;
+  background-color: #CC8905;
+}
+#memsSC-resonantframe h3,
+#memsSC-resonantframe h4,
+#memsSC-resonantframe a {
+  color: #edd3a5;
+}
+#memsSC-resonantframe a:hover {
+  color: #ffffff;
+}
+#memsSC-resonantframe p,
+#memsSC-resonantframe h2,
+#memsSC-resonantframe .caption,
+#memsSC-resonantframe .title a {
+  color: #ffffff;
+}
+#memsSC-resonantframe .resonantModel {
+  background: url(//cdn.comsol.com/showcase/mems/thermodamp-1200x1095.png) transparent 40% 100px no-repeat fixed;
+  min-height: 300px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  margin: 0 auto;
+}
+#memsSC-resonantframe .scdownloadButton {
+  background-color: #b1780b;
+  color: #edd3a5;
+}
+#memsSC-resonantframe .scdownloadButton:hover {
+  color: #ffffff;
+  background-color: #a36e0a;
+}
+/*
+ * Ultrasonic Frame
+ */
+#memsSC-ultrasonicframeNavBox {
+  background-color: #8C2434;
+}
+#memsSC-ultrasonicframeNavBox li,
+#memsSC-ultrasonicframeNavBox a {
+  color: #f395ad;
+}
+#memsSC-ultrasonicframeNavBox li,
+#memsSC-ultrasonicframeNavBox a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+#memsSC-ultrasonicframeNavBox .scNavButton {
+  border-color: #f395ad;
+}
+#memsSC-ultrasonicframeNavBox .scNavButton:hover {
+  border-color: #ffffff;
+}
+#memsSC-ultrasonicframe {
+  padding: 130px 0px;
+  background-color: #9D283A;
+}
+#memsSC-ultrasonicframe h3,
+#memsSC-ultrasonicframe h4,
+#memsSC-ultrasonicframe a {
+  color: #f395ad;
+}
+#memsSC-ultrasonicframe a:hover {
+  color: #ffffff;
+}
+#memsSC-ultrasonicframe p,
+#memsSC-ultrasonicframe h2,
+#memsSC-ultrasonicframe .caption,
+#memsSC-ultrasonicframe .title a {
+  color: #ffffff;
+}
+#memsSC-ultrasonicframe .scdownloadButton {
+  background-color: #8c2434;
+  color: #f395ad;
+}
+#memsSC-ultrasonicframe .scdownloadButton:hover {
+  color: #ffffff;
+  background-color: #80212f;
+}
+/*
+ * RF Frame
+ */
+#memsSC-rfframeNavBox {
+  background-color: #43281d;
+}
+#memsSC-rfframeNavBox li,
+#memsSC-rfframeNavBox a {
+  color: #96857b;
+}
+#memsSC-rfframeNavBox li,
+#memsSC-rfframeNavBox a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+#memsSC-rfframeNavBox .scNavButton {
+  border-color: #96857b;
+}
+#memsSC-rfframeNavBox .scNavButton:hover {
+  border-color: #ffffff;
+}
+#memsSC-rfframe {
+  padding: 130px 0px;
+  background-color: #5c392c;
+}
+#memsSC-rfframe h3,
+#memsSC-rfframe h4,
+#memsSC-rfframe a {
+  color: #96857b;
+}
+#memsSC-rfframe a:hover {
+  color: #ffffff;
+}
+#memsSC-rfframe p,
+#memsSC-rfframe h2,
+#memsSC-rfframe .caption,
+#memsSC-rfframe .title a {
+  color: #ffffff;
+}
+#memsSC-rfframe .scdownloadButton {
+  background-color: #43281d;
+  color: #96857b;
+}
+#memsSC-rfframe .scdownloadButton:hover {
+  color: #ffffff;
+  background-color: #382218;
+}
+/*
+ * Bio Frame
+ */
+#memsSC-bioframeNavBox {
+  background-color: #007e75;
+}
+#memsSC-bioframeNavBox li,
+#memsSC-bioframeNavBox a {
+  color: #a0ffe7;
+}
+#memsSC-bioframeNavBox li,
+#memsSC-bioframeNavBox a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+#memsSC-bioframeNavBox .scNavButton {
+  border-color: #a0ffe7;
+}
+#memsSC-bioframeNavBox .scNavButton:hover {
+  border-color: #ffffff;
+}
+#memsSC-bioframe {
+  padding: 130px 0px;
+  background-color: #02998e;
+}
+#memsSC-bioframe h3,
+#memsSC-bioframe h4,
+#memsSC-bioframe a {
+  color: #a0ffe7;
+}
+#memsSC-bioframe a:hover {
+  color: #ffffff;
+}
+#memsSC-bioframe p,
+#memsSC-bioframe h2,
+#memsSC-bioframe .caption,
+#memsSC-bioframe .title a {
+  color: #ffffff;
+}
+#memsSC-bioframe .scdownloadButton {
+  background-color: #007e75;
+  color: #a0ffe7;
+}
+#memsSC-bioframe .scdownloadButton:hover {
+  color: #ffffff;
+  background-color: #006f67;
+}
+/*
+ * CTA Frame
+ */
+#memsSC-ctaframeNavBox {
+  background-color: #f0f0f0;
+}
+#memsSC-ctaframeNavBox li,
+#memsSC-ctaframeNavBox a {
+  color: #797979;
+}
+#memsSC-ctaframeNavBox li,
+#memsSC-ctaframeNavBox a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+#memsSC-ctaframeNavBox .scNavButton {
+  border-color: #797979;
+}
+#memsSC-ctaframeNavBox .scNavButton:hover {
+  border-color: #000000;
+}
+#memsSC-ctaframe {
+  padding: 130px 0px;
+  background-color: #fff;
+}
+#memsSC-ctaframe p,
+#memsSC-ctaframe h2,
+#memsSC-ctaframe h3 {
+  color: #2f2f2f;
+}
+#memsSC-ctaframe a {
+  color: #0088cc;
+  border-color: #0088cc;
+}
+.mems-flex-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+.mems-flex-list li {
+  width: 300px;
+  height: auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0px;
+  margin: 0;
+}
+.mems-flex-list li:first-child {
+  flex-grow: 1.2;
+}
+.mems-flex-list li:last-child {
+  flex-grow: 3;
+}
+@media (max-width: 990px) {
+  .mems-flex-list li:last-child {
+    flex-grow: 6;
+  }
+}
+.chemical {
+  /*
+     * Hamburger Nav Button
+     */
+}
+.chemical .arrow {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  width: 40px;
+  height: 27px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iNDQ2LjM4OXB4IiBoZWlnaHQ9IjI3Mi41MTZweCIgdmlld0JveD0iMCAwIDQ0Ni4zODkgMjcyLjUxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDQ2LjM4OSAyNzIuNTE2IgoJIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8cmVjdCBjbGFzcz0ic2lkZSIgeD0iLTIxLjc0NiIgeT0iMTAxLjc1OCIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxIDAuNzA3MSAtMC43MDcxIDAuNzA3MSAxMzYuMzEwOSAtNTYuMzA1OCkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIzMTUuNzQyIiBoZWlnaHQ9IjY5LjI3MiIvPgo8cmVjdCBjbGFzcz0ic2lkZSIgeD0iMTUyLjMyNyIgeT0iMTAxLjU1NSIgdHJhbnNmb3JtPSJtYXRyaXgoLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSAtMC43MDcxIDYyNS45MTI2IDEyLjk4NzMpIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMzE1Ljg3OSIgaGVpZ2h0PSI2OS4xMzMiLz4KPC9zdmc+);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.chemical h1,
+.chemical h2,
+.chemical h3,
+.chemical p {
+  font-family: "Lato", "Segoe UI", "Gill Sans Nova", "Helvetica neue", Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+.chemical h1 {
+  font-size: 55px;
+  line-height: 80px;
+  font-weight: 400;
+  margin: 12% 0;
+}
+@media (max-width: 1350px) {
+  .chemical h1 {
+    font-size: 55px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 993px) {
+  .chemical h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 140px;
+  }
+}
+@media (max-width: 768px) {
+  .chemical h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 120px;
+  }
+}
+@media (max-width: 360px) {
+  .chemical h1 {
+    font-size: 35px;
+    line-height: 42px;
+    margin-top: 100px;
+  }
+}
+.chemical h2 {
+  margin: 0px 0px 30px;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+}
+.chemical h3 {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0px 0px 5px;
+}
+.chemical h4,
+.chemical span.featured {
+  font-family: "myriad-pro", Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+@media (max-width: 990px) {
+  .chemical h4,
+  .chemical span.featured {
+    margin-top: 10px;
+  }
+}
+.chemical h5 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.chemical hr {
+  border: none;
+  border-top: solid 1px #545454;
+}
+.chemical p {
+  font-size: 19px;
+  font-family: "Lato", "Segoe UI", "Gill Sans Nova", "Helvetica neue", Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  text-rendering: optimizelegibility;
+  font-weight: 300;
+}
+.chemical p.caption {
+  font-weight: 400;
+  font-size: 14px;
+}
+.chemical p.mainText,
+.chemical .hackMEMSMainText p {
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+.chemical .authors,
+.chemical .authors p {
+  font-size: 14px;
+  font-style: italic;
+}
+.chemical .authors p,
+.chemical .authors p p {
+  margin-bottom: 5px;
+}
+.chemical .authors p:last-child,
+.chemical .authors p p:last-child {
+  margin-bottom: 20px;
+}
+.chemical .thumbnail {
+  background-color: transparent;
+  padding: 8px;
+  margin-bottom: 0;
+}
+.chemical .scdownloadButton {
+  font-family: "myriad-pro", Helvetica, sans-serif;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: none;
+  padding: 4px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  margin: 15px auto;
+  display: block;
+  text-align: center;
+  width: 290px;
+  float: right;
+}
+.chemical .scdownloadButton i {
+  margin-left: 5px;
+}
+@media (max-width: 336px) {
+  .chemical .scdownloadButton {
+    width: 100%;
+  }
+}
+.chemical #chemicalSC-titleframe .scdownloadButton {
+  margin-top: 4%;
+  width: 570px;
+  float: none;
+}
+@media (max-width: 580px) {
+  .chemical #chemicalSC-titleframe .scdownloadButton {
+    width: 95%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+.chemical .scdownloadButton:hover,
+.chemical .scdownloadButton:focus {
+  text-decoration: none;
+}
+.chemical .scdownloadButton:active {
+  text-decoration: none;
+  position: relative;
+  top: 1px;
+}
+.chemical .showcase-btn-yellow {
+  border: solid 1px #ffd15c;
+  color: #ffd15c;
+}
+.chemical .showcase-btn-yellow:hover {
+  background-color: #ffd15c;
+  color: #4d4c4a;
+}
+.chemical .showcase-btn-red {
+  border: solid 1px #ed377a;
+  color: #ed377a;
+}
+.chemical .showcase-btn-red:hover {
+  background-color: #ed377a;
+  color: #332128;
+}
+.chemical .showcase-btn-green {
+  border: solid 1px #70af1a;
+  color: #70af1a;
+}
+.chemical .showcase-btn-green:hover {
+  background-color: #70af1a;
+  color: #ffffff;
+}
+.chemical .showcase-btn-blue {
+  border: solid 1px #368ccb;
+  color: #368ccb;
+}
+.chemical .showcase-btn-blue:hover {
+  background-color: #368ccb;
+  color: #e6e6e6;
+}
+.chemical .scChemicalModule-links {
+  list-style: none;
+  padding-left: 0;
+}
+.chemical .scChemicalModule-links a {
+  font-family: "myriad-pro", Helvetica, sans-serif;
+  background: none;
+  padding: 0px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0);
+}
+.chemical .scChemicalModule-links a::after {
+  margin-left: 5px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f0da";
+}
+.chemical .scChemicalModule-links a:hover,
+.chemical .scChemicalModule-links a:focus,
+.chemical .scChemicalModule-links a:active {
+  text-decoration: none;
+}
+.chemical .showcase-link-red {
+  color: #ed377a;
+}
+.chemical .showcase-link-red:hover,
+.chemical .showcase-link-red:focus,
+.chemical .showcase-link-red:active {
+  border-color: #ed377a;
+  color: #ed377a;
+}
+.chemical .showcase-link-green {
+  color: #70af1a;
+}
+.chemical .showcase-link-green:hover,
+.chemical .showcase-link-green:focus,
+.chemical .showcase-link-green:active {
+  border-color: #70af1a;
+  color: #70af1a;
+}
+.chemical .showcase-link-blue {
+  color: #368ccb;
+}
+.chemical .showcase-link-blue:hover,
+.chemical .showcase-link-blue:focus,
+.chemical .showcase-link-blue:active {
+  border-color: #368ccb;
+  color: #368ccb;
+}
+.chemical #menu-trigger i {
+  font-size: 2em;
+  color: #000;
+  padding: 5px;
+  cursor: pointer;
+}
+.chemical #menu {
+  display: none;
+  /* Hide the original menu, this gets cloned by jPanelMenu. */
+}
+.force-myriad-number em {
+  font-family: "myriad-pro", Helvetica, sans-serif;
+  font-style: normal;
+}
+/*
+ * Top Nav Style
+ */
+.chemicalSC-scMenuBar {
+  width: 100%;
+}
+@media (min-width: 980px) {
+  .chemicalSC-scMenuBar {
+    height: 70px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .chemicalSC-scMenuBar {
+    height: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .chemicalSC-scMenuBar {
+    height: 50px;
+  }
+}
+.chemicalSC-scContentBox {
+  padding: 0px 0px;
+}
+.chemicalSC-scMenuBar {
+  padding-top: 20px;
+  height: 90px;
+}
+.chemicalSC-scMenuBar .scNavButton {
+  margin: 0px 25px;
+  color: #edeef2;
+  text-transform: uppercase;
+  border-bottom: solid 1px rgba(164, 167, 182, 0);
+}
+.chemicalSC-scMenuBar .scNavButton i {
+  margin-left: 12px;
+  font-size: 20px;
+  position: relative;
+  bottom: -3px;
+}
+.chemicalSC-scMenuBar .scNavButton:hover {
+  border-bottom: solid 1px rgba(164, 167, 182, 0.5);
+  text-decoration: none;
+}
+.chemicalSC-scMenuBar .scNavButton:active,
+.chemicalSC-scMenuBar .scNavButton:focus {
+  text-decoration: none;
+}
+.chemicalSC-scMenuBar .next {
+  float: right;
+  float: right !important;
+}
+.chemicalSC-scMenuBar .cta {
+  float: left;
+  float: left !important;
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  .chemicalSC-scMenuBar {
+    height: 70px;
+  }
+}
+.unstyled li {
+  list-style: none;
+}
+/*
+ * Nav Box
+ ***************************************************************/
+.chemicalSC-lightNavBox {
+  background: #fafafa;
+  height: 90px;
+}
+.chemicalSC-lightNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+.chemicalSC-lightNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+.chemicalSC-lightNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+.chemicalSC-grayNavBox {
+  background: #f0efef;
+  height: 90px;
+}
+.chemicalSC-grayNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+.chemicalSC-grayNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+.chemicalSC-grayNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+.chemicalSC-darkNavBox {
+  background: #3b3b3b;
+  height: 90px;
+}
+.chemicalSC-darkNavBox a.scNavButton {
+  color: #cbcdd6;
+}
+.chemicalSC-darkNavBox a.scNavButton span {
+  color: #a4a7b6;
+}
+.chemicalSC-darkNavBox a.scNavButton i {
+  color: #a4a7b6;
+}
+/*
+ * Thumbnail settings
+ ***************************************************************/
+.chemical-darkThumbnail {
+  border-color: rgba(255, 255, 255, 0.11);
+}
+.chemical-darkThumbnail:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.chemical-lightThumbnail {
+  border-color: rgba(186, 186, 186, 0.32);
+}
+.chemical-lightThumbnail:hover {
+  border-color: #bababa;
+}
+.chemical-medThumbnail {
+  border-color: rgba(186, 186, 186, 0.46);
+}
+.chemical-medThumbnail:hover {
+  border-color: #bababa;
+}
+/*
+ * Title Frame
+ ***************************************************************/
+#chemicalSC-titleframeNavBox {
+  background: rgba(0, 0, 0, 0.15);
+  height: 90px;
+}
+#chemicalSC-titleframeNavBox a.scNavButton {
+  color: #edeef2;
+}
+#chemicalSC-titleframeNavBox a.scNavButton span {
+  color: #a4a7b6;
+}
+#chemicalSC-titleframeNavBox a.scNavButton i {
+  color: #a4a7b6;
+}
+#chemicalSC-titleframe {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+#chemicalSC-titleframe h1 {
+  color: #ffffff;
+}
+#chemicalSC-titleframe .scrollDown {
+  width: 165px;
+  text-align: center;
+  z-index: 1200;
+  position: relative;
+  margin: 15% auto 3%;
+}
+@media (min-width: 900px) {
+  #chemicalSC-titleframe .scrollDown {
+    width: 165px;
+  }
+}
+@media (max-width: 480px) {
+  #chemicalSC-titleframe .scrollDown {
+    margin: 5% auto;
+  }
+}
+#chemicalSC-titleframe .titleLinkArrow {
+  display: block;
+  line-height: 40px;
+  margin-bottom: -8px;
+}
+#chemicalSC-titleframe a.titleLinkText {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #e0ebf2;
+  font-size: 24px;
+  line-height: 40px;
+  vertical-align: middle;
+  font-weight: 300;
+}
+#chemicalSC-titleframe a.titleLinkText:hover,
+#chemicalSC-titleframe a.titleLinkText:active,
+#chemicalSC-titleframe a.titleLinkText:focus {
+  text-decoration: none;
+  color: #e3e3e3;
+}
+#chemicalSC-titleframe #chemShowcaseVid {
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  z-index: -1000;
+  /*bottom: 0;
+        left: 0;*/
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: translateX(50%) translateY(50%);
+  -ms-transform: translateX(50%) translateY(50%);
+  transform: translateX(50%) translateY(50%);
+  min-width: 1920px;
+  min-height: 100%;
+  overflow: hidden;
+}
+@media (min-width: 1920px) {
+  #chemicalSC-titleframe #chemShowcaseVid {
+    width: 100%;
+  }
+}
+#chemicalSC-titleframe #chemShowcaseBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(//cdn.comsol.com/showcase/chemical/video-placeholder.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#chemicalSC-titleframe #chemShowcaseVidOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+}
+#chemicalSC-titleframe .chemTitleOverlay * {
+  z-index: 1200;
+}
+#chemicalSC-titleframe .chemTitleOverlay h1,
+#chemicalSC-titleframe .chemTitleOverlay .scdownloadButton {
+  position: relative;
+}
+/*
+/* chemical Design
+/*************************************/
+#chemicalSC-chemicaldesignNavBox {
+  background: #fafafa;
+  height: 90px;
+}
+#chemicalSC-chemicaldesignNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-chemicaldesignNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-chemicaldesignNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-chemicaldesign {
+  background-color: #ffffff;
+  padding: 1px 0px 150px 0px;
+  position: relative;
+  background: url(//cdn.comsol.com/showcase/chemical/design-sketch-2600x1200.jpg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#chemicalSC-chemicaldesign h3,
+#chemicalSC-chemicaldesign h4,
+#chemicalSC-chemicaldesign a {
+  color: #212224;
+}
+#chemicalSC-chemicaldesign a:hover {
+  color: #212224;
+}
+#chemicalSC-chemicaldesign p,
+#chemicalSC-chemicaldesign h2,
+#chemicalSC-chemicaldesign .caption,
+#chemicalSC-chemicaldesign .title a {
+  color: #212224;
+}
+#chemicalSC-chemicaldesign h2 {
+  font-size: 34px;
+}
+#chemicalSC-chemicaldesign p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  width: 800px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  #chemicalSC-chemicaldesign p {
+    width: 95%;
+  }
+}
+#chemicalSC-chemicaldesign .bounce {
+  position: absolute;
+  bottom: 260px;
+  font-size: 45px;
+}
+#chemicalSC-chemicaldesign .chemicaldesignframe-contentholder {
+  padding: 90px 0 480px;
+  /* base64 SVG as background image (IE9/Chrome/Safari/Opera) */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii42IiBzdG9wLWNvbG9yPSIjZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KCQkJPHN0b3Agb2Zmc2V0PSIuODUiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  /* SVG for above
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+                <linearGradient id="g1" x2="0%" y2="100%">
+                    <stop stop-color="#fff" stop-opacity="1"/>
+                    <stop offset=".6" stop-color="#fff" stop-opacity="1"/>
+                    <stop offset=".85" stop-color="#fff" stop-opacity=".0"/>
+                </linearGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#g1)"/>
+        </svg>
+        */
+  width: 100%;
+  top: -1px;
+  position: relative;
+}
+@media (max-width: 380px) {
+  #chemicalSC-chemicaldesign .chemicaldesignframe-contentholder {
+    padding: 90px 0 710px;
+  }
+}
+/*
+ * Video Frame
+ ***************************************************************/
+#chemicalSC-videoframeNavBox {
+  background: #3b3b3b;
+  height: 90px;
+}
+#chemicalSC-videoframeNavBox a.scNavButton {
+  color: #cbcdd6;
+}
+#chemicalSC-videoframeNavBox a.scNavButton span {
+  color: #a4a7b6;
+}
+#chemicalSC-videoframeNavBox a.scNavButton i {
+  color: #a4a7b6;
+}
+#chemicalSC-videoframe {
+  padding: 130px 0px 130px;
+  background-color: #404040;
+}
+#chemicalSC-videoframe h2 {
+  color: #eeeeee;
+}
+#chemicalSC-videoframe p,
+#chemicalSC-videoframe h3,
+#chemicalSC-videoframe h4 {
+  color: #eeeeee;
+}
+#chemicalSC-videoframe h2 {
+  font-size: 34px;
+  text-align: center;
+  color: #f1f0f0;
+}
+#chemicalSC-videoframe h2 em {
+  font-style: normal;
+  color: #757474;
+}
+/*
+ * Table of Contents (TOC) Frame
+ ***************************************************************/
+#chemicalSC-tocNavBox {
+  background: #fafafa;
+  height: 90px;
+}
+#chemicalSC-tocNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-tocNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-tocNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-toc {
+  padding: 160px 0px 200px;
+  background-color: #ffffff;
+}
+#chemicalSC-toc h3,
+#chemicalSC-toc h4,
+#chemicalSC-toc h2,
+#chemicalSC-toc p,
+#chemicalSC-toc p .caption,
+#chemicalSC-toc .title {
+  color: #666666;
+}
+#chemicalSC-toc h2 {
+  font-weight: 300;
+  font-size: 38px;
+}
+.chemical-toc-btn {
+  display: table;
+  width: 234px;
+  height: 134px;
+  color: #fafafa;
+  font-size: 23px;
+  background-color: #464646;
+  margin-right: 32px;
+  margin-bottom: 32px;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  /* Safari 3.0 - 5.0, Chrome 1 - 9, Android 2.1 - 3.x */
+  -moz-box-sizing: border-box;
+  /* Firefox 1 - 28 */
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s;
+  /* Safari */
+  transition: all 0.25s;
+}
+.chemical-toc-btn:hover,
+.chemical-toc-btn:active,
+.chemical-toc-btn:focus {
+  -ms-transform: scale(1.1, 1.1);
+  /* IE 9 */
+  -webkit-transform: scale(1.1, 1.1);
+  /* Safari */
+  transform: scale(1.1, 1.1);
+  /* Standard syntax */
+  text-decoration: none;
+  color: #fafafa;
+}
+.chemical-toc-btn span {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media (max-width: 510px) {
+  .chemical-toc-btn {
+    margin-right: 0;
+  }
+}
+.scContentBox .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: flex-start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+.toc-reactionEngineering-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/reaction-engineering-toc-btn.jpg) no-repeat center center;
+}
+.toc-mixingSeperation-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/mixing-seperation-toc-btn.jpg) no-repeat center center;
+}
+.toc-heatTransfer-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/heat-transfer-toc-btn.jpg) no-repeat center center;
+}
+.toc-batteriesFuelCells-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/batteries-toc-btn.jpg) no-repeat center center;
+}
+.toc-corrosionCorrosionProtection-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/corrosion-toc-btn.jpg) no-repeat center center;
+}
+.toc-electrodepositionCell-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/electrodeposition-toc-btn.jpg) no-repeat center center;
+}
+.toc-industrialAnalyticalElectrochemical-btn {
+  background: url(//cdn.comsol.com/showcase/chemical/toc-btns/electrochem-toc-btn.jpg) no-repeat center center;
+}
+/*
+ * Reaction Engineering Frame
+ ***************************************************************/
+#chemicalSC-reactionEngineeringNavBox {
+  background: #3b3b3b;
+  height: 90px;
+}
+#chemicalSC-reactionEngineeringNavBox a.scNavButton {
+  color: #cbcdd6;
+}
+#chemicalSC-reactionEngineeringNavBox a.scNavButton span {
+  color: #a4a7b6;
+}
+#chemicalSC-reactionEngineeringNavBox a.scNavButton i {
+  color: #a4a7b6;
+}
+#chemicalSC-reactionEngineering {
+  padding: 0px 0px 0px;
+  background-color: #404040;
+  background: url(//cdn.comsol.com/showcase/chemical/pipeing-night-2600x1200.jpg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#chemicalSC-reactionEngineering h3,
+#chemicalSC-reactionEngineering h2,
+#chemicalSC-reactionEngineering h5,
+#chemicalSC-reactionEngineering p,
+#chemicalSC-reactionEngineering .title {
+  color: #e9e8e8;
+}
+#chemicalSC-reactionEngineering h4 {
+  color: #7b7a7a;
+}
+#chemicalSC-reactionEngineering p.caption {
+  color: rgba(241, 240, 240, 0.7);
+}
+#chemicalSC-reactionEngineering .thumbnail {
+  border-color: rgba(255, 255, 255, 0.11);
+}
+#chemicalSC-reactionEngineering .thumbnail:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+#chemicalSC-reactionEngineering .reactionEngineeringframe-contentholder {
+  padding: 160px 0 700px;
+  /* base64 SVG as background image (IE9/Chrome/Safari/Opera) */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiM0MDQwNDAiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii42IiBzdG9wLWNvbG9yPSIjNDA0MDQwIiBzdG9wLW9wYWNpdHk9IjEiLz4KCQkJPHN0b3Agb2Zmc2V0PSIuODUiIHN0b3AtY29sb3I9IiM0MDQwNDAiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  width: 100%;
+  top: -1px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  #chemicalSC-reactionEngineering .reactionEngineeringframe-contentholder {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiM0MDQwNDAiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii44IiBzdG9wLWNvbG9yPSIjNDA0MDQwIiBzdG9wLW9wYWNpdHk9IjEiLz4KCQkJPHN0b3Agb2Zmc2V0PSIuOTUiIHN0b3AtY29sb3I9IiM0MDQwNDAiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  }
+}
+/*
+ * Mixing and Separation Frame
+ ***************************************************************/
+#chemicalSC-mixingSeparationNavBox {
+  background: #fafafa;
+  height: 90px;
+}
+#chemicalSC-mixingSeparationNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-mixingSeparationNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-mixingSeparationNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-mixingSeparation {
+  padding: 160px 0px 200px;
+  background-color: #ffffff;
+}
+#chemicalSC-mixingSeparation h3,
+#chemicalSC-mixingSeparation h2,
+#chemicalSC-mixingSeparation h5,
+#chemicalSC-mixingSeparation p,
+#chemicalSC-mixingSeparation .title {
+  color: #47484d;
+}
+#chemicalSC-mixingSeparation h4 {
+  color: #bbbaba;
+}
+#chemicalSC-mixingSeparation p.caption {
+  color: rgba(71, 72, 77, 0.7);
+}
+#chemicalSC-mixingSeparation hr {
+  border-color: #c7c7c7;
+}
+#chemicalSC-mixingSeparation .thumbnail {
+  border-color: rgba(186, 186, 186, 0.32);
+}
+#chemicalSC-mixingSeparation .thumbnail:hover {
+  border-color: #bababa;
+}
+/*
+ * Heat Transfer Frame
+ ***************************************************************/
+#chemicalSC-heatTransferNavBox {
+  background: #f0efef;
+  height: 90px;
+}
+#chemicalSC-heatTransferNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-heatTransferNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-heatTransferNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-heatTransfer {
+  padding: 0px 0px 0px;
+  background-color: #e6e6e6;
+  background: url(//cdn.comsol.com/showcase/chemical/lab-research-2600x1200.jpg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#chemicalSC-heatTransfer h3,
+#chemicalSC-heatTransfer h2,
+#chemicalSC-heatTransfer h5,
+#chemicalSC-heatTransfer p,
+#chemicalSC-heatTransfer .title {
+  color: #212224;
+}
+#chemicalSC-heatTransfer h4 {
+  color: #aaaaaa;
+}
+#chemicalSC-heatTransfer p.caption {
+  color: rgba(71, 72, 77, 0.7);
+}
+#chemicalSC-heatTransfer hr {
+  border-color: #c7c7c7;
+}
+#chemicalSC-heatTransfer .thumbnail {
+  border-color: rgba(186, 186, 186, 0.46);
+}
+#chemicalSC-heatTransfer .thumbnail:hover {
+  border-color: #bababa;
+}
+#chemicalSC-heatTransfer .heatTransferframe-contentholder {
+  padding: 160px 0 700px;
+  /* base64 SVG as background image (IE9/Chrome/Safari/Opera) */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii42IiBzdG9wLWNvbG9yPSIjZTZlNmU2IiBzdG9wLW9wYWNpdHk9IjEiLz4KCQkJPHN0b3Agb2Zmc2V0PSIuODUiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  width: 100%;
+  top: -1px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  #chemicalSC-heatTransfer .heatTransferframe-contentholder {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii43NSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CgkJCTxzdG9wIG9mZnNldD0iLjkiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  }
+}
+/*
+ * Batteries and Fuel Cells Frame
+ ***************************************************************/
+#chemicalSC-batteriesFuelcellsNavBox {
+  background: #3b3b3b;
+  height: 90px;
+}
+#chemicalSC-batteriesFuelcellsNavBox a.scNavButton {
+  color: #cbcdd6;
+}
+#chemicalSC-batteriesFuelcellsNavBox a.scNavButton span {
+  color: #a4a7b6;
+}
+#chemicalSC-batteriesFuelcellsNavBox a.scNavButton i {
+  color: #a4a7b6;
+}
+#chemicalSC-batteriesFuelcells {
+  padding: 160px 0px 200px;
+  background-color: #404040;
+}
+#chemicalSC-batteriesFuelcells h3,
+#chemicalSC-batteriesFuelcells h2,
+#chemicalSC-batteriesFuelcells h5,
+#chemicalSC-batteriesFuelcells p,
+#chemicalSC-batteriesFuelcells .title {
+  color: #e9e8e8;
+}
+#chemicalSC-batteriesFuelcells h4 {
+  color: #7b7a7a;
+}
+#chemicalSC-batteriesFuelcells p.caption {
+  color: rgba(241, 240, 240, 0.7);
+}
+#chemicalSC-batteriesFuelcells .thumbnail {
+  border-color: rgba(255, 255, 255, 0.11);
+}
+#chemicalSC-batteriesFuelcells .thumbnail:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+/*
+ * Corrosion and Corrosion Protection Frame
+ ***************************************************************/
+#chemicalSC-corrosionProtectionNavBox {
+  background: #f0efef;
+  height: 90px;
+}
+#chemicalSC-corrosionProtectionNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-corrosionProtectionNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-corrosionProtectionNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-corrosionProtection {
+  padding: 0px 0px 0px;
+  background-color: #e6e6e6;
+  background: url(//cdn.comsol.com/showcase/chemical/oil-rig-2600x1200.jpg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#chemicalSC-corrosionProtection h3,
+#chemicalSC-corrosionProtection h2,
+#chemicalSC-corrosionProtection h5,
+#chemicalSC-corrosionProtection p,
+#chemicalSC-corrosionProtection .title {
+  color: #212224;
+}
+#chemicalSC-corrosionProtection h4 {
+  color: #aaaaaa;
+}
+#chemicalSC-corrosionProtection p.caption {
+  color: rgba(71, 72, 77, 0.7);
+}
+#chemicalSC-corrosionProtection hr {
+  border-color: #c7c7c7;
+}
+#chemicalSC-corrosionProtection .thumbnail {
+  border-color: rgba(186, 186, 186, 0.46);
+}
+#chemicalSC-corrosionProtection .thumbnail:hover {
+  border-color: #bababa;
+}
+#chemicalSC-corrosionProtection .corrosionProtectionframe-contentholder {
+  padding: 160px 0 700px;
+  /* base64 SVG as background image (IE9/Chrome/Safari/Opera) */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii42IiBzdG9wLWNvbG9yPSIjZTZlNmU2IiBzdG9wLW9wYWNpdHk9IjEiLz4KCQkJPHN0b3Agb2Zmc2V0PSIuODUiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  width: 100%;
+  top: -1px;
+  position: relative;
+}
+@media (max-width: 991px) {
+  #chemicalSC-corrosionProtection .corrosionProtectionframe-contentholder {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii43NSIgc3RvcC1jb2xvcj0iI2U2ZTZlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CgkJCTxzdG9wIG9mZnNldD0iLjkiIHN0b3AtY29sb3I9IiNlNmU2ZTYiIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  }
+}
+/*
+ * Electrodeposition Cell Design Frame
+ ***************************************************************/
+#chemicalSC-electrodepositionDesignNavBox {
+  background: #fafafa;
+  height: 90px;
+}
+#chemicalSC-electrodepositionDesignNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-electrodepositionDesignNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-electrodepositionDesignNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-electrodepositionDesign {
+  padding: 160px 0px 200px;
+  background-color: #ffffff;
+}
+#chemicalSC-electrodepositionDesign h3,
+#chemicalSC-electrodepositionDesign h2,
+#chemicalSC-electrodepositionDesign h5,
+#chemicalSC-electrodepositionDesign p,
+#chemicalSC-electrodepositionDesign .title {
+  color: #47484d;
+}
+#chemicalSC-electrodepositionDesign h4 {
+  color: #bbbaba;
+}
+#chemicalSC-electrodepositionDesign p.caption {
+  color: rgba(71, 72, 77, 0.7);
+}
+#chemicalSC-electrodepositionDesign hr {
+  border-color: #c7c7c7;
+}
+#chemicalSC-electrodepositionDesign .thumbnail {
+  border-color: rgba(186, 186, 186, 0.32);
+}
+#chemicalSC-electrodepositionDesign .thumbnail:hover {
+  border-color: #bababa;
+}
+/*
+ * Industrial and Analytical Electrochemical Applications Frame
+ ***************************************************************/
+#chemicalSC-industrialAnalyticalNavBox {
+  background: #f0efef;
+  height: 90px;
+}
+#chemicalSC-industrialAnalyticalNavBox a.scNavButton {
+  color: #a4a7b6;
+}
+#chemicalSC-industrialAnalyticalNavBox a.scNavButton span {
+  color: #cbcdd6;
+}
+#chemicalSC-industrialAnalyticalNavBox a.scNavButton i {
+  color: #cbcdd6;
+}
+#chemicalSC-industrialAnalytical {
+  padding: 160px 0px 200px;
+  background-color: #e6e6e6;
+}
+#chemicalSC-industrialAnalytical h3,
+#chemicalSC-industrialAnalytical h2,
+#chemicalSC-industrialAnalytical h5,
+#chemicalSC-industrialAnalytical p,
+#chemicalSC-industrialAnalytical .title {
+  color: #212224;
+}
+#chemicalSC-industrialAnalytical h4 {
+  color: #aaaaaa;
+}
+#chemicalSC-industrialAnalytical p.caption {
+  color: rgba(71, 72, 77, 0.7);
+}
+#chemicalSC-industrialAnalytical hr {
+  border-color: #c7c7c7;
+}
+#chemicalSC-industrialAnalytical .thumbnail {
+  border-color: rgba(186, 186, 186, 0.46);
+}
+#chemicalSC-industrialAnalytical .thumbnail:hover {
+  border-color: #bababa;
+}
+/*
+ * CTA Frame
+ ***************************************************************/
+#chemicalSC-ctaframeNavBox {
+  background-color: #1e2931;
+}
+#chemicalSC-ctaframeNavBox a.scNavButton {
+  color: #f1f0f0;
+}
+#chemicalSC-ctaframe {
+  padding: 0px 0px 0px;
+  background-color: #222e37;
+  background: url(//cdn.comsol.com/showcase/chemical/model-2080x1200.jpg) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#chemicalSC-ctaframe h3,
+#chemicalSC-ctaframe h2,
+#chemicalSC-ctaframe h5,
+#chemicalSC-ctaframe p,
+#chemicalSC-ctaframe .title,
+#chemicalSC-ctaframe label {
+  color: #f1f0f0;
+}
+#chemicalSC-ctaframe h2 {
+  font-size: 39px;
+}
+#chemicalSC-ctaframe .ctaframe-contentholder {
+  padding: 160px 0 700px;
+  /* base64 SVG as background image (IE9/Chrome/Safari/Opera) */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgoJPGRlZnM+CgkJPGxpbmVhckdyYWRpZW50IGlkPSJnMSIgeDI9IjAlIiB5Mj0iMTAwJSI+CgkJCTxzdG9wIHN0b3AtY29sb3I9IiMyMjJlMzciIHN0b3Atb3BhY2l0eT0iMSIvPgoJCQk8c3RvcCBvZmZzZXQ9Ii42IiBzdG9wLWNvbG9yPSIjMjIyZTM3IiBzdG9wLW9wYWNpdHk9IjEiLz4KCQkJPHN0b3Agb2Zmc2V0PSIuODUiIHN0b3AtY29sb3I9IiMyMjJlMzciIHN0b3Atb3BhY2l0eT0iLjAiLz4KCQk8L2xpbmVhckdyYWRpZW50PgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNnMSkiLz4KPC9zdmc+');
+  width: 100%;
+  top: -1px;
+  position: relative;
+}
