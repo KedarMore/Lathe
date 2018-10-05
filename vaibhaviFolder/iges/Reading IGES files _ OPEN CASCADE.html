@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<!-- saved from url=(0054)https://www.opencascade.com/content/reading-iges-files -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js  csstransforms csstransforms3d csstransitions"><head profile="http://www.w3.org/1999/xhtml/vocab"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon" href="https://www.opencascade.com/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="description" content="Hello everybody I&#39;m a new user of Opencascade, and i need some help... I have an IGES file using NURBS representing a surface and i need to calculate the normal vectors to the surface on different points. I thought to find in OpenCascade source code how the file is read, and modify it using the points coordinates to compute normal vectors. My problem is I didn&#39;t understood how OpenCascade read coordinates of the points and draw polygons. Someone can help me? Or if anybody knows an other solution for this problem, i&#39;m opened to any suggestion.">
+<meta name="generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="https://www.opencascade.com/content/reading-iges-files">
+<link rel="shortlink" href="https://www.opencascade.com/node/24533">
+        <title>Reading IGES files | OPEN CASCADE</title>
+        <link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/css_VZ1qiB56HFUv1wJ6leA7y-HexnHauE8bh7bMaKfbsN8.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/css_mmfEm5or7aI3sYp6dFch0LrQrdbvlXnaXbhEMSBPFlI.css" media="all">
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+#sliding-popup.sliding-popup-bottom{background:#000000;}#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text p{color:#ffffff !important;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/css_S22a9TK6MmGCdBRiksepUrzQvfWXGt5RtQGNPq4zKpc.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/custom.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/css_uFFj6sHOWWC_8rO8R5-Bv-plkZh_WBt43Ee2NN9EBkE.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Reading IGES files _ OPEN CASCADE_files/css_Yn4xbrjDrkyVnqoS2pZtip0TJbzHe5yTX0_t48JusGg.css" media="all">
+        <script async="" src="./Reading IGES files _ OPEN CASCADE_files/analytics.js.download"></script><script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/jquery.min.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/js_V1ZuwJK9uzfm6fFffOcHHubfxnimoxnbgG58pvTQdpY.js.download"></script>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/js_K00viKmdTWfT8YboLS-arhMgBz-yWEUHQH4VsyX0i4k.js.download"></script>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/lightbox.js.download"></script>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/js_-Wk0cNNiGVM56a2jj6qACJ2bYXTMJz2ZktY3l_KEA2o.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-36273819-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/js_vs9t3Yvu3TVhqucysPlsy_qCIK4g6xMSj23ePw-MxNI.js.download"></script>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/js_Kjlwo2h6KYa7Gq-0ojRNPzc2nimjPjR7In1cUc6r0I0.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"corporate","theme_token":"4UKMoaruxSz_y1e6S9HvP_ggevyLgkvAxVWBxT5wtLw","js":{"sites\/all\/modules\/contrib\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"0":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.8.3\/jquery.min.js":1,"1":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/highlightjs\/highlight.pack.js":1,"sites\/all\/modules\/contrib\/highlightjs\/highlight_js.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"sites\/all\/libraries\/isotope\/jquery.isotope.js":1,"sites\/all\/modules\/superhero_framework\/superhero_dropdown\/js\/superhero-dropdown.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/superhero\/js\/smoothscroll.js":1,"sites\/all\/libraries\/stellar.js\/jquery.stellar.min.js":1,"sites\/all\/themes\/superhero\/vendor\/bootstrap\/js\/bootstrap.min.js":1,"sites\/all\/themes\/superhero\/vendor\/jquery.appear.js":1,"sites\/all\/themes\/superhero\/js\/superhero.js":1,"sites\/all\/themes\/superhero\/js\/superhero-sticky.js":1,"sites\/all\/themes\/corporate\/js\/corporate.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/private_files_download_permission\/private_files_download_permission.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"modules\/forum\/forum.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/highlightjs\/styles\/default.css":1,"sites\/all\/modules\/contrib\/lightbox2\/css\/lightbox.css":1,"sites\/all\/libraries\/isotope\/jquery.isotope.css":1,"sites\/all\/modules\/superhero_framework\/superhero_dropdown\/css\/superhero-dropdown.css":1,"0":1,"sites\/all\/modules\/contrib\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/modules\/superhero_framework\/superhero_block\/css\/block.css":1,"sites\/all\/themes\/superhero\/vendor\/bootstrap\/css\/bootstrap.min.css":1,"sites\/all\/themes\/superhero\/vendor\/bootstrap\/css\/bootstrap-theme.min.css":1,"sites\/all\/themes\/superhero\/css\/custom.css":1,"sites\/all\/themes\/superhero\/vendor\/font-awesome\/css\/font-awesome.min.css":1,"sites\/all\/themes\/superhero\/vendor\/animate.css":1,"sites\/all\/themes\/superhero\/css\/main.css":1,"sites\/all\/themes\/corporate\/css\/style.css":1,"sites\/all\/modules\/contrib\/highlightjs\/highlight_js.css":1,"sites\/all\/libraries\/highlightjs\/styles\/color-brewer.css":1,"public:\/\/css\/corporate-theme-preset2.css":1,"public:\/\/css_injector\/css_injector_1.css":1,"public:\/\/css_injector\/css_injector_3.css":1,"public:\/\/css_injector\/css_injector_4.css":1}},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":1,"force_show_nav":0,"show_caption":0,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":640,"iframe_height":360,"iframe_border":1,"enable_video":0},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":1,"popup_clicking_confirmation":0,"popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cdiv class=\u0022eu_cookie_compliance_message\u0022\u003EBy continuing to navigate on this website, you accept the use of cookies. For more information and to change the setting of cookies on your computer, please read our \u003Ca href=\u0022\/content\/privacy-policy\u0022 style=\u0022text-decoration: underline;\u0022 target=\u0022_blank\u0022\u003EPrivacy Policy\u003C\/a\u003E.\u003C\/div\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I accept the use of cookies\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cp\u003EThank you for accepting cookies.\u003C\/p\u003E\n\u003Cp\u003EYou can now hide this message or find out more \u003Ca href=\u0022\/content\/privacy-policy\u0022\u003Eabout cookies\u003C\/a\u003E.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button\u0022\u003EHide\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022 \u003EMore info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/content\/privacy-policy","popup_link_new_window":1,"popup_position":null,"popup_language":"en","domain":""},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip|apk"},"urlIsAjaxTrusted":{"\/content\/reading-iges-files":true}});
+//--><!]]>
+</script>
+    </head>
+    <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-24533 node-type-forum wide ltr lightbox-processed sliding-popup-processed">
+        <div class="body-innerwrapper">
+            <div id="skip-link">
+                <a href="https://www.opencascade.com/content/reading-iges-files#main-content" class="element-invisible element-focusable">Skip to main content</a>
+            </div>
+            <div class="region region-page-top">
+	</div>
+            <div class="body">
+   <section id="section-top-panel" class="section section-top-panel hidden-xs" style="margin:0;padding:8px 0;background-color:#424242;">
+		<div class="container">
+		<div class="row">
+			<div class="region region-toppanel-first col-sm-6 col-md-6 col-lg-6">
+	<div id="block-menu-menu-menu-top" class="block block-menu menuTop">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/" title="">Home</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/news" title="">News</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/forums" title="">Forums</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/contact" title="">Contact Us</a></li>
+</ul>  </div>
+</div>
+</div>
+<div class="region region-toppanel-second col-xs-1 col-sm-2 col-md-3 col-lg-3">
+	<div id="block-simple-login-simple-login" class="block block-simple-login">
+
+    
+  <div class="content">
+    <a href="https://www.opencascade.com/user?destination=content/reading-iges-files">Login</a> or <a href="https://www.opencascade.com/user/register?destination=content/reading-iges-files">Create Account</a>  </div>
+</div>
+</div>
+<div class="region region-toppanel-third col-xs-1 col-sm-4 col-md-3 col-lg-3">
+	<div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form action="https://www.opencascade.com/content/reading-iges-files" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="control-group form-type-textfield form-item-search-block-form form-item">
+  <label class="element-invisible control-label" for="edit-search-block-form--2">Search </label>
+<div class="controls"> <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" autocomplete="off">
+</div></div>
+<div class="form-actions form-wrapper" id="edit-actions"><button class="btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
+</div><input type="hidden" name="form_build_id" value="form-Tx_LWT6hb_NmN3jtR1elVmRTZb1k-0fgAc1CefbLFiU">
+<input type="hidden" name="form_id" value="search_block_form">
+</div>
+</div></form>  </div>
+</div>
+</div>
+		</div>
+	</div>
+</section><div class="sticky-wrapper" style="height: 86px;"><section id="section-header" class="section section-header superhero-sticky main-menu-sticky" style="margin:0;padding:0;">
+		<div class="container">
+		<div class="row">
+			<div class="region region-logo col-md-2 col-lg-2">
+		<div class="site-logo clearfix">
+		<a href="https://www.opencascade.com/" rel="home"><img src="./Reading IGES files _ OPEN CASCADE_files/OCC_logo.png" id="logo"></a>	</div>
+		</div>
+<div class="region region-menu col-md-10 col-lg-10">
+         
+	<div id="block-superhero-dropdown-superhero-dropdown-block" class="block block-superhero-dropdown">
+
+    
+  <div class="content">
+    <a data-target=".nav-collapse" data-toggle="collapse" href="https://www.opencascade.com/content/reading-iges-files#" class="superhero-mobile-menu-toggle .btn .btn-default">
+    <i class="fa fa-align-justify"></i>
+</a>
+<div class="superhero-dropdown">
+<ul class="menu"><li class="first expanded"><a href="https://www.opencascade.com/content/offer">Offer</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/3d-engineering">3D Engineering</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/3d-manufacturing">3D Manufacturing</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/3d-post-production">3D Post-Production</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/3d-our-job">3D is Our Job</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/3d-modeling">Geometrical 3D Modeling</a></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/industrial-visualization-solutions">Industrial Visualization Solutions</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/visualization-digital-mockup-and-large-assemblies">Visualization of Digital Mockup</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/industrial-photorealistic-rendering">Industrial photorealistic rendering</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/visualization-massive-point-clouds">Visualization of massive point clouds</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/mixing-point-cloud-and-cad-model-one-3d-scene">Mixing a point cloud and a CAD model</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/volume-rendering-and-computed-tomography-support">Volume rendering</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/efficient-rendering-cgs-models">Efficient rendering of CSG models</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/visualization-mobile-devices-and-touchscreens">Mobile devices and touchscreens</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/web-based-and-cloud-based-visualization">Web-based and cloud-based visualization</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/basic-interactive-visualization-and-selection-daily-tasks">Basic interactive visualization</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/improved-visual-appearance-3d-scene">Improved visual appearance of a 3D scene</a></li>
+</ul></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/cad-data-processing">CAD Data Processing</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/numerical-simulation">Numerical Simulation Environments</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/piping-plant-design">Piping &amp; Plant Design</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/digital-mockup-simplification">Digital Mockup Simplification</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/media-gallery">Media Gallery</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/customers">Customers</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/they-trust-us">They Trust Us</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/success-stories">Success Stories</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/testimonials">Testimonials</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/core-technology">Core Technology</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first expanded"><a href="https://www.opencascade.com/content/overview">Overview</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/foundation-classes">Foundation Classes</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/modeling-data">Modeling Data</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/modeling-algorithms">Modeling Algorithms</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/mesh">Mesh</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/visualization">Visualization</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/data-exchange">Data Exchange</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/shape-healing">Shape Healing</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/application-framework">Application Framework</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/draw-test-harness">DRAW Test Harness</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/download-center">Download Center</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/latest-release">Latest Release</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/previous-releases">Previous Releases</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/system-requirements">System Requirements</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/3rd-party-components">3rd Party Components</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/licensing">Licensing</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/resources">Resources</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/tutorial-learning">Tutorial &amp; Learning</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/documentation">Documentation</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/forums" title="">Forums</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/faqs">FAQs</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/technology-support">Technology Support</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/technology-consulting">Technology Consulting</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/e-learning">E-Learning</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/training">Training</a></li>
+</ul></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/open-source-development">Open Source Development</a></li>
+</ul></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/products">Products</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/salome-software-suite">SALOME Software Suite</a></li>
+<li class="expanded"><a href="https://www.opencascade.com/content/3d-applications">3D Applications</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/content/cad-assistant">CAD Assistant</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/jt-assistant">JT Assistant</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/cadrays">CADRays</a></li>
+</ul></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/components">Components</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/content/product-partners">Product Partners</a></li>
+</ul></li>
+<li class="last expanded"><a href="https://www.opencascade.com/content/company">Company</a><i class="fa fa-angle-right menu-arrow"></i><ul class="menu"><li class="first leaf"><a href="https://www.opencascade.com/news">News</a></li>
+<li class="leaf"><a href="https://www.opencascade.com/content/locations">Locations</a></li>
+<li class="last leaf"><a href="https://www.opencascade.com/contact">Contact Us</a></li>
+</ul></li>
+</ul></div>  </div>
+</div>
+</div>
+		</div>
+	</div>
+</section></div><section id="section-postcontent" class="section section-postcontent" style="margin:0;padding:0;">
+		<div class="container">
+		<div class="row">
+			<div class="region region-postcontent-second col-sm-4 col-md-4 col-lg-4">
+	</div>
+		</div>
+	</div>
+</section><section id="section-content" class="section section-content forum-tuning" style="margin:0 25px;padding:0;">
+		<div class="sh-container">
+		<div class="row">
+			<div class="region region-sidebar-second col-sm-3 col-md-3 col-lg-3">
+	<div id="block-block-127" class="block block-block style-title-bg check-list">
+
+    
+  <div class="content">
+    <p>For all issues regarding the Forums use, please, refer to the <a href="https://www.opencascade.com/content/forums-rules"><strong>Forum Rules</strong></a>.</p>
+  </div>
+</div>
+<div id="block-block-121" class="block block-block style-title-bg check-list">
+
+    <h3 class="block-title">Our Solutions</h3>
+  
+  <div class="content">
+    <div>
+<p class="rtecenter"><img alt="" class="img-rounded" src="./Reading IGES files _ OPEN CASCADE_files/CC_image.jpg"></p></div>
+<div style="margin: 0 auto; width: 250px;">
+<p class="rtecenter">Need professional <strong>assistance</strong>?<br>
+Consider our:</p>
+<p class="rtecenter"><a class="btn btn-primary btn-" href="https://www.opencascade.com/content/technology-support">Support Offerings</a></p>
+<p class="rtecenter">&nbsp;</p>
+<p class="rtecenter">Need to <strong>speed up</strong> your development?<br>
+Have a look at our:</p>
+<p class="rtecenter"><a class="btn btn-primary btn-" href="https://www.opencascade.com/content/advanced-samples-and-tools">Samples &amp; Tools</a></p>
+<p class="rtecenter">&nbsp;</p>
+<p class="rtecenter">Need some <strong>functionality </strong>extending standard OCCT capabilities?<br>
+Check out our:</p>
+<p class="rtecenter"><a class="btn btn-primary btn-" href="https://www.opencascade.com/content/components">Adv. Components</a></p>
+</div>
+  </div>
+</div>
+<div id="block-block-138" class="block block-block style-title-bg check-list">
+
+    <h3 class="block-title">Related pages</h3>
+  
+  <div class="content">
+    <ul><li><a href="https://www.opencascade.com/all-forum-topics">Recent Forum Topics</a></li>
+</ul>  </div>
+</div>
+</div>
+
+<div class="region region-content col-xs-12 col-sm-9 col-md-9 col-lg-9">
+	<div class="main-content-main">
+		<a id="main-content"></a>
+						<h1 class="title" id="page-title">Reading IGES files</h1>
+												<div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-24533" class="node node-forum clearfix" about="/content/reading-iges-files" typeof="sioc:Post sioct:BoardPost">
+
+    <div class="user-picture">
+    <img typeof="foaf:Image" src="./Reading IGES files _ OPEN CASCADE_files/userpic_default.png" alt="QUENAN Christian&#39;s picture" title="QUENAN Christian&#39;s picture">  </div>
+
+      <span property="dc:title" content="Reading IGES files" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="5" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+      <div class="submitted">
+      <span property="dc:date dc:created" content="2012-07-25T22:15:53+02:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/users/quenan-christian" typeof="sioc:UserAccount" property="foaf:name" datatype="">QUENAN Christian</span> on 25 July, 2012 - 22:15</span>    </div>
+  
+  <div class="content">
+    <div class="field field-name-taxonomy-forums field-type-taxonomy-term-reference field-label-above">
+      <div class="field-label">Forums:&nbsp;</div>
+    <div class="field-items">
+          <div class="field-item even" rel="sioc:has_container"><a href="https://www.opencascade.com/forums/usage-issues" typeof="sioc:Container sioc:Forum" property="rdfs:label skos:prefLabel" datatype="">Usage issues</a></div>
+      </div>
+</div>
+<div class="field field-name-body field-type-text-with-summary field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Hello everybody</p>
+<p>I'm a new user of Opencascade, and i need some help...<br>
+I have an IGES file using NURBS representing a surface and i need to calculate the normal vectors to the surface on different points.<br>
+I thought to find in OpenCascade source code how the file is read, and modify it using the points coordinates to compute normal vectors.<br>
+My problem is I didn't understood how OpenCascade read coordinates of the points and draw polygons.</p>
+<p>Someone can help me?<br>
+Or if anybody knows an other solution for this problem, i'm opened to any suggestion.</p>
+<p>Thanks for reading, and sorry for my english, I don't speak very well.</p>
+<p>Christian</p>
+</div>
+      </div>
+</div>
+  </div>
+
+  <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://www.opencascade.com/user/login?destination=node/24533%23comment-form">Log in</a> or <a href="https://www.opencascade.com/user/register?destination=node/24533%23comment-form">register</a> to reply</span></li>
+</ul>
+  <div id="comments" class="comment-wrapper">
+  
+  <a id="comment-7464"></a>
+<div class="comment clearfix" about="/comment/7464#comment-7464" typeof="sioc:Post sioct:Comment">
+  <div class="row-fluid">
+  	 <div class="span2">
+	    <div class="user-picture">
+    <img typeof="foaf:Image" src="./Reading IGES files _ OPEN CASCADE_files/userpic_default.png" alt="Pawel&#39;s picture" title="Pawel&#39;s picture">  </div>
+	 </div>
+	 <div class="span10">
+		  		
+		  		  <h3 class="element-invisible element-invisible" property="dc:title" datatype=""><a href="https://www.opencascade.com/comment/7464#comment-7464" class="permalink" rel="bookmark"></a></h3>
+		  		
+		  <div class="submitted">
+		    <a href="https://www.opencascade.com/comment/7464#comment-7464" class="permalink" rel="bookmark">Permalink</a>		    <span property="dc:date dc:created" content="2012-07-31T17:02:45+02:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/users/pawel" typeof="sioc:UserAccount" property="foaf:name" datatype="">Pawel</span> on 31 July, 2012 - 17:02</span>		  </div>
+		
+		  <div class="content">
+		    <span rel="sioc:reply_of" resource="/content/reading-iges-files" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Hi Quenan,</p>
+<p>I would do that like this:</p>
+<p>1. Read Iges file.<br>
+2. Use TopExp_Explorer or TopTools_IndexedMapOfShape to find all the faces of the imported shape.<br>
+3. For each face obtain the U and V parameters and iterate.<br>
+4. At each U-V-point get the surface normal using BRepLProp_SLProps</p>
+<p>It would look something like this:</p>
+<p>TopTools_IndexedMapOfShape aMap;</p>
+<p>		BRepClass3d_SolidClassifier solidClassifier(shape);</p>
+<p>		TopExp::MapShapes(shape, TopAbs_FACE, aMap);</p>
+<p>		BRepLProp_SLProps surfaceProperties(1, Precision::Confusion());<br>
+		double u0, u1, v0, v1;<br>
+		double u, v;<br>
+		double uDelta, vDelta;														</p>
+<p>		for(int i = 1; i 
+		{<br>
+			BRepAdaptor_Surface surface(TopoDS::Face(aMap(i)));<br>
+			surfaceProperties.SetSurface(surface);</p>
+<p>			u0 = surface.FirstUParameter();<br>
+			u1 = surface.LastUParameter();</p>
+<p>			v0 = surface.FirstVParameter();<br>
+			v1 = surface.LastVParameter();</p>
+<p>			u = u0;<br>
+			v = v0;</p>
+<p>			uDelta = surface.UResolution(resolution);<br>
+			vDelta = surface.VResolution(resolution);				</p>
+<p>			while(u 
+			{<br>
+				v = v0;<br>
+				while(v 
+				{<br>
+					GetSurfaceProperties(u, v,<br>
+						surfaceProperties, solidClassifier,<br>
+						output, propertyToCompute);</p>
+<p>					v += vDelta;<br>
+				}<br>
+				if(v != v1)<br>
+				{<br>
+					v = v1;<br>
+					GetSurfaceProperties(u, v,<br>
+						surfaceProperties, solidClassifier,<br>
+						output, propertyToCompute);<br>
+				}					</p>
+<p>				u += uDelta;<br>
+			}<br>
+			if(u != u1)<br>
+			{<br>
+				u = u1;<br>
+				v = v0;<br>
+				while(v 
+				{<br>
+					GetSurfaceProperties(u, v,<br>
+						surfaceProperties, solidClassifier,<br>
+						output, propertyToCompute);</p>
+<p>					v += vDelta;<br>
+				}<br>
+				if(v != v1)<br>
+				{<br>
+					v = v1;<br>
+					GetSurfaceProperties(u, v,<br>
+						surfaceProperties, solidClassifier,<br>
+						output, propertyToCompute);<br>
+				}<br>
+			}<br>
+		}</p>
+<p>Pawel</p>
+</div>
+      </div>
+</div>
+		    		  </div>
+		
+		  <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://www.opencascade.com/user/login?destination=node/24533%23comment-form">Log in</a> or <a href="https://www.opencascade.com/user/register?destination=node/24533%23comment-form">register</a> to reply</span></li>
+</ul>	  </div>
+	</div>
+</div>
+
+<div class="indented"><a id="comment-17405"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/17405#comment-17405" typeof="sioc:Post sioct:Comment">
+  <div class="row-fluid">
+  	 <div class="span2">
+	    <div class="user-picture">
+    <img typeof="foaf:Image" src="./Reading IGES files _ OPEN CASCADE_files/userpic_default.png" alt="QUENAN Christian&#39;s picture" title="QUENAN Christian&#39;s picture">  </div>
+	 </div>
+	 <div class="span10">
+		  		
+		  		  <h3 class="element-invisible element-invisible" property="dc:title" datatype=""><a href="https://www.opencascade.com/comment/17405#comment-17405" class="permalink" rel="bookmark"></a></h3>
+		  		
+		  <div class="submitted">
+		    <a href="https://www.opencascade.com/comment/17405#comment-17405" class="permalink" rel="bookmark">Permalink</a>		    <span property="dc:date dc:created" content="2012-08-06T22:08:37+02:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/users/quenan-christian" typeof="sioc:UserAccount" property="foaf:name" datatype="">QUENAN Christian</span> on 6 August, 2012 - 22:08</span>		  </div>
+		
+		  <div class="content">
+		    <span rel="sioc:reply_of" resource="/content/reading-iges-files" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/7464#comment-7464" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Hi Pawel,</p>
+<p>thank you for your quick answer, and sorry for mine, arriving a little bit late.</p>
+<p>But i don't understand some parts of your code.</p>
+<p>First, i don't know how to use this line "BRepAdaptor_Surface surface(TopoDS::Face(aMap(i)));"</p>
+<p>Secondly, the fonction GetSurfaceProperties(), where it is define? I don't find it.</p>
+<p>Sorry if my questions are stupid.</p>
+<p>thx for advance,</p>
+<p>Christian</p>
+</div>
+      </div>
+</div>
+		    		  </div>
+		
+		  <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://www.opencascade.com/user/login?destination=node/24533%23comment-form">Log in</a> or <a href="https://www.opencascade.com/user/register?destination=node/24533%23comment-form">register</a> to reply</span></li>
+</ul>	  </div>
+	</div>
+</div>
+
+<div class="indented"><a id="comment-17423"></a>
+<div class="comment clearfix" about="/comment/17423#comment-17423" typeof="sioc:Post sioct:Comment">
+  <div class="row-fluid">
+  	 <div class="span2">
+	    <div class="user-picture">
+    <img typeof="foaf:Image" src="./Reading IGES files _ OPEN CASCADE_files/userpic_default.png" alt="Pawel&#39;s picture" title="Pawel&#39;s picture">  </div>
+	 </div>
+	 <div class="span10">
+		  		
+		  		  <h3 class="element-invisible element-invisible" property="dc:title" datatype=""><a href="https://www.opencascade.com/comment/17423#comment-17423" class="permalink" rel="bookmark"></a></h3>
+		  		
+		  <div class="submitted">
+		    <a href="https://www.opencascade.com/comment/17423#comment-17423" class="permalink" rel="bookmark">Permalink</a>		    <span property="dc:date dc:created" content="2012-08-06T23:47:53+02:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/users/pawel" typeof="sioc:UserAccount" property="foaf:name" datatype="">Pawel</span> on 6 August, 2012 - 23:47</span>		  </div>
+		
+		  <div class="content">
+		    <span rel="sioc:reply_of" resource="/content/reading-iges-files" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/17405#comment-17405" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Hi Christian (sorry for confusing your name/surname ;)</p>
+<p>the sample code is taken from my application so let me explain:</p>
+<p>- I used BRepLProp_SLProps to get the properties of a surface. To use that class I needed a  BRepAdaptor_Surface object which is based on a TopoDS_Face taken from a map filled before </p>
+<p>- GetSurfaceProperties looks something like this:</p>
+<p>void shellDocObjectProperties::GetSurfaceProperties(double u, double v,<br>
+		BRepLProp_SLProps &amp; surfaceProperties,<br>
+		BRepClass3d_SolidClassifier &amp; solidClassifier,<br>
+		ArrayList ^ output, SurfaceProperties propertyToCompute)<br>
+	{<br>
+		gp_Pnt point;<br>
+		gp_Dir normal;</p>
+<p>		surfaceProperties.SetParameters(u, v);<br>
+		point = surfaceProperties.Value();					</p>
+<p>		//=======================<br>
+		solidClassifier.Perform(point, Precision::Confusion());</p>
+<p>		//take only points that are on the surface of the object<br>
+		if( solidClassifier.State() != TopAbs_ON)<br>
+		{<br>
+			return;<br>
+		}<br>
+		//=======================		</p>
+<p>		output-&gt;Add(point.X());<br>
+		output-&gt;Add(point.Y());<br>
+		output-&gt;Add(point.Z());</p>
+<p>		switch (propertyToCompute)<br>
+		{<br>
+		case SurfaceProperties::CurvatureDirections:<br>
+			{<br>
+				gp_Dir minD, maxD;<br>
+				surfaceProperties.CurvatureDirections(maxD, minD);</p>
+<p>				output-&gt;Add(minD.X());<br>
+				output-&gt;Add(minD.Y());<br>
+				output-&gt;Add(minD.Z());</p>
+<p>				output-&gt;Add(maxD.X());<br>
+				output-&gt;Add(maxD.Y());<br>
+				output-&gt;Add(maxD.Z());<br>
+			}<br>
+			break;</p>
+<p>		case SurfaceProperties::GaussianCurvature:<br>
+                ...<br>
+                case SurfaceProperties::Normal:</p>
+<p>This is how you can get the surface normal.</p>
+<p>Hope this helps.</p>
+<p>Pawel</p>
+</div>
+      </div>
+</div>
+		    		  </div>
+		
+		  <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://www.opencascade.com/user/login?destination=node/24533%23comment-form">Log in</a> or <a href="https://www.opencascade.com/user/register?destination=node/24533%23comment-form">register</a> to reply</span></li>
+</ul>	  </div>
+	</div>
+</div>
+
+<div class="indented"><a id="comment-17424"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/17424#comment-17424" typeof="sioc:Post sioct:Comment">
+  <div class="row-fluid">
+  	 <div class="span2">
+	    <div class="user-picture">
+    <img typeof="foaf:Image" src="./Reading IGES files _ OPEN CASCADE_files/userpic_default.png" alt="QUENAN Christian&#39;s picture" title="QUENAN Christian&#39;s picture">  </div>
+	 </div>
+	 <div class="span10">
+		  		
+		  		  <h3 class="element-invisible element-invisible" property="dc:title" datatype=""><a href="https://www.opencascade.com/comment/17424#comment-17424" class="permalink" rel="bookmark"></a></h3>
+		  		
+		  <div class="submitted">
+		    <a href="https://www.opencascade.com/comment/17424#comment-17424" class="permalink" rel="bookmark">Permalink</a>		    <span property="dc:date dc:created" content="2012-08-22T19:22:18+02:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/users/quenan-christian" typeof="sioc:UserAccount" property="foaf:name" datatype="">QUENAN Christian</span> on 22 August, 2012 - 19:22</span>		  </div>
+		
+		  <div class="content">
+		    <span rel="sioc:reply_of" resource="/content/reading-iges-files" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/17423#comment-17423" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>Thank you for your help!!</p>
+<p>I have some details to solve to do exactly what I want, but your help was very good !</p>
+<p>Sorry for the late response and thx again.</p>
+<p>With regards,</p>
+<p>Christian</p>
+</div>
+      </div>
+</div>
+		    		  </div>
+		
+		  <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://www.opencascade.com/user/login?destination=node/24533%23comment-form">Log in</a> or <a href="https://www.opencascade.com/user/register?destination=node/24533%23comment-form">register</a> to reply</span></li>
+</ul>	  </div>
+	</div>
+</div>
+
+<div class="indented"><a id="comment-17467"></a>
+<div class="comment clearfix" about="/comment/17467#comment-17467" typeof="sioc:Post sioct:Comment">
+  <div class="row-fluid">
+  	 <div class="span2">
+	    <div class="user-picture">
+    <img typeof="foaf:Image" src="./Reading IGES files _ OPEN CASCADE_files/userpic_default.png" alt="Game Milky&#39;s picture" title="Game Milky&#39;s picture">  </div>
+	 </div>
+	 <div class="span10">
+		  		
+		  		  <h3 class="element-invisible element-invisible" property="dc:title" datatype=""><a href="https://www.opencascade.com/comment/17467#comment-17467" class="permalink" rel="bookmark"></a></h3>
+		  		
+		  <div class="submitted">
+		    <a href="https://www.opencascade.com/comment/17467#comment-17467" class="permalink" rel="bookmark">Permalink</a>		    <span property="dc:date dc:created" content="2012-12-18T11:46:02+01:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/users/game-milky" typeof="sioc:UserAccount" property="foaf:name" datatype="">Game Milky</span> on 18 December, 2012 - 11:46</span>		  </div>
+		
+		  <div class="content">
+		    <span rel="sioc:reply_of" resource="/content/reading-iges-files" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/17424#comment-17424" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item even" property="content:encoded"><p>
+Dear Christian,</p>
+<p>     I face the same problem right now,would you share it!</p>
+<p>Best Regards</p>
+<p>Game</p>
+</div>
+      </div>
+</div>
+		    		  </div>
+		
+		  <ul class="links inline"><li class="comment_forbidden first last"><span><a href="https://www.opencascade.com/user/login?destination=node/24533%23comment-form">Log in</a> or <a href="https://www.opencascade.com/user/register?destination=node/24533%23comment-form">register</a> to reply</span></li>
+</ul>	  </div>
+	</div>
+</div>
+</div></div></div></div>
+  </div>
+
+</div>
+  </div>
+</div>
+	</div>
+</div>
+		</div>
+	</div>
+</section><section id="section-bottom" class="section section-bottom" style="margin:0;padding:0;">
+		<div class="container">
+		<div class="row">
+			<div class="region region-bottom-second col-sm-8 col-md-8 col-lg-8">
+	</div>
+		</div>
+	</div>
+</section><section id="section-bottom2" class="section section-bottom2" style="margin:0;padding:0;">
+		<div class="container">
+		<div class="row">
+			<div class="region region-bottom-third col-sm-4 col-md-4 col-lg-4">
+	<div id="block-block-71" class="block block-block superhero-block">
+	
+	<div class="block-contents  appear-animation fadeInUp appear-animation-visible" data-appear-animation="fadeInUp">
+	  		  <h3 class="block-title">ABOUT OPEN CASCADE</h3>
+		  	
+	  <div class="content">
+	    <p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/news"><i class="fa fa-comment"><span></span></i> <span style="color:#FFFFFF">News</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/company"><i class="fa fa-globe"><span></span></i> <span style="color:#FFFFFF">Company</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/locations"><i class="fa fa-map-marker"><span></span></i>&nbsp; <span style="color:#FFFFFF">Locations</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/media-gallery"><i class="fa fa-th"><span></span></i> <span style="color:#FFFFFF">Media Gallery</span></a></strong></span></p>
+<!--<p><span style="font-size:12px"><strong><a href="/content/faqs"><i class="fa fa-question-circle"><span></span></i> <span style="color:#FFFFFF">FAQs</span></a></strong></span></p>-->	  </div>
+	</div>
+	<div style="clear:both" class="clear-fix"></div>
+</div>
+</div>
+<div class="region region-bottom-fourth col-sm-4 col-md-4 col-lg-4">
+	<div id="block-block-1" class="block block-block superhero-block">
+	
+	<div class="block-contents  appear-animation fadeInUp appear-animation-visible" data-appear-animation="fadeInUp">
+	  		  <h3 class="block-title">OUR OFFER</h3>
+		  	
+	  <div class="content">
+	    <p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/3d-engineering"><i class="fa fa-user"><span></span></i><span style="color:#FFFFFF"> 3D Engineering</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/3d-manufacturing"><i class="fa fa-cog"><span></span></i> <span style="color:#FFFFFF">3D Manufacturing</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/3d-post-production"><i class="fa fa-refresh"><span></span></i><span style="color:#FFFFFF"> 3D Post-Production</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://www.opencascade.com/content/technology-support"><i class="fa fa-wrench"><span></span></i><span style="color:#FFFFFF"> Technology Support</span></a></strong></span></p>
+<!--<p><span style="font-size:12px"><strong><a href="/customer-corner"><i class="fa fa-download"><span></span></i><span style="color:#FFFFFF"> Customer Corner</span></a></strong></span></p>-->	  </div>
+	</div>
+	<div style="clear:both" class="clear-fix"></div>
+</div>
+</div>
+<div class="region region-bottom-fifth col-sm-4 col-md-4 col-lg-4">
+	<div id="block-block-122" class="block block-block superhero-block">
+	
+	<div class="block-contents  appear-animation fadeInUp appear-animation-visible" data-appear-animation="fadeInUp">
+	  		  <h3 class="block-title">FOLLOW OPEN CASCADE</h3>
+		  	
+	  <div class="content">
+	    <p><span style="font-size:12px"><strong><a href="https://twitter.com/open_cascade" target="_blank"><i class="fa fa-twitter"><span></span></i> <span style="color:#FFFFFF">Twitter</span></a>&nbsp; &nbsp; &nbsp; <a href="https://www.linkedin.com/company/open-cascade" target="_blank"><i class="fa fa-linkedin"><span></span></i> <span style="color:#FFFFFF">LinkedIn</span></a></strong></span></p>
+<p><span style="font-size:12px"><strong><a href="https://plus.google.com/115860736392183219595/posts" target="_blank"><i class="fa fa-google-plus"><span></span></i> <span style="color:#FFFFFF">Google+</span></a> &nbsp;&nbsp; <a href="https://www.youtube.com/channel/UCO6fnQhuib2WjMZwB-lxIwA" target="_blank"><i class="fa fa-youtube"><span></span></i> <span style="color:#FFFFFF">Youtube</span></a></strong></span></p>
+<p style="line-height:6px">&nbsp;</p>
+<p><span style="font-size:12px"><strong><span style="color:#FFFFFF">A Capgemini Group Company</span></strong></span></p>
+<div>
+<p><a href="https://www.capgemini.com/" target="blank_"><img alt="" src="./Reading IGES files _ OPEN CASCADE_files/Capgemini-logo.jpg" style="height: 39px;"></a>
+</p></div>
+	  </div>
+	</div>
+	<div style="clear:both" class="clear-fix"></div>
+</div>
+</div>
+		</div>
+	</div>
+</section><section id="section-footer" class="section section-footer">
+		<div class="container">
+		<div class="row">
+			<div class="region region-footer-first col-md-10 col-lg-10">
+	<div id="block-block-16" class="block block-block">
+
+    
+  <div class="content">
+    <div class="row" id="">
+<div class="col-xs-12 col-md-7" id="">
+<p><strong><a href="https://www.opencascade.com/content/terms-use">Terms Of Use</a></strong> | <strong><a href="https://www.opencascade.com/content/privacy-policy">Privacy Policy</a></strong> |&nbsp;<strong><a href="https://www.opencascade.com/content/credits">Credits</a></strong> | <strong><a href="https://www.opencascade.com/sitemap">Site Map</a></strong> |&nbsp;<strong><a href="https://www.opencascade.com/search">Search</a></strong>
+</p></div>
+<div class="col-xs-12 col-md-5" id="">
+<p class="rteright"><span style="white-space: nowrap;">Copyright © 2017 OPEN CASCADE SAS</span>
+</p></div>
+</div>
+  </div>
+</div>
+</div>
+<div class="region region-footer-second col-md-2 col-lg-2">
+	<div id="block-block-17" class="block block-block mail-support">
+
+    
+  <div class="content">
+    <p><strong><a href="https://www.opencascade.com/contact">Contact Us</a></strong></p>
+  </div>
+</div>
+</div>
+		</div>
+	</div>
+</section></div>
+
+             <div class="region region-page-bottom">
+	</div>
+<script type="text/javascript" src="./Reading IGES files _ OPEN CASCADE_files/js_paiTaEsc1HNeBS2rkLc1NrprKrFnApv70kuY8awAaTI.js.download"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+/**
+ * Collapses all Accordion items by default
+ */
+(function ($) {
+  $('.collapse.in').removeClass('in');
+})(jQuery);
+
+/**
+ * Disable autocomplete for search form in the header
+ */
+(function ($) {
+  $('#section-top-panel input[type=text]').attr('autocomplete', 'off');
+})(jQuery);
+
+//--><!]]>
+</script>
+        </div>
+    
+<div id="lightbox2-overlay" style="display: none;"></div>      <div id="lightbox" style="display: none;" class="lightbox2-orig-layout">        <div id="outerImageContainer" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"><div id="modalContainer" style="display: none; padding: 10px;"></div><div id="frameContainer" style="display: none; padding: 10px;"></div><div id="imageContainer" style="display: none; padding: 10px;"><img id="lightboxImage" alt=""><div id="hoverNav"><a id="prevLink" title="Previous" href="https://www.opencascade.com/content/reading-iges-files#" style="padding-top: 10px;"></a><a id="nextLink" title="Next" href="https://www.opencascade.com/content/reading-iges-files#" style="padding-top: 10px;"></a></div></div><div id="loading"><a href="https://www.opencascade.com/content/reading-iges-files#" id="loadingLink"></a></div></div>        <div id="imageDataContainer" class="clearfix" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">          <div id="imageData"><div id="imageDetails"><span id="caption"></span><span id="numberDisplay"></span></div><div id="bottomNav"><div id="frameHoverNav"><a id="framePrevLink" title="Previous" href="https://www.opencascade.com/content/reading-iges-files#" style="padding-top: 10px;"></a><a id="frameNextLink" title="Next" href="https://www.opencascade.com/content/reading-iges-files#" style="padding-top: 10px;"></a></div><a id="bottomNavClose" title="Close" href="https://www.opencascade.com/content/reading-iges-files#" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);"></a><a id="bottomNavZoom" href="https://www.opencascade.com/content/reading-iges-files#"></a><a id="bottomNavZoomOut" href="https://www.opencascade.com/content/reading-iges-files#"></a><a id="lightshowPause" title="Pause Slideshow" href="https://www.opencascade.com/content/reading-iges-files#" style="display: none;"></a><a id="lightshowPlay" title="Play Slideshow" href="https://www.opencascade.com/content/reading-iges-files#" style="display: none;"></a></div></div>        </div>      </div><div id="sliding-popup" class="sliding-popup-bottom" style="height: auto; width: 100%; bottom: 0px;">
+  <div class="popup-content info">
+    <div id="popup-text">
+      <div class="eu_cookie_compliance_message">By continuing to navigate on this website, you accept the use of cookies. For more information and to change the setting of cookies on your computer, please read our <a href="https://www.opencascade.com/content/privacy-policy" style="text-decoration: underline;" target="_blank">Privacy Policy</a>.</div>
+    </div>
+    <div id="popup-buttons">
+      <button type="button" class="agree-button">OK, I accept the use of cookies</button>
+      <button type="button" class="find-more-button">No, give me more info</button>
+    </div>
+  </div>
+</div></body></html>

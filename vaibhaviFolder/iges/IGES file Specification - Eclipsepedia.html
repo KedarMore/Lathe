@@ -1,0 +1,3557 @@
+<!DOCTYPE html>
+<html dir="ltr" class="client-js" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>IGES file Specification - Eclipsepedia</title>
+<script type="text/javascript" async="" src="IGES%20file%20Specification%20-%20Eclipsepedia_files/ga.js"></script><script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"IGES_file_Specification","wgTitle":"IGES file Specification","wgCurRevisionId":407347,"wgRevisionId":407347,"wgArticleId":54651,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":[],"wgBreakFrames":!1,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"IGES_file_Specification","wgRelevantArticleId":54651,"wgIsProbablyEditable":!1,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":!1,"dialogs":!1,"preview":!1,"publish":
+!1},"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}"});mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits"]);
+} );</script>
+<link rel="stylesheet" href="IGES%20file%20Specification%20-%20Eclipsepedia_files/load.css">
+<link rel="stylesheet" href="IGES%20file%20Specification%20-%20Eclipsepedia_files/styles.css" media="screen, print">
+<style>
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(/resources/src/mediawiki.action/images/green-checkmark.png?9048a)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}</style>
+<script async="" src="IGES%20file%20Specification%20-%20Eclipsepedia_files/load.php"></script>
+<meta name="generator" content="MediaWiki 1.26.4">
+<link rel="shortcut icon" href="https://wiki.eclipse.org/eclipse.org-common/themes/solstice/public/images/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://wiki.eclipse.org/opensearch_desc.php" title="Eclipsepedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.eclipse.org/api.php?action=rsd">
+<link rel="alternate" type="application/atom+xml" title="Eclipsepedia Atom feed" href="https://wiki.eclipse.org/index.php?title=Special:RecentChanges&amp;feed=atom">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="IGES%20file%20Specification%20-%20Eclipsepedia_files/load_002.php"></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-IGES_file_Specification skin-solstice action-view" id="solstice">
+<a class="sr-only" href="#content">Skip to main content</a>
+<header role="banner" class="thin-header hidden-print" id="header-wrapper">
+  <div class="container-fluid reset">
+    <div class="row-fluid" id="header-row">
+      <div class="col-sm-6 col-md-6 col-lg-5" id="header-left">
+        <div class="wrapper-logo-default"><a href="https://www.eclipse.org/"><img class="logo-eclipse-default img-responsive hidden-xs padding-top-10" alt="logo" src="IGES%20file%20Specification%20-%20Eclipsepedia_files/eclipse-426x100.png"></a></div>
+      </div>
+      <div class="col-sm-18 col-md-18 col-lg-19" id="main-menu-wrapper">
+        <div class="navbar yamm navbar-right" id="main-menu">
+          <div id="navbar-collapse-1" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="visible-thin"><a href="https://www.eclipse.org/downloads/" target="_self">Download</a></li>
+              <li><a href="https://www.eclipse.org/users/" target="_self">Getting Started</a></li>
+              <li><a href="https://www.eclipse.org/membership/" target="_self">Members</a></li>
+              <li><a href="https://www.eclipse.org/projects/" target="_self">Projects</a></li>
+              <li class="dropdown visible-xs">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Community <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://marketplace.eclipse.org/">Marketplace</a></li>
+                  <li><a href="http://events.eclipse.org/">Events</a></li>
+                  <li><a href="http://www.planeteclipse.org/">Planet Eclipse</a></li>
+                  <li><a href="https://www.eclipse.org/community/eclipse_newsletter/">Newsletter</a></li>
+                  <li><a href="https://www.youtube.com/user/EclipseFdn">Videos</a></li>
+                </ul>
+              </li>
+              <li class="dropdown visible-xs">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Participate <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+                  <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+                  <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+                  <li><a href="https://wiki.eclipse.org/">Wiki</a></li>
+                  <li><a href="https://wiki.eclipse.org/IRC">IRC</a></li>
+                  <li><a href="https://www.eclipse.org/contribute/">How to Contribute</a></li>
+                </ul>
+              </li>
+              <li class="dropdown visible-xs">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Working Groups <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://wiki.eclipse.org/Auto_IWG">Automotive</a></li>
+                  <li><a href="http://iot.eclipse.org/">Internet of Things</a></li>
+                  <li><a href="http://locationtech.org/">LocationTech</a></li>
+                  <li><a href="http://lts.eclipse.org/">Long-Term Support</a></li>
+                  <li><a href="http://polarsys.org/">PolarSys</a></li>
+                  <li><a href="http://science.eclipse.org/">Science</a></li>
+                  <li><a href="http://www.openmdm.org/">OpenMDM</a></li>
+                </ul>
+              </li>
+              <!-- More -->
+              <li class="dropdown eclipse-more hidden-xs">
+                <a data-toggle="dropdown" class="dropdown-toggle">More<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <!-- Content container to add padding -->
+                    <div class="yamm-content">
+                      <div class="row">
+                        <ul class="col-sm-8 list-unstyled">
+                          <li>
+                            <p><strong>Community</strong></p>
+                          </li>
+                          <li><a href="http://marketplace.eclipse.org/">Marketplace</a></li>
+                          <li><a href="http://events.eclipse.org/">Events</a></li>
+                          <li><a href="http://www.planeteclipse.org/">Planet Eclipse</a></li>
+                          <li><a href="https://www.eclipse.org/community/eclipse_newsletter/">Newsletter</a></li>
+                          <li><a href="https://www.youtube.com/user/EclipseFdn">Videos</a></li>
+                        </ul>
+                        <ul class="col-sm-8 list-unstyled">
+                          <li>
+                            <p><strong>Participate</strong></p>
+                          </li>
+                          <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+                          <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+                          <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+                          <li><a href="https://wiki.eclipse.org/">Wiki</a></li>
+                          <li><a href="https://wiki.eclipse.org/IRC">IRC</a></li>
+                          <li><a href="https://www.eclipse.org/contribute/">How to Contribute</a></li>
+                        </ul>
+                        <ul class="col-sm-8 list-unstyled">
+                          <li>
+                            <p><strong>Working Groups</strong></p>
+                          </li>
+                          <li><a href="http://wiki.eclipse.org/Auto_IWG">Automotive</a></li>
+                          <li><a href="http://iot.eclipse.org/">Internet of Things</a></li>
+                          <li><a href="http://locationtech.org/">LocationTech</a></li>
+                          <li><a href="http://lts.eclipse.org/">Long-Term Support</a></li>
+                          <li><a href="http://polarsys.org/">PolarSys</a></li>
+                          <li><a href="http://science.eclipse.org/">Science</a></li>
+                          <li><a href="http://www.openmdm.org/">OpenMDM</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <div class="wrapper-logo-mobile"><a class="navbar-brand visible-xs" href="https://www.eclipse.org/"><img class="logo-eclipse-default-mobile img-responsive" alt="logo" src="IGES%20file%20Specification%20-%20Eclipsepedia_files/eclipse-800x188.png"></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="hidden-print default-breadcrumbs" id="breadcrumb">
+  <div class="container-fluid">
+    <h3 class="sr-only">Breadcrumbs</h3>
+    <div class="row-fluid">
+      <div class="col-xs-24">
+        <ol class="breadcrumb">
+          <li><a href="https://www.eclipse.org/">Home</a></li>
+          <li><a href="https://wiki.eclipse.org/Main_Page">Eclipse Wiki</a></li>
+          <li class="active">IGES file Specification</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /#breadcrumb -->
+<div class="toolbar-menu breadcrumbs-offset noprint hidden-print margin-bottom-0 clearfix">
+  <div class="col-md-24">
+          <ol class="breadcrumb" role="navigation">
+                  <li id="pt-login">
+            <a href="https://wiki.eclipse.org/index.php?title=Special:UserLogin&amp;returnto=IGES+file+Specification">
+              <i class="fa fa-sign-in fa-fw orange"></i> Log in            </a>
+          </li>
+              
+      </ol></div>
+</div>
+<main role="main" class="background-grey no-promo">
+<div class="container-full">
+
+    
+    
+    <!-- content -->
+    <section id="content" class="mw-body container-full clearfix 0">
+      <div id="mw-js-message" style="display:none;"></div>
+
+      
+      <!-- bodyContent -->
+      <div id="bodyContent">
+
+        
+                <!-- jumpto -->
+        <div id="jump-to-nav" class="mw-jump">
+          Jump to: <a href="#mw-head">navigation</a>,
+          <a href="#p-search">search</a>
+        </div>
+        <!-- /jumpto -->
+        
+          <!-- leftcol -->
+          <aside class="col-md-4 noprint hidden-print" id="leftcol">
+                      <form class="input-group" role="form" id="form-eclipse-search" action="/index.php">
+              <input id="searchInput" class="search-query form-control" accesskey="f" title="Special:Search [Alt+Shift+f]" placeholder="Search" name="search" autocomplete="off" type="search">
+
+              <span class="input-group-btn">
+                <button value="search" id="mw-searchButton" type="submit" class="btn btn-default" title="Search the pages for this text" name="fulltext">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </form>
+                      <select class="form-control margin-top-10 margin-bottom-10 visible-xs visible-sm" onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);"><option class="fw-700 " selected="selected">---Navigation---</option><option value="/Main_Page">Main Page</option><option value="/Eclipsepedia:Community_portal">Community portal</option><option value="/Eclipsepedia:Current_events">Current events</option><option value="/Special:RecentChanges">Recent changes</option><option value="/Special:Random">Random page</option><option value="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents">Help</option></select><ul class="ul-left-nav fa-ul hidden-print leftnav hidden-xs hidden-sm"><li class="separator"><span class="separator">Navigation</span></li>                <li class=""><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Main_Page" id="n-mainpage" title="Visit the main page [Alt+Shift+z]" accesskey="z">Main Page</a></li>                <li class=""><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Eclipsepedia:Community_portal" id="n-portal" title="About the project, what you can do, where to find things">Community portal</a></li>                <li class=""><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Eclipsepedia:Current_events" id="n-currentevents" title="Find background information on current events">Current events</a></li>                <li class=""><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Special:RecentChanges" id="n-recentchanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r">Recent changes</a></li>                <li class=""><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Special:Random" id="n-randompage" title="Load a random page [Alt+Shift+x]" accesskey="x">Random page</a></li>                <li class=""><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" id="n-help" title="The place to find out">Help</a></li></ul>            <select class="form-control margin-top-10 margin-bottom-10 visible-xs visible-sm" onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);"><option class="fw-700 " selected="selected">---Toolbox---</option><option value="/index.php?title=IGES_file_Specification&amp;action=info">Page information</option><option value="/index.php?title=IGES_file_Specification&amp;oldid=407347">Permanent link</option><option value="/index.php?title=IGES_file_Specification&amp;printable=yes">Printable version</option><option value="/Special:SpecialPages">Special pages</option><option value="/Special:RecentChangesLinked/IGES_file_Specification">Related changes</option><option value="/Special:WhatLinksHere/IGES_file_Specification">What links here</option></select><ul class="ul-left-nav fa-ul hidden-print leftnav hidden-xs hidden-sm"><li class="separator"><span class="separator">Toolbox</span></li><li><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;action=info" id="t-info" title="More information about this page">Page information</a></li><li><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;oldid=407347" id="t-permalink" title="Permanent link to this revision of the page">Permanent link</a></li><li><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;printable=yes" id="t-print" rel="alternate" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li><li><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Special:SpecialPages" id="t-specialpages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li><li><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Special:RecentChangesLinked/IGES_file_Specification" id="t-recentchangeslinked" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li><li><i class="fa fa-angle-double-right orange fa-fw"></i> <a href="https://wiki.eclipse.org/Special:WhatLinksHere/IGES_file_Specification" id="t-whatlinkshere" title="A list of all wiki pages that link here [Alt+Shift+j]" accesskey="j">What links here</a></li></ul>                                  </aside>
+          <!-- /leftcol -->
+
+          <!-- mainContent -->
+          <div id="mainContent" class="col-md-20">
+                      <ul class="nav nav-tabs noprint hidden-print" role="tablist">
+                       <li id="ca-nstab-main" class="active"><a href="https://wiki.eclipse.org/IGES_file_Specification" title="View the content page [Alt+Shift+c]" accesskey="c" tabindex="-1">Page</a></li>
+                        <li id="ca-talk" class="new"><a href="https://wiki.eclipse.org/index.php?title=Talk:IGES_file_Specification&amp;action=edit&amp;redlink=1" title="Discussion about the content page [Alt+Shift+t]" accesskey="t" tabindex="-1">Discussion</a></li>
+                        <li id="ca-viewsource"><a href="https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;action=edit" title="This page is protected.
+You can view its source [Alt+Shift+e]" accesskey="e" tabindex="-1">View source</a></li>
+                        <li id="ca-history" class="collapsible"><a href="https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;action=history" title="Past revisions of this page [Alt+Shift+h]" accesskey="h" tabindex="-1">History</a></li>
+                      </ul>            <div class="tab-content background-white">
+              <div id="tab-pane-main-page-content" class="tab-pane active">
+
+                
+                <h1 id="firstHeading" class="firstHeading page-header">
+                  <span dir="auto">IGES file Specification</span>
+                </h1>
+                <div id="main-page-content">
+                                    
+                  
+                  <div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><p>IGES is a file format supported by the Eclipse Advanced Visualization Project (EAVP) for visualizing complex geometries.
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="#" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#What_is_IGES"><span class="tocnumber">1</span> <span class="toctext">What is IGES</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#File_Format"><span class="tocnumber">2</span> <span class="toctext">File Format</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#File_Header_.28Start_and_Global_Sections"><span class="tocnumber">2.1</span> <span class="toctext">File Header (Start and Global Sections</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#File_Data_.28DE_and_PD_Sections.29"><span class="tocnumber">2.2</span> <span class="toctext">File Data (DE and PD Sections)</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Entities"><span class="tocnumber">2.3</span> <span class="toctext">Entities</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="#Circular_Arc_.28Type_100.29"><span class="tocnumber">2.3.1</span> <span class="toctext">Circular Arc (Type 100)</span></a></li>
+<li class="toclevel-3 tocsection-7"><a href="#Composite_Curve_.28Type_102.29"><span class="tocnumber">2.3.2</span> <span class="toctext">Composite Curve (Type 102)</span></a></li>
+<li class="toclevel-3 tocsection-8"><a href="#Conic_Arc_.28Type_104.29"><span class="tocnumber">2.3.3</span> <span class="toctext">Conic Arc (Type 104)</span></a></li>
+<li class="toclevel-3 tocsection-9"><a href="#Copious_Data_.28Type_106.29"><span class="tocnumber">2.3.4</span> <span class="toctext">Copious Data (Type 106)</span></a></li>
+<li class="toclevel-3 tocsection-10"><a href="#Plane_.28Type_108.29"><span class="tocnumber">2.3.5</span> <span class="toctext">Plane (Type 108)</span></a></li>
+<li class="toclevel-3 tocsection-11"><a href="#Line_.28Type_110.29"><span class="tocnumber">2.3.6</span> <span class="toctext">Line (Type 110)</span></a></li>
+<li class="toclevel-3 tocsection-12"><a href="#Parametric_Spline_Curve_.28Type_112.29"><span class="tocnumber">2.3.7</span> <span class="toctext">Parametric Spline Curve (Type 112)</span></a></li>
+<li class="toclevel-3 tocsection-13"><a href="#Parametric_Spline_Surface_.28Type_114.29"><span class="tocnumber">2.3.8</span> <span class="toctext">Parametric Spline Surface (Type 114)</span></a></li>
+<li class="toclevel-3 tocsection-14"><a href="#Point_.28Type_116.29"><span class="tocnumber">2.3.9</span> <span class="toctext">Point (Type 116)</span></a></li>
+<li class="toclevel-3 tocsection-15"><a href="#Ruled_Surface_.28Type_118.29"><span class="tocnumber">2.3.10</span> <span class="toctext">Ruled Surface (Type 118)</span></a></li>
+<li class="toclevel-3 tocsection-16"><a href="#Surface_of_Revolution_.28Type_120.29"><span class="tocnumber">2.3.11</span> <span class="toctext">Surface of Revolution (Type 120)</span></a></li>
+<li class="toclevel-3 tocsection-17"><a href="#Tabulated_Cylinder_.28Type_122.29"><span class="tocnumber">2.3.12</span> <span class="toctext">Tabulated Cylinder (Type 122)</span></a></li>
+<li class="toclevel-3 tocsection-18"><a href="#Direction_.28Type_123.29"><span class="tocnumber">2.3.13</span> <span class="toctext">Direction (Type 123)</span></a></li>
+<li class="toclevel-3 tocsection-19"><a href="#Transformation_Matrix_.28Type_124.29"><span class="tocnumber">2.3.14</span> <span class="toctext">Transformation Matrix (Type 124)</span></a></li>
+<li class="toclevel-3 tocsection-20"><a href="#Rational_B-Spline_Curve_.28Type_126.29"><span class="tocnumber">2.3.15</span> <span class="toctext">Rational B-Spline Curve (Type 126)</span></a></li>
+<li class="toclevel-3 tocsection-21"><a href="#Rational_B-Spline_Surface_.28Type_128.29"><span class="tocnumber">2.3.16</span> <span class="toctext">Rational B-Spline Surface (Type 128)</span></a></li>
+<li class="toclevel-3 tocsection-22"><a href="#Offset_Curve_.28Type_130.29"><span class="tocnumber">2.3.17</span> <span class="toctext">Offset Curve (Type 130)</span></a></li>
+<li class="toclevel-3 tocsection-23"><a href="#Offset_Surface_.28Type_140.29"><span class="tocnumber">2.3.18</span> <span class="toctext">Offset Surface (Type 140)</span></a></li>
+<li class="toclevel-3 tocsection-24"><a href="#Boundary_.28Type_141.29"><span class="tocnumber">2.3.19</span> <span class="toctext">Boundary (Type 141)</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#Curve_on_a_Parametric_Surface_.28Type_142.29"><span class="tocnumber">2.3.20</span> <span class="toctext">Curve on a Parametric Surface (Type 142)</span></a></li>
+<li class="toclevel-3 tocsection-26"><a href="#Bounded_Surface_.28Type_143.29"><span class="tocnumber">2.3.21</span> <span class="toctext">Bounded Surface (Type 143)</span></a></li>
+<li class="toclevel-3 tocsection-27"><a href="#Trimmed_Surface_.28Type_144.29"><span class="tocnumber">2.3.22</span> <span class="toctext">Trimmed Surface (Type 144)</span></a></li>
+<li class="toclevel-3 tocsection-28"><a href="#Block_.28Type_150.29"><span class="tocnumber">2.3.23</span> <span class="toctext">Block (Type 150)</span></a></li>
+<li class="toclevel-3 tocsection-29"><a href="#Right_Angular_Wedge_.28Type_152.29"><span class="tocnumber">2.3.24</span> <span class="toctext">Right Angular Wedge (Type 152)</span></a></li>
+<li class="toclevel-3 tocsection-30"><a href="#Right_Circular_Cylinder_.28Type_154.29"><span class="tocnumber">2.3.25</span> <span class="toctext">Right Circular Cylinder (Type 154)</span></a></li>
+<li class="toclevel-3 tocsection-31"><a href="#Right_Circular_Cone_.28Type_156.29"><span class="tocnumber">2.3.26</span> <span class="toctext">Right Circular Cone (Type 156)</span></a></li>
+<li class="toclevel-3 tocsection-32"><a href="#Sphere_.28Type_158.29"><span class="tocnumber">2.3.27</span> <span class="toctext">Sphere (Type 158)</span></a></li>
+<li class="toclevel-3 tocsection-33"><a href="#Torus_.28Type_160.29"><span class="tocnumber">2.3.28</span> <span class="toctext">Torus (Type 160)</span></a></li>
+<li class="toclevel-3 tocsection-34"><a href="#Solid_of_Revolution_.28Type_162.29"><span class="tocnumber">2.3.29</span> <span class="toctext">Solid of Revolution (Type 162)</span></a></li>
+<li class="toclevel-3 tocsection-35"><a href="#Solid_of_Linear_Extrusion_.28Type_164.29"><span class="tocnumber">2.3.30</span> <span class="toctext">Solid of Linear Extrusion (Type 164)</span></a></li>
+<li class="toclevel-3 tocsection-36"><a href="#Ellipsoid_.28Type_168.29"><span class="tocnumber">2.3.31</span> <span class="toctext">Ellipsoid (Type 168)</span></a></li>
+<li class="toclevel-3 tocsection-37"><a href="#Boolean_Tree_.28Type_180.29"><span class="tocnumber">2.3.32</span> <span class="toctext">Boolean Tree (Type 180)</span></a></li>
+<li class="toclevel-3 tocsection-38"><a href="#Manifold_Solid_B-Rep_Object_.28Type_186.29"><span class="tocnumber">2.3.33</span> <span class="toctext">Manifold Solid B-Rep Object (Type 186)</span></a></li>
+<li class="toclevel-3 tocsection-39"><a href="#Plane_Surface_.28Type_190.29"><span class="tocnumber">2.3.34</span> <span class="toctext">Plane Surface (Type 190)</span></a></li>
+<li class="toclevel-3 tocsection-40"><a href="#Right_Circular_Cylindrical_Surface_.28Type_192.29"><span class="tocnumber">2.3.35</span> <span class="toctext">Right Circular Cylindrical Surface (Type 192)</span></a></li>
+<li class="toclevel-3 tocsection-41"><a href="#Right_Circular_Conical_Surface_.28Type_194.29"><span class="tocnumber">2.3.36</span> <span class="toctext">Right Circular Conical Surface (Type 194)</span></a></li>
+<li class="toclevel-3 tocsection-42"><a href="#Spherical_Surface_.28Type_196.29"><span class="tocnumber">2.3.37</span> <span class="toctext">Spherical Surface (Type 196)</span></a></li>
+<li class="toclevel-3 tocsection-43"><a href="#Toroidal_Surface_.28Type_198.29"><span class="tocnumber">2.3.38</span> <span class="toctext">Toroidal Surface (Type 198)</span></a></li>
+<li class="toclevel-3 tocsection-44"><a href="#Subfigure_Definition_.28Type_308.29"><span class="tocnumber">2.3.39</span> <span class="toctext">Subfigure Definition (Type 308)</span></a></li>
+<li class="toclevel-3 tocsection-45"><a href="#Color_Definition_.28Type_314.29"><span class="tocnumber">2.3.40</span> <span class="toctext">Color Definition (Type 314)</span></a></li>
+<li class="toclevel-3 tocsection-46"><a href="#Singular_Subfigure_Instance_.28Type_408.29"><span class="tocnumber">2.3.41</span> <span class="toctext">Singular Subfigure Instance (Type 408)</span></a></li>
+<li class="toclevel-3 tocsection-47"><a href="#Vertex_List_.28Type_502_Form_1.29"><span class="tocnumber">2.3.42</span> <span class="toctext">Vertex List (Type 502 Form 1)</span></a></li>
+<li class="toclevel-3 tocsection-48"><a href="#Edge_List_.28Type_504_Form_1.29"><span class="tocnumber">2.3.43</span> <span class="toctext">Edge List (Type 504 Form 1)</span></a></li>
+<li class="toclevel-3 tocsection-49"><a href="#Loop_.28Type_508.29"><span class="tocnumber">2.3.44</span> <span class="toctext">Loop (Type 508)</span></a></li>
+<li class="toclevel-3 tocsection-50"><a href="#Face_.28Type_510.29"><span class="tocnumber">2.3.45</span> <span class="toctext">Face (Type 510)</span></a></li>
+<li class="toclevel-3 tocsection-51"><a href="#Shell_.28Type_514.29"><span class="tocnumber">2.3.46</span> <span class="toctext">Shell (Type 514)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="What_is_IGES">What is IGES</span></h2>
+<p>The <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/IGES">Initial Graphics Exchange Specification</a>
+ (IGES) outlines a file format for the transfer of geometry data and CAD
+ models. It is an older specification, and was most recently published 
+as version 6 <a rel="nofollow" class="external text" href="https://filemonger.com/specs/igs/devdept.com/version6.pdf">here</a>.
+ It can be used to represent both Boundary-Representation (B-Rep) and 
+Constructive Solid Geometry (CSG) geometries, as well as two dimensional
+ CAD diagrams. 
+</p>
+<h2><span class="mw-headline" id="File_Format">File Format</span></h2>
+<p>The file is an ASCII text based format, having each line be exactly 
+80 characters long. As explained in the Wikipedia article on <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/IGES">IGES</a>,
+ the file is split into five sections, denoted by the specific upper 
+case letter in the 73rd column. Those sections are Start (S), Global 
+(G), Data Entry (D), Parameter Data (P), and Terminate (T) sections. The
+ Data Entry and Parameter Data sections are commonly abbreviated DE and 
+PD, respectively. 
+</p>
+<h3><span class="mw-headline" id="File_Header_.28Start_and_Global_Sections">File Header (Start and Global Sections</span></h3>
+<p>The Start and Global sections contain basic information about the 
+name of the file and its source, the delimiters for the Parameter Data 
+section, the author of the file, and other general information. The 
+start field contains human readable descriptions of the file, and my 
+have any characters in columns 1-72, with the line ending with the 
+section header and section line number. There must be at least 1 line of
+ the Start section. The global section contains preprocessor data. It 
+also must be present in the file and end with the G000000# format. For 
+example, here is the Start and Global sections from the example document
+ on Wikipedia:
+</p>
+<pre>                                                                        S      1
+1H,,1H;,4HSLOT,37H$1$DUA2:[IGESLIB.BDRAFT.B2I]SLOT.IGS;,                G      1
+17HBravo3 BravoDRAFT,31HBravo3-&gt;IGES V3.002 (02-Oct-87),32,38,6,38,15,  G      2
+4HSLOT,1.,1,4HINCH,8,0.08,13H871006.192927,1.E-06,6.,                   G      3
+31HD. A. Harrod, Tel. 313/995-6333,24HAPPLICON - Ann Arbor, MI,4,0;     G      4
+</pre>
+<p>Note that the strings are expressed in Hollerith format, meaning that
+ every string has the number of characters it contains followed by an H 
+directly preceding it. For example, the string IGES would be 4HIGES. 
+</p>
+<h3><span class="mw-headline" id="File_Data_.28DE_and_PD_Sections.29">File Data (DE and PD Sections)</span></h3>
+<p>The Data Entry and Parameter Data sections contain the information on
+ the basic data of the IGES file format: it’s entities. There are around
+ 150 different defined entities in IGES (including differing ‘forms’ of 
+some entity types). We will focus on the more common and geometry 
+centered entities. An entity is described in the Data Entry section as 
+shown here:
+</p>
+<pre>     116       1       0       1       0       0       0       0       1D      1
+     116       1       5       1       0                               0D      2
+</pre>
+<p><br>
+First, the file lists all of the entities it contains in the Data entry 
+section. This section is specified by a D in the 73rd column and lists 
+properties about the entity it describes. Each line in this section is 
+split into 10 8 character fields, and each entity is given two lines of 
+the section. This indicates that every entity has 20 fields in the Data 
+Entry section, which are usually right justified. These fields map to 
+the following properties: 
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th>Col 1-8
+</th>
+<th>Col 9-16
+</th>
+<th>Col 17-24
+</th>
+<th>Col 25-32
+</th>
+<th>Col 33-40
+</th>
+<th>Col 41-48
+</th>
+<th>Col 49-56
+</th>
+<th>Col 57-64
+</th>
+<th>Col 65-72
+</th>
+<th>Col 73-80
+</th></tr>
+<tr>
+<td> Entity Type
+</td>
+<td> PD pointer
+</td>
+<td> Structure
+</td>
+<td> Line Font Pattern
+</td>
+<td> Level
+</td>
+<td> View
+</td>
+<td> Transformation matrix pointer
+</td>
+<td> Label Display Associativity
+</td>
+<td> Status Number
+</td>
+<td> Section Code and Sequence Number
+</td></tr>
+<tr>
+<td> Entity Type
+</td>
+<td> Line Weight Number
+</td>
+<td> Color Number
+</td>
+<td> Parameter Line Count
+</td>
+<td> Form Number
+</td>
+<td> Reserved
+</td>
+<td> Reserved
+</td>
+<td> Entity Label
+</td>
+<td> Entity Subscript Number
+</td>
+<td> Section Code and Sequence Number
+</td></tr></tbody></table>
+<p>These fields indicate the following properties about the entity being declared:
+</p>
+<ul><li><b>Entity Type</b> This is the type of entity being described. For example, 116 describes a Point entity.</li>
+<li><b>PD pointer</b> This gives the location for this entities data in 
+the Parameter Data section. This location is simply the line number 
+inside the PD section that has the first line of this entity data.</li>
+<li><b>Structure</b> Zero or pointer to definition entity. Not applicable for most entities</li>
+<li><b>Line Font Pattern</b> Number or pointer to line font pattern entity. Number signifies:
+<ul><li>0 No pattern specified (default)</li>
+<li>1 Solid</li>
+<li>2 Dashed</li>
+<li>3 Phantom</li>
+<li>4 Centerline</li>
+<li>5 Dotted</li></ul></li>
+<li><b>Level</b> Specifies levels to be associated with this entity. Allows entity to appear on more than one level</li>
+<li><b>View</b> Specifies viewing options. These are:</li></ul>
+<p>0 Indicates equal visibility and characteristics in all views. Default
+Pointer to the View entity (Type 410) that it can be viewed from
+Reference a View Visible Associativity entity (Type 402, Form 3)
+</p>
+<ul><li><b>Transformation Matrix pointer</b> References a transformation matrix entity (Type 124) or is zero by default (no transformation)</li>
+<li><b>Label Display Associativity’’’ References a Label Display 
+Associativity (Type 402, Form 5) which defines how the entity label 
+appears. </b></li>
+<li><b>Status Number</b> Contains four sections of two numbers. 1-2: 
+Blank status. Either 00 for normal or 01 for blanked. 3-4: Subordinate 
+entity switch: is 00 for independent, 01 for physically dependent, 02 
+for logically dependent, and 03 for both. 5-6: Entity Use flag: is 
+either 00 for Geometry, 01 for annotation, 02 for definition, 03 for 
+Other, 04 for Logical, 05 for 2D parametric, and 06 for Construction 
+geometry. Finally, 7-8 is the hierarchy, where 00 indicates global top 
+down (use this entity’s characteristics), 01 is global defer(do not use 
+this entity’s characteristics), and 02 is use hierarchy property(use 
+Hierarchy Entity (Type 406, Form 10)to determine characteristics of 
+hierarchical grouping). </li>
+<li><b>Sequence Number</b> Specified by D#, where # is the line number 
+for this section (not from the top of the file). This is also used to 
+point to this Data Entry entity.</li>
+<li><b>Entity Type</b> See above- it is specified twice per entity listing</li>
+<li><b>Line Weight Number</b> Specifies thickness when displaying entity. Smallest is 1, 0 is default</li>
+<li><b>Color Number</b> Specifies the entity color. Allowed integer values are:
+<ul><li>0 No color (default)</li>
+<li>1 Black</li>
+<li>2 Red</li>
+<li>3 Green</li>
+<li>4 Blue </li>
+<li>5 Yellow</li>
+<li>6 Magenta</li>
+<li>7 Cyan</li>
+<li>8 White</li></ul></li>
+<li><b>Parameter Line Count Number</b> Specifies the number of lines this entity takes up in the Parameter Data Section</li>
+<li><b>Form Number</b> Indicates the form, or the representation of this entity. Changes how the parameter data is interpreted. Default is 0</li>
+<li><b>Reserved Field</b> Not used</li>
+<li><b>Reserved Field</b> Not used</li>
+<li><b>Entity Label</b> Application specified identifier- right justified</li>
+<li><b>Subscript Number</b> Numeric qualifier for the entity label. Both together form a unique identifier for the entity</li>
+<li><b>Sequence Number</b> See above. This will be D#+1, as each entity is specified on two lines.</li></ul>
+<hr>
+<p>The Parameter Data section comes right after the Data Entries, and 
+lists the data for each respective entry. A typical entry looks 
+something like this:
+</p>
+<pre>126,1,1,1,0,1,0,-5.,-5.,5.,5.,1.,1.,10.,0.,0.,10.,10.,0.,-5.,5.,       3P      3
+0.,0.,1.;                                                              3P      4
+</pre>
+<p>Note the corresponding Data Entry: 
+</p>
+<pre>     126       3       0       0       0       0       0       000010501D      3
+     126       0       0       2       0       0       0               0D      4
+</pre>
+<p>The parameter data section uses the delimiters specified in the 
+Global section to list parameters for the entity. These delimiters are 
+usually commas to separate parameters and a semi-colon to end the 
+listing. The parameter data section listing starts with the entity type 
+followed by parameter data in columns 4-64. Columns 65 to 72 contain the
+ Data Entry pointer number, which gives the index of the data entry 
+listing for this entity (must be an odd number, as the even numbers 
+contain the other half of the Data Entry). The last columns, 73-80, 
+contain the Sequence Number, being P#, similar to the Data Entry 
+section. 
+</p>
+<h3><span class="mw-headline" id="Entities">Entities</span></h3>
+<p>The following entities are supported for import into ICE. Note that 
+not all IGES files contain only these entity specifications. 
+</p>
+<h4><span class="mw-headline" id="Circular_Arc_.28Type_100.29">Circular Arc (Type 100)</span></h4>
+<p>Simple circular arc of constant radius. Usually defined with a Transformation Matrix Entity (Type 124). 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>Z</td>
+<td>z displacement on XT,YT plane
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>X</td>
+<td>x coordinate of center
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Y</td>
+<td>y coordinate of center
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>X1</td>
+<td>x coordinate of start
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Y1</td>
+<td>y coordinate of start
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>X2</td>
+<td>x coordinate of end
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>Y2</td>
+<td>y coordinate of end
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Composite_Curve_.28Type_102.29">Composite Curve (Type 102)</span></h4>
+<p>Groups other curves to form a composite. Can use Ordered List, Point, Connected Point, and Parameterized Curve entities. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>N</td>
+<td>Number of curves comprising this entity
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>DE(1)</td>
+<td>Pointer to first curve
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>1+N</td>
+<td>Pointer</td>
+<td>DE(N)</td>
+<td>Pointer to last curve
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Conic_Arc_.28Type_104.29">Conic Arc (Type 104)</span></h4>
+<p>Arc defined by the equation: Axt^2 + Bxtyt + Cyt^2 + Dxt + Eyt + F = 
+0, with a Transformation Matrix (Entity 124). Can define an ellipse, 
+parabola, or hyperbola. 
+</p><p>The definitions of the terms ellipse, parabola, and hyperbola are given in terms of the quantities
+Q1,Q2, andQ3. These quantities are:
+</p>
+<pre>           |  A   B/2  D/2 |        |  A   B/2 | 
+       Q1= | B/2   C   E/2 |   Q2 = | B/2   C  |   Q3 = A + C 
+           | D/2  E/2   F  | 
+</pre>
+<p>A parent conic curve is:
+</p>
+<ul><li>An ellipse if Q2 &gt; 0 and Q1Q3 &lt; 0.</li>
+<li>A hyperbola if Q2 &lt; 0 and Q1&nbsp;!= 0.</li>
+<li>A parabola if Q2 = 0 and Q1&nbsp;!= 0.</li></ul>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>A</td>
+<td>coefficient of xt^2
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>B</td>
+<td>coefficient of xtyt
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>C</td>
+<td>coefficient of yt^2
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>D</td>
+<td>coefficient of xt
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>E</td>
+<td>coefficient of yt
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>F</td>
+<td>scalar coefficient
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>X1</td>
+<td>x coordinate of start point
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>Y1</td>
+<td>y coordinate of start point
+</td></tr>
+<tr>
+<td>9</td>
+<td>REAL</td>
+<td>Z1</td>
+<td>z coordinate of start point
+</td></tr>
+<tr>
+<td>10</td>
+<td>REAL</td>
+<td>X2</td>
+<td>x coordinate of end point
+</td></tr>
+<tr>
+<td>11</td>
+<td>REAL</td>
+<td>Y2</td>
+<td>y coordinate of end point
+</td></tr>
+<tr>
+<td>12</td>
+<td>REAL</td>
+<td>Z2</td>
+<td>z coordinate of end point
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Copious_Data_.28Type_106.29">Copious Data (Type 106)</span></h4>
+<p>The Copious Data entity defines a set of points. 
+There are three different interpretations, depending on first parameter.
+ It is an INT, and is either 1,2, or 3. 1 Indicates that the points are 
+couples(x,y), 2 indicates the points are triples (x,y,z), and 3 
+indicates the points are sextuplets(x,y,z,i,j,k). If the format is 1, 
+then the first parameter after gives the common Z value for the ordered 
+xy pairs. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Type</td>
+<td>Either 1,2, or 3
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>Z / XP1</td>
+<td> If 1 is above, common z <br> if 2 or 3, first value
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>N</td>
+<td>REAL</td>
+<td>YPN / ZPN / KPN</td>
+<td> Last value for last point
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Plane_.28Type_108.29">Plane (Type 108)</span></h4>
+<p>Defines a plane by Ax + By +Cz = D, and a curve pointer that gives 
+the plane its bounds. Also gives a display symbol at a specified vertex 
+and with a specified size. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>A</td>
+<td>coefficient of x
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>B</td>
+<td>coefficient of y
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>C</td>
+<td>coefficient of z
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>D</td>
+<td>scalar coefficient
+</td></tr>
+<tr>
+<td>5</td>
+<td>Pointer</td>
+<td>Bounds</td>
+<td>Pointer to bounding curve
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>X</td>
+<td>x coordinate of display symbol
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>Y</td>
+<td>y coordinate of display symbol
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>Z</td>
+<td>z coordinate of display symbol
+</td></tr>
+<tr>
+<td>11</td>
+<td>REAL</td>
+<td>Size</td>
+<td>size of display symbol
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Line_.28Type_110.29">Line (Type 110)</span></h4>
+<p>Defines a line using an end point and a start point
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>X1</td>
+<td>x coordinate of start point
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>Y1</td>
+<td>y coordinate of start point
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Z1</td>
+<td>z coordinate of start point
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>X2</td>
+<td>x coordinate of end point
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Y2</td>
+<td>y coordinate of end point
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>Z2</td>
+<td>z coordinate of end point
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Parametric_Spline_Curve_.28Type_112.29">Parametric Spline Curve (Type 112)</span></h4>
+<p>Defines a curve as a series of parametric polynomials, given as Ax(i)
+ + sBx(i) + s^2 Cx(i) + s^3 Dx(i), for the x component in the i'th 
+section. The same function is used for y and z. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Type</td>
+<td>Spline type: <br> 1=Linear <br> 2=Quadratic <br> 3=Cubic <br> 4=Wilson-Fowler <br> 5=Modified Wilson-Fowler <br> 6=B-spline
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>K</td>
+<td>Degree of continuity <br> 0=Curvature <br> 1=Slope <br> 2=Both
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>Dim</td>
+<td>Dimensions (3 or 2)
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of segments
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>T1</td>
+<td>First break point
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>5+N</td>
+<td>REAL</td>
+<td>TN</td>
+<td>Last break point
+</td></tr>
+<tr>
+<td>6+N</td>
+<td>REAL</td>
+<td>AX1</td>
+<td>X coordinate polynomial
+</td></tr>
+<tr>
+<td>7+N</td>
+<td>REAL</td>
+<td>BX1</td>
+<td>
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>5+13N</td>
+<td>REAL</td>
+<td>DZN</td>
+<td>Last z coordinate polynomial
+</td></tr>
+<tr>
+<td>6+13N</td>
+<td>REAL</td>
+<td>XN</td>
+<td>Last x coordinate
+</td></tr>
+<tr>
+<td>7+13N</td>
+<td>REAL</td>
+<td>XN'</td>
+<td>Last n curve x derivative
+</td></tr>
+<tr>
+<td>8+13N</td>
+<td>REAL</td>
+<td>XN''/2!</td>
+<td>Second xn derivative
+</td></tr>
+<tr>
+<td>9+13N</td>
+<td>REAL</td>
+<td>XN'''/3!</td>
+<td>Third xn derivative
+</td></tr>
+<tr>
+<td>10+13N</td>
+<td>REAL</td>
+<td>YN</td>
+<td>Last y coordinate
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>17+13N</td>
+<td>REAL</td>
+<td>ZN'''/3!</td>
+<td>Third zn derivative
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Parametric_Spline_Surface_.28Type_114.29">Parametric Spline Surface (Type 114)</span></h4>
+<p>Defines a surface as a series of parametric surfaces, splitting them 
+into a grid (i by j). They are described by the equation Ax(i,j) + 
+sBx(i,j) + s^2 Cx(i,j) + s^3 Dx(i,j) + tEx(i,j) + tsEx(i,j) + ts^2 
+Fx(i,j) + ts^3 Gx(i,j) + t^2 Kx(i,j) + t^2 s Lx(i,j) + t^2 s^2 Mx(i,j) +
+ t^2 s^3 Nx(i,j) + t^3 Px(i,j) + t^3 s Qx(i,j) + t^3 s^2 Rx(i,j) + t^3 
+s^2 Sx(i,j). Note that that equation is the description of the X element
+ in the i,j section of the spline surface.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Type</td>
+<td>Spline type: <br> 1=Linear <br> 2=Quadratic <br> 3=Cubic <br> 4=Wilson-Fowler <br> 5=Modified Wilson-Fowler <br> 6=B-spline
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>K</td>
+<td>Patch type<br> 0=Unspecified <br> 1=Cartesian Product
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>M</td>
+<td>Number of u segments
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of v segments
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>TU1</td>
+<td>First break point in u
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>5+M</td>
+<td>REAL</td>
+<td>TUM</td>
+<td>Last break point in u
+</td></tr>
+<tr>
+<td>6+M</td>
+<td>REAL</td>
+<td>TV1</td>
+<td>First break point in v
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>5+M+N</td>
+<td>REAL</td>
+<td>TVN</td>
+<td>Last break point in v
+</td></tr>
+<tr>
+<td>7+M+N</td>
+<td>REAL</td>
+<td>Ax(1,1)</td>
+<td>First coefficient for i,j = 1,1
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>...</td>
+<td>REAL</td>
+<td>Sz(M,N)</td>
+<td>Last coefficient for i,j = M,N
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Point_.28Type_116.29">Point (Type 116)</span></h4>
+<p>Defines a point in 3D space. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>X</td>
+<td>x coordinate of point
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>Y</td>
+<td>y coordinate of point
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Z</td>
+<td>z coordinate of point
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>P</td>
+<td>Pointer to sub-figure entity, specifies display symbol
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Ruled_Surface_.28Type_118.29">Ruled Surface (Type 118)</span></h4>
+<p>This is a surface formed by sweeping over an area between defined 
+curves. The sweep can be done by lines connecting points of equal arc 
+length (Form 0) or equal parametric values (Form1). Valid curves would 
+be points, lines, circles, conics, parametric splines, rational 
+B-splines, composite curves, or any parametric curves. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>P1</td>
+<td>pointer to first curve
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>P2</td>
+<td>pointer to second curve
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>DirFlag</td>
+<td>Direction. 0=First to first, last to last <br> 1=First to last, last to first
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>DevFlag</td>
+<td>Developable: 0=Possibly not <br> 1=Yes
+</td></tr></tbody></table>
+<p><br>
+</p>
+<h4><span class="mw-headline" id="Surface_of_Revolution_.28Type_120.29">Surface of Revolution (Type 120)</span></h4>
+<p>This solid is formed by rotating a bounded surface on a specified axis and recording the area it passes through. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Axis</td>
+<td>Pointer to Line describing axis of rotation
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Surface</td>
+<td>Pointer to generatrix entity
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>SA</td>
+<td>Start angle (Rad)
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>EA</td>
+<td>End angle (Rad)
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Tabulated_Cylinder_.28Type_122.29">Tabulated Cylinder (Type 122)</span></h4>
+<p>Formed by moving a line segment parallel to itself along a curve called the directrix. 
+Curve may be any of: a line, a circular arc, a conic arc, a parametric spline curve, or a rational B-spline curve.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Curve</td>
+<td>Pointer to directrix
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>Lx</td>
+<td>x coordinate of line end
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Ly</td>
+<td>y coordinate of line end
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Lz</td>
+<td>z coordinate of line end
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Direction_.28Type_123.29">Direction (Type 123)</span></h4>
+<p>Gives a direction in 3 Dimensions, where x^2 + y^2 + z^2 &gt; 0
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>X1</td>
+<td>x component
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>Y1</td>
+<td>y component
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Z1</td>
+<td>z component
+</td></tr></tbody></table>
+<p><br>
+</p>
+<h4><span class="mw-headline" id="Transformation_Matrix_.28Type_124.29">Transformation Matrix (Type 124)</span></h4>
+<p>Transforms entities by matrix multiplication and vector addition to give a translation, as shown below:
+</p>
+<pre>           | R11  R12  R13 |          | T1 |              
+       R=  | R21  R22  R23 |     T =  | T2 |        ET = RE + T, where E is the entity coordinate 
+           | R31  R32  R33 |          | T3 |           
+</pre>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>R11</td>
+<td>First row
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>R12</td>
+<td>..
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>R13</td>
+<td>..
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>T1</td>
+<td>First T vector value
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>R21</td>
+<td>Second row..
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>12</td>
+<td>REAL</td>
+<td>T3</td>
+<td>Third T vector value
+</td></tr></tbody></table>
+<p><br>
+</p>
+<h4><span class="mw-headline" id="Rational_B-Spline_Curve_.28Type_126.29">Rational B-Spline Curve (Type 126)</span></h4>
+<p>Composes analytic curves. Form: 0=Determined by data 1=Line 2=Circular arc 3=Elliptical arc 4=Parabolic arc 5=Hyperbolic arc
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>K</td>
+<td>Upper index of sum
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>M</td>
+<td>Degree of basis functions
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>Flag1</td>
+<td>0=nonplanar, 1=planar
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>Flag2</td>
+<td>0=open curve, 1=closed curve
+</td></tr>
+<tr>
+<td>5</td>
+<td>INT</td>
+<td>Flag3</td>
+<td>0=rational, 1=polynomial
+</td></tr>
+<tr>
+<td>6</td>
+<td>INT</td>
+<td>Flag4</td>
+<td>0=nonperiodic , 1=periodic
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>T1</td>
+<td>First value of knot sequence
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>8+K+M</td>
+<td>REAL</td>
+<td>T(1+K+M)</td>
+<td>Last value of knot sequence
+</td></tr>
+<tr>
+<td>9+K+M</td>
+<td>REAL</td>
+<td>W0</td>
+<td>First weight
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>9+2K+M</td>
+<td>REAL</td>
+<td>WK</td>
+<td>Last weight
+</td></tr>
+<tr>
+<td>10+2K+M</td>
+<td>REAL</td>
+<td>X0</td>
+<td>x of first control point
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>12+5*K+M</td>
+<td>REAL</td>
+<td>ZK</td>
+<td>z of last control point
+</td></tr>
+<tr>
+<td>13+5*K+M</td>
+<td>REAL</td>
+<td>V0</td>
+<td>Start parameter value
+</td></tr>
+<tr>
+<td>14+5*K+M</td>
+<td>REAL</td>
+<td>V1</td>
+<td>End parameter value
+</td></tr>
+<tr>
+<td>14+5*K+M</td>
+<td>REAL</td>
+<td>XN</td>
+<td>Unit normal x (if planar)
+</td></tr>
+<tr>
+<td>15+5*K+M</td>
+<td>REAL</td>
+<td>YN</td>
+<td>Unit normal y (if planar)
+</td></tr>
+<tr>
+<td>16+5*K+M</td>
+<td>REAL</td>
+<td>ZN</td>
+<td>Unit normal z (if planar)
+</td></tr>
+</tbody></table>
+<h4><span class="mw-headline" id="Rational_B-Spline_Surface_.28Type_128.29">Rational B-Spline Surface (Type 128)</span></h4>
+<p>This is a surface entity defined by multiple surfaces. The form 
+number describes the general type: 0=determined from data, 1=Plane, 
+2=Right circular cylinder, 3=Cone, 4=Sphere, 5=Torus, 6=Surface of 
+revolution, 7=Tabulated cylinder, 8=Ruled surface, 9=General quadratic 
+surface. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>K2</td>
+<td>Upper index of first sum
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>K1</td>
+<td>Upper index of second sum
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>M1</td>
+<td>Degree of first basis functions
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>M2</td>
+<td>Degree of second basis functions
+</td></tr>
+<tr>
+<td>5</td>
+<td>INT</td>
+<td>Flag1</td>
+<td>0=closed in first direction, 1=not closed
+</td></tr>
+<tr>
+<td>6</td>
+<td>INT</td>
+<td>Flag2</td>
+<td>0=closed in second direction, 1=not closed
+</td></tr>
+<tr>
+<td>7</td>
+<td>INT</td>
+<td>Flag3</td>
+<td>0=rational, 1=polynomial
+</td></tr>
+<tr>
+<td>8</td>
+<td>INT</td>
+<td>Flag4</td>
+<td>0=nonperiodic in first direction , 1=periodic
+</td></tr>
+<tr>
+<td>9</td>
+<td>INT</td>
+<td>Flag5</td>
+<td>0=nonperiodic in second direction , 1=periodic
+</td></tr>
+<tr>
+<td>10</td>
+<td>REAL</td>
+<td>T1(0)</td>
+<td>First value of first knot sequence
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>11+K1+M1</td>
+<td>REAL</td>
+<td>T1(1+K1+M1)</td>
+<td>Last value of first knot sequence
+</td></tr>
+<tr>
+<td>12+K1+M1</td>
+<td>REAL</td>
+<td>T2(0)</td>
+<td>First value of second knot sequence
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>13+K1+M1+K2+M2</td>
+<td>REAL</td>
+<td>T2(1+K2+M2)</td>
+<td>Last value of second knot sequence
+</td></tr>
+<tr>
+<td>14+K1+M1+K2+M2</td>
+<td>REAL</td>
+<td>W(0,0)</td>
+<td>First weight
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>14+K1+K2+M1+M2+(1+K1)(1+K2)</td>
+<td>REAL</td>
+<td>W(K1,K2)</td>
+<td>Last weight
+</td></tr>
+<tr>
+<td>^+1</td>
+<td>REAL</td>
+<td>X(0,0)</td>
+<td>x of first control point
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>^+9+3(1+K1)(1+K2)</td>
+<td>REAL</td>
+<td>K(K1)(K2)</td>
+<td>z of last control point
+</td></tr>
+<tr>
+<td>^+1</td>
+<td>REAL</td>
+<td>U0</td>
+<td>Start first parameter value
+</td></tr>
+<tr>
+<td>^+1</td>
+<td>REAL</td>
+<td>U1</td>
+<td>End first parameter value
+</td></tr>
+<tr>
+<td>^+1</td>
+<td>REAL</td>
+<td>V0</td>
+<td>Start second parameter value
+</td></tr>
+<tr>
+<td>^+1</td>
+<td>REAL</td>
+<td>V1</td>
+<td>End second parameter value
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Offset_Curve_.28Type_130.29">Offset Curve (Type 130)</span></h4>
+<p>Contains the data to determine curve offsets
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Curve</td>
+<td>Curve to be offset
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>Flag1</td>
+<td>Offset distance <br> 1=Single value offset <br> 2=Offset distance varying linearly <br> 3=Offset distance as a function
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>Offset</td>
+<td>Pointer to curve describing offset (Flag1=3)
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>Dim</td>
+<td>Coordinate of offset curve to use (Flag1=3)
+</td></tr>
+<tr>
+<td>5</td>
+<td>INT</td>
+<td>Flag2</td>
+<td>Tapered offset type: <br> 1=Function of arc length <br> 2=Function of parameter (Flag1=2, 3)
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>D1</td>
+<td>First offset distance(Flag1=1, 2)
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>TD1</td>
+<td>Arc length/parameter value (Flag1=2)
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>D2</td>
+<td>Second offset distance
+</td></tr>
+<tr>
+<td>9</td>
+<td>REAL</td>
+<td>TD2</td>
+<td>Second arc length/parameter value (Flag1=2)
+</td></tr>
+<tr>
+<td>10</td>
+<td>REAL</td>
+<td>X</td>
+<td>X value of normal vector
+</td></tr>
+<tr>
+<td>11</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y value of normal vector
+</td></tr>
+<tr>
+<td>12</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z value of normal vector
+</td></tr>
+<tr>
+<td>13</td>
+<td>REAL</td>
+<td>TT1</td>
+<td>Offset curve start parameter value
+</td></tr>
+<tr>
+<td>14</td>
+<td>REAL</td>
+<td>TT2</td>
+<td>Offset curve end parameter value
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Offset_Surface_.28Type_140.29">Offset Surface (Type 140)</span></h4>
+<p>Gives the data necessary to calculate the offset surface from a particular surface.
+</p><p><br>
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>NX</td>
+<td>X coordinate of offset indicator
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>NY</td>
+<td>Y coordinate of offset indicator
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Nz</td>
+<td>z coordinate of offset indicator
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>D</td>
+<td>Distance by which surface is offset <br> from indicator
+</td></tr>
+<tr>
+<td>5</td>
+<td>Pointer</td>
+<td>Surface</td>
+<td>Pointer to surface to be offset
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Boundary_.28Type_141.29">Boundary (Type 141)</span></h4>
+<p>Identifies a surface boundary consisting of curves lying on a surface.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Type</td>
+<td>The type of boundary being represented <br> 0=Entities reference model space curves <br> 1=Entities reference model space curves and <br> associated parameter space curves
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>Pref</td>
+<td>Preferred representation of trimming curves. <br> 0 = Unspecified <br> 1 = Model Space <br> 2 = Parameter Space <br> 3 = Equal
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>Surface</td>
+<td>The untrimmed surface to be bounded
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of curves in boundary
+</td></tr>
+<tr>
+<td>5</td>
+<td>Pointer</td>
+<td>MC1</td>
+<td> Pointer to first model space curve
+</td></tr>
+<tr>
+<td>6</td>
+<td>INT</td>
+<td>Flag 1</td>
+<td>Orientation flag: 0 = No reversal <br> 1 = Reversal needed
+</td></tr>
+<tr>
+<td>7</td>
+<td>INT</td>
+<td>K1</td>
+<td>How many parameter curves for this model curve
+</td></tr>
+<tr>
+<td>8</td>
+<td>Pointer</td>
+<td>PC(1,1)</td>
+<td>First parameter curve for model curve 1
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>7+K1</td>
+<td>Pointer</td>
+<td>PC(1,K1)</td>
+<td>Last parameter curve for model curve 1
+</td></tr>
+<tr>
+<td>8+K1</td>
+<td>Pointer</td>
+<td>MC2</td>
+<td>Model curve 2
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>11+3N+Sum(K(N))</td>
+<td>Pointer</td>
+<td>PC(N,KN)</td>
+<td>Last parameter curve for model curve N
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Curve_on_a_Parametric_Surface_.28Type_142.29">Curve on a Parametric Surface (Type 142)</span></h4>
+<p>Associates a curve and a surface, gives how a curve lies on the specified surface. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Flag1</td>
+<td>Indicates how curve was created: <br> 0 = Unspecified <br> 1 = Projection <br> 2 = Intersection of surfaces <br> 3 = Isoparametric curve
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Surface</td>
+<td>Points to surface curve lies on
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>Curve</td>
+<td>Definition of curve
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>Mapping</td>
+<td>Entity that provides mapping from curve to surface
+</td></tr>
+<tr>
+<td>5</td>
+<td>INT</td>
+<td>Representation</td>
+<td>Preferred representation of curve: <br> 0 = Unspecified <br> 1 = S(B(t)) <br> 2 = C(t) <br> 3 = Both equal
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Bounded_Surface_.28Type_143.29">Bounded Surface (Type 143)</span></h4>
+<p>Represents a surface bounded by Boundary Entities. 
+</p><p><br>
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Type</td>
+<td>The type of boundary being represented <br> 0=Entities reference model space curves <br> 1=Entities reference model space curves and <br> associated parameter space curves
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Surface</td>
+<td>Points to unbounded surface
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of Boundary entities
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>B1</td>
+<td>Pointer to first boundary entity
+</td></tr>
+<tr>
+<td>3+N</td>
+<td>Pointer</td>
+<td>BN</td>
+<td>Pointer to last boundary entity
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Trimmed_Surface_.28Type_144.29">Trimmed Surface (Type 144)</span></h4>
+<p>Describes a surface trimmed by a boundary consisting of boundary Curves. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Surface</td>
+<td>Entity to be trimmed
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>Flag</td>
+<td>0=Boundary is boundary of surface, 1=otherwise
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of closed curves that make up inner boundary
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>OuterBound</td>
+<td>Pointer to Curve on Parametric Surface <br> (Type 142) entity that is outer bound
+</td></tr>
+<tr>
+<td>5</td>
+<td>Pointer</td>
+<td>Inner1</td>
+<td>Pointer to first inner curve boundary
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>5+N</td>
+<td>Pointer</td>
+<td>InnerN</td>
+<td>Pointer to last inner curve boundary
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Block_.28Type_150.29">Block (Type 150)</span></h4>
+<p>Defines a CSG Block object. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>LX</td>
+<td>Side length along x axis
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>LY</td>
+<td>Side length along y axis
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>LZ</td>
+<td>Side length along z axis
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>X</td>
+<td>Corner x coordinate
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Corner y coordinate
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Corner z coordinate
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>Xi</td>
+<td>Unit vector along x direction
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>Xj</td>
+<td>
+</td></tr>
+<tr>
+<td>9</td>
+<td>REAL</td>
+<td>Xk</td>
+<td>
+</td></tr>
+<tr>
+<td>10</td>
+<td>REAL</td>
+<td>Zi</td>
+<td>Unit vector along z direction
+</td></tr>
+<tr>
+<td>11</td>
+<td>REAL</td>
+<td>Zj</td>
+<td>
+</td></tr>
+<tr>
+<td>12</td>
+<td>REAL</td>
+<td>Zk</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Right_Angular_Wedge_.28Type_152.29">Right Angular Wedge (Type 152)</span></h4>
+<p>Defines a CSG Wedge
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>LX</td>
+<td>Size along x axis
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>LY</td>
+<td>Size along y axis
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>LZ</td>
+<td>Size along z axis
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>TLX</td>
+<td>Distance from local x axis LY away
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>X</td>
+<td>Coordinates of corner
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>Y</td>
+<td>
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>Z</td>
+<td>
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>Xi</td>
+<td>Normal vector for x axis
+</td></tr>
+<tr>
+<td>9</td>
+<td>REAL</td>
+<td>Xj</td>
+<td>
+</td></tr>
+<tr>
+<td>10</td>
+<td>REAL</td>
+<td>Xk</td>
+<td>
+</td></tr>
+<tr>
+<td>11</td>
+<td>REAL</td>
+<td>Zi</td>
+<td>Normal vector for z axis
+</td></tr>
+<tr>
+<td>12</td>
+<td>REAL</td>
+<td>Zj</td>
+<td>
+</td></tr>
+<tr>
+<td>13</td>
+<td>REAL</td>
+<td>Zk</td>
+<td>
+</td></tr>
+</tbody></table>
+<h4><span class="mw-headline" id="Right_Circular_Cylinder_.28Type_154.29">Right Circular Cylinder (Type 154)</span></h4>
+<p>Defines a CSG cylinder
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>H</td>
+<td>Height
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>R</td>
+<td>Radius
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>X</td>
+<td>X coordinate of face center
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y coordinate of face center
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z coordinate of face center
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>i</td>
+<td>Normal vector along cylinder axis
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>j</td>
+<td>
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>k</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Right_Circular_Cone_.28Type_156.29">Right Circular Cone (Type 156)</span></h4>
+<p>Defines a CSG Cone primitive object.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>H</td>
+<td>Height
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>R1</td>
+<td>Larger radius
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>R2</td>
+<td>Smaller radius
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>X</td>
+<td>X coordinate of larger face center
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y coordinate of larger face center
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z coordinate of larger face center
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>i</td>
+<td>Normal vector along axis <br> (from larger face toward smaller)
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>j</td>
+<td>
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>k</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Sphere_.28Type_158.29">Sphere (Type 158)</span></h4>
+<p>Defines the CSG Sphere primitive type.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>R</td>
+<td>Radius
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>X</td>
+<td>X coordinate of center
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y coordinate of center
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z coordinate of center
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Torus_.28Type_160.29">Torus (Type 160)</span></h4>
+<p>Defines the CSG Torus primitive type. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>R1</td>
+<td>Radius from center to middle of loop <br> (how big torus is)
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>R2</td>
+<td>Radius of loop <br> (how thick torus is)
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>X</td>
+<td>X coordinate of center
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y coordinate of center
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z coordinate of center
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>i</td>
+<td>Normal vector through center hole
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>j</td>
+<td>
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>k</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Solid_of_Revolution_.28Type_162.29">Solid of Revolution (Type 162)</span></h4>
+<p>Describes a solid that is formed by rotating a curve around an axis.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>C</td>
+<td>Curve to revolve
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>F</td>
+<td>Fraction of full rotation (default 1)
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>X</td>
+<td>X coordinate to revolve around
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y coordinate to revolve around
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z coordinate to revolve around
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>i</td>
+<td>Vector specifying axis of revolution
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>j</td>
+<td>
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>k</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Solid_of_Linear_Extrusion_.28Type_164.29">Solid of Linear Extrusion (Type 164)</span></h4>
+<p>Describes a solid that is formed by translating an area by a planar curve.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>C</td>
+<td>Closed curve to translate
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>L</td>
+<td>Length of extrusion
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>i</td>
+<td>Vector specifying direction of extrusion
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>j</td>
+<td>
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>k</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Ellipsoid_.28Type_168.29">Ellipsoid (Type 168)</span></h4>
+<p>Defines the CSG Ellipsoid primitive type, defined by the curve: X^2/LX^2 + Y^2/LY^2 + Z^2/LZ^2 = 1
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>LX</td>
+<td>X scaling
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>LY</td>
+<td>Y scaling
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>LZ</td>
+<td>Z scaling
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>X</td>
+<td>X coordinate of center
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Y coordinate of center
+</td></tr>
+<tr>
+<td>6</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Z coordinate of center
+</td></tr>
+<tr>
+<td>7</td>
+<td>REAL</td>
+<td>i1</td>
+<td>Unit vector along local X axis <br> (major axis)
+</td></tr>
+<tr>
+<td>8</td>
+<td>REAL</td>
+<td>j1</td>
+<td>
+</td></tr>
+<tr>
+<td>9</td>
+<td>REAL</td>
+<td>k1</td>
+<td>
+</td></tr>
+<tr>
+<td>10</td>
+<td>REAL</td>
+<td>i2</td>
+<td>Unit vector along local Z axis <br> (minor axis)
+</td></tr>
+<tr>
+<td>11</td>
+<td>REAL</td>
+<td>j2</td>
+<td>
+</td></tr>
+<tr>
+<td>12</td>
+<td>REAL</td>
+<td>k2</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Boolean_Tree_.28Type_180.29">Boolean Tree (Type 180)</span></h4>
+<p>Provides a CSG Boolean tree structure, for constructing CSG geometries. <br>
+The three types of operations it accepts are denoted by an integer: <br>
+1 = Union <br>
+2 = Intersection <br>
+3 = Difference <br>
+The data is provided in post-order notation, giving operands and operations. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of operands + operations
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>P1</td>
+<td>Pointer to first operand
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>P2</td>
+<td>Pointer to second operand
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer/INT</td>
+<td>P3/O1</td>
+<td>Third operand or first operation
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>1+N</td>
+<td>INT</td>
+<td>ON</td>
+<td>Last Operation
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Manifold_Solid_B-Rep_Object_.28Type_186.29">Manifold Solid B-Rep Object (Type 186)</span></h4>
+<p>Defines a closed, solid, finite volume in R^3 by enumerating the boundary. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Shell</td>
+<td>Pointer to the shell entity (Type 514)
+</td></tr>
+<tr>
+<td>2</td>
+<td>BOOL</td>
+<td>FLAG</td>
+<td> Orientation flag- True = shell agrees with faces
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of void shells
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>VShell1</td>
+<td>First void shell
+</td></tr>
+<tr>
+<td>5</td>
+<td>BOOL</td>
+<td>VFLAG1</td>
+<td>Orientation flag of VShell1
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>3+2N</td>
+<td>BOOL</td>
+<td>VFLAGN</td>
+<td>Orientation flag of VShellN
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Plane_Surface_.28Type_190.29">Plane Surface (Type 190)</span></h4>
+<p>The Plane Surface is given by a point on the plane and the normal. Used by a Face entity.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Point</td>
+<td>Pointer to Point Entity (Type 116)
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Normal</td>
+<td>Pointer to Direction Entity (Type 123)
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>Ref</td>
+<td>Pointer to Direction Entity (Type 123) <br> Gives the reference direction <br>* Only for Form 1
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Right_Circular_Cylindrical_Surface_.28Type_192.29">Right Circular Cylindrical Surface (Type 192)</span></h4>
+<p>Defines the surface for a right circular cylinder. Used by a Face Entity.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Point</td>
+<td>Pointer to Point Entity (Type 116) <br> Point on axis
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Axis</td>
+<td>Pointer to Direction Entity (Type 123) <br> Axis direction
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>R</td>
+<td>Radius
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>Ref</td>
+<td>Pointer to Direction Entity (Type 123) <br> Gives the reference direction <br>* Only for Form 1
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Right_Circular_Conical_Surface_.28Type_194.29">Right Circular Conical Surface (Type 194)</span></h4>
+<p>Defines a surface as a circular cone. Used by a Face Entity. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Point</td>
+<td>Pointer to Point Entity (Type 116) <br> Point on axis
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Axis</td>
+<td>Pointer to Direction Entity (Type 123) <br> Axis direction
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>R</td>
+<td>Radius at Point
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>ANG</td>
+<td>Angle between axis and cone surface
+</td></tr>
+<tr>
+<td>5</td>
+<td>Pointer</td>
+<td>Ref</td>
+<td>Pointer to Direction Entity (Type 123) <br> Gives the reference direction <br>* Only for Form 1
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Spherical_Surface_.28Type_196.29">Spherical Surface (Type 196)</span></h4>
+<p>Defines a surface as a sphere. Used by a Face Entity.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Point</td>
+<td>Pointer to Point Entity (Type 116) <br> Center point
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>R</td>
+<td>Radius
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Axis</td>
+<td>Pointer to Direction Entity (Type 123) <br> Axis direction <br>* Only for Form 1
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>Ref</td>
+<td>Pointer to Direction Entity (Type 123) <br> Gives the reference direction <br>* Only for Form 1
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Toroidal_Surface_.28Type_198.29">Toroidal Surface (Type 198)</span></h4>
+<p>Defines a surface as a Torus. Used by the Face Entity. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>Point</td>
+<td>Pointer to Point Entity (Type 116) <br> Point on axis
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Axis</td>
+<td>Pointer to Direction Entity (Type 123) <br> Axis direction
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>R1</td>
+<td>Major radius
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>R2</td>
+<td>Minor radius
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>Ref</td>
+<td>Pointer to Direction Entity (Type 123) <br> Gives the reference direction <br>* Only for Form 1
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Subfigure_Definition_.28Type_308.29">Subfigure Definition (Type 308)</span></h4>
+<p>Combines other entity definitions into one Entity. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>INT</td>
+<td>Depth</td>
+<td>Depth of subfigure (with nesting)
+</td></tr>
+<tr>
+<td>2</td>
+<td>String</td>
+<td>Name</td>
+<td>Subfigure Name
+</td></tr>
+<tr>
+<td>3</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of entities in subfigure
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>E1</td>
+<td>Associated entity 1
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>3+N</td>
+<td>Pointer</td>
+<td>EN</td>
+<td>Last associated entity
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Color_Definition_.28Type_314.29">Color Definition (Type 314)</span></h4>
+<p>Used to give custom colors for other entities, in RGB color space. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>REAL</td>
+<td>RED</td>
+<td>Red value, from 0.0 - 100.0
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>GREEN</td>
+<td>Green value, from 0.0 - 100.0
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>BLUE</td>
+<td>Blue value, from 0.0 - 100.0
+</td></tr>
+<tr>
+<td>4</td>
+<td>String</td>
+<td>Name</td>
+<td>Optional color name
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Singular_Subfigure_Instance_.28Type_408.29">Singular Subfigure Instance (Type 408)</span></h4>
+<p>Gives the Subfigure Definition Entity a defined subfigure. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>1</td>
+<td>Pointer</td>
+<td>SD</td>
+<td>The Subfigure Definition Entity (type 308)
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>X</td>
+<td>Translation in the x direction
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Y</td>
+<td>Translation in the y direction
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Z</td>
+<td>Translation in the z direction
+</td></tr>
+<tr>
+<td>5</td>
+<td>REAL</td>
+<td>S</td>
+<td>Scale factor
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Vertex_List_.28Type_502_Form_1.29">Vertex List (Type 502 Form 1)</span></h4>
+<p>Provides a list of vertices for specifying B-Rep Geometries.
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>INT</td>
+<td>N</td>
+<td>Number of vertices in list
+</td></tr>
+<tr>
+<td>2</td>
+<td>REAL</td>
+<td>X1</td>
+<td>Coordinates of first vertex
+</td></tr>
+<tr>
+<td>3</td>
+<td>REAL</td>
+<td>Y1</td>
+<td>
+</td></tr>
+<tr>
+<td>4</td>
+<td>REAL</td>
+<td>Z1</td>
+<td>
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>3N-1</td>
+<td>REAL</td>
+<td>XN</td>
+<td>Coordinates of last vertex
+</td></tr>
+<tr>
+<td>3N</td>
+<td>REAL</td>
+<td>YN</td>
+<td>
+</td></tr>
+<tr>
+<td>3N+1</td>
+<td>REAL</td>
+<td>ZN</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Edge_List_.28Type_504_Form_1.29">Edge List (Type 504 Form 1)</span></h4>
+<p>Provides a list of edges, comprised of vertices, for specifying B-Rep Geometries.
+</p><p><br>
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>INT</td>
+<td>N</td>
+<td>Number of Edges in list
+</td></tr>
+<tr>
+<td>2</td>
+<td>Pointer</td>
+<td>Curve1</td>
+<td>First model space curve
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>SVL1</td>
+<td>Vertex list for start vertex
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>S1</td>
+<td>Index of start vertex in SVL1
+</td></tr>
+<tr>
+<td>5</td>
+<td>Pointer</td>
+<td>EVL1</td>
+<td>Vertex list for end vertex
+</td></tr>
+<tr>
+<td>6</td>
+<td>INT</td>
+<td>E1</td>
+<td>Index of end vertex in EVL1
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>5N-3</td>
+<td>Pointer</td>
+<td>CurveN</td>
+<td>First model space curve
+</td></tr>
+<tr>
+<td>5N-2</td>
+<td>Pointer</td>
+<td>SVLN</td>
+<td>Vertex list for start vertex
+</td></tr>
+<tr>
+<td>5N-1</td>
+<td>INT</td>
+<td>SN</td>
+<td>Index of start vertex in SVLN
+</td></tr>
+<tr>
+<td>5N</td>
+<td>Pointer</td>
+<td>EVLN</td>
+<td>Vertex list for end vertex
+</td></tr>
+<tr>
+<td>5N+1</td>
+<td>INT</td>
+<td>EN</td>
+<td>Index of end vertex in EVLN
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Loop_.28Type_508.29">Loop (Type 508)</span></h4>
+<p>Defines a loop, specifying a bounded face, for B-Rep Geometries. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>INT</td>
+<td>N</td>
+<td>Number of Edges in loop
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>Type1</td>
+<td>Type of Edge 1 <br> 0 = Edge <br> 1 = Vertex
+</td></tr>
+<tr>
+<td>3</td>
+<td>Pointer</td>
+<td>E1</td>
+<td>First vertex list or edge list
+</td></tr>
+<tr>
+<td>4</td>
+<td>INT</td>
+<td>Index1</td>
+<td>Index of edge/vertex in E1
+</td></tr>
+<tr>
+<td>5</td>
+<td>BOOL</td>
+<td>Flag1</td>
+<td>Orientation flag- True = Agrees with model curve
+</td></tr>
+<tr>
+<td>6</td>
+<td>INT</td>
+<td>K1</td>
+<td>Number of parametric space curves
+</td></tr>
+<tr>
+<td>7</td>
+<td>BOOL</td>
+<td>ISO(1,1)</td>
+<td>Isoparametric flag of first parameter space curve
+</td></tr>
+<tr>
+<td>8</td>
+<td>Pointer</td>
+<td>PSC(1,1)</td>
+<td>First parametric space curve of E1
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>6+2K1</td>
+<td>Pointer</td>
+<td>PSC(1,K1)</td>
+<td>Last parametric space curve of E1
+</td></tr>
+<tr>
+<td>7+2K1</td>
+<td>INT</td>
+<td>Type2</td>
+<td>Type of Edge 2
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Face_.28Type_510.29">Face (Type 510)</span></h4>
+<p>Defines a bound portion of three dimensional space (R^3) which has a finite area. Used to construct B-Rep Geometries. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>Pointer</td>
+<td>Surface</td>
+<td>Underlying surface
+</td></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of loops
+</td></tr>
+<tr>
+<td>3</td>
+<td>BOOL</td>
+<td>Flag</td>
+<td>Outer loop flag: <br> True indicates Loop1 is outer loop. <br> False indicates no outer loop.
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>Loop1</td>
+<td>Pointer to first loop of the face
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>3+N</td>
+<td>Pointer</td>
+<td>LoopN</td>
+<td>Pointer to last loop of the face
+</td></tr></tbody></table>
+<h4><span class="mw-headline" id="Shell_.28Type_514.29">Shell (Type 514)</span></h4>
+<p>Defines edge connected sets of faces for defining B-Rep geometries. 
+</p>
+<table class="wikitable">
+<caption style="text-align: left;"> Parameter Data
+</caption>
+<tbody><tr>
+<th>Index in list
+</th>
+<th>Type of data
+</th>
+<th>Name
+</th>
+<th>Description
+</th></tr>
+<tr>
+<td>2</td>
+<td>INT</td>
+<td>N</td>
+<td>Number of faces
+</td></tr>
+<tr>
+<td>4</td>
+<td>Pointer</td>
+<td>Face1</td>
+<td>Pointer to first face
+</td></tr>
+<tr>
+<td>3</td>
+<td>BOOL</td>
+<td>Flag1</td>
+<td>Orientation flag of first face. <br> True indicates face agrees with surface
+</td></tr>
+<tr>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>.<br>.</td>
+<td>
+</td></tr>
+<tr>
+<td>2N</td>
+<td>Pointer</td>
+<td>FaceN</td>
+<td>Pointer to last face
+</td></tr>
+<tr>
+<td>1+2N</td>
+<td>BOOL</td>
+<td>FlagN</td>
+<td>Orientation flag of last face.
+</td></tr></tbody></table>
+
+<!-- 
+NewPP limit report
+Cached time: 20171013053258
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.264 seconds
+Real time usage: 0.265 seconds
+Preprocessor visited node count: 230/1000000
+Preprocessor generated node count: 268/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+
+<!-- Saved in parser cache with key my_wiki:pcache:idhash:54651-0!*!*!!en!*!* and timestamp 20171013053258 and revision id 407347
+ -->
+</div>
+                                      <!-- catlinks -->
+                    <div id="catlinks" class="catlinks catlinks-allhidden"></div>                     <!-- /catlinks -->
+                                  </div>
+              </div>
+            </div>
+          </div>
+        <!-- /maincontent -->
+
+                <!-- printfooter -->
+        <div class="printfooter">
+        Retrieved from "<a dir="ltr" href="https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;oldid=407347">https://wiki.eclipse.org/index.php?title=IGES_file_Specification&amp;oldid=407347</a>"        </div>
+        <!-- /printfooter -->
+        
+        
+        <!-- debughtml -->
+                <!-- /debughtml -->
+
+      </div>
+      <!-- /bodyContent -->
+    </section>
+    <!-- /content -->
+
+    <!-- footer -->
+    </div>
+<section id="footer-contribution-info" style="border-top:1px solid #ccc;" class="footer-offset background-white margin-top-25"><div class="container text-center padding-top-10 padding-bottom-10"><p id="footercredit">This page was last modified 12:36, 23 June 2016 by <a href="https://wiki.eclipse.org/index.php?title=User:Kaspergam.bellsouth.net&amp;action=edit&amp;redlink=1" class="new" title="User:Kaspergam.bellsouth.net (page does not exist)">Kasper Gammeltoft</a>. Based on work by <a href="https://wiki.eclipse.org/index.php?title=User:Jayjaybillings.gmail.com&amp;action=edit&amp;redlink=1" class="new" title="User:Jayjaybillings.gmail.com (page does not exist)">Jay Billings</a>.</p><p id="footerviews"></p></div></section></main> <!-- /#main-content-container-row -->
+<p id="back-to-top" class="noprint hidden-print">
+  <a class="visible-xs" href="#top">Back to the top</a>
+</p>
+<footer role="contentinfo" id="solstice-footer" class="noprint hidden-print">
+  <div class="container">
+    <div class="row">
+      <section class="col-sm-offset-1 col-xs-11 col-sm-7 col-md-6 col-md-offset-0 hidden-print" id="footer-eclipse-foundation">
+        <h2 class="section-title">Eclipse Foundation</h2>
+        <ul class="nav">
+          <li><a href="https://www.eclipse.org/org/">About us</a></li>
+          <li><a href="https://www.eclipse.org/org/foundation/contact.php">Contact Us</a></li>
+          <li><a href="https://www.eclipse.org/donate">Donate</a></li>
+          <li><a href="https://www.eclipse.org/org/documents/">Governance</a></li>
+          <li><a href="https://www.eclipse.org/artwork/">Logo and Artwork</a></li>
+          <li><a href="https://www.eclipse.org/org/foundation/directors.php">Board of Directors</a></li>
+        </ul>
+      </section>
+      <section class="col-sm-offset-1 col-xs-11 col-sm-7 col-md-6 col-md-offset-0 hidden-print" id="footer-legal">
+        <h2 class="section-title">Legal</h2>
+        <ul class="nav">
+          <li><a href="https://www.eclipse.org/legal/privacy.php">Privacy Policy</a></li>
+          <li><a href="https://www.eclipse.org/legal/termsofuse.php">Terms of Use</a></li>
+          <li><a href="https://www.eclipse.org/legal/copyright.php">Copyright Agent</a></li>
+          <li><a href="https://www.eclipse.org/legal/epl-2.0/">Eclipse Public License</a></li>
+          <li><a href="https://www.eclipse.org/legal/">Legal Resources </a></li>
+        </ul>
+      </section>
+      <section class="col-sm-offset-1 col-xs-11 col-sm-7 col-md-6 col-md-offset-0 hidden-print" id="footer-useful-links">
+        <h2 class="section-title">Useful Links</h2>
+        <ul class="nav">
+          <li><a href="https://bugs.eclipse.org/bugs/">Report a Bug</a></li>
+          <li><a href="https://help.eclipse.org/">Documentation</a></li>
+          <li><a href="https://www.eclipse.org/contribute/">How to Contribute</a></li>
+          <li><a href="https://www.eclipse.org/mail/">Mailing Lists</a></li>
+          <li><a href="https://www.eclipse.org/forums/">Forums</a></li>
+          <li><a href="https://marketplace.eclipse.org/">Marketplace</a></li>
+        </ul>
+      </section>
+      <section class="col-sm-offset-1 col-xs-11 col-sm-7 col-md-6 col-md-offset-0 hidden-print" id="footer-other">
+        <h2 class="section-title">Other</h2>
+        <ul class="nav">
+          <li><a href="https://www.eclipse.org/ide/">IDE and Tools</a></li>
+          <li><a href="https://www.eclipse.org/projects">Community of Projects</a></li>
+          <li><a href="https://www.eclipse.org/org/workinggroups/">Working Groups</a></li>
+        </ul>
+        <ul class="list-inline social-media">
+          <li><a href="https://twitter.com/EclipseFdn"><i class="fa fa-twitter-square"></i></a></li>
+          <li><a href="https://plus.google.com/+Eclipse"><i class="fa fa-google-plus-square"></i></a></li>
+          <li><a href="https://www.facebook.com/eclipse.org"><i class="fa fa-facebook-square"></i> </a></li>
+          <li><a href="https://www.youtube.com/user/EclipseFdn"><i class="fa fa-youtube-square"></i></a></li>
+        </ul>
+      </section>
+      <div id="copyright" class="col-sm-offset-1 col-sm-14 col-md-24 col-md-offset-0">
+        <span class="hidden-print">
+          <div class="wrapper-logo-eclipse-white"><a href="https://www.eclipse.org/"><img class="logo-eclipse-white img-responsive" alt="logo" src="IGES%20file%20Specification%20-%20Eclipsepedia_files/eclipse-logo-bw-332x78.png"></a></div>
+        </span>
+        <p id="copyright-text">Copyright © 2017 The Eclipse Foundation. All Rights Reserved.</p>
+      </div>
+      <a href="#" class="scrollup" style="display: block;">Back to the top</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-910670-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+    <!-- /footer -->
+    <script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.loader.state({"skins.solstice":"loading","user":"ready","user.groups":"ready"});mw.loader.load("/load.php?debug=false\u0026lang=en\u0026modules=skins.solstice\u0026only=scripts\u0026skin=solstice");mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"]);
+} );</script><script>window.RLQ = window.RLQ || []; window.RLQ.push( function () {
+mw.config.set({"wgBackendResponseTime":629});
+} );</script>  
+
+<div style="display: none; font-size: 14px;" class="suggestions"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>
