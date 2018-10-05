@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model -->
+<html itemscope="" itemtype="http://schema.org/QAPage"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/robotics/img/favicon.ico?v=42259f93a085">
+        <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/robotics/img/apple-touch-icon.png?v=2b4dee09af5b">
+        <link rel="search" type="application/opensearchdescription+xml" title="Robotics Stack Exchange" href="https://robotics.stackexchange.com/opensearch.xml">
+
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model">
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/robotics/img/apple-touch-icon@2.png?v=da210979bb08">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="robotics.stackexchange.com">
+        <meta name="twitter:site" content="@StackRobotics">
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="MATLAB 3D Simulation with SOLIDWORKS model">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;m learning  to make a 3D simulation in MATLAB based on a model designed from SOLIDWORKS.
+There is an example: SIMULINK+SOLIDWORKS
+
+The way used here is: 
+Create a 3D model in SOLIDWORKS
+Create a...">
+        <script src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/rules-p-c1rF4kxgLUzNc.js.download" async=""></script><script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/quant.js.download"></script><script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/beacon.js.download"></script><script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/analytics.js.download"></script><script src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/jquery.min.js.download"></script>
+        <script src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/stub.en.js.download"></script>
+    
+        <link rel="stylesheet" type="text/css" href="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/all.css">
+    
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;MATLAB 3D Simulation with SOLIDWORKS model&#39;" href="https://robotics.stackexchange.com/feeds/question/7723">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+
+            StackExchange.ready(function () {
+                
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:10,shownCommentCount:5,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:7723});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('469', '7723');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+             
+        
+        
+        
+                    <script type="text/x-mathjax-config;executed=true">
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                    TeX: { 
+                        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                    messageStyle: "none"
+            });
+            </script>
+            <script src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/MathJax.js.download"></script>
+        <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('469');
+                StackExchange.realtime.subscribeToTopBarNotifications('469');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","serverTime":1515781880,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Robotics Stack Exchange","description":"Q&A for professional robotic engineers, hobbyists, researchers and students","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdsB7sSAAAAAAzjgEF_Hd8vXv-C42sa_KyofaGR","recaptchaAudioLang":"en","enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":469,"childUrl":"https://robotics.meta.stackexchange.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"8e3722bf4453581cbf4629eab078bacb","tid":"80a6b64b-9dc5-4abe-773b-6eb08fd6e9d8","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true},"realtime":{"newest":true,"active":true,"tagged":true,"staleDisconnectIntervalInHours":0,"workerIframeDomain":"https://cdn.sstatic.net"},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"topBar":{},"snippets":{"renderDomain":"stacksnippets.net"},"paths":{},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"f44e1f6cd352","js/moderator.en.js":"b86e02678d91","js/full-anon.en.js":"258fdb6b3863","js/full.en.js":"705b2e196b85","js/wmd.en.js":"afbbe05feecc","js/third-party/jquery.autocomplete.min.js":"d3b8fa7fdf74","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"91fb9b46b986","js/help.en.js":"dbd4f489eff2","js/tageditor.en.js":"235a2acc7d79","js/tageditornew.en.js":"80a18a633e71","js/inline-tag-editing.en.js":"681a5e3ebd00","js/revisions.en.js":"297d702fb157","js/review.en.js":"92df650bf614","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"03e8875a2287","js/explore-qlist.en.js":"88f824a42b1a","js/events.en.js":"f129a7a6cad5","js/keyboard-shortcuts.en.js":"9352d7463df3","js/external-editor.en.js":"1a34c5bf72a3","js/adops.en.js":"22a9bd59b1e9","js/mathjax-editing.en.js":"1930297f1188"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css">&lt;style&gt;body,.top-bar{margin-top:1.9em}&lt;/style&gt;</noscript>
+    <script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/full-anon.en.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/post-validation.en.js.download"></script><script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/prettify-full.en.js.download"></script><script async="" src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/external-editor.en.js.download"></script><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.2') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.2') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.2') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+    <body class="question-page new-topbar"><div id="MathJax_Message" style="display: none;"></div><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div>
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar">
+    <div class="-container">
+        <div class="-main">
+            
+                <a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-logo js-gps-track js-network-logo" data-gps-track="stack_exchange_popup.show">
+                    <svg aria-hidden="true" class="svg-icon native iconLogoSEAlternativeSm" width="110" height="15" viewBox="0 0 110 15"><g><path d="M50.4 11.92l-1.98-3.23-1.05 1.17v2.06h-1.42V2.08h1.42v6.07l2.76-3.24h1.73L49.4 7.66l2.77 4.26h-1.76zm-7.86.08c-1.6 0-3.16-.97-3.16-3.6 0-2.62 1.56-3.57 3.16-3.57.97 0 1.66.28 2.33.98l-.98.94c-.45-.48-.8-.66-1.35-.66s-1.01.22-1.32.62c-.3.39-.42.88-.42 1.7 0 .81.11 1.32.42 1.71.3.4.77.62 1.32.62s.9-.18 1.35-.66l.98.93c-.67.7-1.36.99-2.33.99zm-5.7-3.18h-1.67c-.84 0-1.27.38-1.27 1.01 0 .64.4 1 1.3 1 .54 0 .95-.05 1.33-.4.2-.21.3-.54.3-1.04v-.57zm.02 3.1v-.64c-.51.51-1 .72-1.88.72-.89 0-1.47-.2-1.9-.64a2.13 2.13 0 0 1-.57-1.5c0-1.17.83-2.02 2.45-2.02h1.87v-.5c0-.88-.44-1.3-1.55-1.3-.78 0-1.16.17-1.55.67l-.94-.87c.67-.77 1.37-1 2.55-1 1.94 0 2.92.8 2.92 2.4v4.68h-1.4zm-6.44 0c-1.33 0-1.95-.94-1.95-1.95V6.12h-.8V5.04h.8V2.9h1.43v2.13h1.37v1.08H29.9V9.9c0 .51.25.82.78.82h.59v1.2h-.85zm-6.9.08c-1.5 0-2.57-.35-3.52-1.3l1-.98a3.3 3.3 0 0 0 2.55.94c1.3 0 2.06-.55 2.06-1.5 0-.43-.13-.8-.4-1.03-.25-.23-.5-.33-1.09-.41l-1.17-.17a3.43 3.43 0 0 1-1.89-.79 2.43 2.43 0 0 1-.72-1.87c0-1.72 1.25-2.89 3.32-2.89 1.32 0 2.24.33 3.1 1.12l-.97.94a2.94 2.94 0 0 0-2.17-.76c-1.17 0-1.82.66-1.82 1.53 0 .36.12.68.38.91.25.22.66.39 1.12.46l1.13.16c.93.14 1.44.36 1.86.74.55.47.81 1.17.81 2.01 0 1.81-1.5 2.89-3.58 2.89z" fill="#FFF"></path><path d="M107.4 6.88c-.2-.44-.61-.76-1.23-.76-.63 0-1.04.32-1.23.76-.12.27-.16.46-.17.79h2.8a2 2 0 0 0-.17-.8zm-2.63 2.04c0 .94.58 1.63 1.6 1.63.81 0 1.21-.23 1.68-.69l1.11 1.08a3.52 3.52 0 0 1-2.8 1.16c-1.74 0-3.4-.8-3.4-3.76 0-2.39 1.3-3.74 3.2-3.74 2.06 0 3.22 1.5 3.22 3.5v.82h-4.61zm-5.68-2.67c-1.1 0-1.2.92-1.2 1.9 0 .96.1 1.9 1.2 1.9 1.08 0 1.21-.94 1.21-1.9 0-.98-.13-1.9-1.21-1.9zm-.19 8.53c-1.13 0-1.9-.22-2.67-.96l1.14-1.15c.41.4.83.56 1.45.56 1.1 0 1.48-.77 1.48-1.51v-.75c-.48.53-1.03.73-1.75.73s-1.34-.24-1.76-.65c-.69-.68-.74-1.63-.74-2.9 0-1.29.05-2.21.74-2.9a2.5 2.5 0 0 1 1.77-.65c.78 0 1.29.21 1.8.77V4.7h1.78v7.05c0 1.76-1.26 3.04-3.24 3.04zm-5.58-2.77V7.58c0-1-.63-1.33-1.21-1.33s-1.23.33-1.23 1.33v4.43h-1.84V4.7h1.8v.67c.47-.5 1.15-.76 1.83-.76.74 0 1.33.24 1.74.65.6.59.75 1.28.75 2.08V12h-1.84zm-7.14-3.1h-1.46c-.66 0-1.03.32-1.03.84 0 .5.34.84 1.06.84.51 0 .84-.04 1.16-.35.2-.18.27-.48.27-.93v-.4zm.04 3.1v-.63c-.5.49-.96.7-1.8.7-.84 0-1.45-.21-1.89-.65-.4-.4-.6-1-.6-1.64 0-1.17.8-2.12 2.51-2.12h1.74V7.3c0-.8-.4-1.15-1.37-1.15-.7 0-1.03.17-1.42.6l-1.17-1.14c.72-.78 1.43-1 2.66-1 2.06 0 3.14.86 3.14 2.58V12h-1.8zm-7 0V7.54c0-.97-.62-1.3-1.2-1.3-.57 0-1.18.34-1.18 1.3v4.47H75V2h1.84v3.36c.5-.5 1.11-.76 1.76-.76 1.62 0 2.47 1.13 2.47 2.67v4.74h-1.84zm-7.7.09c-1.48 0-3.3-.8-3.3-3.76 0-2.97 1.82-3.74 3.3-3.74 1 0 1.77.31 2.42.99L72.7 6.82c-.38-.4-.7-.57-1.19-.57-.44 0-.78.15-1.05.47-.28.36-.4.85-.4 1.62 0 .77.12 1.28.4 1.63.27.33.61.48 1.05.48.48 0 .8-.17 1.19-.58l1.24 1.23c-.65.67-1.41 1-2.43 1zm-6.07-.1l-1.36-2.2-1.34 2.2h-2.2l2.54-3.74-2.45-3.58h2.2l1.25 2.1 1.26-2.1h2.2l-2.44 3.58L67.65 12h-2.2zm-12.46 0V2h6.63v1.74h-4.66V6.1h3.97v1.75h-3.97v2.43h4.66V12H53z" fill="#2F96E8"></path><path d="M2 1h8a2 2 0 0 1 2 2H0c0-1.1.9-2 2-2z" fill="#8FD8F7"></path><path d="M0 10h12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm7 2v3l3-3z" fill="#155397"></path><path fill="#46A2D9" d="M0 4h12v2H0z"></path><path fill="#2D6DB5" d="M0 7h12v2H0z"></path></g></svg>
+                </a>
+                <div class="topbar-dialog network-logo-dialog js-network-logo-dialog dno">
+                    <div class="dialog-content">
+                        <h4 class="bold">Stack Exchange Network</h4>
+                        <p>Stack Exchange network consists of 171 Q&amp;A communities including <a href="https://stackoverflow.com/">Stack Overflow</a>, the largest, most trusted online community for developers to learn, share their knowledge, and build their careers.</p>
+                        <a class="btn-secondary" href="https://stackexchange.com/" data-gps-track="stack_exchange_popup.click">Visit Stack Exchange</a>
+                        <a class="icon-close js-close-button"><svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9z"></path></svg></a>
+                    </div>
+                </div>
+
+
+                <nav class="navigation" role="navigation" aria-label="site navigation">
+                    <ol class="-list">
+                    </ol>
+                </nav>
+
+        </div>
+        
+            <form id="search" action="https://robotics.stackexchange.com/search" method="get" class="searchbar" autocomplete="off" role="search">
+                <input name="q" type="text" placeholder="Search on Robotics…" value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field">
+                <button type="submit" aria-label="Search..." class="btn-topbar-primary js-search-submit"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.86 11.32L18 16.5 16.5 18l-5.18-5.14v-.35a7 7 0 1 1 1.19-1.19h.35zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"></path></svg></button>
+            </form>
+
+        
+
+
+    
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="https://robotics.stackexchange.com/">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+            <a href="https://robotics.stackexchange.com/help" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:14 })">help</a>
+                    <a href="https://chat.stackexchange.com/?tab=site&amp;host=robotics.stackexchange.com" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+            </div>
+    <a href="https://robotics.stackexchange.com/" class="current-site-link site-link js-gps-track" data-id="469" data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-robotics site-icon" title="Robotics"></div>
+        Robotics
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://robotics.meta.stackexchange.com/" class="site-link js-gps-track" data-id="470" data-gps-track="site.switch({ target_site:470, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-roboticsmeta site-icon" title="Robotics Meta"></div>
+        Robotics Meta
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://robotics.stackexchange.com/users/signup?ssrc=site_switcher&amp;returnurl=https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a> or <a href="https://robotics.stackexchange.com/users/login?ssrc=site_switcher&amp;returnurl=https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model" class="login-link js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog/" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="https://robotics.stackexchange.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="https://robotics.stackexchange.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://robotics.meta.stackexchange.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+        </div>
+        <ol class="-list">
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=inbox" class="-link js-inbox-button" title="Recent inbox messages">
+            <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M15.19 1H4.63c-.85 0-1.6.54-1.85 1.35L0 10.79V15c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-4.21l-2.87-8.44A2 2 0 0 0 15.19 1zm-.28 10l-2 2h-6l-2-2H1.96L4.4 3.68A1 1 0 0 1 5.35 3h9.12a1 1 0 0 1 .95.68L17.86 11h-2.95z"></path></svg>
+            <span class="indicator-badge js-unread-count _important" style="display: none;"></span>
+        </a>
+    </li>
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=reputation" class="-link js-achievements-button" title="Recent achievements: reputation, badges, and privileges earned" data-unread-class="_highlighted-positive">
+            <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"></path></svg>
+            <span class="indicator-badge js-unread-count _positive" style="display: none;"></span>
+        </a>
+    </li>
+
+
+                <li class="-item"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-link js-help-button" title="Help Center and other resources">
+        <svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8a5.8 5.8 0 0 1-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66a5.29 5.29 0 0 1 1.43-1.22c.16-.12.28-.25.38-.39a1.34 1.34 0 0 0 .02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"></path></svg>
+    </a></li>
+
+                <li class="-item">
+        <a href="https://stackexchange.com/" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 171 Stack Exchange sites">
+            <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"></path></svg>
+        </a>
+    </li>
+
+        </ol>
+    </nav>
+        <div class="-ctas">
+                <a href="https://robotics.stackexchange.com/users/login?ssrc=head&amp;returnurl=https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model" class="login-link btn-clear" rel="nofollow">Log In</a>
+                    <a href="https://robotics.stackexchange.com/users/signup?ssrc=head&amp;returnurl=https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model" class="login-link btn-topbar-primary" rel="nofollow">Sign Up</a>
+
+        </div>
+</div>
+
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+
+
+    <div class="container  ">
+            <div id="header">
+                <br class="cbt">
+                <div id="hlogo">
+                    <a href="https://robotics.stackexchange.com/" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+                        Robotics
+                            <span class="beta-title">beta</span>
+                    </a>
+                </div>
+                <div id="hmenus">
+                        <div class="nav mainnavs" role="navigation" aria-label="site navigation">
+                            <ul>
+                                    <li class="youarehere">
+        <a id="nav-questions" href="https://robotics.stackexchange.com/questions" class="js-gps-track" data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">
+        Questions
+        </a>
+    </li>
+
+                                    <li>
+        <a id="nav-tags" href="https://robotics.stackexchange.com/tags" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">
+        Tags
+        </a>
+    </li>
+
+                                    <li>
+        <a id="nav-users" href="https://robotics.stackexchange.com/users" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">
+        Users
+        </a>
+    </li>
+
+                                    <li>
+        <a id="nav-badges" href="https://robotics.stackexchange.com/help/badges" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:4})">
+        Badges
+        </a>
+    </li>
+
+    <li>
+        <a id="nav-unanswered" href="https://robotics.stackexchange.com/unanswered" class="js-gps-track" data-gps-track="top_nav.click({is_current:false, location:2, destination:5})">
+        Unanswered
+        </a>
+    </li>
+                            </ul>
+                        </div>
+                    <div class="nav askquestion" role="navigation" aria-label="ask new question">
+                        <ul>
+                            <li>
+                                <a id="nav-askquestion" href="https://robotics.stackexchange.com/questions/ask">Ask Question</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+
+
+        <div id="content">
+
+
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/robotics/img/apple-touch-icon.png?v=2b4dee09af5b">
+
+
+<div id="herobox" class="js-dismissable-hero" data-campaign-name="nso">
+    <div id="hero-content">
+            <div id="close"><a title="click to minimize">_</a></div>
+        <div id="blurb">
+            Robotics Stack Exchange is a question and answer site for professional robotic engineers, hobbyists, researchers and students. Join them; it only takes a minute:
+            <br>
+            <br>
+            <a href="https://robotics.stackexchange.com/users/signup?ssrc=hero&amp;returnurl=https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model" id="tell-me-more" class="button">Sign up</a>
+        </div>
+        <div id="desc">
+            <b>Here's how it works:</b>
+            <ol id="hiw">
+                <li id="q">
+                    Anybody can ask a question
+                </li>
+                <li id="an">
+                    Anybody can answer
+                </li>
+                <li id="b">
+                    The best answers are voted up and rise to the top
+                </li>
+            </ol>
+        </div>
+    <div style="clear: both"></div>
+    </div>
+</div><script>
+    StackExchange.ready(function () {
+
+        StackExchange.Hero.init("nso", "a");
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+
+        $('.js-dismissable-hero #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+              });
+
+            StackExchange.Hero.dismiss();
+
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $(".js-dismissable-hero").fadeOut("fast", function () {
+                        $(".js-dismissable-hero").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+</script>    <div class="inner-content clearfix">
+            <div id="question-header">
+                <h1 itemprop="name"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model" class="question-hyperlink">MATLAB 3D Simulation with SOLIDWORKS model</a></h1>
+
+            
+        </div>
+            <div id="mainbar" role="main" aria-label="question and answers">
+
+            
+
+<div class="question" data-questionid="7723" id="question">
+
+        <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="7723">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">5</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I'm learning  to make a 3D simulation in MATLAB based on a model designed from SOLIDWORKS.
+There is an example: <a href="https://youtu.be/1nSafEJlySs" rel="nofollow">SIMULINK+SOLIDWORKS</a></p>
+
+<p>The way used here is: </p>
+
+<ol>
+<li><p>Create a 3D model in SOLIDWORKS</p></li>
+<li><p>Create a xml file applicable to import to MATLAB via SimMechanics Link</p></li>
+<li><p>Import the model to MATLAB/SIMULINK. A simulink system is created.</p></li>
+</ol>
+
+<p>After these steps, controlling the system will be implemented in <strong>SIMULINK</strong>.
+But I feel simulink is kind of strict to control. I want to be more flexible, apply any algorithm to the model. And using matlab *.m file to control is more efficient way. </p>
+
+<p>So my question is this: Is there any way to do 3D simulation (MATLAB+SOLIDWORKS) by using only *.m file to control, no <strong>SIMULINK</strong> anymore? </p>
+
+<p>All model information will be contained in the *m.file. Maybe the step 1 and 2 are inherited, but step 3 is different.</p>
+    </div>
+    <div class="post-taglist">
+        <a href="https://robotics.stackexchange.com/questions/tagged/matlab" class="post-tag js-gps-track" title="show questions tagged &#39;matlab&#39;" rel="tag">matlab</a> <a href="https://robotics.stackexchange.com/questions/tagged/simulation" class="post-tag js-gps-track" title="show questions tagged &#39;simulation&#39;" rel="tag">simulation</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="https://robotics.stackexchange.com/q/7723" title="short permalink to this question" class="short-link" id="link-post-7723">share</a><span class="lsep">|</span><a href="https://robotics.stackexchange.com/posts/7723/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="https://robotics.stackexchange.com/posts/7723/revisions" title="show all edits to this post">edited <span title="2015-07-30 23:57:18Z" class="relativetime">Jul 30 '15 at 23:57</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://robotics.stackexchange.com/users/9176/greenonline"><div class="gravatar-wrapper-32"><img src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/rUfLl.png" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://robotics.stackexchange.com/users/9176/greenonline">Greenonline</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,053</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="24 bronze badges"><span class="badge3"></span><span class="badgecount">24</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2015-07-22 07:11:51Z" class="relativetime">Jul 22 '15 at 7:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://robotics.stackexchange.com/users/9205/phan"><div class="gravatar-wrapper-32"><img src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/f518fc470b13e39859bd74b3aecd8d3b" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://robotics.stackexchange.com/users/9205/phan">Phan</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">53</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="6 bronze badges"><span class="badge3"></span><span class="badgecount">6</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7723" class="comments js-comments-container ">
+		        <table>
+                    <tbody class="js-comments-list" data-remaining-comments-count="5" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-11216" class="comment js-comment ">
+        <td class="js-comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Basically you need a Simulink file because of the SimMechanics. But if is possible to "control" simulink files from a *.m file. Make sure the optimization "Inline Parameters" is disabled to be able to set all parameters of the simulink easily. Just start your simulation with the sim() command. If you can be more precise what you try to achieve I can give a better answer.</span>
+                    –&nbsp;<a href="https://robotics.stackexchange.com/users/6911/tobiask" title="1,612 reputation" class="comment-user">TobiasK</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#comment11216_7723"><span title="2015-07-22 08:26:47Z" class="relativetime-clean">Jul 22 '15 at 8:26</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-11217" class="comment js-comment ">
+        <td class="js-comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks for your comment. I made a controller for a quadruped in MATLAB, and animated in 2D. I see the simulation in <a href="https://www.youtube.com/watch?v=IG7hX-_D3gU" rel="nofollow noreferrer">this video</a> is very interesting. So i want to realize a 3D simulation for my work.</span>
+                    –&nbsp;<a href="https://robotics.stackexchange.com/users/9205/phan" title="53 reputation" class="comment-user owner">Phan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#comment11217_7723"><span title="2015-07-22 08:36:22Z" class="relativetime-clean">Jul 22 '15 at 8:36</span></a></span>
+                        <span class="edited-yes" title="this comment was edited 3 times"></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-11218" class="comment js-comment ">
+        <td class="js-comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I usually create a simulation m-file which enables me to control any input to the system (creating offsets, provide measured data....) and set the parameters per non-inlining. So you can do easily DoE simulations and so on.</span>
+                    –&nbsp;<a href="https://robotics.stackexchange.com/users/6911/tobiask" title="1,612 reputation" class="comment-user">TobiasK</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#comment11218_7723"><span title="2015-07-22 08:41:26Z" class="relativetime-clean">Jul 22 '15 at 8:41</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-11219" class="comment js-comment ">
+        <td class="js-comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Can you explain it more clearly. I still don't get your point. What is DoE simulation?</span>
+                    –&nbsp;<a href="https://robotics.stackexchange.com/users/9205/phan" title="53 reputation" class="comment-user owner">Phan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#comment11219_7723"><span title="2015-07-22 08:44:51Z" class="relativetime-clean">Jul 22 '15 at 8:44</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+    <tr id="comment-11220" class="comment js-comment ">
+        <td class="js-comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I created a chat room to avoid discussion in comments: <a href="http://chat.stackexchange.com/rooms/26108/matlab-3d-simulation-with-solidwork-model">chat.stackexchange.com/rooms/26108/…</a></span>
+                    –&nbsp;<a href="https://robotics.stackexchange.com/users/6911/tobiask" title="1,612 reputation" class="comment-user">TobiasK</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#comment11220_7723"><span title="2015-07-22 08:47:09Z" class="relativetime-clean">Jul 22 '15 at 8:47</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+                    </tbody>
+		        </table>
+	    </div>
+
+        <div id="comments-link-7723" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link  dno" title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."></a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link " title="expand to show all comments on this post" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" onclick="">show <b>5</b> more comments</a>
+        </div>         
+    </td>
+</tr>        </tbody></table>
+</div>
+
+            <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2 data-answercount="1">
+                                1 Answer
+                                <span style="display:none;" itemprop="answerCount">1</span>
+                        </h2>
+                        <div>
+                            <div id="tabs">
+        <a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere " href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+  
+<a name="7727"></a>
+<div id="answer-7727" class="answer accepted-answer" data-answerid="7727" itemscope="" itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="7727">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">3</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>I use CAD software to generate 3D models, convert those 3D models to an STL format, then load those STL files to Matlab with the following script:</p>
+
+<pre class="lang-matlab prettyprint prettyprinted" style=""><code><span class="kwd">function</span><span class="pln"> </span><span class="tag">[</span><span class="ident">points</span><span class="pun">,</span><span class="ident">success</span><span class="tag">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="ident">LoadSTL</span><span class="tag">(</span><span class="fun">path</span><span class="tag">)</span><span class="pln">
+</span><span class="com">% LoadSTL loads an ASCII STL file with units in [mm]. </span><span class="pln">
+</span><span class="com">% The output is a structure array where each element in the array is </span><span class="pln">
+</span><span class="com">% a vertex. </span><span class="pln">
+</span><span class="com">%</span><span class="pln">
+</span><span class="com">% [points , success] = LoadSTL(path)</span><span class="pln">
+</span><span class="com">%</span><span class="pln">
+</span><span class="com">% path = String containing the path and extension of the file to be loaded.</span><span class="pln">
+</span><span class="com">% points = Matrix of locations where each column is a vertex, rows are x/y/z/1:</span><span class="pln">
+</span><span class="com">%    points(1,:) = x</span><span class="pln">
+</span><span class="com">%    points(2,:) = y</span><span class="pln">
+</span><span class="com">%    points(3,:) = z</span><span class="pln">
+</span><span class="com">%    points(4,:) = 1</span><span class="pln">
+</span><span class="com">%           NOTE - every three columns is a new face/facet. </span><span class="pln">
+</span><span class="com">% success = Bit indicating if the file was successfully opened or not. </span><span class="pln">
+
+</span><span class="ident">success</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+</span><span class="ident">fileID</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">fopen</span><span class="tag">(</span><span class="fun">path</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">if</span><span class="pln"> </span><span class="ident">fileID</span><span class="pln"> </span><span class="pun">&lt;</span><span class="lit">0</span><span class="pln">
+    </span><span class="fun">fprintf</span><span class="tag">(</span><span class="str">'File not found at path %s\n'</span><span class="pun">,</span><span class="fun">path</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="fun">fprintf</span><span class="tag">(</span><span class="str">'Loading Path %s...\n'</span><span class="pun">,</span><span class="fun">path</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="ident">fileData</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">fread</span><span class="tag">(</span><span class="ident">fileID</span><span class="pun">,</span><span class="str">'*char'</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="ident">eol</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">sprintf</span><span class="tag">(</span><span class="str">'\n'</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="ident">stlFile</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="ident">strsplit</span><span class="tag">(</span><span class="ident">fileData</span><span class="transpose">'</span><span class="pun">,</span><span class="ident">eol</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="fun">fclose</span><span class="tag">(</span><span class="ident">fileID</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="fun">fprintf</span><span class="tag">(</span><span class="str">'Done.\n'</span><span class="tag">)</span><span class="pln">
+</span><span class="fun">pause</span><span class="tag">(</span><span class="lit">0.25</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="fun">clc</span><span class="pln">
+</span><span class="fun">assignin</span><span class="tag">(</span><span class="str">'base'</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="str">'stlFile'</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="ident">stlFile</span><span class="tag">)</span><span class="pln">
+</span><span class="ident">pointsTracker</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">for</span><span class="pln"> </span><span class="ident">i</span><span class="pun">=</span><span class="lit">2</span><span class="pun">:</span><span class="fun">size</span><span class="tag">(</span><span class="ident">stlFile</span><span class="pun">,</span><span class="lit">2</span><span class="tag">)</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="fun">mod</span><span class="tag">(</span><span class="ident">pointsTracker</span><span class="pun">,</span><span class="lit">100</span><span class="tag">)</span><span class="pun">==</span><span class="lit">0</span><span class="pln">
+        </span><span class="fun">clc</span><span class="pln">
+        </span><span class="fun">fprintf</span><span class="tag">(</span><span class="str">'Parsing file at %s...\n'</span><span class="pun">,</span><span class="fun">path</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+        </span><span class="fun">fprintf</span><span class="tag">(</span><span class="str">'Currently logged %d points\n'</span><span class="pun">,</span><span class="ident">pointsTracker</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+
+    </span><span class="ident">testLine</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="ident">stlFile</span><span class="tag">{</span><span class="ident">i</span><span class="tag">}</span><span class="pun">;</span><span class="pln">
+    </span><span class="ident">rawStrip</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="ident">strsplit</span><span class="tag">(</span><span class="ident">testLine</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="str">' '</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="str">'CollapseDelimiters'</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="const">true</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">if</span><span class="pln"> </span><span class="fun">numel</span><span class="tag">(</span><span class="ident">rawStrip</span><span class="tag">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">5</span><span class="pln">
+        </span><span class="ident">points</span><span class="tag">(</span><span class="lit">1</span><span class="pun">,</span><span class="ident">pointsTracker</span><span class="tag">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">str2double</span><span class="tag">(</span><span class="ident">rawStrip</span><span class="tag">{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">3</span><span class="tag">})</span><span class="pun">/</span><span class="lit">1000</span><span class="pun">;</span><span class="pln">
+        </span><span class="ident">points</span><span class="tag">(</span><span class="lit">2</span><span class="pun">,</span><span class="ident">pointsTracker</span><span class="tag">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">str2double</span><span class="tag">(</span><span class="ident">rawStrip</span><span class="tag">{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">4</span><span class="tag">})</span><span class="pun">/</span><span class="lit">1000</span><span class="pun">;</span><span class="pln">
+        </span><span class="ident">points</span><span class="tag">(</span><span class="lit">3</span><span class="pun">,</span><span class="ident">pointsTracker</span><span class="tag">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">str2double</span><span class="tag">(</span><span class="ident">rawStrip</span><span class="tag">{</span><span class="lit">1</span><span class="pun">,</span><span class="lit">5</span><span class="tag">})</span><span class="pun">/</span><span class="lit">1000</span><span class="pun">;</span><span class="pln">
+        </span><span class="ident">points</span><span class="tag">(</span><span class="lit">4</span><span class="pun">,</span><span class="ident">pointsTracker</span><span class="tag">)</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+        </span><span class="ident">pointsTracker</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="ident">pointsTracker</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">end</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+</span><span class="fun">disp</span><span class="tag">(</span><span class="str">'Done.'</span><span class="tag">)</span><span class="pln">
+</span><span class="fun">pause</span><span class="tag">(</span><span class="lit">0.25</span><span class="tag">)</span><span class="pun">;</span><span class="pln">
+</span><span class="fun">clc</span><span class="pun">;</span><span class="pln">
+
+</span><span class="kwd">if</span><span class="pln"> </span><span class="fun">mod</span><span class="tag">(</span><span class="fun">size</span><span class="tag">(</span><span class="ident">points</span><span class="pun">,</span><span class="lit">2</span><span class="tag">)</span><span class="pun">,</span><span class="lit">3</span><span class="tag">)</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pln">
+    </span><span class="fun">disp</span><span class="tag">(</span><span class="str">'File format in an unexpected type.'</span><span class="tag">)</span><span class="pln">
+    </span><span class="fun">disp</span><span class="tag">(</span><span class="str">'Check the file specified is an STL format file with ASCII formatting.'</span><span class="tag">)</span><span class="pln">
+    </span><span class="fun">disp</span><span class="tag">(</span><span class="str">'(Error - number of vertices not a multiple of 3)'</span><span class="tag">)</span><span class="pln">
+    </span><span class="fun">disp</span><span class="tag">(</span><span class="fun">numel</span><span class="tag">(</span><span class="ident">points.x</span><span class="tag">))</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">end</span><span class="pln">
+
+</span><span class="ident">success</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">return</span><span class="pun">;</span></code></pre>
+
+<p>Once this is done I save the resulting output (points) as a .mat file and load exclusively from that .mat instead of the STL file because the .mat file loads <em>significantly</em> faster than parsing the STL file every time.</p>
+
+<p>Once you've loaded the file, you can quickly plot the STL file in Matlab with the following command:</p>
+
+<pre class="lang-matlab prettyprint prettyprinted" style=""><code><span class="ident">myPlotColor</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="tag">[</span><span class="lit">0.5</span><span class="pln"> </span><span class="lit">0.5</span><span class="pln"> </span><span class="lit">0.5</span><span class="tag">]</span><span class="pun">;</span><span class="pln">
+</span><span class="ident">nFaces</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="fun">size</span><span class="tag">(</span><span class="ident">points</span><span class="pun">,</span><span class="lit">2</span><span class="tag">)</span><span class="pun">/</span><span class="lit">3</span><span class="pun">;</span><span class="pln">
+</span><span class="fun">patch</span><span class="tag">(</span><span class="linecont">...
+</span><span class="pln">    </span><span class="fun">reshape</span><span class="tag">(</span><span class="ident">points</span><span class="tag">(</span><span class="lit">1</span><span class="pun">,:</span><span class="tag">)</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="ident">nFaces</span><span class="tag">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="linecont">...
+</span><span class="pln">    </span><span class="fun">reshape</span><span class="tag">(</span><span class="ident">points</span><span class="tag">(</span><span class="lit">2</span><span class="pun">,:</span><span class="tag">)</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="ident">nFaces</span><span class="tag">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="linecont">...
+</span><span class="pln">    </span><span class="fun">reshape</span><span class="tag">(</span><span class="ident">points</span><span class="tag">(</span><span class="lit">3</span><span class="pun">,:</span><span class="tag">)</span><span class="pun">,</span><span class="lit">3</span><span class="pun">,</span><span class="ident">nFaces</span><span class="tag">)</span><span class="pln"> </span><span class="pun">,</span><span class="pln"> </span><span class="linecont">...
+</span><span class="pln">    </span><span class="ident">myPlotColor</span><span class="tag">)</span><span class="pun">;</span></code></pre>
+
+<p>At this point, standard Matlab plot commands work; e.g., <code>axis equal</code>, <code>hold on</code>, etc. </p>
+
+<p>Now, given how to load and display STL files in Matlab plots from an m-file, you can go about doing whatever form of control you want. Transform the CAD file with any 4x4 transform matrix composed of a rotation matrix <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 0.947em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.781em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.336em 1000.78em 2.336em -999.997em); top: -2.164em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">R</span></span><span style="display: inline-block; width: 0px; height: 2.169em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>R</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">R</script> and translation vector <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-4" style="width: 0.558em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.447em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.558em 1000.39em 2.336em -999.997em); top: -2.164em; left: 0em;"><span class="mrow" id="MathJax-Span-5"><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math-italic;">s</span></span><span style="display: inline-block; width: 0px; height: 2.169em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">s</script>:</p>
+
+<p><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mstyle displaystyle=&quot;false&quot; scriptlevel=&quot;0&quot;&gt;&lt;mtext&gt;transformedPoints&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mtable rowspacing=&quot;4pt&quot; columnspacing=&quot;1em&quot;&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;/mtd&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;mstyle displaystyle=&quot;false&quot; scriptlevel=&quot;0&quot;&gt;&lt;mtext&gt;points&lt;/mtext&gt;&lt;/mstyle&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-7" style="width: 22.669em; display: inline-block;"><span style="display: inline-block; position: relative; width: 18.892em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.781em 1018.84em 4.503em -999.997em); top: -3.386em; left: 0em;"><span class="mrow" id="MathJax-Span-8"><span class="mstyle" id="MathJax-Span-9"><span class="mrow" id="MathJax-Span-10"><span class="mtext" id="MathJax-Span-11" style="font-family: MathJax_Main;">transformedPoints</span></span></span><span class="mo" id="MathJax-Span-12" style="font-family: MathJax_Main; padding-left: 0.281em;">=</span><span class="mrow" id="MathJax-Span-13" style="padding-left: 0.281em;"><span class="mo" id="MathJax-Span-14" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">[</span></span><span class="mtable" id="MathJax-Span-15" style="padding-right: 0.169em; padding-left: 0.169em;"><span style="display: inline-block; position: relative; width: 5.281em; height: 0px;"><span style="position: absolute; clip: rect(3.169em 1000.45em 4.947em -999.997em); top: -3.997em; left: 0em;"><span style="display: inline-block; position: relative; width: 0.503em; height: 0px;"><span style="position: absolute; clip: rect(3.836em 1000em 4.169em -999.997em); top: -4.664em; left: 50%; margin-left: 0em;"><span class="mtd" id="MathJax-Span-16"><span class="mrow" id="MathJax-Span-17"></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.169em 1000.45em 4.169em -999.997em); top: -3.219em; left: 50%; margin-left: -0.219em;"><span class="mtd" id="MathJax-Span-26"><span class="mrow" id="MathJax-Span-27"><span class="mn" id="MathJax-Span-28" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(2.503em 1000.78em 4.947em -999.997em); top: -3.997em; left: 1.503em;"><span style="display: inline-block; position: relative; width: 0.781em; height: 0px;"><span style="position: absolute; clip: rect(3.169em 1000.78em 4.169em -999.997em); top: -4.664em; left: 50%; margin-left: -0.386em;"><span class="mtd" id="MathJax-Span-18"><span class="mrow" id="MathJax-Span-19"><span class="mi" id="MathJax-Span-20" style="font-family: MathJax_Math-italic;">R</span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.169em 1000.45em 4.169em -999.997em); top: -3.219em; left: 50%; margin-left: -0.219em;"><span class="mtd" id="MathJax-Span-29"><span class="mrow" id="MathJax-Span-30"><span class="mn" id="MathJax-Span-31" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.169em 1000.45em 4.947em -999.997em); top: -3.997em; left: 3.281em;"><span style="display: inline-block; position: relative; width: 0.503em; height: 0px;"><span style="position: absolute; clip: rect(3.836em 1000em 4.169em -999.997em); top: -4.664em; left: 50%; margin-left: 0em;"><span class="mtd" id="MathJax-Span-21"><span class="mrow" id="MathJax-Span-22"></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.169em 1000.45em 4.169em -999.997em); top: -3.219em; left: 50%; margin-left: -0.219em;"><span class="mtd" id="MathJax-Span-32"><span class="mrow" id="MathJax-Span-33"><span class="mn" id="MathJax-Span-34" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(2.725em 1000.45em 4.947em -999.997em); top: -3.997em; left: 4.781em;"><span style="display: inline-block; position: relative; width: 0.503em; height: 0px;"><span style="position: absolute; clip: rect(3.392em 1000.45em 4.169em -999.997em); top: -4.664em; left: 50%; margin-left: -0.219em;"><span class="mtd" id="MathJax-Span-23"><span class="mrow" id="MathJax-Span-24"><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math-italic;">s</span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.169em 1000.45em 4.169em -999.997em); top: -3.219em; left: 50%; margin-left: -0.219em;"><span class="mtd" id="MathJax-Span-35"><span class="mrow" id="MathJax-Span-36"><span class="mn" id="MathJax-Span-37" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span><span class="mo" id="MathJax-Span-38" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">]</span></span></span><span class="mstyle" id="MathJax-Span-39" style="padding-left: 0.169em;"><span class="mrow" id="MathJax-Span-40"><span class="mtext" id="MathJax-Span-41" style="font-family: MathJax_Main;">points</span></span></span></span><span style="display: inline-block; width: 0px; height: 3.392em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.197em; border-left: 0px solid; width: 0px; height: 3.003em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mstyle displaystyle="false" scriptlevel="0"><mtext>transformedPoints</mtext></mstyle><mo>=</mo><mrow><mo>[</mo><mtable rowspacing="4pt" columnspacing="1em"><mtr><mtd></mtd><mtd><mi>R</mi></mtd><mtd></mtd><mtd><mi>s</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mstyle displaystyle="false" scriptlevel="0"><mtext>points</mtext></mstyle></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-3">
+\mbox{transformedPoints} = \begin{bmatrix}
+ & R& & s \\
+0 &0 &0& 1 \\
+\end{bmatrix}
+\mbox{points}
+</script></p>
+
+<p>Plot the transformed points with the <code>patch</code> command shown above. As long as you've generated your CAD model such that the origin of your 3D model corresponds with the origin of your mathematical model then any movement/rotation of the mathematical model about its origin can be correctly applied to the CAD model, which can then be displayed.</p>
+
+<p>I'd just like to reiterate that this file loads STL files that are in ASCII format with units in millimeters, and the resulting plot is with units in meters, but of course you can change that with the <code>/1000</code> scaling during the loading of the file. </p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="https://robotics.stackexchange.com/a/7727" title="short permalink to this answer" class="short-link" id="link-post-7727">share</a><span class="lsep">|</span><a href="https://robotics.stackexchange.com/posts/7727/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2015-07-22 17:32:34Z" class="relativetime">Jul 22 '15 at 17:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://robotics.stackexchange.com/users/9720/chuck"><div class="gravatar-wrapper-32"><img src="./MATLAB 3D Simulation with SOLIDWORKS model - Robotics Stack Exchange_files/5d6176aa4b344412710307f8b051aad6" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://robotics.stackexchange.com/users/9720/chuck">Chuck</a><span class="mod-flair" title="moderator">♦</span>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,014</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="29 bronze badges"><span class="badge3"></span><span class="badgecount">29</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+    
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-7727" class="comments js-comments-container ">
+		        <table>
+                    <tbody class="js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+
+    <tr id="comment-11225" class="comment js-comment ">
+        <td class="js-comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">It sounds great! Thank you for your answer. Can you share me an example of doing that or suggest me somewhere to look for more information  about this method?</span>
+                    –&nbsp;<a href="https://robotics.stackexchange.com/users/9205/phan" title="53 reputation" class="comment-user owner">Phan</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#comment11225_7727"><span title="2015-07-23 04:19:17Z" class="relativetime-clean">Jul 23 '15 at 4:19</span></a></span>
+                                                                            </div>
+        </td>
+    </tr>
+                    </tbody>
+		        </table>
+	    </div>
+
+        <div id="comments-link-7727" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" onclick=""></a>
+        </div>         
+    </td>
+</tr>    </tbody></table>
+</div>
+                                    <a name="new-answer"></a>
+                        <form id="post-form" action="https://robotics.stackexchange.com/questions/7723/answer/submit" method="post" class="post-form">
+                            <input type="hidden" id="post-id" value="7723">
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false">
+                            <input type="hidden" name="referrer" value="https://www.google.co.in/">
+                            <h2 class="space">Your Answer</h2>
+
+        <script>
+            StackExchange.ifUsing("editor", function () {
+                return StackExchange.using("mathjaxEditing", function () {
+                    StackExchange.MarkdownEditor.creationCallbacks.add(function (editor, postfix) {
+                        StackExchange.mathjaxEditing.prepareWmdForMathJax(editor, postfix, [["$", "$"], ["\\\\(","\\\\)"]]);
+                    });
+                });
+            }, "mathjax-editing");
+        </script>
+
+        
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                StackExchange.prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: false,
+                reputationToPostImages: null,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;"> 
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li id="wmd-bold-button" class="wmd-button" style="left: 0px;"><span style="background-position: 0px -20px;"></span></li><li id="wmd-italic-button" class="wmd-button" style="left: 25px;"><span style="background-position: -20px -20px;"></span></li><li id="wmd-spacer1" class="wmd-spacer" style="left: 50px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-link-button" class="wmd-button" style="left: 75px;"><span style="background-position: -40px -20px;"></span></li><li id="wmd-quote-button" class="wmd-button" style="left: 100px;"><span style="background-position: -60px -20px;"></span></li><li id="wmd-code-button" class="wmd-button" style="left: 125px;"><span style="background-position: -80px -20px;"></span></li><li id="wmd-image-button" class="wmd-button" style="left: 150px;"><span style="background-position: -100px -20px;"></span></li><li id="wmd-spacer2" class="wmd-spacer" style="left: 175px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-olist-button" class="wmd-button" style="left: 200px;"><span style="background-position: -120px -20px;"></span></li><li id="wmd-ulist-button" class="wmd-button" style="left: 225px;"><span style="background-position: -140px -20px;"></span></li><li id="wmd-heading-button" class="wmd-button" style="left: 250px;"><span style="background-position: -160px -20px;"></span></li><li id="wmd-hr-button" class="wmd-button" style="left: 275px;"><span style="background-position: -180px -20px;"></span></li><li id="wmd-spacer3" class="wmd-spacer" style="left: 300px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-undo-button" class="wmd-button" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li id="wmd-redo-button" class="wmd-button" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="8e3722bf4453581cbf4629eab078bacb">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+
+                            <div style="position: relative;">
+                                
+                                            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="https://robotics.stackexchange.com/users/login?ssrc=question_page&amp;returnurl=https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18"><g><path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z" fill="#4285F4"></path><path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z" fill="#34A853"></path><path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"></path><path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z" fill="#EA4335"></path></g></svg> Sign up using Google
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M1.88 1C1.4 1 1 1.4 1 1.88v14.24c0 .48.4.88.88.88h7.67v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h4.08c.48 0 .88-.4.88-.88V1.88c0-.48-.4-.88-.88-.88H1.88z" fill="#3C5A96"></path></svg> Sign up using Facebook
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <svg aria-hidden="true" class="svg-icon native iconLogoGlyphXSm" width="18" height="18" viewBox="0 0 18 18"><g><path fill="#BCBBBB" d="M14 16v-5h2v7H2v-7h2v5z"></path><path d="M5 15v-2h8v2H5zM12.09.72l4.5 6.06-1.2.9-4.51-6.06 1.21-.9zM8.34 4.3l.97-1.16 5.8 4.83-.96 1.16-5.8-4.83zm-1.9 3.36l.64-1.37 6.85 3.19-.63 1.37-6.85-3.2zM5.4 11.39l.38-1.67 7.42 1.48-.22 1.46-7.58-1.27z" fill="#F48024"></path></g></svg> Sign up using Email and Password
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid">
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false">
+                    <input type="hidden" name="use-google" class="use-google" value="false">
+                    <input type="button" class="submit-openid" value="Submit" style="display:none">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown">
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'https%3a%2f%2frobotics.stackexchange.com%2fquestions%2f7723%2fmatlab-3d-simulation-with-solidworks-model%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        &lt;h3&gt;Post as a guest&lt;/h3&gt;
+    &lt;div class="form-item"&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+                    &lt;td class="vm"&gt;
+                &lt;div&gt;
+                    &lt;label for="display-name"&gt;Name&lt;/label&gt;
+                    &lt;input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105"&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;label for="m-address"&gt;Email&lt;/label&gt;
+                    &lt;input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" /&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+            </noscript>
+
+                            </div>
+
+                                                            <div class="form-submit cbt">
+                                        <input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+                                    <a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="https://stackexchange.com/legal/privacy-policy" name="privacy" target="_blank">privacy policy</a> and <a href="https://stackexchange.com/legal/terms-of-service" name="tos" target="_blank">terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1">                                </div>
+                        </form>
+
+
+
+                        <h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?                            Browse other questions tagged <a href="https://robotics.stackexchange.com/questions/tagged/matlab" class="post-tag" title="show questions tagged &#39;matlab&#39;" rel="tag">matlab</a> <a href="https://robotics.stackexchange.com/questions/tagged/simulation" class="post-tag" title="show questions tagged &#39;simulation&#39;" rel="tag">simulation</a>  or <a href="https://robotics.stackexchange.com/questions/ask">ask your own question</a>.                        </h2>
+            </div>
+        </div>
+                <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+                            <div class="module question-stats">
+                    <table id="qinfo">
+                        <tbody><tr>
+                            <td>
+                                <p class="label-key">asked</p>
+                            </td>
+                            <td style="padding-left: 10px">
+                                <p class="label-key" title="2015-07-22 07:11:51Z"><b>2 years, 5 months ago</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label-key">viewed</p>
+                            </td>
+
+                            <td style="padding-left: 10px">
+                                <p class="label-key">
+                                    <b>3,057 times</b>
+                                </p>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p class="label-key">active</p>
+                                </td>
+                                <td style="padding-left: 10px">
+                                    <p class="label-key"><b><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model?lastactivity" class="lastactivity-link" title="2015-07-30 23:57:18Z">2 years, 5 months ago</a></b></p>
+                                </td>
+                            </tr>
+                    </tbody></table>
+                </div>
+            <div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://stackoverflow.blog/2018/01/10/farewell-winter-bash-2017/?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="https://stackoverflow.blog/2018/01/10/farewell-winter-bash-2017/?cb=1" class="question-hyperlink">Farewell, Winter Bash 2017!</a>
+                </div>
+                <br class="cbt">
+            </div>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="https://stackoverflow.blog/2018/01/11/brutal-lifecycle-javascript-frameworks/?cb=1" class="question-hyperlink">The Brutal Lifecycle of JavaScript Frameworks</a>
+                </div>
+                <br class="cbt">
+            </div>
+    </div>
+</div>            
+<div id="dfp-tsb"></div>
+        <script>setTimeout(function () { try { typeof clc !== 'undefined' && typeof clc.loadDisplayAds === 'function' && clc.loadDisplayAds(['dfp-tsb']); } catch (e) { console.error(e); } }, 0);</script>
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="https://robotics.stackexchange.com/q/14518?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+	</a>
+	<a href="https://robotics.stackexchange.com/questions/14518/what-software-can-i-use-to-3d-model-and-simulate-my-robot?noredirect=1&amp;lq=1" class="question-hyperlink">What software can I use to 3d model and simulate my robot?</a>
+</div>			</div>
+</div>
+
+                <div class="module sidebar-related">
+                    <h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/7729?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="https://robotics.stackexchange.com/questions/7729/is-it-possible-to-simulate-vision-perception-in-gazebo-or-other-simulators?rq=1" class="question-hyperlink">Is it possible to simulate vision (perception) in Gazebo (or other simulators)</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/8292?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="https://robotics.stackexchange.com/questions/8292/are-there-any-aerodynamics-modeling-simulation-software-that-is-capable-to-consu?rq=1" class="question-hyperlink">Are there any aerodynamics modeling/simulation software that is capable to consume a SolidWorks model and to interface with MATLAB/Simulink?</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/8471?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="https://robotics.stackexchange.com/questions/8471/dynamic-simulation-of-compliant-elements-in-quadruped-robot?rq=1" class="question-hyperlink">Dynamic simulation of compliant elements in quadruped robot</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/9569?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="https://robotics.stackexchange.com/questions/9569/robotic-arm-analysis-in-matlab-simulink?rq=1" class="question-hyperlink">Robotic Arm analysis in Matlab/simulink</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/9724?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">1</div></a><a href="https://robotics.stackexchange.com/questions/9724/how-to-apply-a-bang-bang-signal-of-amplitude-1-n-and-1-s-width-as-an-input-force?rq=1" class="question-hyperlink">How to apply A bang-bang signal of amplitude 1 N and 1 s width as an input force to reproduce certain results in Matlab?</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/11010?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">3</div></a><a href="https://robotics.stackexchange.com/questions/11010/how-can-i-apply-different-control-approach-without-having-a-state-space-model?rq=1" class="question-hyperlink">How can I apply different control approach without having a state space model?</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/11399?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="https://robotics.stackexchange.com/questions/11399/how-to-consider-gravity-in-the-design-of-a-compensator?rq=1" class="question-hyperlink">How to consider gravity in the design of a compensator?</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/11742?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="https://robotics.stackexchange.com/questions/11742/robot-arm-matlab-simulink-simulation-error?rq=1" class="question-hyperlink">Robot arm matlab Simulink simulation error</a></div><div class="spacer js-gps-track"><a href="https://robotics.stackexchange.com/q/11963?rq=1" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">1</div></a><a href="https://robotics.stackexchange.com/questions/11963/using-3d-graphics-animate-the-robot-in-matlab-gui?rq=1" class="question-hyperlink">Using 3D graphics animate the robot in Matlab GUI</a></div>
+                    </div>
+                </div>
+
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="https://parenting.stackexchange.com/questions/32877/how-to-get-my-daughters-fixation-on-my-belly-button-under-control" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to get my daughter's fixation on my belly button under control?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-money" title="Personal Finance &amp; Money Stack Exchange"></div><a href="https://money.stackexchange.com/questions/89357/does-owing-taxes-or-getting-a-tax-refund-imply-my-paycheck-is-off" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:93 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does owing taxes or getting a tax refund imply my paycheck is off?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="https://ell.stackexchange.com/questions/153322/what-verb-to-choose-here" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What verb to choose here?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-mechanics" title="Motor Vehicle Maintenance &amp; Repair Stack Exchange"></div><a href="https://mechanics.stackexchange.com/questions/51029/sideways-impact-with-median" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:224 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Sideways Impact with Median
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="https://skeptics.stackexchange.com/questions/40397/does-china-control-85-of-the-supply-of-rare-metals-used-in-lithium-batteries" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does China control 85% of the supply of rare metals used in lithium batteries?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/152856/write-moby-dick-approximately" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Write Moby Dick, approximately
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-politics" title="Politics Stack Exchange"></div><a href="https://politics.stackexchange.com/questions/27378/can-us-ask-for-julian-assanges-extradition-without-official-charges" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:475 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can US ask for Julian Assange's extradition without official charges?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/113296/what-are-the-benefits-of-worshipping-a-god-do-alignment-differences-matter" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are the benefits of worshipping a god? Do alignment differences matter?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="https://skeptics.stackexchange.com/questions/40400/was-the-obama-administration-responsible-for-the-decision-to-move-the-uk-embassy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Was the Obama administration responsible for the decision to move the UK embassy and the sale of the old location?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="https://music.stackexchange.com/questions/65603/lowering-the-key-of-a-song-by-a-semitone" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Lowering the key of a song by a semitone
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="https://security.stackexchange.com/questions/177405/can-a-vpn-provider-mitm-my-ssl-traffic-without-me-noticing" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can a VPN Provider MitM my SSL traffic without me noticing?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="https://salesforce.stackexchange.com/questions/204487/how-to-make-code-which-uses-lightning-promises-look-more-synchronous" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:459 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to make code which uses Lightning promises look more synchronous
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="https://travel.stackexchange.com/questions/108120/i-am-a-jamaican-travelling-on-a-b1-b2-transited-through-the-us-but-never-stayed" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I am a Jamaican travelling on a B1/B2, transited through the US but never stayed, what does this US stamp mean?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-quant" title="Quantitative Finance Stack Exchange"></div><a href="https://quant.stackexchange.com/questions/37703/is-the-delta-of-a-binary-option-the-same-as-the-delta-for-a-regular-european-opt" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:204 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is the delta of a binary option the same as the delta for a regular European option?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="https://stackoverflow.com/questions/48221783/stream-peek-method-in-java8-vs-java9" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Stream.peek() method in Java8 vs Java9
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/113268/how-do-i-keep-a-party-together-without-railroading" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I keep a party together without railroading?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="https://security.stackexchange.com/questions/177415/is-it-true-that-meltdown-and-spectre-were-intended-as-debug-tools" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it true that meltdown and spectre were intended as debug tools?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/9042/how-to-tell-people-im-not-their-tech-support" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to tell people I'm not their tech support?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-softwareengineering" title="Software Engineering Stack Exchange"></div><a href="https://softwareengineering.stackexchange.com/questions/363874/how-to-clean-code-too-many-if-else-if-else-if" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:131 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to "clean code" too many if else if else if
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-workplace" title="The Workplace Stack Exchange"></div><a href="https://workplace.stackexchange.com/questions/105040/social-media-and-possible-public-relations-issue-possible-consequences" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:423 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Social media and possible public relations issue, possible consequences?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="https://scifi.stackexchange.com/questions/178754/is-narnia-high-or-low-fantasy" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Narnia high or low fantasy?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="https://movies.stackexchange.com/questions/84774/is-black-museum-trying-to-address-that-there-is-a-chronological-order-in-black-m" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Black Museum trying to address that there is a chronological order in Black Mirror?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="https://physics.stackexchange.com/questions/379280/could-a-human-beat-light-in-a-footrace" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Could a human beat light in a footrace?
+                </a>
+
+            </li>
+            <li class="dno js-hidden" style="display: list-item;">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="https://stackoverflow.com/questions/48225673/why-is-stdis-pod-deprecated-in-c20" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is std::is_pod deprecated in C++20?
+                </a>
+
+            </li>
+    </ul>
+
+        
+</div>
+        </div>
+    <div id="feed-link">
+    <div id="feed-link-text">
+        <a href="https://robotics.stackexchange.com/feeds/question/7723" title="feed of this question and its answers">
+            <svg aria-hidden="true" class="svg-icon iconRss" width="18" height="18" viewBox="0 0 18 18"><path d="M1 3c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3zm14.5 12C15.5 8.1 9.9 2.5 3 2.5V5a10 10 0 0 1 10 10h2.5zm-5 0A7.5 7.5 0 0 0 3 7.5V10a5 5 0 0 1 5 5h2.5zm-5 0A2.5 2.5 0 0 0 3 12.5V15h2.5z"></path></svg>
+            question feed
+        </a>
+    </div>
+</div>
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/7723/ivc/b7a9');});</script>
+<noscript>&lt;div&gt;&lt;img src="/posts/7723/ivc/b7a9" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;</noscript><div style="display:none" id="prettify-lang">lang-matlab</div></div>
+
+
+        </div>
+    </div>
+
+    <footer id="footer" class="s-footer js-footer" role="contentinfo">
+        <div class="-container">
+            <div class="g-row">
+                
+                    <nav class="-nav js-category _visible" data-name="default">
+                        <h5 class="-title"><a href="https://robotics.stackexchange.com/">Robotics</a></h5>
+                        <ul class="-list">
+                                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 2 })" href="https://robotics.stackexchange.com/tour">Tour</a></li>
+                                <li class="-item"><a href="https://robotics.stackexchange.com/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 3 })">Help</a></li>
+                                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 5 })" href="https://chat.stackexchange.com/?tab=site&amp;host=robotics.stackexchange.com">Chat</a></li>
+                            <li class="-item g-col"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 13 })" href="https://robotics.stackexchange.com/contact">Contact</a></li>
+                                <li class="-item g-col"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 14 })" href="https://robotics.meta.stackexchange.com/">Feedback</a></li>
+                                                            <li class="-item"><a onclick="StackExchange.switchMobile(&quot;on&quot;)" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 12 })">Mobile</a></li>
+                        </ul>
+                    </nav>
+                <nav class="-nav js-category _visible" data-name="default">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Company</a></h5>
+                    <ul class="-list">
+                                                    <li class="-item"><a href="https://stackoverflow.com/" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 15})">Stack Overflow</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/?utm_source=so-footer&amp;utm_medium=referral&amp;utm_campaign=brand-activation" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 19 })">Stack Overflow Business</a></li>
+                            <li class="-item"><a href="https://stackoverflow.com/jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 17})">Developer Jobs</a></li>
+                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">About</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 27 })" href="https://stackoverflow.com/company/press">Press</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 7 })" href="https://stackexchange.com/legal">Legal</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 8 })" href="https://stackexchange.com/legal/privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+                <div class="-network g-row">
+                    <a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-back-trigger js-back"><svg aria-hidden="true" class="svg-icon iconArrowLeftAlt" width="18" height="18" viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7z"></path></svg></a>
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com/">Stack Exchange<br> Network</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-link _expandable js-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Technology">Technology</a></li>
+                            <li class="-item"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-link _expandable js-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Life / Arts">Life / Arts</a></li>
+                            <li class="-item"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-link _expandable js-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Culture / Recreation">Culture / Recreation</a></li>
+                            <li class="-item"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-link _expandable js-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Science">Science</a></li>
+                            <li class="-item"><a href="https://robotics.stackexchange.com/questions/7723/matlab-3d-simulation-with-solidworks-model#" class="-link _expandable js-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Other">Other</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <nav class="-nav js-category" data-name="Technology">
+        <ul class="-list">
+                <li class="-item"><a href="https://stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                <li class="-item"><a href="https://serverfault.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="system and network administrators">Server Fault</a></li>
+                <li class="-item"><a href="https://superuser.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="computer enthusiasts and power users">Super User</a></li>
+                <li class="-item"><a href="https://webapps.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of web applications">Web Applications</a></li>
+                <li class="-item"><a href="https://askubuntu.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                <li class="-item"><a href="https://webmasters.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="pro webmasters">Webmasters</a></li>
+                <li class="-item"><a href="https://gamedev.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and independent game developers">Game Development</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://tex.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                <li class="-item"><a href="https://softwareengineering.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                <li class="-item"><a href="https://unix.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                <li class="-item"><a href="https://apple.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                <li class="-item"><a href="https://wordpress.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="WordPress developers and administrators">WordPress Development</a></li>
+                <li class="-item"><a href="https://gis.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                <li class="-item"><a href="https://electronics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://android.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                <li class="-item"><a href="https://security.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="information security professionals">Information Security</a></li>
+                <li class="-item"><a href="https://dba.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                <li class="-item"><a href="https://drupal.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Drupal developers and administrators">Drupal Answers</a></li>
+                <li class="-item"><a href="https://sharepoint.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="SharePoint enthusiasts">SharePoint</a></li>
+                <li class="-item"><a href="https://ux.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="user experience researchers and experts">User Experience</a></li>
+                <li class="-item"><a href="https://mathematica.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Wolfram Mathematica">Mathematica</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://salesforce.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                <li class="-item"><a href="https://expressionengine.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="administrators, end users, developers and designers for ExpressionEngine® CMS">ExpressionEngine® Answers</a></li>
+                <li class="-item"><a href="https://pt.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores profissionais e entusiastas">Stack Overflow em Português</a></li>
+                <li class="-item"><a href="https://blender.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who use Blender to create 3D graphics, animations, or games">Blender</a></li>
+                <li class="-item"><a href="https://networkengineering.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="network engineers">Network Engineering</a></li>
+                <li class="-item"><a href="https://crypto.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                <li class="-item"><a href="https://codereview.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="peer programmer code reviews">Code Review</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://magento.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of the Magento e-Commerce platform">Magento</a></li>
+                <li class="-item"><a href="https://softwarerecs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people seeking specific software recommendations">Software Recommendations</a></li>
+                <li class="-item"><a href="https://dsp.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                <li class="-item"><a href="https://emacs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those using, extending or developing Emacs">Emacs</a></li>
+                <li class="-item"><a href="https://raspberrypi.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                <li class="-item"><a href="https://ru.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="программистов">Stack Overflow на русском</a></li>
+                <li class="-item"><a href="https://codegolf.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://es.stackoverflow.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programadores y profesionales de la informática">Stack Overflow en español</a></li>
+                <li class="-item"><a href="https://ethereum.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="users of Ethereum, the decentralized application platform and smart contract enabled blockchain">Ethereum</a></li>
+                <li class="-item"><a href="https://datascience.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Data science professionals, Machine Learning specialists, and those interested in learning more about the field">Data Science</a></li>
+                <li class="-item"><a href="https://arduino.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="developers of open-source hardware and software that is compatible with Arduino">Arduino</a></li>
+                <li class="-item"><a href="https://bitcoin.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Bitcoin crypto-currency enthusiasts">Bitcoin</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (26)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </nav>
+    <nav class="-nav js-category" data-name="Life / Arts">
+        <ul class="-list">
+                <li class="-item"><a href="https://photo.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                <li class="-item"><a href="https://scifi.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                <li class="-item"><a href="https://graphicdesign.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                <li class="-item"><a href="https://movies.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                <li class="-item"><a href="https://music.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                <li class="-item"><a href="https://worldbuilding.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="writers/artists using science, geography and culture to construct imaginary worlds and settings">Worldbuilding</a></li>
+                <li class="-item"><a href="https://cooking.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://diy.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="contractors and serious DIYers">Home Improvement</a></li>
+                <li class="-item"><a href="https://money.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                <li class="-item"><a href="https://academia.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="academics and those enrolled in higher education">Academia</a></li>
+                <li class="-item"><a href="https://law.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="legal professionals, students, and others with experience or interest in law">Law</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (16)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </nav>
+    <nav class="-nav js-category" data-name="Culture / Recreation">
+        <ul class="-list">
+                <li class="-item"><a href="https://english.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                <li class="-item"><a href="https://skeptics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientific skepticism">Skeptics</a></li>
+                <li class="-item"><a href="https://judaism.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                <li class="-item"><a href="https://travel.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="road warriors and seasoned travelers">Travel</a></li>
+                <li class="-item"><a href="https://christianity.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                <li class="-item"><a href="https://ell.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="speakers of other languages learning English">English Language Learners</a></li>
+                <li class="-item"><a href="https://japanese.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://gaming.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                <li class="-item"><a href="https://bicycles.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                <li class="-item"><a href="https://rpg.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                <li class="-item"><a href="https://anime.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="anime and manga fans">Anime &amp; Manga</a></li>
+                <li class="-item"><a href="https://puzzling.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those who create, solve, and study puzzles">Puzzling</a></li>
+                <li class="-item"><a href="https://mechanics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (32)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </nav>
+    <nav class="-nav js-category" data-name="Science">
+        <ul class="-list">
+                <li class="-item"><a href="https://mathoverflow.net/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="professional mathematicians">MathOverflow</a></li>
+                <li class="-item"><a href="https://math.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                <li class="-item"><a href="https://stats.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                <li class="-item"><a href="https://cstheory.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                <li class="-item"><a href="https://physics.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="active researchers, academics and students of physics">Physics</a></li>
+                <li class="-item"><a href="https://chemistry.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="scientists, academics, teachers and students">Chemistry</a></li>
+                <li class="-item"><a href="https://biology.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="biology researchers, academics, and students">Biology</a></li>
+                    </ul></nav><nav class="-nav js-category" data-name="Science"><ul class="-list">
+                <li class="-item"><a href="https://cs.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                <li class="-item"><a href="https://philosophy.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 26 })">
+                        <strong>
+                            more (10)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </nav>
+    <nav class="-nav js-category" data-name="Other">
+        <ul class="-list">
+                <li class="-item"><a href="https://meta.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                <li class="-item"><a href="https://stackapps.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                <li class="-item"><a href="https://api.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="programmatic interaction with Stack Exchange sites">API</a></li>
+                <li class="-item"><a href="https://data.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="querying Stack Exchange data using SQL">Data</a></li>
+                <li class="-item"><a href="https://area51.stackexchange.com/" class="-link js-gps-track" data-gps-track="footer.click({ location: 2, link: 25 })" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                    </ul>
+    </nav>
+                <div class="-copyright g-row jc-end">
+                    <div class="g-column jc-sp-between">
+                        <ul class="-list">
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog/?blb=1">Blog</a></li>
+                            <li class="-item"><a href="https://www.facebook.com/officialstackoverflow/" class="-link">Facebook</a></li>
+                            <li class="-item"><a href="https://twitter.com/stackoverflow" class="-link">Twitter</a></li>
+                            <li class="-item"><a href="https://linkedin.com/company/stack-overflow" class="-link">LinkedIn</a></li>
+                        </ul>
+
+                        <div>
+                            <p>
+site design / logo © 2018 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license" class="-link">cc by-sa 3.0</a>
+                    with <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license" class="-link">attribution required</a>.
+                                <span id="svnrev">rev&nbsp;2018.1.12.28379</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+    </footer>
+
+    <noscript>
+        &lt;div id="noscript-warning"&gt;Robotics Stack Exchange works best with JavaScript enabled
+            &lt;img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;
+        &lt;/div&gt;
+    </noscript>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                ga('create', 'UA-5620270-24', {'cookieDomain': 'stackexchange.com'});
+                ga('set', 'dimension2', '|matlab|simulation|');
+            
+            StackExchange.ready(function () {
+                StackExchange.ga.init();
+            });
+            ga('send', 'pageview');
+            
+                    
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
+    </script>
+        
+    
+    
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size3, sans-serif;"></div></div></body></html>
