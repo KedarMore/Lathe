@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://www.mathworks.com/solutions/mechatronics.html -->
+<html lang="en" class="wf-museoslab-n7-active wf-futurapt-n4-active wf-futurapt-i4-active wf-futurapt-n5-active wf-futurapt-i5-active wf-futurapt-n7-active wf-futurapt-i7-active wf-automate-n7-active wf-minionprosubhead-n4-active wf-active"><head class="at-element-marker"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Mechatronics system development requires integrating mechanical, electrical, control, and embedded software subsystems. Model-Based Design and MathWorks products enable you to design and simulate all of these domains in a single environment.">
+	<link rel="icon" href="https://www.mathworks.com/etc/designs/mathworks/img/favicon.ico" type="image/x-icon">
+	<link rel="canonical" href="https://www.mathworks.com/solutions/mechatronics.html">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+
+	<meta property="og:url" content="https://www.mathworks.com/solutions/mechatronics.html">
+	<meta property="og:image:secure_url">
+	<meta property="og:description" content="Mechatronics system development requires integrating mechanical, electrical, control, and embedded software subsystems. Model-Based Design and MathWorks products enable you to design and simulate all of these domains in a single environment.">
+	<meta property="og:title" content="Mechatronics - MATLAB &amp; Simulink Solutions">
+	
+	
+
+	<link rel="stylesheet" href="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/main.min.css" type="text/css">
+<script type="text/javascript" async="" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/elqCfg.min.js.download"></script><script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/aquant.js.download" async="" type="text/javascript"></script><script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/186030155234771" async=""></script><script async="" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/fbevents.js.download"></script><script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/jquery.min.js.download"></script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/utils.min.js.download"></script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/granite.min.js.download"></script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/jquery.min.js(1).download"></script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/main.min.js.download"></script>
+
+	<script type="text/javascript">
+            (function() {
+                window.ContextHub = window.ContextHub || {};
+                ContextHub.Paths = ContextHub.Paths || {};
+                ContextHub.Paths.RESOURCE_PATH = "\/content\/mathworks\/www\/en\/solutions\/mechatronics\/jcr:content\/contexthub";
+                ContextHub.Paths.SEGMENTATION_PATH = "\/etc\/segmentation\/contexthub";
+                ContextHub.Paths.CQ_CONTEXT_PATH = "";
+            }());
+        </script><script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/contexthub.kernel.js.download" type="text/javascript"></script>
+	
+
+	
+
+	
+
+	
+    
+<link rel="stylesheet" href="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/clientlibs.min.20171103180323287.css" type="text/css">
+
+
+
+	
+    
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/headlibs.min.20171103180323287.js.download"></script>
+
+
+
+	
+    
+<link rel="stylesheet" href="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/aem.min.20171103180323287.css" type="text/css">
+
+
+
+
+	
+	
+	
+
+	<style type="text/css">.tk-museo-slab{font-family:"museo-slab",serif;}.tk-futura-pt{font-family:"futura-pt","Arial","Helvetica",sans-serif;}.tk-automate{font-family:"automate",sans-serif;}.tk-minion-pro-subhead{font-family:"minion-pro-subhead",serif;}</style><link rel="stylesheet" href="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/xvy5baa-d.css"><script>try{Typekit.load();}catch(e){}</script>
+
+	<script id="analyticsDigitalData"> digitalData = {
+  "pageInstanceID" : "http://www.mathworks.com/solutions/mechatronics.html",
+  "page" : {
+    "pageInfo" : {
+      "pageID" : "http://www.mathworks.com/solutions/mechatronics.html",
+      "destinationURL" : "http://www.mathworks.com/solutions/mechatronics.html"
+    },
+    "category" : {
+      "subCategory1" : "solutions/mechatronics",
+      "pageType" : "solmain"
+    },
+    "attributes" : {
+      "descriptonCode" : "mech",
+      "aic" : [ "mechatronics" ]
+    }
+  },
+  "product" : [ {
+    "productInfo" : { }
+  } ],
+  "component" : [ ]
+};</script>
+
+	<script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/satelliteLib-e8d23c2e444abadc572df06537e2def59c01db09.js.download"></script><script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/mbox-contents-95c6a4d9c82a8d20476522984666120b54192e9b.js.download"></script><script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/satellite-56972e2c64746d54aa00cb73.js.download"></script><style id="at-mbox-default-style">.mboxDefault {visibility:hidden;}</style><style>.at-element-marker {visibility:visible;}</style><!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '186030155234771'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+	
+
+	
+		
+	
+
+	<title>Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink</title>
+<script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/s-code-contents-73da148cb454c4f6e395aa8df704854c99540662.js.download"></script><script src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/saved_resource"></script></head>
+
+
+<body class="" style="">
+
+
+<!-- Mobile TopNav: Start -->
+<div class="header visible-xs visible-sm" id="header_mobile" style="">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle topnav_toggle" data-toggle="collapse" data-target="#topnav_collapse">
+							<span class="sr-only">Toggle Main Navigation</span>
+							<span class="icon-menu"></span>
+						</button>
+						<a href="https://www.mathworks.com/?s_tid=gn_logo" class="svg_link navbar-brand">
+							<img src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row visible-xs visible-sm">
+				<div class="col-xs-12">
+					<div class="navbar-collapse collapse" id="topnav_collapse">
+						<div class="topnavigation containsResourceName topNavigation resourceClass-topnavigation"><ul class="nav navbar-nav" id="topnav">
+	<li class="headernav_login" style="">
+	<a class="mwa-nav_login" href="https://www.mathworks.com/login?uri=https%3A%2F%2Fwww.mathworks.com%2Fsolutions%2Fmechatronics.html">Log In</a>
+</li>
+<li class="headernav_logout dropdown" style="display: none;">
+	<a href="https://www.mathworks.com/solutions/mechatronics.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="mwa-name"></span><b class="caret"></b>
+	</a>
+	<ul class="dropdown-menu">
+		<li class="mwa-nav_account"><a class="mwa-account">My Account</a></li>
+		<li class="mwa-nav_associate"><a class="mwa-associate-license">Associate License</a></li>
+		<li class="mwa-nav_community"><a class="mwa-community-profile">My Community Profile</a></li>
+		<li class="mwa-nav_logout"><a class="mwa-logout">Log Out</a>
+		</li>
+	</ul>
+</li>
+
+	
+		<li class="topnav_products ">
+			<a href="https://www.mathworks.com/products.html?s_tid=gn_ps">Products</a>
+		</li>
+	
+		<li class="topnav_solutions active">
+			<a href="https://www.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a>
+		</li>
+	
+		<li class="topnav_academia ">
+			<a href="https://www.mathworks.com/academia.html?s_tid=gn_acad">Academia</a>
+		</li>
+	
+		<li class="topnav_support ">
+			<a href="https://www.mathworks.com/support/?s_tid=gn_supp">Support</a>
+		</li>
+	
+		<li class="topnav_community ">
+			<a href="https://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a>
+		</li>
+	
+		<li class="topnav_events ">
+			<a href="https://www.mathworks.com/company/events.html?s_tid=gn_ev">Events</a>
+		</li>
+	
+	
+		<li class="headernav_contact">
+			<a href="https://www.mathworks.com/company/aboutus/contact_us.html?s_tid=gn_cntus">Contact Us</a>
+		</li>
+		<li class="headernav_store">
+			<a href="https://www.mathworks.com/store?s_tid=gn_store">How to Buy</a>
+		</li>
+	
+</ul>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- Mobile TopNav: End -->
+<!-- Desktop TopNav: Start -->
+<div class="header hidden-xs hidden-sm" id="header_desktop">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="headerNavigation containsResourceName resourceClass-headernavigation headernavigation">
+<div class="collapse navbar-collapse" id="headernav_collapse">
+	<ul class="nav navbar-nav navbar-right" id="headernav">
+		<li class="headernav_contact"><a href="https://www.mathworks.com/company/aboutus/contact_us.html?s_tid=gn_cntus">Contact Us</a></li>
+		<li class="headernav_store"><a href="https://www.mathworks.com/store?s_tid=gn_store">How to Buy</a></li>
+		<li class="headernav_login" style="">
+	<a class="mwa-nav_login" href="https://www.mathworks.com/login?uri=https%3A%2F%2Fwww.mathworks.com%2Fsolutions%2Fmechatronics.html">Log In</a>
+</li>
+<li class="headernav_logout dropdown" style="display: none;">
+	<a href="https://www.mathworks.com/solutions/mechatronics.html#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<span class="mwa-name"></span><b class="caret"></b>
+	</a>
+	<ul class="dropdown-menu">
+		<li class="mwa-nav_account"><a class="mwa-account">My Account</a></li>
+		<li class="mwa-nav_associate"><a class="mwa-associate-license">Associate License</a></li>
+		<li class="mwa-nav_community"><a class="mwa-community-profile">My Community Profile</a></li>
+		<li class="mwa-nav_logout"><a class="mwa-logout">Log Out</a>
+		</li>
+	</ul>
+</li>
+
+	</ul>
+</div></div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="navbar-header">
+						<div class="logo_container hidden-xs hidden-sm">
+							<a href="https://www.mathworks.com/?s_tid=gn_logo" class="svg_link pull-left">
+								<img src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/pic-header-mathworks-logo.svg" class="mw_logo" alt="MathWorks">
+							</a>
+						</div>
+						<div class="navbar-collapse collapse hidden-xs hidden-sm">
+							
+							<div class="topnavigation containsResourceName topNavigation resourceClass-topnavigation">
+	<ul id="topnav" class="nav navbar-nav">
+		<li class="topnav_products ">
+			<a href="https://www.mathworks.com/products.html?s_tid=gn_ps">Products</a>
+		</li>
+	
+		<li class="topnav_solutions active">
+			<a href="https://www.mathworks.com/solutions.html?s_tid=gn_sol">Solutions</a>
+		</li>
+	
+		<li class="topnav_academia ">
+			<a href="https://www.mathworks.com/academia.html?s_tid=gn_acad">Academia</a>
+		</li>
+	
+		<li class="topnav_support ">
+			<a href="https://www.mathworks.com/support/?s_tid=gn_supp">Support</a>
+		</li>
+	
+		<li class="topnav_community ">
+			<a href="https://www.mathworks.com/matlabcentral/?s_tid=gn_mlc">Community</a>
+		</li>
+	
+		<li class="topnav_events ">
+			<a href="https://www.mathworks.com/company/events.html?s_tid=gn_ev">Events</a>
+		</li>
+	</ul>
+	
+
+</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+<!-- Desktop TopNav: End -->
+
+	<div class="sticky_header_container includes_subnav affix-top">
+		<!-- Section Header: Start -->
+		<div class="section_header level_3">
+			<div class="container">
+				<div class="row" id="mobile_search_row">
+					<div class="col-xs-12 col-sm-6 col-sm-push-6 col-md-5 col-md-push-7" id="mobile_search">
+						<div><div class="containsResourceName sectionheadsearchbox sectionHeadSearchBox resourceClass-sectionheadsearchbox">
+<div class="search_nested_content_container">
+	
+	<div id="search_scope_site" class="collapse in">
+		<form name="search" id="site_search" class="site_search" action="https://www.mathworks.com/search/site_search.html" method="get">
+			<div class="input-group">
+				<label class="sr-only">Search MathWorks.com</label>
+				<input type="hidden" name="c[]" value="entire_site">
+				<input type="text" name="q" id="query" class="form-control conjoined_search" placeholder="Search MathWorks.com" autocomplete="off" data-search-typeahead="false" data-site-domain="www" data-site-language="en">
+				<div class="input-group-btn">
+					
+					<button type="submit" id="searchbutton" class="btn icon-search btn_search_adjacent btn_search icon_16" tabindex="-1"></button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script>
+		$(".search_scope_trigger").click(function handlerSearch(event) {
+			var target1 = event.target.parentNode.attributes.getNamedItem("data-groupid").nodeValue;
+			$('#' + target1).removeClass("in");
+		});
+	</script>
+
+</div>
+<button class="btn icon-remove btn_search pull-right icon_32 visible-xs" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+
+</div>
+</div>
+					</div>
+					<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5" id="section_header_title">
+						<div><div class="containsResourceName resourceClass-sectionhead sectionHead sectionhead">
+<div class="section_header_content">
+	<div class="section_header_title add_cursor_pointer">
+		<h1>
+			<a href="https://www.mathworks.com/solutions/mechatronics.html">Mechatronics</a>
+			
+		</h1>
+		
+        
+	</div>
+    
+</div>
+</div>
+</div>
+					</div>
+					<div class="visible-xs" id="search_actuator">
+						<button class="btn icon-search btn_search pull-right icon_16 containsResourceName resourceClass-button" data-toggle="collapse" href="#mobile_search" aria-expanded="false" aria-controls="mobile_search"></button>
+					</div>
+				</div>
+                <!-- Mobile Local Nav: Start -->
+                <div class="row visible-xs visible-sm" id="mobile_subnav">
+                    <div class="col-xs-12">
+                        <div class="navbar-collapse collapse mobile_subnav_content">
+                            <div><div class="containsResourceName localnav localNavigation resourceClass-localnav">
+	<ul id="localnav" class="nav navbar-nav subnav" style="float:none">
+		
+	</ul>
+	<div>
+		<div class="cq-placeholder" data-emptytext="Local Navigation"></div>
+	</div>
+</div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile Local Nav: End -->
+            </div>
+		</div>
+		
+<div class="horizontal_nav hidden-xs hidden-sm ">
+    <div class="horizontal_nav_container">
+        
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-9 hidden-xs hidden-sm">
+                        <nav class="navbar navbar-default" role="navigation" id="subnav">
+                            <div class="collapse navbar-collapse">
+                                <div><div class="containsResourceName localnav localNavigation resourceClass-localnav">
+	<ul id="localnav" class="nav navbar-nav subnav" style="float:none">
+		
+	</ul>
+	<div>
+		<div class="cq-placeholder" data-emptytext="Local Navigation"></div>
+	</div>
+</div>
+</div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-4 col-lg-3 hidden-xs hidden-sm">
+                        <div><div class="containsResourceName calltoactionheader resourceClass-calltoactionheader callToAction">
+
+ 
+	<div class="cta_box">
+		<ul class="list-inline">
+		    <li class="cta_item cta_item_general">
+		    	<a href="https://www.mathworks.com/programs/trials/trial_request.html?prodcode=" class="
+						  icon-download
+						  " data-link="lead" data-offertype="trial" data-component="calltoactionheader">
+					Trial software
+				</a>
+		    </li>
+		
+		    <li class="cta_item cta_item_general">
+		    	<a href="https://www.mathworks.com/company/aboutus/contact_us/contact_sales.html" class="
+						  icon-phone
+						  " data-link="lead" data-offertype="Contact Sales" data-component="calltoactionheader">
+					Contact sales
+				</a>
+		    </li>
+		</ul>
+	</div>
+
+
+
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	</div>
+
+
+
+
+
+
+<div class="cta_container_mobile visible-sm visible-xs">
+	<div class="container-fluid">      
+		<div class="row">
+			<div class="col-xs-12">
+				<div><div class="containsResourceName calltoactionheader resourceClass-calltoactionheader callToAction">
+
+ 
+	<div class="cta_box">
+		<ul class="list-inline">
+		    <li class="cta_item cta_item_general">
+		    	<a href="https://www.mathworks.com/programs/trials/trial_request.html?prodcode=" class="
+						  icon-download
+						  " data-link="lead" data-offertype="trial" data-component="calltoactionheader">
+					Trial software
+				</a>
+		    </li>
+		
+		    <li class="cta_item cta_item_general">
+		    	<a href="https://www.mathworks.com/company/aboutus/contact_us/contact_sales.html" class="
+						  icon-phone
+						  " data-link="lead" data-offertype="Contact Sales" data-component="calltoactionheader">
+					Contact sales
+				</a>
+		    </li>
+		</ul>
+	</div>
+
+
+
+</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+    
+    <div class="content_container">
+        <div class="container">
+            <section><div class="containsResourceName parsys mainParsys resourceClass-parsys"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row   ">
+
+    
+        <div class=" col-xs-12 col-sm-8"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<section class="section_downsize"></section> 
+</div>
+
+
+</div>
+<div class="containsResourceName resourceClass-feature section cqFeature">
+
+ 
+<div id="61549540-3a98-43cf-80ef-1bce871e069d" class="carousel slide   add_margin_20 " data-ride="carousel" data-wrap="true" data-interval="false"> 
+
+    <!-- Controls --> 
+    
+   
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner add_overflow_visible">
+        <!-- /* Don't add the active class if the feature is randomized */-->
+        <div class="item  active" style="background-image: url(&quot;/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.high.jpg/1492752869045.jpg&quot;);">
+            
+	<div data-adaptivepicture="" data-backgroundimage="true">
+		<div data-src="/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.low.jpg/1492752869045.jpg" data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src="/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.medium.jpg/1492752869045.jpg" data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src="/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.high.jpg/1492752869045.jpg" data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		
+	</div>
+
+
+            
+            
+                
+	<div data-adaptivepicture="" data-class="visible-xs">
+		<div data-src="/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.low.jpg/1492752869045.jpg" data-media="(min-width: 1px)"></div>    <!-- Portrait iPad  -->
+		<div data-src="/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.medium.jpg/1492752869045.jpg" data-media="(min-width: 481px)"></div> <!-- Landscape iPad -->
+		<div data-src="/content/mathworks/www/en/solutions/mechatronics/jcr:content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.high.jpg/1492752869045.jpg" data-media="(min-width: 768px)"></div>    <!-- desktop  -->
+		<noscript>
+			&lt;img src="/content/mathworks/www/en/solutions/mechatronics/_jcr_content/mainParsys/column_0/1/feature_0/items/item_1.adapt.full.high.jpg/1492752869045.jpg" class="visible-xs" data-aem-src="/content/dam/mathworks/mathworks-dot-com/broken-images-resolved/solutions/mechatronics/mainParsys/column_0/1/feature_0/items/item_1/mechatronics-feature"&gt;
+		</noscript>
+	<img class="visible-xs" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/1492752869045.jpg"></div>
+
+            
+
+            
+            <div>
+                <div class="carousel-caption  ">
+                    <div>
+                        <div><div class="containsResourceName parsys resourceClass-parsys"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row   ">
+
+    
+        <div class=" col-xs-12 col-sm-6"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section opacitycontainer resourceClass-opacitycontainer"><div class="opacity_container opacity_dark_6   ">
+	<div><div class="containsResourceName parsys mainParsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h3 class="add_font_color_null">Design, optimize, and verify mechatronic systems</h3>
+</div>
+
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+    
+</div>
+</div>
+
+</div>
+</div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Indicators -->
+    
+
+</div>
+
+
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<p>Developing mechatronic systems requires integrating mechanical, electrical, control, and embedded software subsystems. <a href="https://www.mathworks.com/solutions/model-based-design.html">Model-Based Design</a> and MathWorks products enable you to design and simulate all of these domains in a single environment. </p>
+ <p>Through desktop and real-time simulations, you can:</p>
+</div>
+
+
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<ul>
+  <li>Predict and optimize system performance</li>
+  <li>Understand and manage complex system interactions</li>
+  <li>Detect design inefficiencies and integration errors early during development</li>
+  <li>Verify and test mechatronic systems such as <a href="https://www.mathworks.com/discovery/motor-control.html">motor control</a> using fewer hardware prototypes.</li>
+  <li>Eliminate manual coding errors by automatically generating code from the simulation model</li>
+ </ul>
+</div>
+
+
+</div>
+<div class="cqColumns containsResourceName section resourceClass-columns"><div class="row   section_downsize add_equal_heights">
+
+    
+        <div class=" col-xs-12 col-sm-4 col-md-3"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName thumbnail resourceClass-thumbnail section"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	<div class="thumbnail thumbnail_asset asset_overlay add_margin_20  ">
+		<div class="row">
+			
+			
+			
+			
+			
+			
+			
+			
+				<div class="col-xs-6 col-sm-12">
+					
+	
+		
+		
+	<a href="https://www.mathworks.com/videos/optimizing-mechatronic-systems-using-simulation-81681.html?form_seq=1s3k3K3B" title="In this webinar we demonstrate the benefits of using Simulink as a platform for motion control system design of electrically driven mechanical linkages. This webinar explores multidomain modeling involving the interaction of mechanical and electrical" data-width="833" data-remote="/content/mathworks/www/en/videos/optimizing-mechatronic-systems-using-simulation-81681.udp.html" data-toggle="lightbox">
+		<img src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/Thumbnail.11.210.118.jpg" class="fluid_image" alt="In this webinar we demonstrate the benefits of using Simulink as a platform for motion control system design of electrically driven mechanical linkages. This webinar explores multidomain modeling involving the interaction of mechanical and electrical">
+		
+		<div class="overlay_container text-center" style="font-size: 12px; padding: 2px;">
+			<span class="icon-video add_icon_color_white"><span class="video_length" style="font-size: 12px;"> 41:38</span></span>
+		</div>
+		
+	</a>
+
+	
+
+				</div>
+				<div class="col-xs-6 col-sm-12">
+					
+	<div class="asset_title">
+			
+			
+	<a href="https://www.mathworks.com/videos/optimizing-mechatronic-systems-using-simulation-81681.html?form_seq=1s3k3K3B" data-width="833" data-remote="/content/mathworks/www/en/videos/optimizing-mechatronic-systems-using-simulation-81681.udp.html" data-toggle="lightbox">
+		<span></span>
+		Optimizing Mechatronic Systems Using Simulation
+		<span style="color:grey"></span>
+		
+	</a>
+
+			
+	</div>
+		
+		
+		
+
+				</div>
+			
+		</div>
+	</div>
+
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-4 col-md-3"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName thumbnail resourceClass-thumbnail section"><script type="text/javascript">
+	$(document).ready(function() {
+		if ($.cookie("video-reg") != null) {
+			//target dom span class
+			$('.icon-video-locked').css('display', 'none');
+		}
+	});
+</script>
+
+
+
+
+
+
+
+
+
+	<div class="thumbnail thumbnail_asset asset_overlay add_margin_20  ">
+		<div class="row">
+			
+			
+			
+			
+			
+			
+			
+			
+				<div class="col-xs-6 col-sm-12">
+					
+	
+		
+		
+	<a href="https://www.mathworks.com/videos/b-r-develops-virtual-sensor-technology-to-improve-servo-drive-performance-1490385615790.html?form_seq=jZTtoGtD" title="To counteract vibrations in drive systems B&amp;R developed virtual sensor technology, which applies an advanced control strategy for high-performance operation of drive systems and avoids the costly usage of additional physical sensors." data-width="833" data-remote="/content/mathworks/www/en/videos/b-r-develops-virtual-sensor-technology-to-improve-servo-drive-performance-1490385615790.udp.html" data-toggle="lightbox">
+		<img src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/B-and-R-Develops-Virtual-Sensor-Technology-to-Improve-Servo-Drive-Performance.jpg" class="fluid_image" alt="To counteract vibrations in drive systems B&amp;R developed virtual sensor technology, which applies an advanced control strategy for high-performance operation of drive systems and avoids the costly usage of additional physical sensors.">
+		
+		<div class="overlay_container text-center" style="font-size: 12px; padding: 2px;">
+			<span class="icon-video add_icon_color_white"><span class="video_length" style="font-size: 12px;"> 3:46</span></span>
+		</div>
+		
+	</a>
+
+	
+
+				</div>
+				<div class="col-xs-6 col-sm-12">
+					
+	<div class="asset_title">
+			
+			
+	<a href="https://www.mathworks.com/videos/b-r-develops-virtual-sensor-technology-to-improve-servo-drive-performance-1490385615790.html?form_seq=jZTtoGtD" data-width="833" data-remote="/content/mathworks/www/en/videos/b-r-develops-virtual-sensor-technology-to-improve-servo-drive-performance-1490385615790.udp.html" data-toggle="lightbox">
+		<span></span>
+		B&amp;R Develops Virtual Sensor Technology to Improve Servo Drive Performance
+		<span style="color:grey"></span>
+		
+	</a>
+
+			
+	</div>
+		
+		
+		
+
+				</div>
+			
+		</div>
+	</div>
+
+
+
+</div>
+
+</div>
+</div>
+    
+</div>
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-4"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName resourceClass-panel cqPanel section">
+
+
+<div class="panel panel-default add_background_color_white panel_font_downsize">
+    
+
+    
+
+    <div class="panel-body">
+        
+        <div class="panelParsys containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h3>Explore Products for Mechatronics</h3>
+</div>
+
+
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<ul class="list-unstyled">
+  <li><a href="https://www.mathworks.com/products/simulink-coder.html">Simulink Coder™</a></li>
+  <li><a href="https://www.mathworks.com/products/simelectronics.html">Simscape Electronics<sup>®</sup></a></li>
+  <li><a href="https://www.mathworks.com/products/simhydraulics.html">Simscape Fluids<sup>®</sup></a></li>
+  <li><a href="https://www.mathworks.com/products/simmechanics.html">Simscape Multibody™</a></li>
+  <li><a href="https://www.mathworks.com/products/simpower.html">Simscape Power Systems™</a></li>
+  <li><a href="https://www.mathworks.com/products/simscape.html">Simscape™</a></li>
+  <li><a href="https://www.mathworks.com/products/simcontrol.html">Simulink Control Design™</a></li>
+ </ul>
+</div>
+
+
+</div>
+<div class="horizontalrule containsResourceName section resourceClass-horizontalrule">
+
+<hr>
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h3>Mechatronics Resources</h3>
+</div>
+
+
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<ul class="list-unstyled">
+<li><a href="https://www.mathworks.com/videos/search.html?q=&amp;fq=marketing-application:mechatronics&amp;page=1">Videos and Webinars</a></li>
+<li><a href="https://www.mathworks.com/hardware-support.html?q=&amp;fq=marketing-application:mechatronics&amp;page=1">Hardware Support</a></li>
+<li><a href="https://www.mathworks.com/company/user_stories/search.html?q=&amp;fq=marketing-application:mechatronics&amp;page=1" target="_self">User Stories</a></li>
+<li><a href="https://www.mathworks.com/company/newsletters/search.html?q=&amp;fq=marketing-application:mechatronics&amp;page=1">Technical Articles</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+        
+    </div>
+
+    
+
+</div></div>
+
+</div>
+</div>
+    
+</div>
+</div>
+
+</div>
+</section>
+            
+
+<div><div class="containsResourceName parsys resourceClass-parsys modalParsys">
+</div>
+</div>
+
+            <div id="location_content" style="display:none;"></div>
+
+<div class="modal fade" id="country-unselected" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<object data="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/pic-header-mathworks-logo.svg" width="167" class="mw_logo" type="image/svg+xml">
+					<img src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/pic-header-mathworks-logo.png" class="mw_logo" alt="MathWorks">
+				</object>
+			</div>
+			<div class="modal-body">
+				<div class="row add_margin_40">
+					<div class="col-xs-12">
+						<h1 class="icon-globe add_icon_color_darkblue">Select Your Country</h1>
+						<p>Choose your country to get translated content where available and see local events and offers. Based on
+							your location, we recommend that you select: <strong class="recommended-country">India</strong>.</p>
+						<a href="https://in.mathworks.com/" id="recommended_domain_button" class="btn btn_color_blue containsResourceName resourceClass-button">Select <span class="recommended-country">India</span></a>
+					</div>
+				</div>
+				<p>You can also select a location from the following list:</p>
+				<div class="row add_margin_30">
+					<div class="col-sm-4 col-md-3">
+						<h3 class="add_bottom_rule">Americas</h3>
+						<ul class="list-unstyled">
+							<li><a href="https://www.mathworks.com/" class="domain_selector_link" data-country-code="CA" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Canada</a> (English)
+							</li>
+							<li><a href="https://www.mathworks.com/" class="domain_selector_link" data-country-code="US" data-subdomain="www" data-lang="en" data-default-lang="true" data-selected-text="United States" data-recommended-text="United States" data-do-not-rewrite="true">United States</a> (English)
+							</li>
+						</ul>
+					</div>
+					<div class="col-sm-4 col-md-6">
+						<h3 class="add_bottom_rule">Europe</h3>
+						<div class="row">
+							<div class="col-xs-6 col-sm-12 col-md-6">
+								<ul class="list-unstyled add_margin_0_sm">
+									<li><a href="https://nl.mathworks.com/" class="domain_selector_link" data-country-code="BE" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Belgium</a> (English)
+									</li>
+									<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="DK" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Denmark</a> (English)
+									</li>
+									<li><a href="https://de.mathworks.com/" class="domain_selector_link" data-country-code="DE" data-subdomain="de" data-lang="de" data-default-lang="true" data-selected-text="Deutschland" data-recommended-text="Deutschland" data-do-not-rewrite="true">Deutschland</a> (Deutsch)
+									</li>
+									<li><a href="https://es.mathworks.com/" class="domain_selector_link" data-country-code="ES" data-subdomain="es" data-lang="es" data-default-lang="true" data-selected-text="España" data-recommended-text="España" data-do-not-rewrite="true">España</a> (Español)
+									</li>
+									<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="FI" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Finland</a> (English)
+									</li>
+									<li><a href="https://fr.mathworks.com/" class="domain_selector_link" data-country-code="FR" data-subdomain="fr" data-lang="fr" data-default-lang="true" data-selected-text="France" data-recommended-text="France" data-do-not-rewrite="true">France</a> (Français)
+									</li>
+									<li><a href="https://uk.mathworks.com/" class="domain_selector_link" data-country-code="IE" data-subdomain="uk" data-lang="en" data-do-not-rewrite="true">Ireland</a> (English)
+									</li>
+									<li><a href="https://it.mathworks.com/" class="domain_selector_link" data-country-code="IT" data-subdomain="it" data-lang="it" data-default-lang="true" data-selected-text="Italia" data-recommended-text="Italia" data-do-not-rewrite="true">Italia</a> (Italiano)
+									</li>
+									<li><a href="https://nl.mathworks.com/" class="domain_selector_link" data-country-code="LU" data-subdomain="nl" data-lang="en" data-do-not-rewrite="true">Luxembourg</a> (English)
+									</li>
+								</ul>
+							</div>
+							<div class="col-xs-6 col-sm-12 col-md-6">
+								<ul class="list-unstyled">
+									<li><a href="https://nl.mathworks.com/" class="domain_selector_link" data-country-code="NL" data-subdomain="nl" data-lang="en" data-default-lang="true" data-selected-text="Benelux" data-recommended-text="Netherlands" data-do-not-rewrite="true">Netherlands</a> (English)
+									</li>
+									<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="NO" data-subdomain="se" data-lang="en" data-do-not-rewrite="true">Norway</a> (English)
+									</li>
+									<li><a href="https://de.mathworks.com/" class="domain_selector_link" data-country-code="AT" data-subdomain="de" data-lang="de" data-do-not-rewrite="true">Österreich</a> (Deutsch)
+									</li>
+									<li><a href="https://www.mathworks.com/" class="domain_selector_link" data-country-code="PT" data-subdomain="www" data-lang="en" data-do-not-rewrite="true">Portugal</a> (English)
+									</li>
+									<li><a href="https://se.mathworks.com/" class="domain_selector_link" data-country-code="Sweden" data-subdomain="se" data-lang="en" data-default-lang="true" data-selected-text="Nordic" data-recommended-text="Sweden" data-do-not-rewrite="true">Sweden</a> (English)
+									</li>
+									<li>Switzerland
+										<ul class="list-unstyled add_indent_20">
+											<li><a href="https://ch.mathworks.com/" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="de" data-selected-text="Schweiz" data-recommended-text="Schweiz" data-do-not-rewrite="true">Deutsch</a>
+											</li>
+
+											<li><a href="https://ch.mathworks.com/" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="en" data-default-lang="true" data-selected-text="Switzerland" data-recommended-text="Switzerland" data-do-not-rewrite="true">English</a>
+											</li>
+
+											<li><a href="https://ch.mathworks.com/" class="domain_selector_link" data-country-code="CH" data-subdomain="ch" data-lang="fr" data-selected-text="Suisse" data-recommended-text="Suisse" data-do-not-rewrite="true">Français</a>
+											</li>
+										</ul>
+									</li>
+									<li><a href="https://uk.mathworks.com/" class="domain_selector_link" data-country-code="GB" data-subdomain="uk" data-lang="en" data-default-lang="true" data-selected-text="United Kingdom" data-recommended-text="United Kingdom" data-do-not-rewrite="true">United Kingdom</a> (English)
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-3">
+						<h3 class="add_bottom_rule">Asia Pacific</h3>
+						<ul class="list-unstyled">
+							<li><a href="https://au.mathworks.com/" class="domain_selector_link" data-country-code="AU" data-subdomain="au" data-lang="en" data-default-lang="true" data-selected-text="Australia" data-recommended-text="Australia" data-do-not-rewrite="true">Australia</a> (English)
+							</li>
+							<li><a href="https://in.mathworks.com/" class="domain_selector_link" data-country-code="IN" data-subdomain="in" data-lang="en" data-default-lang="true" data-selected-text="India" data-recommended-text="India" data-do-not-rewrite="true">India</a> (English)
+							</li>
+							<li><a href="https://au.mathworks.com/" class="domain_selector_link" data-country-code="NZ" data-subdomain="au" data-lang="en" data-do-not-rewrite="true">New Zealand</a> (English)
+							</li>
+							<li><a href="https://cn.mathworks.com/" class="domain_selector_link" data-country-code="CN" data-subdomain="cn" data-lang="zh" data-default-lang="true" data-selected-text="中国" data-recommended-text="中国" data-do-not-rewrite="true">中国</a> (简体中文)
+							</li>
+							<li><a href="https://jp.mathworks.com/" class="domain_selector_link" data-country-code="JP" data-subdomain="jp" data-lang="ja" data-default-lang="true" data-selected-text="日本" data-recommended-text="日本" data-do-not-rewrite="true">日本</a> (日本語)
+							</li>
+							<li><a href="https://kr.mathworks.com/" class="domain_selector_link" data-country-code="KR" data-subdomain="kr" data-lang="ko" data-default-lang="true" data-selected-text="한국" data-recommended-text="한국" data-do-not-rewrite="true">한국</a> (한국어)
+							</li>
+						</ul>
+					</div>
+				</div>
+				<p class="text-center"><strong><a href="https://www.mathworks.com/company/worldwide.html">See all countries</a></strong></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+<footer id="footer" class="bs-footer">
+
+	<div class="fat_footer_container"><div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div><div class="resourceClass-iparsys containsResourceName parsys fatFooterParsys iparsys"><div class="section"><div class="new containsResourceName resourceClass-new"></div>
+</div><div class="iparys_inherited"><div class="containsResourceName parsys fatFooterParsys iparsys resourceClass-par"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row   ">
+
+    
+        <div class=" col-xs-12 col-lg-9 col-lg-push-3"><div class="containsResourceName parsys resourceClass-parsys"><div class="cqColumns containsResourceName section resourceClass-columns"><div class="row add_margin_20  ">
+
+    
+        <div class=" col-xs-12 col-sm-2"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h5>Explore Products</h5>
+<ul class="list-unstyled">
+<li><a href="https://www.mathworks.com/products/matlab.html?s_tid=hp_ff_p_matlab" target="_self">MATLAB</a></li>
+<li><a href="https://www.mathworks.com/products/simulink.html?s_tid=hp_ff_p_simulink" target="_self">Simulink</a></li>
+<li><a href="https://www.mathworks.com/academia/student_version.html?s_tid=hp_ff_p_student" target="_self">Student Software</a></li>
+<li><a href="https://www.mathworks.com/hardware-support.html?s_tid=hp_ff_p_hwsupport" target="_self">Hardware Support</a></li>
+<li><a href="https://www.mathworks.com/matlabcentral/fileexchange/?s_tid=hp_ff_p_fx">File Exchange</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h5>Try or Buy</h5>
+<ul class="list-unstyled">
+<li><a href="https://www.mathworks.com/downloads/web_downloads/?s_iid=hp_ff_t_downloads">Downloads</a></li>
+<li><a href="https://www.mathworks.com/programs/trials/trial_request.html" data-target="same" data-link="lead" data-offertype="trial" data-component="footer">Trial Software</a></li>
+<li><a href="https://www.mathworks.com/company/aboutus/contact_us/contact_sales.html" target="_self" data-link="lead" data-offertype="Contact Sales" data-component="footer">Contact Sales</a></li>
+<li><a href="https://www.mathworks.com/pricing-licensing.html" target="_self" data-link="lead" data-offertype="pl" data-component="footer">Pricing and Licensing</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h5>Learn to Use</h5>
+<ul class="list-unstyled">
+<li><a href="https://www.mathworks.com/help/?s_tid=hp_ff_l_doc" data-target="same">Documentation</a></li>
+<li><a href="https://www.mathworks.com/support/learn-with-matlab-tutorials.html?s_tid=hp_ff_l_tutorials" data-target="same">Tutorials</a></li>
+<li><a href="https://www.mathworks.com/examples/?s_tid=hp_ff_l_examples" data-target="same">Examples</a></li>
+<li><a href="https://www.mathworks.com/videos.html?s_tid=hp_ff_l_videos" target="_self">Videos and Webinars</a></li>
+<li><a href="https://www.mathworks.com/services/training.html?s_tid=hp_ff_l_training" target="_self">Training</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h5>Get Support</h5>
+<ul class="list-unstyled">
+<li><a href="https://www.mathworks.com/support/install-matlab.html?s_tid=hp_ff_s_install">Installation Help</a></li>
+<li><a href="https://www.mathworks.com/matlabcentral/answers/?s_tid=hp_ff_s_answers">Answers</a></li>
+<li><a href="https://www.mathworks.com/services/consulting.html?s_tid=hp_ff_s_consulting" target="_self">Consulting</a></li>
+<li><a href="http://status.mathworks.com/?s_tid=hp_ff_s_application">Application Status</a></li>
+<li><a href="https://www.mathworks.com/licensecenter/?s_tid=hp_ff_s_license">License Center</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-sm-2"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h5>About MathWorks</h5>
+<ul class="list-unstyled">
+<li><a href="https://www.mathworks.com/company/jobs/opportunities/?s_tid=hp_ff_a_careers">Careers</a></li>
+<li><a href="https://www.mathworks.com/company/newsroom.html?s_tid=hp_ff_a_newsroom" target="_self">Newsroom</a></li>
+<li><a href="https://www.mathworks.com/company/aboutus/soc_mission.html?s_tid=hp_ff_a_socialmission" target="_self">Social Mission</a></li>
+<li><a href="https://www.mathworks.com/company.html?s_tid=hp_ff_a_company" target="_self">About MathWorks</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+</div>
+</div>
+
+</div>
+</div>
+    
+        <div class=" col-xs-12 col-lg-3 col-lg-pull-9"><div class="containsResourceName parsys resourceClass-parsys"><div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<h4 class="add_margin_0">MathWorks</h4>
+<p><i>Accelerating the pace of engineering and science</i></p>
+
+</div>
+
+
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<p>MathWorks is the leading developer of mathematical computing software for engineers and scientists.</p>
+
+</div>
+
+
+</div>
+<div class="containsResourceName section text resourceClass-text">
+<div class="mw-text  ">
+	<p><a href="https://www.mathworks.com/discovery.html?s_tid=hp_ff_a_discover" data-target="same">Discover…</a></p>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+    
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+	<!-- BASIC FOOTER CONTENT - Begin -->
+	<div class="container">
+		<div class="footer">
+			<div class="row">
+				<div class="col-xs-12 col-md-9">
+					<ul class="countrynav">
+						<!-- Code to Remove Tracking from Previous page and add new tracking -->
+						<li class="footernav_country">
+							<a onclick="$(&#39;#country-unselected&#39;).modal(&#39;show&#39;);">
+                                <span class="icon-globe icon_color_quinary icon_16"></span><span id="countrySelectorButtonText">United States</span>
+							</a>
+						</li>
+					</ul>
+					<div class="clearfix"></div>
+					
+					<div><div class="footernavigation containsResourceName resourceClass-footernavigation footerNavigation">
+	<ul class="footernav  ">
+		<li class="footernav_footernav_patents">
+			<a href="https://www.mathworks.com/company/aboutus/policies_statements/patents.html?s_tid=gf_pat">Patents</a>
+		</li>
+	
+		<li class="footernav_footernav_trademarks">
+			<a href="https://www.mathworks.com/company/aboutus/policies_statements/trademarks.html?s_tid=gf_trd">Trademarks</a>
+		</li>
+	
+		<li class="footernav_footernav_privacy">
+			<a href="https://www.mathworks.com/company/aboutus/policies_statements.html?s_tid=gf_priv">Privacy Policy</a>
+		</li>
+	
+		<li class="footernav_footernav_piracy">
+			<a href="https://www.mathworks.com/company/aboutus/policies_statements/piracy.html?s_tid=gf_pir">Preventing Piracy</a>
+		</li>
+	</ul>
+	
+
+</div>
+</div>
+					
+					<div><div class="containsResourceName resourceClass-footercompanyaddress footerCompanyAddress footercompanyaddress">
+	
+	<div class="cq-placeholder" data-emptytext="Footer Company Address"></div>
+
+</div>
+</div>
+					
+					<div><div class="resourceClass-iparsys containsResourceName parsys iparsys footerParsys"><div class="section"><div class="new containsResourceName resourceClass-new"></div>
+</div><div class="iparys_inherited"><div class="containsResourceName parsys iparsys footerParsys resourceClass-par"></div>
+</div>
+</div>
+</div>
+					<div class="clearfix"></div>
+					<p class="copyright">© 1994-2017 The MathWorks, Inc.</p>
+				</div>
+				<div class="clearfix visible-sm add_margin_10"></div>
+				<div class="col-xs-12 col-md-3">
+					
+					<div><div class="resourceClass-iparsys socialMediaIconParsys containsResourceName parsys iparsys"><div class="section"><div class="new containsResourceName resourceClass-new"></div>
+</div><div class="iparys_inherited"><div class="socialMediaIconParsys containsResourceName parsys iparsys resourceClass-par"><div class="containsResourceName socialmediaicon resourceClass-socialmediaicon section">
+
+
+	<div class="social_media  ">
+		<ul class="social_media_icons list-unstyled  ">
+			
+			<li>
+				<a href="http://www.facebook.com/MATLAB" class="svg_link" target="_blank">
+					<img class="ico_facebook" alt="Facebook" title="Facebook" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/ico-facebook.svg">
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="http://www.twitter.com/MATLAB" class="svg_link" target="_blank">
+					<img class="ico_twitter" alt="Twitter" title="Twitter" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/ico-twitter.svg">
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="https://plus.google.com/117177960465154322866?prsrc=3" class="svg_link" target="_blank">
+					<img class="ico_google" alt="Google+" title="Google+" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/ico-google-plus.svg">
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="http://www.linkedin.com/company/the-mathworks_2" class="svg_link" target="_blank">
+					<img class="ico_linkedin" alt="LinkedIn" title="LinkedIn" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/ico-linkedin.svg">
+				</a>
+
+				 
+				
+			</li>
+			
+			<li>
+				<a href="https://www.mathworks.com/company/rss.html" class="svg_link" target="_blank">
+					<img class="ico_rss" alt="RSS" title="RSS" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/ico-rss.svg">
+				</a>
+
+				 
+				
+			</li>
+			
+			
+		</ul>
+		<div class="clearfix"></div>
+	</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+					<div class="clearfix"></div>
+					<p class="pull_right_sm pull_right_md pull_right_lg"><small class="percent_90"><em>Join the conversation</em></small></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- BASIC FAT FOOTER CONTENT - End -->
+</footer>
+
+
+<div class="containsResourceName parbase clientcontext resourceClass-clientcontext"><link rel="stylesheet" href="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/shared.min.css" type="text/css">
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/shared.min.js.download"></script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/modern.min.js.download"></script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/kernel.min.js.download"></script>
+<script type="text/javascript">
+    $CQ(function() {
+        CQ_Analytics.SegmentMgr.loadSegments("\/etc\/segmentation");
+        CQ_Analytics.ClientContextUtils.init("\/etc\/clientcontext\/mw\u002Ddefault", "\/content\/mathworks\/www\/en\/solutions\/mechatronics");
+
+        
+    });
+</script>
+</div>
+
+
+    
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/akamai-country-code.min.20171103180323287.js.download"></script>
+
+
+
+
+
+
+
+    
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/clientlibs.min.20171103180323287.js.download"></script>
+
+
+
+
+
+<!-- BEGIN Adobe DTM -->
+<script type="text/javascript">
+try {
+_satellite.pageBottom();
+} catch (e) {
+//something went wrong
+}
+</script><script>
+if (typeof qcord == 'undefined') {
+  var qcord = '';
+}
+var qcrev = '';
+if (typeof qclabels == 'undefined') {
+  var qclabels = '';
+} 
+ var ezt = ezt ||[];
+
+ (function(){
+   var elem = document.createElement('script');
+   elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://pixel") + ".quantserve.com/aquant.js?a=p-zfNtLVVEHXE-1";
+   elem.async = true;
+   elem.type = "text/javascript";
+   var scpt = document.getElementsByTagName('script')[0];
+   scpt.parentNode.insertBefore(elem,scpt);
+ }());
+
+
+ ezt.push({qacct: 'p-zfNtLVVEHXE-1',
+           orderid: qcord,
+           revenue: qcrev,
+           labels: qclabels
+           });
+</script><!-- Google Remarketing Base Tag -->
+<script type="text/javascript">
+/* <![CDATA[ */  
+var google_conversion_id = 1023777138;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/conversion.js.download">
+</script>
+<!-- END Adobe DTM -->
+
+
+
+<a class="btn btn_color_mediumgray" id="go-top" style="display: none;"><span class="icon-arrow-open-up icon_24"></span></a><iframe sandbox="allow-scripts allow-same-origin" title="Adobe ID Syncing iFrame" id="destination_publishing_iframe_mathworks_0" src="./Mechatronics - MATLAB &amp; Simulink Solutions - MATLAB &amp; Simulink_files/dest5.html" class="aamIframeLoaded" style="display: none; width: 0px; height: 0px;"></iframe></body></html>
