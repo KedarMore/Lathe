@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<!-- saved from url=(0143)file:///E:/Shared%20docs/Lathe/Converting%20A%2013x40%20Manual%20Lathe%20To%20Cnc%20With%20Servos%20And%20Mach3%20_%20The%20Hobby-Machinist.htm -->
+<html id="XF" dir="LTR" data-app="public" data-template="thread_view" data-container-key="node-231" data-content-key="thread-33405" data-logged-in="false" data-cookie-prefix="xf_" class="has-js template-thread_view has-blobconstructor has-blob-constructor has-cors has-geolocation has-history has-postmessage has-svg has-websockets has-passiveeventlisteners has-webworkers has-contextmenu has-hashchange has-no-pointerevents has-audio has-canvas has-canvastext has-contenteditable has-emoji has-video has-webgl has-rgba has-placeholder has-hsla has-supports has-no-hiddenscroll has-no-touchevents has-fontface has-generatedcontent has-textshadow has-pagevisibility has-performance has-cssanimations has-csscolumns has-csscolumns-width has-no-csscolumns-span has-csscolumns-fill has-csscolumns-gap has-csscolumns-rule has-csscolumns-rulecolor has-csscolumns-rulestyle has-csscolumns-rulewidth has-no-csscolumns-breakbefore has-no-csscolumns-breakafter has-no-csscolumns-breakinside has-flexbox has-flexwrap has-no-cssreflections has-csstransforms has-csstransforms3d has-csstransitions has-indexeddb has-indexeddb-deletedatabase has-blobconstructor has-blob-constructor has-cors has-geolocation has-history has-postmessage has-svg has-websockets has-passiveeventlisteners has-webworkers has-no-contextmenu has-hashchange has-pointerevents has-audio has-canvas has-canvastext has-contenteditable has-emoji has-video has-webgl has-rgba has-placeholder has-hsla has-supports has-no-hiddenscroll has-no-touchevents has-fontface has-generatedcontent has-textshadow has-pagevisibility has-performance has-cssanimations has-csscolumns has-csscolumns-width has-csscolumns-span has-csscolumns-fill has-csscolumns-gap has-csscolumns-rule has-csscolumns-rulecolor has-csscolumns-rulestyle has-csscolumns-rulewidth has-csscolumns-breakbefore has-csscolumns-breakafter has-csscolumns-breakinside has-flexbox has-flexwrap has-cssreflections has-csstransforms has-csstransforms3d has-csstransitions has-indexeddb has-no-indexeddb-deletedatabase" style="" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	
+	
+
+	<title>Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 | The Hobby-Machinist</title>
+
+	
+		
+		<meta name="description" content="I wanted to start a new thread to document conversion of my Jet 13x40 lathe. Most of this should translate to similar size lathes like the PM lathes etc...">
+		<meta property="og:description" content="I wanted to start a new thread to document conversion of my Jet 13x40 lathe. Most of this should translate to similar size lathes like the PM lathes etc. and I hope it will be of help to anyone considering it. I am basically building off of the lessons learned from successfully converting my...">
+		<meta property="twitter:description" content="I wanted to start a new thread to document conversion of my Jet 13x40 lathe. Most of this should translate to similar size lathes like the PM lathes etc. and I hope it will be of help to anyone...">
+	
+	
+		<meta property="og:url" content="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/">
+	
+		<link rel="canonical" href="file:///E:/Shared%20docs/Lathe/Converting%20A%2013x40%20Manual%20Lathe%20To%20Cnc%20With%20Servos%20And%20Mach3%20_%20The%20Hobby-Machinist_files/a_008.htm">
+	
+
+	
+		
+	
+	
+	<meta property="og:site_name" content="The Hobby-Machinist">
+
+
+	
+	
+		
+	
+	
+	
+		<meta property="og:title" content="Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3">
+		<meta property="twitter:title" content="Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3">
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+		<meta property="og:image" content="http://www.hobby-machinist.com/styles/default/xenforo/HM_Logo.gif">
+		<meta property="twitter:image" content="http://www.hobby-machinist.com/styles/default/xenforo/HM_Logo.gif">
+		<meta property="twitter:card" content="summary">
+	
+
+
+	
+
+	
+		<meta name="theme-color" content="rgb(24, 88, 134)">
+	
+
+	
+	<link rel="stylesheet" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/css_002.css">
+	
+	<link rel="stylesheet" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/css.css">
+
+	
+		<script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/ca-pub-6703608967479420.js.download"></script><script async="" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/analytics.js.download"></script><script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/ca-pub-6703608967479420.js(1).download"></script><script async="" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/analytics.js(1).download"></script><script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/preamble-compiled.js.download"></script>
+	
+
+
+	
+	
+		<link rel="apple-touch-icon" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/HM_Logo.gif">
+	
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-34659449-1', 'auto');
+	ga('send', 'pageview');
+</script>
+<link rel="preload" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator.js.download" as="script"><script type="text/javascript" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator.js.download"></script><link rel="preload" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator_002.js.download" as="script"><script type="text/javascript" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator_002.js.download"></script><link rel="prefetch" href="https://securepubads.g.doubleclick.net/static/3p_cookie.html"><link rel="preload" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator.js(1).download" as="script"><script type="text/javascript" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator.js(1).download"></script><link rel="preload" href="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator.js(2).download" as="script"><script type="text/javascript" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/integrator.js(2).download"></script></head>
+<body data-template="thread_view">
+
+<div class="p-pageWrapper" id="top">
+
+
+
+<header class="p-header" id="header">
+	<div class="p-header-inner">
+		<div class="p-header-content">
+
+			<div class="p-header-logo p-header-logo--image">
+				<a href="http://www.hobby-machinist.com/">
+					<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/HM_Logo.gif" alt="The Hobby-Machinist">
+				</a>
+			</div>
+
+			
+		</div>
+	</div>
+</header>
+
+
+
+
+
+	<div class="p-navSticky p-navSticky--primary is-sticky" data-xf-init="sticky-header">
+		
+	<nav class="p-nav">
+		<div class="p-nav-inner">
+			<a class="p-nav-menuTrigger" data-xf-click="off-canvas" data-menu=".js-headerOffCanvasMenu" role="button" tabindex="0">
+				<i aria-hidden="true"></i>
+				<span class="p-nav-menuText">Menu</span>
+			</a>
+
+			<div class="p-nav-smallLogo">
+				<a href="http://www.hobby-machinist.com/">
+					<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/HM_Logo.gif" alt="The Hobby-Machinist">
+				</a>
+			</div>
+
+			<div class="p-nav-scroller hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll is-calculated" style="margin-bottom: -47px;">
+					<ul class="p-nav-list js-offCanvasNavSource">
+					
+						<li>
+							
+	<div class="p-navEl " data-has-children="true">
+		
+
+			
+	
+	<a href="http://www.hobby-machinist.com/" class="p-navEl-link p-navEl-link--splitMenu " data-nav-id="home">Home</a>
+
+
+			<a data-xf-key="1" data-xf-click="menu" data-menu-pos-ref="&lt; .p-navEl" data-arrow-pos-ref="&lt; .p-navEl" class="p-navEl-splitTrigger" role="button" tabindex="0" aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					<!--<h4 class="menu-header">Home</h4>-->
+					
+						
+	
+	
+	<a href="http://www.hobby-machinist.com/register/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="defaultRegister">Register</a>
+
+	
+
+					
+						
+	
+	
+	<a href="http://www.hobby-machinist.com/whats-new/latest-activity" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="defaultLatestActivity">Latest activity</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl is-selected" data-has-children="true">
+		
+
+			
+	
+	<a href="http://www.hobby-machinist.com/" class="p-navEl-link p-navEl-link--splitMenu " data-nav-id="forums">Forums</a>
+
+
+			<a data-xf-key="2" data-xf-click="menu" data-menu-pos-ref="&lt; .p-navEl" data-arrow-pos-ref="&lt; .p-navEl" class="p-navEl-splitTrigger" role="button" tabindex="0" aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					<!--<h4 class="menu-header">Forums</h4>-->
+					
+						
+	
+	
+	<a href="http://www.hobby-machinist.com/whats-new/posts/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " data-nav-id="newPosts">New posts</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+						<li>
+							
+	<div class="p-navEl " data-has-children="true">
+		
+
+			
+	
+	<a href="http://www.hobby-machinist.com/whats-new/" class="p-navEl-link p-navEl-link--splitMenu " data-nav-id="whatsNew">What's new</a>
+
+
+			<a data-xf-key="3" data-xf-click="menu" data-menu-pos-ref="&lt; .p-navEl" data-arrow-pos-ref="&lt; .p-navEl" class="p-navEl-splitTrigger" role="button" tabindex="0" aria-label="Toggle expanded" aria-expanded="false" aria-haspopup="true"></a>
+
+		
+		
+			<div class="menu menu--structural" data-menu="menu" aria-hidden="true">
+				<div class="menu-content">
+					<!--<h4 class="menu-header">What's new</h4>-->
+					
+						
+	
+	
+	<a href="http://www.hobby-machinist.com/whats-new/posts/" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow" data-nav-id="whatsNewPosts">New posts</a>
+
+	
+
+					
+						
+	
+	
+	<a href="http://www.hobby-machinist.com/whats-new/latest-activity" class="menu-linkRow u-indentDepth0 js-offCanvasCopy " rel="nofollow" data-nav-id="latestActivity">Latest activity</a>
+
+	
+
+					
+				</div>
+			</div>
+		
+	</div>
+
+						</li>
+					
+					</ul>
+				</div><i class="hScroller-action hScroller-action--end" aria-hidden="true"></i><i class="hScroller-action hScroller-action--start" aria-hidden="true"></i><i class="hScroller-action hScroller-action--end" aria-hidden="true"></i><i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+			</div>
+
+			<div class="p-nav-opposite">
+				<div class="p-navgroup p-account p-navgroup--guest">
+					
+						<a href="http://www.hobby-machinist.com/login/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--logIn" rel="nofollow" data-xf-click="overlay">
+							<span class="p-navgroup-linkText">Log in</span>
+						</a>
+						
+							<a href="http://www.hobby-machinist.com/register/" class="p-navgroup-link p-navgroup-link--textual p-navgroup-link--register" rel="nofollow" data-xf-click="overlay">
+							<span class="p-navgroup-linkText"><span class="pulse">Register</span></span>
+							</a>
+						
+					
+				</div>
+
+				<div class="p-navgroup p-discovery">
+					<a href="http://www.hobby-machinist.com/whats-new/" class="p-navgroup-link p-navgroup-link--iconic p-navgroup-link--whatsnew" title="What&#39;s new">
+						<i aria-hidden="true"></i>
+						<span class="p-navgroup-linkText">What's new</span>
+					</a>
+
+					
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	</div>
+	
+	
+		<div class="p-sectionLinks">
+			<div class="p-sectionLinks-inner hScroller" data-xf-init="h-scroller">
+				<div class="hScroller-scroll is-calculated" style="margin-bottom: -47px;">
+					<ul class="p-sectionLinks-list">
+					
+						<li>
+							
+	<div class="p-navEl ">
+		
+
+			
+	
+	<a href="http://www.hobby-machinist.com/whats-new/posts/" class="p-navEl-link  " data-xf-key="alt+1" data-nav-id="newPosts">New posts</a>
+
+
+			
+
+		
+		
+	</div>
+
+						</li>
+					
+					</ul>
+				</div><i class="hScroller-action hScroller-action--end" aria-hidden="true"></i><i class="hScroller-action hScroller-action--start" aria-hidden="true"></i><i class="hScroller-action hScroller-action--end" aria-hidden="true"></i><i class="hScroller-action hScroller-action--start" aria-hidden="true"></i>
+			</div>
+		</div>
+	
+
+
+
+<div class="offCanvasMenu offCanvasMenu--nav js-headerOffCanvasMenu" data-menu="menu" aria-hidden="true" data-ocm-builder="navigation">
+	<div class="offCanvasMenu-backdrop" data-menu-close="true"></div>
+	<div class="offCanvasMenu-content">
+		<div class="offCanvasMenu-header">
+			Menu
+			<a class="offCanvasMenu-closer" data-menu-close="true" role="button" tabindex="0" aria-label="Close"></a>
+		</div>
+		
+			<div class="p-offCanvasRegisterLink">
+				<div class="offCanvasMenu-linkHolder">
+					<a href="http://www.hobby-machinist.com/login/" class="offCanvasMenu-link" rel="nofollow" data-xf-click="overlay" data-menu-close="true">
+						Log in
+					</a>
+				</div>
+				<hr class="offCanvasMenu-separator">
+				
+					<div class="offCanvasMenu-linkHolder">
+						<a href="http://www.hobby-machinist.com/register/" class="offCanvasMenu-link" rel="nofollow" data-xf-click="overlay" data-menu-close="true">
+							Register
+						</a>
+					</div>
+					<hr class="offCanvasMenu-separator">
+				
+			</div>
+		
+		<div class="js-offCanvasNavTarget"></div>
+	</div>
+</div>
+
+<div class="p-body">
+	<div class="p-body-inner">
+		<!--XF:EXTRA_OUTPUT-->
+
+		
+			
+	
+		
+		
+		
+
+		<ul class="notices notices--block notices--isMulti js-notices" data-xf-init="notices" data-type="block" data-scroll-interval="6">
+
+			
+				
+	<li class="notice js-notice notice--primary" data-notice-id="" data-delay-duration="0" data-display-duration="0" data-auto-dismiss="0" data-visibility="">
+
+		
+		<div class="notice-content">
+			
+			This site uses cookies. By continuing to use this site, you are agreeing to our use of cookies. <a href="http://www.hobby-machinist.com/help/cookies">Learn more.</a>
+		</div>
+	</li>
+
+			
+				
+	<li class="notice js-notice notice--primary" data-notice-id="32" data-delay-duration="0" data-display-duration="0" data-auto-dismiss="" data-visibility="">
+
+		
+		<div class="notice-content">
+			
+				<a href="http://www.hobby-machinist.com/account/dismiss-notice?notice_id=32" class="notice-dismiss js-noticeDismiss" data-xf-init="tooltip" data-original-title="Dismiss notice" id="js-XFUniqueId1"></a>
+			
+			<p><b>PLEASE: Read the <a href="http://www.hobby-machinist.com/threads/the-site-rules-please-read-before-registering.40822/">FORUM RULES</a> BEFORE registering!</b></p>
+		</div>
+	</li>
+
+			
+		</ul>
+	
+
+		
+
+		
+
+		
+		
+	
+		<ul class="p-breadcrumbs " itemscope="" itemtype="https://schema.org/BreadcrumbList">
+		
+
+			
+			
+
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/" itemprop="item">
+			<span itemprop="name">Forums</span>
+		</a>
+	</li>
+
+			
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/categories/general-machining-discussions-alphabetized.11/" itemprop="item">
+			<span itemprop="name">GENERAL MACHINING DISCUSSIONS (Alphabetized)</span>
+		</a>
+	</li>
+
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/forums/cnc-in-the-home-shop.82/" itemprop="item">
+			<span itemprop="name">CNC IN THE HOME SHOP</span>
+		</a>
+	</li>
+
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/forums/machine-build-logs.231/" itemprop="item">
+			<span itemprop="name">MACHINE BUILD LOGS</span>
+		</a>
+	</li>
+
+			
+
+		
+		</ul>
+	
+
+		
+
+		
+	<noscript>&lt;div class="blockMessage blockMessage--important blockMessage--iconic u-noJsOnly"&gt;JavaScript is disabled. For a better experience, please enable JavaScript in your browser before proceeding.&lt;/div&gt;</noscript>
+
+		
+	<!--[if lt IE 9]><div class="blockMessage blockMessage&#45;&#45;important blockMessage&#45;&#45;iconic">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</div><![endif]-->
+
+
+		
+	
+			<div class="p-body-header">
+			
+				
+					<div class="p-title ">
+					
+						
+							<h1 class="p-title-value">Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3</h1>
+						
+						
+					
+					</div>
+				
+
+				
+					<div class="p-description">
+	<ul class="listInline listInline--bullet">
+		<li>
+			<i class="fa fa-user" aria-hidden="true" title="Thread starter"></i>
+			<span class="u-srOnly">Thread starter</span>
+
+			<a href="http://www.hobby-machinist.com/members/gt40.36819/" class="username  u-concealed" dir="auto" data-user-id="36819" data-xf-init="member-tooltip" id="js-XFUniqueId2">gt40</a>
+		</li>
+		<li>
+			<i class="fa fa-clock-o" aria-hidden="true" title="Start date"></i>
+			<span class="u-srOnly">Start date</span>
+
+			<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/" class="u-concealed"><time class="u-dt" dir="auto" datetime="2015-03-08T21:23:42-0400" data-time="1425864222" data-date-string="Mar 8, 2015" data-time-string="9:23 PM" title="Mar 8, 2015 at 9:23 PM">Mar 8, 2015</time></a>
+		</li>
+		
+	</ul>
+</div>
+				
+			
+			</div>
+		
+
+
+		<div class="p-body-main  ">
+			
+
+			
+	<div class="p-body-content">
+				
+
+	
+
+		
+		<script async="" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/adsbygoogle.js.download"></script>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({
+		          google_ad_client: "ca-pub-6703608967479420",
+		          enable_page_level_ads: true
+		     });
+		</script>
+
+	
+
+
+				<div class="p-body-pageContent">
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+		
+	
+	
+	
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+		
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+<div class="block block--messages" data-xf-init="" data-type="post" data-href="/inline-mod/">
+
+	
+	
+
+
+	<div class="block-outer"></div>
+
+	<div class="block-outer js-threadStatusField"></div>
+
+	<div class="block-container lbContainer" data-xf-init="lightbox select-to-quote" data-message-selector=".js-post" data-lb-id="thread-33405" data-lb-universal="1">
+
+		<div class="block-body js-replyNewMessageContainer">
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="gt40" data-content="post-281803" id="js-post-281803">
+
+		<span class="u-anchorTarget" id="post-281803"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/gt40.36819/" class="avatar avatar--m  " data-user-id="36819" data-xf-init="member-tooltip" id="js-XFUniqueId3">
+			<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/36819.jpg" srcset="/data/avatars/l/36/36819.jpg?1425390257 2x" alt="gt40" class="avatar-u36819-m" itemprop="image"> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/gt40.36819/" class="username " dir="auto" data-user-id="36819" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId4">gt40</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Active Member</h5>
+			<div class="userBanner userBanner userBanner--skyBlue message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Active Member</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281803" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-08T21:23:42-0400" data-time="1425864222" data-date-string="Mar 8, 2015" data-time-string="9:23 PM" title="Mar 8, 2015 at 9:23 PM">Mar 8, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281803" class="u-concealed" rel="nofollow">#1</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281803" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-08T21:23:42-0400" data-time="1425864222" data-date-string="Mar 8, 2015" data-time-string="9:23 PM" title="Mar 8, 2015 at 9:23 PM">Mar 8, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281803" class="u-concealed" rel="nofollow">#1</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-281803" data-lb-caption-desc="gt40 · Mar 8, 2015 at 9:23 PM">
+
+							
+								
+
+	
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper">I wanted to start a new thread to 
+document conversion of my Jet 13x40 lathe. Most of this should translate
+ to similar size lathes like the PM lathes etc. and I hope it will be of
+ help to anyone considering it. I am basically building off of the 
+lessons learned from successfully converting my PM45M mill to CNC. <br>
+<br>
+I have gotten pretty good with Mach 3 software to control the mill and 
+they have a suite of tools for the lathe that includes threading, 
+drilling profiling and I am really looking forward to this even more 
+than the mill.<br>
+<br>
+My Jet mill suffered another crash last year and completely lost 
+threading capabilities on what was a decent machine. Instead, I am 
+converting it to a gang or turret style cnc lathe with vfd and 
+controlled by Mach 3.<br>
+<br>
+I started by taking off the lead screws, x axis compound etc off. All of
+ this goes away with a cnc conversion and I will use a pendant to 
+control it. There is no reason to have cranks and they just get in the 
+way.<br>
+Initial mockup. Note the compound goes away:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/mockup-jpg.183101/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140337-88d71bec30aa1eb0f56590c7ddbcdb84.jpg" class="bbImage" alt="mockup.jpg"></a>
+<br>
+The servo will go underneath with timing gears to run it.<br>
+<br>
+I was able to pick up a 2.5"x 10" x 13" piece of 7075 tooling plate from
+ the scrap pile at industrial metal supply. It will replace the compound
+ and shelter the ballscrew from shards etc and be a rigid platform for a
+ turret or gang setup.<br>
+<br>
+Next I had to machine the saddle to make where I would mount the 
+ballscrew perfectly parallel to the surface on the dovetail. This setup 
+took several hours to get it aligned but I was able to use it to flatten
+ the saddle and also drill the holes to mount the ballscrew:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/ballscewdrillingsetup-jpg.183102/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140338-f76bf0e2fbf5af84a87647f43199b26b.jpg" class="bbImage" alt="ballscewdrillingsetup.jpg"></a>
+<br>
+I made ballnut mount via cnc on the mill:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/ballnutmountcut-jpg.183103/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140339-8d186dccd7241a5f084c26a19c885a50.jpg" class="bbImage" alt="ballnutmountcut.jpg"></a>
+<br>
+<br>
+I was a little concerned whether having the ballscrew mounted offset 
+would cause binding but after everything was mounted, a small cordless 
+drill easily moves the x axis really well. I can't even begin to 
+describe how much more rigid everything is with no compound and a giant 
+piece of 7075 on the x axis.<br>
+<br>
+Pic of the ballscrew mounted:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/ballscrewmounted-jpg.183104/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140340-7346ec2829a67846a8d3415ee6cbca31.jpg" class="bbImage" alt="ballscrewmounted.jpg"></a>
+<br>
+<br>
+BTW, I cut the 7075 aluminum 13" tall with my Agazzani vertical bandsaw.
+ the new carbide blade didn't flinch cutting a 5" deep cut 13" tall. I 
+just used beeswax based lube.<br>
+<br>
+<br>
+Next up, I have timing pulleys coming and a 3 hp extreme duty motor already to go:<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/motor-tag-jpg.183105/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140341-a6d4da7209137b875a46587a9ed94a15.jpg" class="bbImage" alt="motor-tag.jpg"></a>
+<br>
+<br>
+I am putting together a comprehensive list but here is the broad strokes:<br>
+<br>
+1. CNC axis motors- I am going with DMM-Tech 2 axis servo motor setup. 
+They are quiet, extremely smooth and very strong. I have 3 on my PM45m 
+and have run it for 8-10 hours continuously without issues cutting 
+stuff. The .75kw servos are overkill and can snap a 1/2" carbide end 
+mill or move my head on the mill(250+lbs) without issue.<br>
+<br>
+<br>
+They have 2 axis kits that have everything from the servos, cables, 
+drives, emergency stop switch, limit switches(to stop the machine from 
+crashing and set zero) etc. kit:<br>
+<br>
+DMM TECH LINK: <a href="http://www.dmm-tech.com/Files/dmmmaxs14a_p.pdf" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fwww.dmm-tech.com%2FFiles%2Fdmmmaxs14a_p.pdf&amp;hash=ad8ecb2917fd2be6e03eacc9fb8accc3" rel="nofollow noopener">http://www.dmm-tech.com/Files/dmmmaxs14a_p.pdf</a><br>
+<br>
+I am getting the 400watt 2 axis kit but not getting their power supply 
+modules. For that, I am getting an antec power supply. It is more 
+elegant to me having one high quality overbuilt power supply to run all 
+the servos and drives and simplifies wiring.<br>
+<br>
+<a href="http://http/www.antekinc.com/ps-10n56-1000w-56v-power-supply/" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fhttp%2Fwww.antekinc.com%2Fps-10n56-1000w-56v-power-supply%2F&amp;hash=586414d43cd69562e7805fe4551e8435" rel="nofollow noopener">http://http://www.antekinc.com/ps-10n56-1000w-56v-power-supply/</a><br>
+<br>
+It really isn't bad to hook up and I found they had really outstanding 
+techs over at dmm the helped me set up the antek ps and that spent the 
+necessary time to walk me through things and answer my silly questions.<br>
+<br>
+Here is a really good diagram that shows exactly what you have to hook 
+up. Keep in mind for a lathe, you will only need to do 2 drives, servos 
+etc and the "spindle" connection will just go to your vfd and 3 phase 
+motor:<br>
+<br>
+<a href="http://mccomsey.net/cnclathe/breakoutboard.pdf" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fmccomsey.net%2Fcnclathe%2Fbreakoutboard.pdf&amp;hash=8b95ac6e79ea83e46c770ad4e5d66c3e" rel="nofollow noopener">http://mccomsey.net/cnclathe/breakoutboard.pdf</a><br>
+<br>
+For the ballscrews, you need 2, one for the x and one for the z axis. 
+Ebay is your friend and ground ballscrews can sometimes be found for 
+silly cheap.<br>
+<br>
+Being patient on ebay, I spent $300 total for both axis and I got a THK 
+and Hi-Win ground ballscrews. Ground ballscrews are definitely better 
+but my mill used rolled ballscrews and it is accurate to 2 tenths over 
+16".<br>
+<br>
+Keep in mind your lead tpi controls your resolution. For my purposes, I am going with 0.2" lead.<br>
+<br>
+If you want to read about this stuff, here is a decent primer: <a href="http://blog.cnccookbook.com/2014/01/12/ultimate-benchtop-cnc-mini-mill-part-2-cnc-conversion/" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fblog.cnccookbook.com%2F2014%2F01%2F12%2Fultimate-benchtop-cnc-mini-mill-part-2-cnc-conversion%2F&amp;hash=c33cad915e222d20af5b50fe82a608dc" rel="nofollow noopener">http://blog.cnccookbook.com/2014/01/...nc-conversion/</a><br>
+<br>
+When you convert the mill to cnc, you won't need cranks, and the whole 
+lead screw and threading part of the lathe(the lower box assembly on 
+most gear head lathes) is better removed.<br>
+<br>
+My jet used to look pretty much the same as the PM lathes. Now it is definitely on a "diet":<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/stripped2-jpg.183106/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140342-a4c444ec03d483cb92744158df135afd.jpg" class="bbImage" alt="stripped2.jpg"></a>
+<br>
+<br>
+left overs:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/stripped3-jpg.183107/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140343-83e520a57f70d25cf4d882f758a1b494.jpg" class="bbImage" alt="stripped3.jpg"></a>
+<br>
+<br>
+took some time to prep the lathe now that it is all stripped and gave it
+ 2 coats of primer. The original finish was showing it's wear and I 
+think the lathe was just a little jealous of darkzero's spotless finish 
+on his machines. Seriously, I wonder how you keep a lathe that clean and
+ use it <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="smilie smilie--sprite smilie--sprite7" alt=":p" title="Stick Out Tongue    :p"> Simply amazing...<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/primer-jpg.183108/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140344-fd1bae28a60046f354a04ec45761c21a.jpg" class="bbImage" alt="primer.jpg"></a>
+<br>
+<br>
+I ended up having some fun with the paint:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/painted1-jpg.183109/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140345-35bcd1d6f663e38c6d07d1a221f23714.jpg" class="bbImage" alt="painted1.jpg"></a>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/painted2-jpg.183110/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140346-235d1e09d6ca661c1ffa136e88c196bc.jpg" class="bbImage" alt="painted2.jpg"></a>
+<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/painted3-jpg.183111/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140347-9e8314bdadfb5375bb041ea7b41af65a.jpg" class="bbImage" alt="painted3.jpg"></a>
+<br>
+"gap"<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/gap-jpg.183112/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140348-43a1cd9a6d17db1ea00e065ef1adc04e.jpg" class="bbImage" alt="gap.jpg"></a>
+<br>
+<br>
+For reference, this is what the lathe looked like when I started with it:<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/lathe1-jpg.183113/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140349-ac3f705761efd46e84b075c9e917b7d4.jpg" class="bbImage" alt="lathe1.jpg"></a>
+<br>
+<br>
+I have a set of THK SHS in the right size. I was going to just machine 
+the whole top of the x axis flat and use them but the current 
+arrangement is tracking tight and true. I am working on an epoxy granite
+ slant bed design with all linear guides but needed to make the Jet work
+ so I could make the spindle:<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/linearslides-jpg.183114/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140350-057c26fa08bfc36855a13ce1b0de7ea0.jpg" class="bbImage" alt="linearslides.jpg"></a>
+<br>
+Finally, I drilled and tapped the timing pulley and mounted it. The axis
+ moves smoothly and without binding using the drill and by hand.<br>
+<br>
+I am using a 15 and 25 tooth "L" timing gear setup. The belts are 3/4" 
+wide and allow you to move without backlash or slippage when you change 
+direction.<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/pulleys-jpg.183115/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140351-4613f22c6873a0e333ae32f7591d2168.jpg" class="bbImage" alt="pulleys.jpg"></a>
+<br>
+FYI, here are the pulleys I actually ordered:<br>
+<br>
+<b>15L075 Aluminum Pulley 15 tooth MPB OD=1.760 inch</b><br>
+<br>
+<a href="http://shop.polybelt.com/15L075-Aluminum-Pulley-15-tooth-MPB-OD1760-inch-P15L075-6FA.htm" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fshop.polybelt.com%2F15L075-Aluminum-Pulley-15-tooth-MPB-OD1760-inch-P15L075-6FA.htm&amp;hash=59afe259cdf99cc9a106da9b45b1a0e6" rel="nofollow noopener">http://shop.polybelt.com/15L075-Alum...15L075-6FA.htm</a><br>
+<b>25L075 Aluminum Pulley 25 Tooth, OD=2.954 inch</b><br>
+<br>
+<a href="http://shop.polybelt.com/25L075-Aluminum-Pulley-25-Tooth-OD2954-inch-P25L075-6FA.htm" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fshop.polybelt.com%2F25L075-Aluminum-Pulley-25-Tooth-OD2954-inch-P25L075-6FA.htm&amp;hash=3906efdbb0df04f4783e26f5eeebb819" rel="nofollow noopener">http://shop.polybelt.com/25L075-Alum...25L075-6FA.htm</a><br>
+<br>
+With the .2" lead on the ball screw, and the lower gear ratio, this combo increases torque and resolution.<br>
+<br>
+Here is the breakdown to convert the mill to cnc servos, drives, 
+breakout board and cables. I have had awesome results with DMM tech + 
+many hours of support from them schooling me on my builds:<br>
+<br>
+Part Number Part Quantity Total Expense<br>
+DYN2-H DYN2-H AC Servo Drive 2 $250.00<br>
+60M-DHT-36 0.4kW AC servo motor 2 $394.00<br>
+DMB4250-8B Breakout Board 1 $115.00<br>
+CA-MO55-1H 1ft Molex 5/5pin Breakout Board to DYN2 ServoDrive 2 $16.00<br>
+HW-04-NPS Inductive Proximity Switch 4 $56.00<br>
+HE-04-RMS Emergency Stop Switch 1 $12.00<br>
+CA-MRS232-6 6ft RS232 to Molex 7 pin drive tuning cable 1 $15.00<br>
+Sub Total: $858.00<br>
+Shipping: $64.00<br>
+Total USD: $922.00<br>
+<br>
+Looking at the rest, you will need to add a power supply for $150, a 
+couple of ballscrews at $300 and some metal costs for mounts.<br>
+<br>
+<b>I expect total costs to convert the lathe to CNC to be less than $1500 dollars.</b><br>
+<br>
+FYI, the DMM Tech folks are up in Canada and have been around for 20 
+years. No affiliation but they have tech you can actually talk to when 
+configuring things.<br>
+<br>
+Quick video making the z axis servo motor mount at 7000 rpm with my cnc 
+converted Precision Mathews PM45m mill. I was paranoid and slowed it 
+down to 30 ipm. The mill does fine at 70...<br>
+<br>
+<div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/97583574.html" allowfullscreen="true" height="315" frameborder="0" width="560"></iframe>
+	</div>
+</div><br>
+I made a monolithic ballnut block that is 1.8" thick and mounts to the 
+saddle. I also made the two bearing blocks that support each end of the 
+ballscrew. The trick was getting everything square and aligned. I was 
+rewarded by a z axis that moves very smooth without any binding on the 
+full range. The ballnut block has a "L" shaped cutout for my skarf guard
+ I am making to protect the ballscrew.  It is so stiff and solid 
+compared with the way the lathe was stock and there is absolutely no 
+perceptible backlash:
+	<a href="http://www.hobby-machinist.com/attachments/zaxis1-jpg.183116/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140352-f29f34440aa73121bb7ddefc05d1a88e.jpg" class="bbImage" alt="zaxis1.jpg"></a>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/zaxis3-jpg.183117/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140353-13d8041625043b93a7c76d1a4fe6b6ec.jpg" class="bbImage" alt="zaxis3.jpg"></a>
+<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/zaxis4-jpg.183118/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140354-a64da0bdf0aa0e966fb0147eff6a248d.jpg" class="bbImage" alt="zaxis4.jpg"></a>
+<br>
+<br>
+I re-thought my x axis aluminum platform and converted to a massive 8"x 
+8" x1.5" steel block that sits on one side of where the aluminum block 
+went. The steel is much heavier at 28 lbs but the main reason was to 
+preserve the max stock capacity of the lathe.<br>
+<br>
+The 13x40 lathe can handle stock 8" in diameter with the right chuck but
+ with the aluminum going the whole width of the cast iron x axis base, I
+ inadvertently cut that in half. I don't normally turn giant stock but 
+definitely want to be able to in the future. Here is my 4" extension on 
+the PM45m mill that is 8" diameter and brings my PM45M mill to 11.5" y 
+travel:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/head-20extension2-jpg.183119/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140355-0db4db40c8d4cded68671b3cacf4fabe.jpg" class="bbImage" alt="head%20extension2.jpg"></a>
+<br>
+<br>
+Here are the shots for the new steel x axis. There is a noticeable 
+difference in the stiffness. I will add some bellows like these to cover
+ the ballscrew:<br>
+<br>
+<a href="http://www.arceurotrade.co.uk/Catalogue/Machine-Spares/Machine-Bellows" target="_blank" class="link link--external" data-proxy-href="/proxy.php?link=http%3A%2F%2Fwww.arceurotrade.co.uk%2FCatalogue%2FMachine-Spares%2FMachine-Bellows&amp;hash=a4522d625d5795e4ce26274a1c22ee61" rel="nofollow noopener">http://www.arceurotrade.co.uk/Catalo...achine-Bellows</a><br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/steel1-jpg.183120/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140356-548defecb281ca272a16161cf102bc1d.jpg" class="bbImage" alt="steel1.jpg"></a>
+<br>
+<br>
+<br>
+Re-doing the axis wasted a nice giant piece of mic6 but I regained my full stock capacity.<br>
+<br>
+z servo mounting block<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/z-blocks-jpg.183121/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140357-f074249f68f4df572d7dea96e7f82aff.jpg" class="bbImage" alt="z-blocks.jpg"></a>
+<br>
+<br>
+New "saddle". This holds the servo and ball nut in place and allows for a scarf guard:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/new-saddle-jpg.183122/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140358-ba0f7dbf5b693bdb068e92282b3cf556.jpg" class="bbImage" alt="new-saddle.jpg"></a>
+<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/saddle2-jpg.183123/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140359-9e9356a953d700e7aa619d99c85b765f.jpg" class="bbImage" alt="saddle2.jpg"></a>
+<br>
+<br>
+x axis servo plate with boss cut for the mount:<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/xservoplate-jpg.183124/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140360-4d841daf96a4133884a731cf455edcfd.jpg" class="bbImage" alt="xservoplate.jpg"></a>
+<br>
+<br>
+New DMM Tech servos:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/dmmservos-jpg.183125/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140361-33e9cdbd02c78dcb41df693b0bbc331b.jpg" class="bbImage" alt="dmmservos.jpg"></a>
+<br>
+<br>
+drives:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/dmmtechdrives-jpg.183126/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140362-feba4e03b6d70edd32f59ff1ca544022.jpg" class="bbImage" alt="dmmtechdrives.jpg"></a>
+<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/back-oofservoplate-jpg.183127/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140363-dbbb211c8e1d2945cf03f6a5fb47dc32.jpg" class="bbImage" alt="back-oofservoplate.jpg"></a>
+<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/saddle3-jpg.183128/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140364-5e8cca614e4082183e4d93d127e927f4.jpg" class="bbImage" alt="saddle3.jpg"></a>
+<br>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/mountedxservo-jpg.183129/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140365-3f107ef01b35b4b629b8354a3da4acaf.jpg" class="bbImage" alt="mountedxservo.jpg"></a>
+ 
+	<a href="http://www.hobby-machinist.com/attachments/saddle4-jpg.183130/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140366-0f8bfe20ccd53a0b415461d207f06562.jpg" class="bbImage" alt="saddle4.jpg"></a>
+<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/zservomounted-jpg.183131/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140367-8b7c25e5276927c6787a89768a402beb.jpg" class="bbImage" alt="zservomounted.jpg"></a>
+<br>
+<br>
+An overall shot:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/finished1-jpg.183132/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140368-a19ea2627a7675a5c3c79d8a9edde3aa.jpg" class="bbImage" alt="finished1.jpg"></a>
+<br>
+<div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/104368587.html" allowfullscreen="true" height="315" frameborder="0" width="560"></iframe>
+	</div>
+</div><br>
+FYI, I wanted to take a moment to share the outstanding tech support I 
+have been getting over with servo company I used to do the conversion, 
+DMM Tech. I fried a breakout board by dumping high voltage into it(my 
+fault) and they overnighted a replacement free of charge and free 
+shipping from Canada. They also spent over an hour on the phone while we
+ traced down a random interference issue. You want to keep the servo 
+power cables away from the control ones. I had them touching and the 
+current fields messed with the control. They just walked me through it 
+while we tested some stuff over the phone and everything is just 
+working.<br>
+<br>
+They are also helping me set up a hall sensor to pick up the spindle rpm
+ as I hope to be able to set up constant surface speed as well as for 
+threading. There are boards for sale but the tech walked me through 
+using a cheap hall sensor I had laying around to save money.<br>
+<br>
+<div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/106826758.html" allowfullscreen="true" height="315" frameborder="0" width="560"></iframe>
+	</div>
+</div><br>
+I ended up investing in  Dolphin Turn for cam. I have been busy 
+learning. I am starting to make sense of things and I was able to design
+ a new 18650 powered xm-l light and... finally was able to thread with 
+my lathe once more. The whole reason for me doing this conversion was I 
+had a bad crash on the lathe a year ago and it was going to cost about 
+the same to fix it as go cnc. I am pleased I can thread again and am 
+starting to make some lights.<br>
+<br>
+After learning how to thread on a manual lathe properly, my first 
+experience threading via cnc was really humbling. less than 90 seconds 
+to face, turn and thread a tube with perfect accuracy. I will post some 
+stills of the threads but they came out beautiful. I also tested cutting
+ various stock out in steel and aluminum and threading to fit nuts I had
+ laying around and well, it just works:<br>
+<div class="bbMediaWrapper">
+	<div class="bbMediaWrapper-inner">
+		<iframe src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/110749711.html" allowfullscreen="true" height="315" frameborder="0" width="560"></iframe>
+	</div>
+</div><br>
+Quick pic of part of a light I am designing. I made these bodies setting
+ up the tool offsets in the mach 3 software that runs the lathe. FYI, 
+the finish is right off the lathe without polishing and with mist 
+coolant I borrowed from my mill. It is about 3 minutes to make a part 
+including facing, profiling, threading both sides and parting off the 
+finished part. I had to get a left and right side threading tools to do 
+this but it works well:<br>
+
+	<a href="http://www.hobby-machinist.com/attachments/ry-3d480.183133/" target="_blank"><img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/140369-4ca8f32d30a2eda828cb5b4a369058ad.jpg" class="bbImage" alt="ry%3D480"></a>
+<br>
+<br>
+Thanks for looking...</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+								
+
+	
+
+							
+
+							
+								
+	
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList is-active">
+							<i class="likeIcon" title="Likes" aria-hidden="true"></i>
+<span class="u-srOnly">Likes:</span>
+<a href="http://www.hobby-machinist.com/posts/281803/likes" data-xf-click="overlay"><bdi>NoobCanuk</bdi>, <bdi>genec</bdi>, <span>bpratl and 2 others</span></a>
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="bladehunter" data-content="post-281874" id="js-post-281874">
+
+		<span class="u-anchorTarget" id="post-281874"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/bladehunter.26831/" class="avatar avatar--m  " data-user-id="26831" data-xf-init="member-tooltip" style="background-color: #2966a3; color: #99bfe6" id="js-XFUniqueId5">
+			<span class="avatar-u26831-m">B</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/bladehunter.26831/" class="username " dir="auto" data-user-id="26831" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId6">bladehunter</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Active User</h5>
+			<div class="userBanner userBanner userBanner--skyBlue message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Active Member</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281874" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T02:09:59-0400" data-time="1425881399" data-date-string="Mar 9, 2015" data-time-string="2:09 AM" title="Mar 9, 2015 at 2:09 AM">Mar 9, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281874" class="u-concealed" rel="nofollow">#2</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281874" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T02:09:59-0400" data-time="1425881399" data-date-string="Mar 9, 2015" data-time-string="2:09 AM" title="Mar 9, 2015 at 2:09 AM">Mar 9, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281874" class="u-concealed" rel="nofollow">#2</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-281874" data-lb-caption-desc="bladehunter · Mar 9, 2015 at 2:09 AM">
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper">Top job there. I take my hat off to you sir.</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList ">
+							
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="darkzero" data-content="post-281875" id="js-post-281875">
+
+		<span class="u-anchorTarget" id="post-281875"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/darkzero.20975/" class="avatar avatar--m  " data-user-id="20975" data-xf-init="member-tooltip" id="js-XFUniqueId7">
+			<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/20975.jpg" srcset="/data/avatars/l/20/20975.jpg?1497255437 2x" alt="darkzero" class="avatar-u20975-m" itemprop="image"> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/darkzero.20975/" class="username " dir="auto" data-user-id="20975" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId8"><span class="username--style42 username--staff username--moderator">darkzero</span></a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Global Moderator</h5>
+			<div class="userBanner userBanner--staff message-userBanner" dir="auto" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Staff member</strong><span class="userBanner-after"></span></div>
+<div class="userBanner userBanner userBanner--orange message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>H-M Supporter-Premium</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281875" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T02:19:04-0400" data-time="1425881944" data-date-string="Mar 9, 2015" data-time-string="2:19 AM" title="Mar 9, 2015 at 2:19 AM">Mar 9, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281875" class="u-concealed" rel="nofollow">#3</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281875" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T02:19:04-0400" data-time="1425881944" data-date-string="Mar 9, 2015" data-time-string="2:19 AM" title="Mar 9, 2015 at 2:19 AM">Mar 9, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281875" class="u-concealed" rel="nofollow">#3</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-281875" data-lb-caption-desc="darkzero · Mar 9, 2015 at 2:19 AM">
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper">Yup, nice job Mark! Can't wait to see it 
+in action with my own eyes. Did you paint it with rattle cans or a spray
+ gun? I want to repaint my mill someday but I don't want to move it out 
+of the garage.</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList ">
+							
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="bpratl" data-content="post-281888" id="js-post-281888">
+
+		<span class="u-anchorTarget" id="post-281888"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/bpratl.18002/" class="avatar avatar--m  " data-user-id="18002" data-xf-init="member-tooltip" id="js-XFUniqueId9">
+			<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/18002.jpg" srcset="/data/avatars/l/18/18002.jpg?1423902369 2x" alt="bpratl" class="avatar-u18002-m" itemprop="image"> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/bpratl.18002/" class="username " dir="auto" data-user-id="18002" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId10"><span class="username--style42">bpratl</span></a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Active User</h5>
+			<div class="userBanner userBanner userBanner--orange message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>H-M Supporter-Premium</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281888" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T05:41:34-0400" data-time="1425894094" data-date-string="Mar 9, 2015" data-time-string="5:41 AM" title="Mar 9, 2015 at 5:41 AM">Mar 9, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281888" class="u-concealed" rel="nofollow">#4</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281888" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T05:41:34-0400" data-time="1425894094" data-date-string="Mar 9, 2015" data-time-string="5:41 AM" title="Mar 9, 2015 at 5:41 AM">Mar 9, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281888" class="u-concealed" rel="nofollow">#4</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-281888" data-lb-caption-desc="bpratl · Mar 9, 2015 at 5:41 AM">
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper">Nice design and machining, looks like a good choice in using servos.</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList ">
+							
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="gt40" data-content="post-281914" id="js-post-281914">
+
+		<span class="u-anchorTarget" id="post-281914"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/gt40.36819/" class="avatar avatar--m  " data-user-id="36819" data-xf-init="member-tooltip" id="js-XFUniqueId11">
+			<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/36819.jpg" srcset="/data/avatars/l/36/36819.jpg?1425390257 2x" alt="gt40" class="avatar-u36819-m" itemprop="image"> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/gt40.36819/" class="username " dir="auto" data-user-id="36819" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId12">gt40</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Active Member</h5>
+			<div class="userBanner userBanner userBanner--skyBlue message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Active Member</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281914" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T08:48:06-0400" data-time="1425905286" data-date-string="Mar 9, 2015" data-time-string="8:48 AM" title="Mar 9, 2015 at 8:48 AM">Mar 9, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281914" class="u-concealed" rel="nofollow">#5</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281914" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T08:48:06-0400" data-time="1425905286" data-date-string="Mar 9, 2015" data-time-string="8:48 AM" title="Mar 9, 2015 at 8:48 AM">Mar 9, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-281914" class="u-concealed" rel="nofollow">#5</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-281914" data-lb-caption-desc="gt40 · Mar 9, 2015 at 8:48 AM">
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper"><div class="bbCodeBlock bbCodeBlock--expandable bbCodeBlock--quote">
+	
+		<div class="bbCodeBlock-title">
+			
+				<a href="http://www.hobby-machinist.com/goto/post?id=281875" class="bbCodeBlock-sourceJump" data-xf-click="attribution" data-content-selector="#post-281875">darkzero said:</a>
+			
+		</div>
+	
+	<div class="bbCodeBlock-content">
+		<div class="bbCodeBlock-expandContent">
+			Yup, nice job Mark! Can't wait to see it in action with my own eyes. 
+Did you paint it with rattle cans or a spray gun? I want to repaint my 
+mill someday but I don't want to move it out of the garage.
+		</div>
+		<div class="bbCodeBlock-expandLink"><a>Click to expand...</a></div>
+	</div>
+</div>I painted with industrial paint rattle cans- 2 coats primer and 
+then 3 coats of the orange.  Seems to be holding up at least as well as 
+the stock Jet paint.</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList ">
+							
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="darkzero" data-content="post-282057" id="js-post-282057">
+
+		<span class="u-anchorTarget" id="post-282057"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/darkzero.20975/" class="avatar avatar--m  " data-user-id="20975" data-xf-init="member-tooltip" id="js-XFUniqueId13">
+			<img src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/20975.jpg" srcset="/data/avatars/l/20/20975.jpg?1497255437 2x" alt="darkzero" class="avatar-u20975-m" itemprop="image"> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/darkzero.20975/" class="username " dir="auto" data-user-id="20975" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId14"><span class="username--style42 username--staff username--moderator">darkzero</span></a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Global Moderator</h5>
+			<div class="userBanner userBanner--staff message-userBanner" dir="auto" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Staff member</strong><span class="userBanner-after"></span></div>
+<div class="userBanner userBanner userBanner--orange message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>H-M Supporter-Premium</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282057" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T18:46:45-0400" data-time="1425941205" data-date-string="Mar 9, 2015" data-time-string="6:46 PM" title="Mar 9, 2015 at 6:46 PM">Mar 9, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282057" class="u-concealed" rel="nofollow">#6</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282057" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-09T18:46:45-0400" data-time="1425941205" data-date-string="Mar 9, 2015" data-time-string="6:46 PM" title="Mar 9, 2015 at 6:46 PM">Mar 9, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282057" class="u-concealed" rel="nofollow">#6</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-282057" data-lb-caption-desc="darkzero · Mar 9, 2015 at 6:46 PM">
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper">Thanks</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList ">
+							
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+				
+					
+	
+	
+	<article class="message message--post js-post js-inlineModContainer  " data-author="dave2176" data-content="post-282392" id="js-post-282392">
+
+		<span class="u-anchorTarget" id="post-282392"></span>
+
+		<div class="message-inner">
+			<div class="message-cell message-cell--user">
+				
+				
+				
+
+	<section itemscope="" itemtype="https://schema.org/Person" class="message-user">
+		<div class="message-avatar ">
+			<div class="message-avatar-wrapper">
+				<a href="http://www.hobby-machinist.com/members/dave2176.26229/" class="avatar avatar--m  " data-user-id="26229" data-xf-init="member-tooltip" style="background-color: #3b2b2b; color: #9d7b7b" id="js-XFUniqueId15">
+			<span class="avatar-u26229-m">D</span> 
+		</a>
+				
+			</div>
+		</div>
+		<div class="message-userDetails">
+			<h4 class="message-name"><a href="http://www.hobby-machinist.com/members/dave2176.26229/" class="username " dir="auto" data-user-id="26229" data-xf-init="member-tooltip" itemprop="name" id="js-XFUniqueId16">dave2176</a></h4>
+			<h5 class="userTitle message-userTitle" dir="auto" itemprop="jobTitle">Active User</h5>
+			<div class="userBanner userBanner userBanner--skyBlue message-userBanner" itemprop="jobTitle"><span class="userBanner-before"></span><strong>Active Member</strong><span class="userBanner-after"></span></div>
+			<div class="message-date"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282392" class="u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-11T00:44:19-0400" data-time="1426049059" data-date-string="Mar 11, 2015" data-time-string="12:44 AM" title="Mar 11, 2015 at 12:44 AM">Mar 11, 2015</time></a></div>
+		</div>
+		<div class="message-permalink"><a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282392" class="u-concealed" rel="nofollow">#7</a></div>
+		
+			
+			
+		
+		<span class="message-userArrow"></span>
+	</section>
+
+			</div>
+			<div class="message-cell message-cell--main">
+				<div class="message-main js-quickEditTarget">
+
+					<header class="message-attribution">
+						<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282392" class="message-attribution-main u-concealed" rel="nofollow"><time class="u-dt" dir="auto" datetime="2015-03-11T00:44:19-0400" data-time="1426049059" data-date-string="Mar 11, 2015" data-time-string="12:44 AM" title="Mar 11, 2015 at 12:44 AM">Mar 11, 2015</time></a>
+						<div class="message-attribution-opposite">
+							
+							<a href="http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/post-282392" class="u-concealed" rel="nofollow">#7</a>
+						</div>
+					</header>
+
+					<div class="message-content js-messageContent">
+
+						
+						
+						
+
+						<div class="message-userContent lbContainer js-lbContainer " data-lb-id="post-282392" data-lb-caption-desc="dave2176 · Mar 11, 2015 at 12:44 AM">
+
+							
+
+							<article class="message-body js-selectToQuote">
+								
+								<div class="bbWrapper">That is awesome. What else can I say?<br>
+Dave</div>
+								<div class="js-selectToQuoteEnd">&nbsp;</div>
+								
+							</article>
+
+							
+
+							
+						</div>
+
+						
+
+						
+	
+
+					</div>
+
+					<footer class="message-footer">
+						
+
+						<div class="likesBar js-likeList ">
+							
+						</div>
+
+						<div class="js-historyTarget message-historyTarget toggleTarget" data-href="trigger-href"></div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		
+	</article>
+
+				
+			
+		</div>
+	</div><div style="text-align: center; width: 100%; height: auto; clear: both;" class="google-auto-placed"><ins style="display: block; margin: 10px auto; background-color: transparent; height: 90px;" data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-6703608967479420" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:1180px;height:90px;" height="90" frameborder="0" width="1180" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource.html"></iframe></ins></ins></ins></div>
+
+	
+		<div class="block-outer block-outer--after">
+			
+				
+				
+				
+					<div class="block-outer-opposite">
+						
+							<a href="http://www.hobby-machinist.com/login/" class="button--link button" data-xf-click="overlay"><span class="button-text">
+								You must log in or register to reply here.
+							</span></a>
+						
+					</div>
+				
+			
+		</div><div style="text-align: center; width: 100%; height: auto; clear: both;" class="google-auto-placed"><ins style="display: block; margin: 20px auto 10px; background-color: transparent; height: 90px;" data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-6703608967479420" data-adsbygoogle-status="done"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><ins id="aswift_3_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;width:1180px;height:90px;" height="90" frameborder="0" width="1180" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(1).html"></iframe></ins></ins></ins></div>
+	
+
+	
+	
+
+</div>
+
+
+
+
+
+<div class="blockMessage blockMessage--none">
+	
+	
+		
+		<div class="shareButtons shareButtons--iconic" data-xf-init="share-buttons">
+			
+				<span class="shareButtons-label">Share:</span>
+			
+
+			
+
+				
+					<a class="shareButtons-button shareButtons-button--facebook" data-href="https://www.facebook.com/sharer.php?u={url}" id="js-XFUniqueId17">
+						<i aria-hidden="true"></i>
+						<span>Facebook</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--twitter" data-href="https://twitter.com/intent/tweet?url={url}&amp;text={title}" id="js-XFUniqueId18">
+						<i aria-hidden="true"></i>
+						<span>Twitter</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--gplus" data-href="https://plus.google.com/share?url={url}" id="js-XFUniqueId19">
+						<i aria-hidden="true"></i>
+						<span>Google+</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--reddit" data-href="https://reddit.com/submit?url={url}&amp;title={title}" id="js-XFUniqueId20">
+						<i aria-hidden="true"></i>
+						<span>Reddit</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--pinterest" data-href="https://pinterest.com/pin/create/bookmarklet/?url={url}&amp;description={title}" id="js-XFUniqueId21">
+						<i></i>
+						<span>Pinterest</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--tumblr" data-href="https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&amp;title={title}" id="js-XFUniqueId22">
+						<i></i>
+						<span>Tumblr</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--whatsApp" data-href="https://api.whatsapp.com/send?text={title} {url}" id="js-XFUniqueId23">
+						<i></i>
+						<span>WhatsApp</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--email" data-href="mailto:?subject={title}&amp;body={url}" id="js-XFUniqueId24">
+						<i></i>
+						<span>Email</span>
+					</a>
+				
+
+				
+					<a class="shareButtons-button shareButtons-button--link" data-clipboard="{url}" id="js-XFUniqueId25">
+						<i></i>
+						<span>Link</span>
+					</a>
+					
+				
+			
+		</div>
+	
+
+</div>
+
+
+
+</div>
+				
+
+	
+
+		
+		<script async="" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/adsbygoogle.js.download"></script>
+		<ins class="adsbygoogle" style="display: block; height: 590px;" data-ad-format="autorelaxed" data-ad-client="ca-pub-6703608967479420" data-ad-slot="4342023797" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:590px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:590px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:1180px;height:590px;" height="590" frameborder="0" width="1180" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(2).html"></iframe></ins></ins></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+
+	
+
+
+			</div>
+
+
+			
+	
+
+		</div>
+
+		
+		
+	
+		<ul class="p-breadcrumbs p-breadcrumbs--bottom" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+		
+
+			
+			
+
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/" itemprop="item">
+			<span itemprop="name">Forums</span>
+		</a>
+	</li>
+
+			
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/categories/general-machining-discussions-alphabetized.11/" itemprop="item">
+			<span itemprop="name">GENERAL MACHINING DISCUSSIONS (Alphabetized)</span>
+		</a>
+	</li>
+
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/forums/cnc-in-the-home-shop.82/" itemprop="item">
+			<span itemprop="name">CNC IN THE HOME SHOP</span>
+		</a>
+	</li>
+
+			
+				
+	<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+		<a href="http://www.hobby-machinist.com/forums/machine-build-logs.231/" itemprop="item">
+			<span itemprop="name">MACHINE BUILD LOGS</span>
+		</a>
+	</li>
+
+			
+
+		
+		</ul>
+	
+
+		
+	</div>
+</div>
+
+<footer class="p-footer" id="footer">
+	<div style="text-align: center; width: 100%; height: auto; clear: both;" class="google-auto-placed"><ins style="display: block; margin: 10px auto; background-color: transparent; height: 90px;" data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-6703608967479420" data-adsbygoogle-status="done"><ins id="aswift_4_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><ins id="aswift_4_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;width:1200px;height:90px;" height="90" frameborder="0" width="1200" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(3).html"></iframe></ins></ins></ins></div><div class="p-footer-inner">
+
+		<div class="p-footer-row">
+			
+				<div class="p-footer-row-main">
+					<ul class="p-footer-linkList">
+					
+						
+							<li><a href="http://www.hobby-machinist.com/misc/style" data-xf-click="overlay" data-xf-init="tooltip" rel="nofollow" data-original-title="Style chooser" id="js-XFUniqueId26">
+								<i class="fa fa-paint-brush" aria-hidden="true"></i> Default Style
+							</a></li>
+						
+						
+					
+					</ul>
+				</div>
+			
+			<div class="p-footer-row-opposite">
+				<ul class="p-footer-linkList">
+					
+						
+							<li><a href="http://www.hobby-machinist.com/misc/contact" data-xf-click="overlay">Contact us</a></li>
+						
+					
+
+					
+						<li><a href="http://www.hobby-machinist.com/threads/the-site-rules-please-read-before-registering.40822/">Terms and rules</a></li>
+					
+
+					
+
+					
+						<li><a href="http://www.hobby-machinist.com/help/">Help</a></li>
+					
+
+					
+						<li><a href="http://www.hobby-machinist.com/">Home</a></li>
+					
+
+					<li><a href="http://www.hobby-machinist.com/forums/-/index.rss" target="_blank" class="p-footer-rssLink" title="RSS"><span aria-hidden="true"><i class="fa fa-rss"></i></span></a></li>
+				</ul>
+			</div>
+		</div><div style="text-align: center; width: 100%; height: auto; clear: both;" class="google-auto-placed"><ins style="display: block; margin: 20px auto 10px; background-color: transparent; height: 90px;" data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-6703608967479420" data-adsbygoogle-status="done"><ins id="aswift_5_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><ins id="aswift_5_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;width:1180px;height:90px;" height="90" frameborder="0" width="1180" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(4).html"></iframe></ins></ins></ins></div>
+
+		
+			<div class="p-footer-copyright">
+			
+				<a href="https://xenforo.com/" class="u-concealed" dir="ltr">Forum software by XenForo™ <span class="copyright">©2010-2017 XenForo Ltd.</span></a>
+				
+			
+			</div><div style="text-align: center; width: 100%; height: auto; clear: both;" class="google-auto-placed"><ins style="display: block; margin: 10px auto; background-color: transparent; height: 90px;" data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-6703608967479420" data-adsbygoogle-status="done"><ins id="aswift_6_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><ins id="aswift_6_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1180px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_6" name="aswift_6" style="left:0;position:absolute;top:0;width:1180px;height:90px;" height="90" frameborder="0" width="1180" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(5).html"></iframe></ins></ins></ins></div>
+		
+
+		
+	</div>
+</footer>
+
+</div><ins class="adsbygoogle" data-adsbygoogle-status="done" style="display: none; width: auto; height: auto;"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe width="0" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:0px;height:0px;" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(6).html"></iframe></ins></ins></ins><ins class="adsbygoogle" style="display: none; width: auto; height: auto;" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:0px;margin:0;padding:0;position:relative;visibility:visible;width:0px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:0px;height:0px;" height="0" frameborder="0" width="0" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(7).html"></iframe></ins></ins></ins> <!-- closing p-pageWrapper -->
+
+<div class="u-bottomFixer js-bottomFixTarget">
+	
+</div>
+
+
+	<div class="u-scrollButtons js-scrollButtons" data-trigger-type="up">
+		<a href="file:///E:/Shared%20docs/Lathe/Converting%20A%2013x40%20Manual%20Lathe%20To%20Cnc%20With%20Servos%20And%20Mach3%20_%20The%20Hobby-Machinist.htm#top" class="button--scroll button" data-xf-click="scroll-to"><span class="button-text"><i class="fa fa-arrow-up"></i></span></a>
+		
+	</div>
+
+
+
+
+
+	<script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/jquery.js.download"></script><script>window.jQuery || document.write('<script src="/js/vendor/jquery/jquery-3.2.1.min.js?_v=e269bc08"><\/script>')</script>
+	<script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/vendor-compiled.js.download"></script>
+	<script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/core-compiled.js.download"></script>
+	<script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/notice.js.download"></script>
+<script src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/snogform.js.download"></script>
+<script>
+
+						jQuery.extend(XF.phrases, {
+							link_copied_to_clipboard: "Link copied to clipboard."
+						});
+					
+</script>
+
+	<script>
+		jQuery.extend(true, XF.config, {
+			userId: 0,
+			url: {
+				fullBase: 'http://www.hobby-machinist.com/',
+				basePath: '/',
+				css: '/css.php?css=__SENTINEL__&s=1&l=1&d=1509738750',
+				keepAlive: '/login/keep-alive'
+			},
+			cookie: {
+				path: '/',
+				domain: '',
+				prefix: 'xf_'
+			},
+			csrf: '1509773434,0a56dab59bd7f1af6af32f3b78c4812c',
+			js: {"\/js\/xf\/notice.min.js?_v=e269bc08":true,"\/js\/Snog\/Groups\/snogform.min.js":true},
+			css: {"public:bb_code.less":true,"public:message.less":true,"public:notices.less":true,"public:share_controls.less":true,"public:snog_groups.less":true,"public:extra.less":true},
+			time: {
+				now: 1509773434,
+				today: 1509768000,
+				todayDow: 6
+			},
+			borderSizeFeature: '3px',
+			enableRtnProtect: true,
+			enableFormSubmitSticky: true,
+			uploadMaxFilesize: 52428800,
+			visitorCounts: {
+				conversations_unread: '0',
+				alerts_unread: '0',
+				total_unread: '0',
+				title_count: true,
+				icon_indicator: true
+			},
+			jsState: {}
+		});
+
+		jQuery.extend(XF.phrases, {
+			date_x_at_time_y: "{date} at {time}",
+			day_x_at_time_y:  "{day} at {time}",
+			yesterday_at_x:   "Yesterday at {time}",
+			x_minutes_ago:    "{minutes} minutes ago",
+			one_minute_ago:   "1 minute ago",
+			a_moment_ago:     "A moment ago",
+			today_at_x:       "Today at {time}",
+			in_a_moment:      "In a moment",
+			in_a_minute:      "In a minute",
+			in_x_minutes:     "In {minutes} minutes",
+			later_today_at_x: "Later today at {time}",
+			tomorrow_at_x:    "Tomorrow at {time}",
+
+			day0: "Sunday",
+			day1: "Monday",
+			day2: "Tuesday",
+			day3: "Wednesday",
+			day4: "Thursday",
+			day5: "Friday",
+			day6: "Saturday",
+
+			dayShort0: "Sun",
+			dayShort1: "Mon",
+			dayShort2: "Tue",
+			dayShort3: "Wed",
+			dayShort4: "Thu",
+			dayShort5: "Fri",
+			dayShort6: "Sat",
+
+			month0: "January",
+			month1: "February",
+			month2: "March",
+			month3: "April",
+			month4: "May",
+			month5: "June",
+			month6: "July",
+			month7: "August",
+			month8: "September",
+			month9: "October",
+			month10: "November",
+			month11: "December",
+
+			active_user_changed_reload_page: "The active user has changed. Reload the page for the latest version.",
+			server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+			oops_we_ran_into_some_problems: "Oops! We ran into some problems.",
+			oops_we_ran_into_some_problems_more_details_console: "Oops! We ran into some problems. Please try again later. More error details may be in the browser console.",
+			file_too_large_to_upload: "The file is too large to be uploaded.",
+			files_being_uploaded_are_you_sure: "Files are still being uploaded. Are you sure you want to submit this form?",
+			close: "Close",
+
+			showing_x_of_y_items: "Showing {count} of {total} items",
+			showing_all_items: "Showing all items",
+			no_items_to_display: "No items to display"
+		});
+	</script>
+
+	<form style="display:none" hidden="hidden">
+		<input name="_xfClientLoadTime" value="1509773424,1509773434" id="_xfClientLoadTime" tabindex="-1" type="text">
+	</form>
+
+	
+
+
+
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "DiscussionForumPosting",
+		"@id": "http://www.hobby-machinist.com/threads/converting-a-13x40-manual-lathe-to-cnc-with-servos-and-mach3.33405/",
+		"headline": "Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3",
+		"articleBody": "I wanted to start a new thread to document conversion of my Jet 13x40 lathe. Most of this should translate to similar size lathes like the PM lathes etc. and I hope it will be of help to anyone considering it. I am basically building off of the lessons learned from successfully converting my PM45M mill to CNC. \n\nI have gotten pretty good with Mach 3 software to control the mill and they have a suite of tools for the lathe that includes threading, drilling profiling and I am really looking forward to this even more than the mill.\n\nMy Jet mill suffered another crash last year and completely lost threading capabilities on what was a decent machine. Instead, I am converting it to a gang or turret style cnc lathe with vfd and controlled by Mach 3.\n\nI started by taking off the lead screws, x axis compound etc off. All of this goes away with a cnc conversion and I will use a pendant to control it. There is no reason to have cranks and they just get in the way.\nInitial mockup. Note the compound goes away:\n\nThe servo will go underneath with timing gears to run it.\n\nI was able to pick up a 2.5&quot;x 10&quot; x 13&quot; piece of 7075 tooling plate from the scrap pile at industrial metal supply. It will replace the compound and shelter the ballscrew from shards etc and be a rigid platform for a turret or gang setup.\n\nNext I had to machine the saddle to make where I would mount the ballscrew perfectly parallel to the surface on the dovetail. This setup took several hours to get it aligned but I was able to use it to flatten the saddle and also drill the holes to mount the ballscrew:\n\nI made ballnut mount via cnc on the mill:\n\n\nI was a little concerned whether having the ballscrew mounted offset would cause binding but after everything was mounted, a small cordless drill easily moves the x axis really well. I can&#039;t even begin to describe how much more rigid everything is with no compound and a giant piece of 7075 on the x axis.\n\nPic of the ballscrew mounted:\n\n\nBTW, I cut the 7075 aluminum 13&quot; tall with my Agazzani vertical bandsaw. the new carbide blade didn&#039;t flinch cutting a 5&quot; deep cut 13&quot; tall. I just used beeswax based lube.\n\n\nNext up, I have timing pulleys coming and a 3 hp extreme duty motor already to go:\n\n\n\nI am putting together a comprehensive list but here is the broad strokes:\n\n1. CNC axis motors- I am going with DMM-Tech 2 axis servo motor setup. They are quiet, extremely smooth and very strong. I have 3 on my PM45m and have run it for 8-10 hours continuously without issues cutting stuff. The .75kw servos are overkill and can snap a 1/2&quot; carbide end mill or move my head on the mill(250+lbs) without issue.\n\n\nThey have 2 axis kits that have everything from the servos, cables, drives, emergency stop switch, limit switches(to stop the machine from crashing and set zero) etc. kit:\n\nDMM TECH LINK: http://www.dmm-tech.com/Files/dmmmaxs14a_p.pdf\n\nI am getting the 400watt 2 axis kit but not getting their power supply modules. For that, I am getting an antec power supply. It is more elegant to me having one high quality overbuilt power supply to run all the servos and drives and simplifies wiring.\n\nhttp://http://www.antekinc.com/ps-10n56-1000w-56v-power-supply/\n\nIt really isn&#039;t bad to hook up and I found they had really outstanding techs over at dmm the helped me set up the antek ps and that spent the necessary time to walk me through things and answer my silly questions.\n\nHere is a really good diagram that shows exactly what you have to hook up. Keep in mind for a lathe, you will only need to do 2 drives, servos etc and the &quot;spindle&quot; connection will just go to your vfd and 3 phase motor:\n\nhttp://mccomsey.net/cnclathe/breakoutboard.pdf\n\nFor the ballscrews, you need 2, one for the x and one for the z axis. Ebay is your friend and ground ballscrews can sometimes be found for silly cheap.\n\nBeing patient on ebay, I spent $300 total for both axis and I got a THK and Hi-Win ground ballscrews. Ground ballscrews are definitely better but my mill used rolled ballscrews and it is accurate to 2 tenths over 16&quot;.\n\nKeep in mind your lead tpi controls your resolution. For my purposes, I am going with 0.2&quot; lead.\n\nIf you want to read about this stuff, here is a decent primer: http://blog.cnccookbook.com/2014/01/...nc-conversion/\n\nWhen you convert the mill to cnc, you won&#039;t need cranks, and the whole lead screw and threading part of the lathe(the lower box assembly on most gear head lathes) is better removed.\n\nMy jet used to look pretty much the same as the PM lathes. Now it is definitely on a &quot;diet&quot;:\n\n\nleft overs:\n\n\ntook some time to prep the lathe now that it is all stripped and gave it 2 coats of primer. The original finish was showing it&#039;s wear and I think the lathe was just a little jealous of darkzero&#039;s spotless finish on his machines. Seriously, I wonder how you keep a lathe that clean and use it :p Simply amazing...\n\n\n\nI ended up having some fun with the paint:\n\n\n\n\n&quot;gap&quot;\n\n\nFor reference, this is what the lathe looked like when I started with it:\n\n\n\nI have a set of THK SHS in the right size. I was going to just machine the whole top of the x axis flat and use them but the current arrangement is tracking tight and true. I am working on an epoxy granite slant bed design with all linear guides but needed to make the Jet work so I could make the spindle:\n\n\nFinally, I drilled and tapped the timing pulley and mounted it. The axis moves smoothly and without binding using the drill and by hand.\n\nI am using a 15 and 25 tooth &quot;L&quot; timing gear setup. The belts are 3/4&quot; wide and allow you to move without backlash or slippage when you change direction.\n\n\nFYI, here are the pulleys I actually ordered:\n\n15L075 Aluminum Pulley 15 tooth MPB OD=1.760 inch\n\nhttp://shop.polybelt.com/15L075-Alum...15L075-6FA.htm\n25L075 Aluminum Pulley 25 Tooth, OD=2.954 inch\n\nhttp://shop.polybelt.com/25L075-Alum...25L075-6FA.htm\n\nWith the .2&quot; lead on the ball screw, and the lower gear ratio, this combo increases torque and resolution.\n\nHere is the breakdown to convert the mill to cnc servos, drives, breakout board and cables. I have had awesome results with DMM tech + many hours of support from them schooling me on my builds:\n\nPart Number Part Quantity Total Expense\nDYN2-H DYN2-H AC Servo Drive 2 $250.00\n60M-DHT-36 0.4kW AC servo motor 2 $394.00\nDMB4250-8B Breakout Board 1 $115.00\nCA-MO55-1H 1ft Molex 5/5pin Breakout Board to DYN2 ServoDrive 2 $16.00\nHW-04-NPS Inductive Proximity Switch 4 $56.00\nHE-04-RMS Emergency Stop Switch 1 $12.00\nCA-MRS232-6 6ft RS232 to Molex 7 pin drive tuning cable 1 $15.00\nSub Total: $858.00\nShipping: $64.00\nTotal USD: $922.00\n\nLooking at the rest, you will need to add a power supply for $150, a couple of ballscrews at $300 and some metal costs for mounts.\n\nI expect total costs to convert the lathe to CNC to be less than $1500 dollars.\n\nFYI, the DMM Tech folks are up in Canada and have been around for 20 years. No affiliation but they have tech you can actually talk to when configuring things.\n\nQuick video making the z axis servo motor mount at 7000 rpm with my cnc converted Precision Mathews PM45m mill. I was paranoid and slowed it down to 30 ipm. The mill does fine at 70...\n\n\n\nI made a monolithic ballnut block that is 1.8&quot; thick and mounts to the saddle. I also made the two bearing blocks that support each end of the ballscrew. The trick was getting everything square and aligned. I was rewarded by a z axis that moves very smooth without any binding on the full range. The ballnut block has a &quot;L&quot; shaped cutout for my skarf guard I am making to protect the ballscrew.  It is so stiff and solid compared with the way the lathe was stock and there is absolutely no perceptible backlash:\n\n\n\n\nI re-thought my x axis aluminum platform and converted to a massive 8&quot;x 8&quot; x1.5&quot; steel block that sits on one side of where the aluminum block went. The steel is much heavier at 28 lbs but the main reason was to preserve the max stock capacity of the lathe.\n\nThe 13x40 lathe can handle stock 8&quot; in diameter with the right chuck but with the aluminum going the whole width of the cast iron x axis base, I inadvertently cut that in half. I don&#039;t normally turn giant stock but definitely want to be able to in the future. Here is my 4&quot; extension on the PM45m mill that is 8&quot; diameter and brings my PM45M mill to 11.5&quot; y travel:\n\n\nHere are the shots for the new steel x axis. There is a noticeable difference in the stiffness. I will add some bellows like these to cover the ballscrew:\n\nhttp://www.arceurotrade.co.uk/Catalo...achine-Bellows\n\n\n\n\nRe-doing the axis wasted a nice giant piece of mic6 but I regained my full stock capacity.\n\nz servo mounting block\n\n\nNew &quot;saddle&quot;. This holds the servo and ball nut in place and allows for a scarf guard:\n\n\n\n\nx axis servo plate with boss cut for the mount:\n\n\n\nNew DMM Tech servos:\n\n\ndrives:\n\n\n\n\n\n\n \n\n\nAn overall shot:\n\n\n\nFYI, I wanted to take a moment to share the outstanding tech support I have been getting over with servo company I used to do the conversion, DMM Tech. I fried a breakout board by dumping high voltage into it(my fault) and they overnighted a replacement free of charge and free shipping from Canada. They also spent over an hour on the phone while we traced down a random interference issue. You want to keep the servo power cables away from the control ones. I had them touching and the current fields messed with the control. They just walked me through it while we tested some stuff over the phone and everything is just working.\n\nThey are also helping me set up a hall sensor to pick up the spindle rpm as I hope to be able to set up constant surface speed as well as for threading. There are boards for sale but the tech walked me through using a cheap hall sensor I had laying around to save money.\n\n\n\nI ended up investing in  Dolphin Turn for cam. I have been busy learning. I am starting to make sense of things and I was able to design a new 18650 powered xm-l light and... finally was able to thread with my lathe once more. The whole reason for me doing this conversion was I had a bad crash on the lathe a year ago and it was going to cost about the same to fix it as go cnc. I am pleased I can thread again and am starting to make some lights.\n\nAfter learning how to thread on a manual lathe properly, my first experience threading via cnc was really humbling. less than 90 seconds to face, turn and thread a tube with perfect accuracy. I will post some stills of the threads but they came out beautiful. I also tested cutting various stock out in steel and aluminum and threading to fit nuts I had laying around and well, it just works:\n\n\nQuick pic of part of a light I am designing. I made these bodies setting up the tool offsets in the mach 3 software that runs the lathe. FYI, the finish is right off the lathe without polishing and with mist coolant I borrowed from my mill. It is about 3 minutes to make a part including facing, profiling, threading both sides and parting off the finished part. I had to get a left and right side threading tools to do this but it works well:\n\n\nThanks for looking...",
+		"articleSection": "MACHINE BUILD LOGS",
+		"author": {
+			"@type": "Person",
+			"name": "gt40"
+		},
+		"datePublished": "2015-03-08",
+		"dateModified": "2015-03-11",
+		
+		"image": "http://www.hobby-machinist.com/data/avatars/l/36/36819.jpg?1425390257",
+		
+		"interactionStatistic": {
+			"@type": "InteractionCounter",
+			"interactionType": "https://schema.org/ReplyAction",
+			"userInteractionCount": 6
+		}
+	}
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center; width: 100%; height: auto; clear: both;" class="google-auto-placed"><ins style="display: block; margin: 10px auto; background-color: transparent; height: 90px;" data-ad-format="auto" class="adsbygoogle" data-ad-client="ca-pub-6703608967479420" data-adsbygoogle-status="done"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:1200px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;width:1200px;height:90px;" height="90" frameborder="0" width="1200" src="./Converting A 13x40 Manual Lathe To Cnc With Servos And Mach3 _ The Hobby-Machinist_files/saved_resource(8).html"></iframe></ins></ins></ins></div></body></html>

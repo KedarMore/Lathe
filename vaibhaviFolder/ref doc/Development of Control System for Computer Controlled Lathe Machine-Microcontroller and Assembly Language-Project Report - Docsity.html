@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<!-- saved from url=(0193)file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm -->
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths k-ff k-ff56 js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio no-localstorage no-sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths k-webkit k-webkit61" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+				
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="theme-color" content="#063141">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/public/images/mstile-144x144.png">
+<meta name="msapplication-config" content="/public/browserconfig.xml">
+<link rel="image_src" href="https://www.docsity.com/public/images/logos/docsity.png">
+<link rel="shortcut icon" href="https://www.docsity.com/public/images/favicon.ico">
+<link rel="icon" type="image/png" href="https://www.docsity.com/public/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://www.docsity.com/public/images/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.docsity.com/public/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.docsity.com/public/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.docsity.com/public/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.docsity.com/public/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.docsity.com/public/images/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.docsity.com/public/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.docsity.com/public/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.docsity.com/public/images/apple-touch-icon-152x152.png">
+<link rel="manifest" href="https://www.docsity.com/public/manifest.json">
+
+	<meta name="robots" content="index, follow">
+				<link rel="canonical" href="https://www.docsity.com/en/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report/77866/">
+	<meta name="description" content="This is project report by a student to fulfil requirement of course Microcontroller and Assembly Language at Ankit Institute of Technology and Science. It contains CNC, Lathe, Machine, Control, System, Controlled, Electrical, Motor, Drive, Bipolar, Stepper, Degree thesis for Microcontrollers. Ankit Institute of Technology and Science">
+
+
+<meta property="og:description" content="This is project report by a student to fulfil requirement of course Microcontroller and Assembly Language at Ankit Institute of Technology and Science. It contains CNC, Lathe, Machine, Control, System, Controlled, Electrical, Motor, Drive, Bipolar, Stepper, Degree thesis for Microcontrollers. Ankit Institute of Technology and Science">
+
+<meta property="og:image" content="https://www.docsity.com/documents/original/2012/07/03/thumbs/Development_of_Control_System_for_Computer_Controlled_Lathe_Machine-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg?v=1509773074">
+
+<meta property="og:title" content="Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report">
+		<title>Development of Control System for Computer Controlled Lathe 
+Machine-Microcontroller and Assembly Language-Project Report - Docsity</title>		
+<link rel="stylesheet" href="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/vendor.css">
+
+<!-- Script generati per il gruppo 'css-core-documents-view' -->
+<link rel="stylesheet" href="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/styleguide.css">
+<link rel="stylesheet" href="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/app.css">
+<link href="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/index.css" media="screen" rel="stylesheet" type="text/css"><script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/iframe_api"></script><script type="text/javascript" async="" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/analytics.js.download"></script><script async="" src="file://www.googletagmanager.com/gtm.js?id=GTM-NSW2TJ"></script><script async="" src="file://connect.facebook.net/en_US/fbds.js"></script><script type="text/javascript" async="" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/recaptcha__en.js.download"></script><script type="text/javascript" id="www-widgetapi-script" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/www-widgetapi.js.download" async=""></script><script type="text/javascript" id="www-widgetapi-script" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/www-widgetapi.js(1).download" async=""></script><script id="twitter-wjs" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/widgets.js.download"></script><script id="facebook-jssdk" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/sdk.js.download"></script><script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/iframe_api(1)"></script><script type="text/javascript" async="" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/analytics.js(1).download"></script><script async="" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/gtm.js.download"></script><script async="" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/fbds.js.download"></script><script type="text/javascript" async="" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/recaptcha__en.js(1).download"></script><script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/api.js.download"></script>
+
+
+<!-- spesso e volentieri il servizio sta giù e rimane in pending per molot tempo -->
+
+<script>
+	window.docsityAPI = {"search":"\/search\/api\/lang\/en\/","news":"\/posts\/index\/lang\/en\/","submitQuestion":"\/questions-post\/create-question\/lang\/en\/","setFavouriteDocument":"\/documents\/add-favourite\/lang\/en\/","getDocumentPages":"\/documents\/get-pages-content\/lang\/en\/","documentReport":"\/documents\/report\/lang\/en\/","postDocumentComment":"\/documents\/post-comment\/lang\/en\/","voteResource":"\/vote\/vote-content\/lang\/en\/","storeEntity":"\/search\/store-entity\/lang\/en\/","storeDocuments":"\/documents\/store\/lang\/en\/","saveDocuments":"\/documents\/save\/lang\/en\/","setPremiumDisclaimer":"\/users\/set-premium-disclaimer\/lang\/en\/","paymentMethods":"\/payment\/methods\/lang\/en\/","braintreePaymentUrl":"\/payment\/paybraintree\/lang\/en\/","paypalExpressCheckoutUrl":"\/payment\/checkout\/lang\/en\/","paypalOneClickPaymentUrl":"\/payment\/pay\/lang\/en\/","uploadInvoiceUrl":"\/account\/upload-invoice\/lang\/en\/"}</script>
+
+
+<script>(function() {
+	var _fbq = window._fbq || (window._fbq = []);
+	if (!_fbq.loaded) {
+		var fbds = document.createElement('script');
+		fbds.async = true;
+		fbds.src = '//connect.facebook.net/en_US/fbds.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(fbds, s);
+		_fbq.loaded = true;
+	}
+	_fbq.push(['addPixelId', '1024072847606931']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript>&lt;img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1024072847606931&amp;amp;ev=PixelInitialized" /&gt;</noscript>
+<script>
+	window.locale = "en";
+</script>
+		<script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/jquery.js.download"></script><style type="text/css">.vjs-youtube .vjs-iframe-blocker { display: none; }.vjs-youtube.vjs-user-inactive .vjs-iframe-blocker { display: block; }.vjs-youtube .vjs-poster { background-size: cover; }.vjs-youtube-mobile .vjs-big-play-button { display: none; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/jquery.mousewheel.min.js.download"></script><style type="text/css">.vjs-youtube .vjs-iframe-blocker { display: none; }.vjs-youtube.vjs-user-inactive .vjs-iframe-blocker { display: block; }.vjs-youtube .vjs-poster { background-size: cover; }.vjs-youtube-mobile .vjs-big-play-button { display: none; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head><body data-username="vaibhavi-patil" data-id="4176905" data-lang="en" data-country="2" data-missing-infos="0" data-guest="1" data-logged="1"><div class="ui modal docsity-modal languages-modal" id="languages-modal">
+	<div class="header">
+		<h3 class="ui header">
+			Choose your language		</h3>
+		<i class="close icon"></i>
+	</div>
+
+	<div class="content">
+		<div class="ui info message">
+			All Docsity's contents are fully available from any version		</div>
+
+		<div class="ui two column grid">
+			<div class="ten wide column">
+				<img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/mappa_paesi.png" class="ui image">
+			</div>
+			<div class="six wide column">
+				<div class="ui list">
+					<a href="https://www.docsity.com/index/change-country/lang/en" rel="en" class="item">
+						English
+					</a>
+
+					<a href="https://www.docsity.com/index/change-country/lang/es" rel="es" class="item">
+						Español
+					</a>
+
+					<a href="https://www.docsity.com/index/change-country/lang/it" rel="it" class="item">
+						Italiano
+					</a>
+
+					<a href="https://www.docsity.com/index/change-country/lang/sr" rel="sr" class="item">
+						Srpski
+					</a>
+					<a href="https://www.docsity.com/index/change-country/lang/pl" rel="pl" class="item">
+						Polski
+					</a>
+					<a href="https://www.docsity.com/index/change-country/lang/ru" rel="ru" class="item">
+						Русский
+					</a>
+
+					<a href="https://www.docsity.com/index/change-country/lang/pt" rel="pt" class="item">
+						Português
+					</a>
+
+					<a href="https://www.docsity.com/index/change-country/lang/fr" rel="fr" class="item">
+						Français
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		    	
+
+	
+		
+<script>
+	dataLayer = [];
+
+			dataLayer.push({'&uid': '4176905'});
+	
+		
+		
+	
+	
+	
+		
+		
+		
+</script>
+
+
+	<!--
+	Al momento manca il container per bankreferatov su GTM
+	e di conseguenza dobbiamo tracciarlo ancora su analytics
+	-->
+			<!-- Google Tag Manager -->
+		<noscript>
+			&lt;iframe
+				src="//www.googletagmanager.com/ns.html?id=GTM-NSW2TJ"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"
+			&gt;&lt;/iframe&gt;
+		</noscript>
+		<script>
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-NSW2TJ');
+		</script>
+		<!-- End Google Tag Manager -->
+	
+
+
+
+		<div class="dsy-style-patch">
+	<div class="docsity-header-wrapper">
+		
+						
+	
+	
+			<div class="dsy-js-header" data-props="{&quot;navigation&quot;:[{&quot;label&quot;:&quot;Documents&quot;,&quot;url&quot;:&quot;\/en\/documents\/&quot;,&quot;children&quot;:[{&quot;label&quot;:&quot;Degree thesis&quot;,&quot;url&quot;:&quot;\/en\/degree-thesis\/&quot;},{&quot;label&quot;:&quot;Exam questions&quot;,&quot;url&quot;:&quot;\/en\/exam-questions\/&quot;},{&quot;label&quot;:&quot;Exercises&quot;,&quot;url&quot;:&quot;\/en\/exercises\/&quot;},{&quot;label&quot;:&quot;Lecture notes&quot;,&quot;url&quot;:&quot;\/en\/lecture-notes\/&quot;},{&quot;label&quot;:&quot;Schemes&quot;,&quot;url&quot;:&quot;\/en\/schemes\/&quot;},{&quot;label&quot;:&quot;Study notes&quot;,&quot;url&quot;:&quot;\/en\/study-notes\/&quot;},{&quot;label&quot;:&quot;Summaries&quot;,&quot;url&quot;:&quot;\/en\/summaries\/&quot;},{&quot;label&quot;:&quot;All documents&quot;,&quot;url&quot;:&quot;\/en\/documents\/&quot;,&quot;separator&quot;:true},{&quot;label&quot;:&quot;Upload documents&quot;,&quot;url&quot;:&quot;\/en\/dashboard\/share\/documents\/&quot;,&quot;accent&quot;:true,&quot;icon&quot;:&quot;upload&quot;}],&quot;current&quot;:true},{&quot;label&quot;:&quot;Questions&quot;,&quot;url&quot;:&quot;\/en\/answers\/&quot;,&quot;current&quot;:false,&quot;children&quot;:[{&quot;label&quot;:&quot;Latest questions&quot;,&quot;url&quot;:&quot;\/en\/answers\/?order=created&quot;},{&quot;label&quot;:&quot;Biology &amp; Chemistry&quot;,&quot;url&quot;:&quot;\/en\/answers\/biology-and-chemistry\/&quot;},{&quot;label&quot;:&quot;Economics&quot;,&quot;url&quot;:&quot;\/en\/answers\/economics\/&quot;},{&quot;label&quot;:&quot;Psycology &amp; Sociology&quot;,&quot;url&quot;:&quot;\/en\/answers\/psycology-and-sociology\/&quot;},{&quot;label&quot;:&quot;Management&quot;,&quot;url&quot;:&quot;\/en\/answers\/management\/&quot;},{&quot;label&quot;:&quot;Physics&quot;,&quot;url&quot;:&quot;\/en\/answers\/physics\/&quot;,&quot;separator&quot;:true},{&quot;label&quot;:&quot;Ask a question&quot;,&quot;url&quot;:&quot;\/en\/dashboard\/answers\/&quot;,&quot;accent&quot;:true,&quot;icon&quot;:&quot;comment-o&quot;}]},{&quot;label&quot;:&quot;Blog&quot;,&quot;url&quot;:&quot;\/en\/news\/&quot;,&quot;current&quot;:false,&quot;children&quot;:[{&quot;label&quot;:&quot;Interesting facts&quot;,&quot;url&quot;:&quot;\/en\/news\/category\/interesting-facts\/&quot;},{&quot;label&quot;:&quot;Universities&quot;,&quot;url&quot;:&quot;\/en\/news\/category\/universities\/&quot;},{&quot;label&quot;:&quot;Engineering&quot;,&quot;url&quot;:&quot;\/en\/news\/category\/engineering\/&quot;},{&quot;label&quot;:&quot;How to&quot;,&quot;url&quot;:&quot;\/en\/news\/category\/how-to\/&quot;},{&quot;label&quot;:&quot;Science&quot;,&quot;url&quot;:&quot;\/en\/news\/category\/science-2\/&quot;},{&quot;label&quot;:&quot;University Admission Tests&quot;,&quot;url&quot;:&quot;\/en\/news\/category\/university-admission-tests\/&quot;,&quot;separator&quot;:true},{&quot;label&quot;:&quot;Write a post&quot;,&quot;url&quot;:&quot;\/en\/news\/write\/&quot;,&quot;accent&quot;:true,&quot;icon&quot;:&quot;pencil&quot;}]},{&quot;label&quot;:&quot;Share&quot;,&quot;children&quot;:[{&quot;label&quot;:&quot;Upload documents&quot;,&quot;url&quot;:&quot;\/en\/dashboard\/share\/documents\/&quot;},{&quot;label&quot;:&quot;Upload videos&quot;,&quot;url&quot;:&quot;\/en\/video\/add\/&quot;},{&quot;label&quot;:&quot;Ask a question&quot;,&quot;url&quot;:&quot;\/en\/dashboard\/answers\/&quot;},{&quot;label&quot;:&quot;Answer&quot;,&quot;url&quot;:&quot;\/en\/answers\/&quot;}]}],&quot;searchResources&quot;:[{&quot;value&quot;:&quot;docsity&quot;,&quot;label&quot;:&quot;Documents&quot;,&quot;url&quot;:&quot;\/en\/search\/?resources=1&amp;q=%query%&quot;,&quot;subjectUrl&quot;:&quot;\/en\/search\/?subjects%5B%5D=%subject%&amp;resources=1&quot;},{&quot;value&quot;:&quot;questions&quot;,&quot;label&quot;:&quot;Questions&quot;,&quot;url&quot;:&quot;\/en\/search\/?resources=3&amp;q=%query%&quot;},{&quot;value&quot;:&quot;all&quot;,&quot;label&quot;:&quot;All&quot;,&quot;subjectUrl&quot;:&quot;\/en\/search\/?subjects%5B%5D=%subject%&quot;,&quot;url&quot;:&quot;\/en\/search\/?q=%query%&quot;}],&quot;defaultSearchResource&quot;:&quot;docsity&quot;,&quot;resourcesMenu&quot;:[{&quot;label&quot;:&quot;Documents&quot;,&quot;url&quot;:&quot;\/en\/dashboard\/documents\/&quot;},{&quot;label&quot;:&quot;Questions&quot;,&quot;url&quot;:&quot;\/en\/dashboard\/answers\/&quot;}],&quot;showSearch&quot;:true,&quot;showNavigation&quot;:true,&quot;alerts&quot;:[{&quot;type&quot;:&quot;complete-profile&quot;,&quot;priority&quot;:5},{&quot;type&quot;:&quot;avatar-upload&quot;,&quot;priority&quot;:3}],&quot;user&quot;:{&quot;id&quot;:4176905,&quot;username&quot;:&quot;vaibhavi-patil&quot;,&quot;url&quot;:&quot;\/en\/users\/profile\/vaibhavi-patil\/&quot;,&quot;about&quot;:{&quot;text&quot;:&quot;University M&quot;},&quot;name&quot;:&quot;Vaibhavi&quot;,&quot;lastName&quot;:&quot;Patil&quot;,&quot;type&quot;:&quot;university&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;avatar&quot;:{&quot;image&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;,&quot;default&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;,&quot;original&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;,&quot;icon&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;},&quot;isTutor&quot;:false,&quot;isCompleteProfileNeeded&quot;:true,&quot;isSeller&quot;:false,&quot;university&quot;:null,&quot;faculty&quot;:null,&quot;school&quot;:null,&quot;havePremium&quot;:false,&quot;downloadPoints&quot;:0,&quot;premiumPoints&quot;:0,&quot;points&quot;:0,&quot;prepaidsPoints&quot;:0},&quot;inboxLimit&quot;:3,&quot;notifications&quot;:[],&quot;friendRequests&quot;:[],&quot;inboxUnread&quot;:[],&quot;hasPremium&quot;:false,&quot;hasTutoring&quot;:false,&quot;hasInbox&quot;:false,&quot;modulesEnabled&quot;:{&quot;premium&quot;:false}}" data-translations="[]" data-navigation="{&quot;\/it\/inbox\/&quot;:&quot;#&quot;,&quot;\/it\/utenti\/notifiche\/&quot;:&quot;#&quot;,&quot;\/it\/utenti\/logout\/&quot;:&quot;\/en\/users\/logout\/&quot;,&quot;\/it\/pag\/punteggi\/&quot;:&quot;\/en\/pag\/points-management\/&quot;}" data-locale="en"><div style="height: auto;" class="dsy-sticky" data-reactroot="" data-reactid="1" data-react-checksum="777726953"><div class="dsy-sticky__wrapper" data-reactid="2"><div class="docsity-engage-alerts"><figure class="dsy-alert dsy-alert--small dsy-alert--attached dsy-alert--info"><i class="fa fa-user"></i><figcaption class="dsy-alert__content">Please, complete your profile in order to access all the features!</figcaption><div class="dsy-alert__action"><button class="dsy-button dsy-button--small dsy-button--success">Complete now</button></div><div class="dsy-alert__close"></div></figure></div><header class="dsy-header" data-reactid="4"><div class="dsy-header__dimmer" data-reactid="5"></div><div class="dsy-slide-menu-brand"><div class="dsy-menu-brand"><div class="dsy-menu-brand__item"><i class="fa fa-times"></i><div class="dsy-menu-brand__item__text">Close</div></div><div class="dsy-menu-brand__group dsy-menu-brand__group--open"><a href="https://www.docsity.com/en/documents/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Documents</div></a><div class="dsy-menu-brand__group__children"><a href="https://www.docsity.com/en/degree-thesis/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Degree thesis</div></a><a href="https://www.docsity.com/en/exam-questions/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Exam questions</div></a><a href="https://www.docsity.com/en/exercises/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Exercises</div></a><a href="https://www.docsity.com/en/lecture-notes/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Lecture notes</div></a><a href="https://www.docsity.com/en/schemes/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Schemes</div></a><a href="https://www.docsity.com/en/study-notes/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Study notes</div></a><a href="https://www.docsity.com/en/summaries/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Summaries</div></a><a href="https://www.docsity.com/en/documents/" class="dsy-menu-brand__item dsy-menu-brand__item--separator"><div class="dsy-menu-brand__item__text">All documents</div></a><a href="https://www.docsity.com/en/dashboard/share/documents/" class="dsy-menu-brand__item dsy-menu-brand__item--accent"><i class="fa fa-upload"></i><div class="dsy-menu-brand__item__text">Upload documents</div></a></div></div><div class="dsy-menu-brand__group dsy-menu-brand__group--open"><a href="https://www.docsity.com/en/answers/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Questions</div></a><div class="dsy-menu-brand__group__children"><a href="https://www.docsity.com/en/answers/?order=created" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Latest questions</div></a><a href="https://www.docsity.com/en/answers/biology-and-chemistry/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Biology &amp; Chemistry</div></a><a href="https://www.docsity.com/en/answers/economics/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Economics</div></a><a href="https://www.docsity.com/en/answers/psycology-and-sociology/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Psycology &amp; Sociology</div></a><a href="https://www.docsity.com/en/answers/management/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Management</div></a><a href="https://www.docsity.com/en/answers/physics/" class="dsy-menu-brand__item dsy-menu-brand__item--separator"><div class="dsy-menu-brand__item__text">Physics</div></a><a href="https://www.docsity.com/en/dashboard/answers/" class="dsy-menu-brand__item dsy-menu-brand__item--accent"><i class="fa fa-comment-o"></i><div class="dsy-menu-brand__item__text">Ask a question</div></a></div></div><div class="dsy-menu-brand__group dsy-menu-brand__group--open"><a href="https://www.docsity.com/en/news/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Blog</div></a><div class="dsy-menu-brand__group__children"><a href="https://www.docsity.com/en/news/category/interesting-facts/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Interesting facts</div></a><a href="https://www.docsity.com/en/news/category/universities/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Universities</div></a><a href="https://www.docsity.com/en/news/category/engineering/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Engineering</div></a><a href="https://www.docsity.com/en/news/category/how-to/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">How to</div></a><a href="https://www.docsity.com/en/news/category/science-2/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Science</div></a><a href="https://www.docsity.com/en/news/category/university-admission-tests/" class="dsy-menu-brand__item dsy-menu-brand__item--separator"><div class="dsy-menu-brand__item__text">University Admission Tests</div></a><a href="https://www.docsity.com/en/news/write/" class="dsy-menu-brand__item dsy-menu-brand__item--accent"><i class="fa fa-pencil"></i><div class="dsy-menu-brand__item__text">Write a post</div></a></div></div><div class="dsy-menu-brand__group dsy-menu-brand__group--open"><div class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Share</div></div><div class="dsy-menu-brand__group__children"><a href="https://www.docsity.com/en/dashboard/share/documents/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Upload documents</div></a><a href="https://www.docsity.com/en/video/add/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Upload videos</div></a><a href="https://www.docsity.com/en/dashboard/answers/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Ask a question</div></a><a href="https://www.docsity.com/en/answers/" class="dsy-menu-brand__item"><div class="dsy-menu-brand__item__text">Answer</div></a></div></div></div></div><button class="dsy-header__mobile-menu" data-reactid="6"><div class="dsy-header__mobile-menu__hamburger" data-reactid="7"><span data-reactid="8"></span><span data-reactid="9"></span><span data-reactid="10"></span></div></button><a href="https://www.docsity.com/" class="dsy-header__logo" data-reactid="11"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/docsity-white.svg" data-reactid="12"></a><div class="dsy-header__toggler" data-reactid="13"><div class="dsy-header__toggler__item" data-reactid="14"><nav role="navigation" class="dsy-header__nav" data-reactid="15"><div class="dsy-header__nav__dropdown dsy-header__nav__dropdown--current dsy-header__nav__dropdown--use-css" data-reactid="16"><a href="https://www.docsity.com/en/documents/" class="dsy-header__nav__item" data-reactid="17">Documents</a></div><div class="dsy-header__nav__dropdown dsy-header__nav__dropdown--use-css" data-reactid="18"><a href="https://www.docsity.com/en/answers/" class="dsy-header__nav__item" data-reactid="19">Questions</a></div><div class="dsy-header__nav__dropdown dsy-header__nav__dropdown--use-css" data-reactid="20"><a href="https://www.docsity.com/en/news/" class="dsy-header__nav__item" data-reactid="21">Blog</a></div><div class="dsy-header__nav__dropdown dsy-header__nav__dropdown--use-css" data-reactid="22"><div class="dsy-header__nav__item" data-reactid="23">Share</div></div></nav></div><div class="dsy-header__toggler__item"><div class="dsy-header__search"><div class="dsy-header__search__input dsy-header__search__input--filtered"><div class="dsy-header__search__input__value"><input class="dsy-header__search__input__value__label" placeholder="What are you studying today?"><input value="" type="hidden"></div></div><div class="dsy-header__search__target dsy-header__search__target--plain"><div class="dsy-header__search__target__value"><span class="dsy-header__search__target__value__label">Documents</span><div class="dsy-header__search__target__value__figure"><i></i></div><input value="docsity" type="hidden"></div></div></div></div></div><button type="button" class="dsy-header__activate-search" data-reactid="24"></button><button type="button" class="dsy-header__deactivate-search" data-reactid="25"></button><div class="dsy-slide-menu dsy-slide-menu--right-aligned"><div class="dsy-notifications-menu"><div class="dsy-notifications-menu__group dsy-notifications-menu__group--separator"><div class="dsy-notifications-menu__item"><div class="dsy-notifications-menu__item__text">Friend requests</div></div><div class="dsy-notifications-menu__group__children"><div class="dsy-notifications-menu__item"><div class="dsy-notifications-menu__item__text">No friend requests</div></div></div></div><div class="dsy-notifications-menu__group dsy-notifications-menu__group--separator"><a href="file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm#" class="dsy-notifications-menu__item"><div class="dsy-notifications-menu__item__text">Notifications</div></a><div class="dsy-notifications-menu__group__children"><div class="dsy-notifications-menu__item"><div class="dsy-notifications-menu__item__text">You've got no notifications</div></div></div></div></div></div><div class="dsy-slide-menu dsy-slide-menu--right-aligned"><div class="dsy-menu"><div class="dsy-menu__group dsy-menu__group--separator"><div class="dsy-menu__item dsy-menu__item--condensed"><div class="dsy-menu__item__text"><a href="https://www.docsity.com/en/users/profile/vaibhavi-patil/" class="dsy-avatar"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/photo.jpg" alt="vaibhavi-patil"></a><a href="https://www.docsity.com/en/users/profile/vaibhavi-patil/">vaibhavi-patil</a></div></div><div class="dsy-menu__group__children"><a href="https://www.docsity.com/en/pag/points-management/" class="dsy-menu__item dsy-menu__item--condensed"><div class="dsy-menu__item__text"><span class="dsy-points dsy-points--points"><span class="dsy-points__points">0</span><!-- react-text: 156 -->points<!-- /react-text --></span></div></a></div></div><div class="dsy-menu__group dsy-menu__group--separator"><div class="dsy-menu__item"><div class="dsy-menu__item__text">My resources</div></div><div class="dsy-menu__group__children"><a href="https://www.docsity.com/en/dashboard/documents/" class="dsy-menu__item"><div class="dsy-menu__item__text">Documents</div></a><a href="https://www.docsity.com/en/dashboard/answers/" class="dsy-menu__item dsy-menu__item--separator"><div class="dsy-menu__item__text">Questions</div></a><a href="https://www.docsity.com/account" class="dsy-menu__item"><i class="fa fa-gear"></i><div class="dsy-menu__item__text">Manage account</div></a><div class="dsy-menu__item"><i class="fa fa-globe"></i><div class="dsy-menu__item__text">Language</div></div><a href="https://www.docsity.com/en/users/logout/" class="dsy-menu__item"><i class="fa fa-sign-out"></i><div class="dsy-menu__item__text">Logout</div></a></div></div></div></div><div class="dsy-header__dropdown dsy-header__dropdown--right-aligned" data-reactid="26"><button type="button" class="dsy-header__notifications" data-value="0" data-reactid="27"></button></div><div class="dsy-header__dropdown dsy-header__dropdown--right-aligned" data-reactid="28"><button type="button" class="dsy-header__profile" data-value="0" data-reactid="29"><div class="dsy-header__profile__avatar" data-reactid="30"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/photo.jpg" alt="vaibhavi-patil" data-reactid="31"></div></button></div></header></div></div></div>	</div>
+</div>
+
+			
+
+		
+							
+		<div class="content wrapper" style="position: relative;">
+			
+	
+<div class="dsy-style-patch">
+	<div class="docsity-document">
+		<div class="docsity-document__header docsity-document__header">
+			<div class="docsity-document__header__container">
+								
+				
+	
+			<div class="docsity-document__leaderboard dsy-js-leaderboard" data-props="{&quot;advEnabled&quot;:true}" data-translations="[]" data-navigation="[]" data-locale="en"><div class="docsity-adv" data-reactroot="" data-reactid="1" data-react-checksum="1695172072"><ins class="adsbygoogle" data-ad-client="ca-pub-5016218198171959" data-ad-slot="8701108117" data-ad-width="728" data-ad-height="90" data-reactid="2"></ins></div></div>				<div class="docsity-document__breadcrumb">
+					<div class="ui basic breadcrumb">
+	<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="section">
+		<a href="https://www.docsity.com/en/" itemprop="url">
+			<span itemprop="title">Home</span>
+		</a>
+	</div>
+
+			<i class="right arrow icon divider"></i>
+
+		<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="section">
+							<a itemprop="url" href="https://www.docsity.com/en/documents/">
+											<span itemprop="title">
+							Documents						</span>
+									</a>
+					</div>
+			<i class="right arrow icon divider"></i>
+
+		<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="section">
+							<a itemprop="url" href="https://www.docsity.com/en/degree-thesis/">
+											<span itemprop="title">
+							Degree thesis						</span>
+									</a>
+					</div>
+			<i class="right arrow icon divider"></i>
+
+		<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="section">
+							<a itemprop="url" href="https://www.docsity.com/en/degree-thesis/engineering/">
+											<span itemprop="title">
+							Degree thesis Engineering						</span>
+									</a>
+					</div>
+			<i class="right arrow icon divider"></i>
+
+		<div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="section">
+							<a itemprop="url" href="https://www.docsity.com/en/degree-thesis/engineering/microcontrollers/">
+											<span itemprop="title">
+							Degree thesis Microcontrollers						</span>
+									</a>
+					</div>
+	</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="docsity-document__main">
+			<div class="docsity-document__main__container">
+								
+	
+	
+			<div class="dsy-js-document-view" data-props="{&quot;relatedDocuments&quot;:[{&quot;id&quot;:77866,&quot;title&quot;:&quot;Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Development_of_Control_System_for_Computer_Controlled_Lathe_Machine-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report\/77866\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77876,&quot;title&quot;:&quot;Speed Control of Brushed D.C. Motor-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Speed_Control_of_Brushed_D_C__Motor-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/speed-control-of-brushed-d-c-motor-microcontroller-and-assembly-language-project-report\/77876\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77868,&quot;title&quot;:&quot;Feedback D.C. Motor Control System-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Feedback_D_C__Motor_Control_System-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/feedback-d-c-motor-control-system-microcontroller-and-assembly-language-project-report\/77868\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77857,&quot;title&quot;:&quot;Automatic PCB Drill Machine-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Automatic_PCB_Drill_Machine-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/automatic-pcb-drill-machine-microcontroller-and-assembly-language-project-report\/77857\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:78107,&quot;title&quot;:&quot;Sensorless Control of BLDC Motor-Microcontroller and Assembly language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/04\/thumbs\/Sensorless_Control_of_BLDC_Motor-Microcontroller_and_Assembly_language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/sensorless-control-of-bldc-motor-microcontroller-and-assembly-language-project-report\/78107\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77870,&quot;title&quot;:&quot;Fluid Flow Measurement System-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Fluid_Flow_Measurement_System-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/fluid-flow-measurement-system-microcontroller-and-assembly-language-project-report\/77870\/&quot;,&quot;forSale&quot;:false}],&quot;relatedSubjects&quot;:null,&quot;userDocuments&quot;:[{&quot;id&quot;:77878,&quot;title&quot;:&quot;Vital Signs-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Vital_Signs-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/vital-signs-microcontroller-and-assembly-language-project-report\/77878\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77877,&quot;title&quot;:&quot;Temperature, Pressuer ,Heartbeat-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Temperature__Pressuer__Heartbeat-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/temperature-pressuer-heartbeat-microcontroller-and-assembly-language-project-report\/77877\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77876,&quot;title&quot;:&quot;Speed Control of Brushed D.C. Motor-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Speed_Control_of_Brushed_D_C__Motor-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/speed-control-of-brushed-d-c-motor-microcontroller-and-assembly-language-project-report\/77876\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77875,&quot;title&quot;:&quot;Simulation of D.C. Motor Drive&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Simulation_of_D_C__Motor_Drive_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/simulation-of-d-c-motor-drive\/77875\/&quot;,&quot;forSale&quot;:false},{&quot;id&quot;:77874,&quot;title&quot;:&quot;Online Programming Capable Card-Microcontroller and Assembly Language-Project Report&quot;,&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Online_Programming_Capable_Card-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/online-programming-capable-card-microcontroller-and-assembly-language-project-report\/77874\/&quot;,&quot;forSale&quot;:false}],&quot;document&quot;:{&quot;id&quot;:77866,&quot;title&quot;:&quot;Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report&quot;,&quot;description&quot;:&quot;This is project report by a student to fulfil requirement of course Microcontroller and Assembly Language at Ankit Institute of Technology and Science. It contains CNC, Lathe, Machine, Control, System, Controlled, Electrical, Motor, Drive, Bipolar, Stepper&quot;,&quot;shortDescription&quot;:null,&quot;author&quot;:{&quot;id&quot;:321028,&quot;username&quot;:&quot;booby&quot;,&quot;url&quot;:&quot;\/en\/users\/profile\/booby\/&quot;,&quot;about&quot;:{&quot;text&quot;:&quot;Ankit Institute of Technology and Science&quot;},&quot;name&quot;:null,&quot;lastName&quot;:null,&quot;type&quot;:&quot;university&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;avatar&quot;:{&quot;image&quot;:&quot;\/media\/avatar\/imgs\/321028_p.jpg&quot;,&quot;default&quot;:&quot;\/media\/avatar\/imgs\/321028_t.jpg&quot;,&quot;original&quot;:&quot;\/media\/avatar\/imgs\/321028_o.jpg&quot;,&quot;icon&quot;:&quot;\/media\/avatar\/imgs\/321028_i.jpg&quot;},&quot;isTutor&quot;:false,&quot;isCompleteProfileNeeded&quot;:false,&quot;isSeller&quot;:false,&quot;university&quot;:{&quot;id&quot;:196,&quot;name&quot;:&quot;Ankit Institute of Technology and Science&quot;},&quot;country&quot;:{&quot;id&quot;:2,&quot;name&quot;:&quot;India&quot;},&quot;faculty&quot;:null,&quot;school&quot;:{&quot;id&quot;:196,&quot;name&quot;:&quot;Ankit Institute of Technology and Science&quot;},&quot;havePremium&quot;:false,&quot;downloadPoints&quot;:1760,&quot;premiumPoints&quot;:0,&quot;points&quot;:1760,&quot;prepaidsPoints&quot;:0,&quot;premiumDisclaimer&quot;:null},&quot;language&quot;:&quot;en&quot;,&quot;uploadDate&quot;:{&quot;timestamp&quot;:1341342210,&quot;date&quot;:&quot;03\/07\/2012&quot;,&quot;time&quot;:&quot;21:03:30&quot;},&quot;typology&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Degree thesis&quot;,&quot;url&quot;:&quot;\/en\/degree-thesis\/&quot;,&quot;storeUrl&quot;:&quot;&quot;},&quot;category&quot;:{&quot;id&quot;:1,&quot;slug&quot;:&quot;engineering&quot;,&quot;label&quot;:&quot;Engineering&quot;,&quot;url&quot;:&quot;\/en\/faculty\/engineering\/&quot;,&quot;storeUrl&quot;:&quot;&quot;},&quot;subject&quot;:{&quot;id&quot;:2039,&quot;slug&quot;:&quot;microcontrollers&quot;,&quot;label&quot;:&quot;Microcontrollers&quot;,&quot;url&quot;:&quot;\/en\/subjects\/microcontrollers\/&quot;,&quot;storeUrl&quot;:&quot;&quot;},&quot;thumbnail&quot;:&quot;\/documents\/original\/2012\/07\/03\/thumbs\/Development_of_Control_System_for_Computer_Controlled_Lathe_Machine-Microcontroller_and_Assembly_Language-Project_Report_pdf.pdf.jpeg&quot;,&quot;url&quot;:&quot;\/en\/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report\/77866\/&quot;,&quot;views&quot;:&quot;1000+&quot;,&quot;downloads&quot;:4,&quot;downloadPoints&quot;:20,&quot;favourites&quot;:&quot;0&quot;,&quot;votes&quot;:0,&quot;school&quot;:{&quot;id&quot;:196,&quot;name&quot;:&quot;Ankit Institute of Technology and Science&quot;},&quot;isFavourite&quot;:false,&quot;fileExtension&quot;:&quot;pdf&quot;,&quot;fileSize&quot;:383962,&quot;pages&quot;:10,&quot;previewPages&quot;:3,&quot;forSale&quot;:false,&quot;price&quot;:null,&quot;staticPrice&quot;:null,&quot;status&quot;:&quot;published&quot;,&quot;absoluteUrl&quot;:&quot;http:\/\/www.docsity.com\/en\/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report\/77866\/&quot;,&quot;hasOptimizedPrice&quot;:false,&quot;type&quot;:&quot;university&quot;,&quot;unsafeContent&quot;:false},&quot;downloadAttributes&quot;:{&quot;href&quot;:&quot;#&quot;,&quot;action&quot;:&quot;complete-profile&quot;,&quot;points&quot;:20,&quot;credits&quot;:null,&quot;label&quot;:&quot;Download the document&quot;},&quot;comments&quot;:{&quot;pages&quot;:1,&quot;page&quot;:1,&quot;items&quot;:[{&quot;id&quot;:78139,&quot;author&quot;:{&quot;username&quot;:&quot;peymanc_12&quot;,&quot;url&quot;:&quot;\/en\/users\/profile\/peymanc_12\/&quot;,&quot;avatar&quot;:{&quot;image&quot;:&quot;\/public\/images\/avatars\/default_6_p.png&quot;,&quot;default&quot;:&quot;\/public\/images\/avatars\/default_6_t.png&quot;,&quot;original&quot;:&quot;\/public\/images\/avatars\/default_6_o.png&quot;,&quot;icon&quot;:&quot;\/public\/images\/avatars\/default_6_i.png&quot;},&quot;school&quot;:{&quot;id&quot;:5602,&quot;name&quot;:&quot;Isfahan University of Technology&quot;}},&quot;description&quot;:&quot;This is Perfect&quot;,&quot;timestamp&quot;:{&quot;timestamp&quot;:1353486970,&quot;date&quot;:&quot;21\/11\/2012&quot;,&quot;time&quot;:&quot;09:36:10&quot;}}],&quot;total&quot;:1},&quot;hashPages&quot;:{&quot;ccd6f8e8d0a820bd6e69af88a0c9d9ef&quot;:&quot;\/documents\/pages\/2012\/07\/03\/ccd6f8e8d0a820bd6e69af88a0c9d9ef.png&quot;,&quot;aa21d2ae4c307a8f62edd61a89cf1bf3&quot;:&quot;\/documents\/pages\/2012\/07\/03\/aa21d2ae4c307a8f62edd61a89cf1bf3.png&quot;,&quot;e1b44bfe6c0af8d1eb9fd0bb5e81d053&quot;:&quot;\/documents\/pages\/2012\/07\/03\/e1b44bfe6c0af8d1eb9fd0bb5e81d053.png&quot;,&quot;1fa02958adb89165d201666bb54d74bd&quot;:true,&quot;89d028309684928d18e828196588decf&quot;:true,&quot;3e8ed5f5ff532f987d49eb68ac2b2081&quot;:true,&quot;78a4cdef6bcc75647505f6f2187cd598&quot;:true,&quot;78011ae57ce22c84e5c22737f5b8cd31&quot;:true,&quot;b52b82d16b26e703dd7c6f57e736f585&quot;:true,&quot;03e9f8b329f48d2639f08f26fc74fc79&quot;:true},&quot;pagesType&quot;:&quot;png&quot;,&quot;user&quot;:{&quot;id&quot;:4176905,&quot;username&quot;:&quot;vaibhavi-patil&quot;,&quot;url&quot;:&quot;\/en\/users\/profile\/vaibhavi-patil\/&quot;,&quot;about&quot;:{&quot;text&quot;:&quot;University M&quot;},&quot;name&quot;:&quot;Vaibhavi&quot;,&quot;lastName&quot;:&quot;Patil&quot;,&quot;type&quot;:&quot;university&quot;,&quot;lang&quot;:&quot;en&quot;,&quot;avatar&quot;:{&quot;image&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;,&quot;default&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;,&quot;original&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;,&quot;icon&quot;:&quot;https:\/\/lh6.googleusercontent.com\/-PoQxHkzcxuQ\/AAAAAAAAAAI\/AAAAAAAACPU\/crdO1sDJ5is\/photo.jpg?sz=200&quot;},&quot;isTutor&quot;:false,&quot;isCompleteProfileNeeded&quot;:true,&quot;isSeller&quot;:false,&quot;university&quot;:null,&quot;country&quot;:{&quot;id&quot;:2,&quot;name&quot;:&quot;India&quot;},&quot;faculty&quot;:null,&quot;school&quot;:null,&quot;havePremium&quot;:false,&quot;downloadPoints&quot;:0,&quot;premiumPoints&quot;:0,&quot;points&quot;:0,&quot;prepaidsPoints&quot;:0,&quot;premiumDisclaimer&quot;:null},&quot;isPreview&quot;:false,&quot;socialUrl&quot;:&quot;https:\/\/www.docsity.com\/en\/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report\/77866\/&quot;,&quot;embedUrl&quot;:&quot;https:\/\/www.docsity.com\/en\/docs\/embed-player\/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report\/&quot;,&quot;textFile&quot;:&quot;&lt;!DOCTYPE html PUBLIC \&quot;-\/\/W3C\/\/DTD HTML 4.01 Transitional\/\/EN\&quot;\n\&quot;http:\/\/www.w3.org\/TR\/html4\/loose.dtd\&quot;&gt;\n&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;\/title&gt;\n&lt;meta http-equiv=\&quot;Content-Type\&quot; content=\&quot;text\/html; charset=\&quot;UTF-8\&quot;&gt;\n&lt;\/head&gt;\n&lt;body&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;DEVELOPMENT OF THE CONTROL SYSTEM FOR THE \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;COMPUTER CONTROLLED LATHE MACHINE \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt; \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt; \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt; \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;CNC Lathe Machine&lt;\/b&gt; \n&lt;\/p&gt;\n&lt;p&gt;CNC lathe machine is computer controlled and can be programmed to do a variety of different \n&lt;\/p&gt;\n&lt;p&gt;things such as sanding, cutting and drilling. Its huge draw is that it cuts production time down and \n&lt;\/p&gt;\n&lt;p&gt;brings profitability to the business. The modern CNC lathe machine is a combination of a computer \n&lt;\/p&gt;\n&lt;p&gt;with a lathe machine in which the controller converts each digital signal into the desired action. \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;Control System for Computer Controlled Lathe Machine \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;There are generally three axis in which tool move to do job; x-axis which is left to right, y-axis which \n&lt;\/p&gt;\n&lt;p&gt;is front and back and z- axis which is up and down. In this project the control strategy is to control \n&lt;\/p&gt;\n&lt;p&gt;the x axis motion and y axis motion of the tool. The control of the motion of tool is done by two \n&lt;\/p&gt;\n&lt;p&gt;different motors. One is DC motor which is used for x axis motion control and other is stepper \n&lt;\/p&gt;\n&lt;p&gt;motor which is used for y axis motion control. \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;&lt;i&gt;Control of X-axis Motion \n&lt;\/i&gt;&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;The control of x axis motion of the tool is done by DC motor. DC motor is a device which takes the \n&lt;\/p&gt;\n&lt;p&gt;electrical energy and converts it into mechanical energy. In the conventional lathe machine, the \n&lt;\/p&gt;\n&lt;p&gt;motion of tool is controlled by operator who moves the tool in x axis by hand wheel with his full \n&lt;\/p&gt;\n&lt;p&gt;power. To move the tool in left and right, high torque is required. In order to achieve this high value \n&lt;\/p&gt;\n&lt;p&gt;of torque, DC motor is used which provide more torque. \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;&lt;i&gt;Control of Y-axis Motion \n&lt;\/i&gt;&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;The control of y axis motion is done by stepper motor. Stepper motor is a kind of DC motor which \n&lt;\/p&gt;\n&lt;p&gt;gives the output in steps. There are two type of stepper motor unipolar and bipolar stepper motor. \n&lt;\/p&gt;\n&lt;p&gt;Bipolar stepper gives more torque then the unipolar stepper motor. In this experimental project \n&lt;\/p&gt;\n&lt;p&gt;Bipolar stepper motor is used to control y-axis motion of the tool. The stepper shown in the Figure \n&lt;\/p&gt;\n&lt;p&gt;2-6 is used in this project. The rating of the bipolar stepper motor is given below \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt;1. Voltage = 3.6 volts 2. Current = 4 amperes 3. Torque = 7.44 Nm \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;Overall Electrical Control System \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;For the controlling of the x axis and y axis motion of the tool through motors, it is necessary to \n&lt;\/p&gt;\n&lt;p&gt;develop the motor control cards. These motor control cards are used for driving motors in open as \n&lt;\/p&gt;\n&lt;p&gt;well as close loop form. The overall electrical control system for computer controlled lathe machine \n&lt;\/p&gt;\n&lt;p&gt;is shown below in figure. \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;As shown in the above figure there are three portion of the electrical control system. First consists \n&lt;\/p&gt;\n&lt;p&gt;of computer (PC) which is giving and taking instruction from maser control card. \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;Motor Drive \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;DC Motor Drive  \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;This is the future work of our project. \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;Bipolar Stepper Motor Driving Circuit \n&lt;\/b&gt;&lt;\/p&gt;\n&lt;p&gt;Following components are used for stepper motor control, \n&lt;\/p&gt;\n&lt;p&gt;1) L297 stepper motor driver IC \n&lt;\/p&gt;\n&lt;p&gt;2) L298 dual H bridge IC \n&lt;\/p&gt;\n&lt;p&gt;3) 4A diodes \n&lt;\/p&gt;\n&lt;p&gt;The circuit for driving stepper motor is given below, \n&lt;\/p&gt;\n&lt;p&gt;MASTER \n&lt;\/p&gt;\n&lt;p&gt;CONTROL \n&lt;\/p&gt;\n&lt;p&gt;CARD \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;PC \n&lt;\/p&gt;\n&lt;p&gt;SLAVE \n&lt;\/p&gt;\n&lt;p&gt;CONTROL CARD \n&lt;\/p&gt;\n&lt;p&gt;SLAVE \n&lt;\/p&gt;\n&lt;p&gt;CONTROL CARD \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;&lt;b&gt;CIRCUIT OPERATION \n&lt;\/b&gt; \nThe L297 is intended for use with a dual bridge driver, quad darlington array or discrete power devices \n&lt;\/p&gt;\n&lt;p&gt;in step motor driving applications. It receives step clock, direction and mode signals from the systems \n&lt;\/p&gt;\n&lt;p&gt;controller (usually a microcomputer chip) and generates control signals for the power stage. \n&lt;\/p&gt;\n&lt;p&gt;The principal functions are a translator, which generates the motor phase sequences, and a dual PWM \n&lt;\/p&gt;\n&lt;p&gt;chopper circuit which regulates the current in the motor windings. The translator generates three \n&lt;\/p&gt;\n&lt;p&gt;different sequences, selected by the HALF\/FULL input. These are normal (two phases energised), wave \n&lt;\/p&gt;\n&lt;p&gt;drive (one phase energised) and half-step (alternately one phase energised\/two phases energised). Two \n&lt;\/p&gt;\n&lt;p&gt;inhibit signals are also generated by the L297 in half step and wave drive modes. These signals, which \n&lt;\/p&gt;\n&lt;p&gt;connect directly to the L298&amp;#8217;s enable inputs, are intended to speed current decay when a winding is de-\n&lt;\/p&gt;\n&lt;p&gt;energised.     When the L297 is used to drive a unipolar motor the chopper acts on these lines. \n&lt;\/p&gt;\n&lt;p&gt;An input called CONTROL determines whether the chopper will act on the phase lines ABCD or the \ninhibit lines INH1 and INH2. When the phase lines are chopped the non-active phase line of each pair \n&lt;\/p&gt;\n&lt;p&gt;(AB or CD) is activated (rather than interrupting the line then active). In L297 + L298 configurations this \n&lt;\/p&gt;\n&lt;p&gt;technique reduces dissipation in the load current sense resistors. A common on-chip oscillator drives the \ndual chopper. It supplies pulses at the chopper rate which set the two flip-flops FF1 and FF2. When the \ncurrent in a winding reaches the programmed peak value the voltage across the sense resistor \n(connected to one of the sense inputs SENS1 or SENS2) equals Vref and the corresponding comparator \nresets its flip flop, interrupting the drive current until the next oscillator pulse arrives. The peak current \nfor both windings is programmed by a voltage divider on the Vref input. Ground noise problems in \nmultiple configurations can be avoided by synchronising the chopper oscillators. This is done by \nconnecting all the SYNC pins together, mounting the oscillator RC network on one device only and \ngrounding the OSC pin on all other devices. \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt; \n&lt;\/p&gt;\n&lt;p&gt;PROJECT CODE \n&lt;\/p&gt;\n&lt;p&gt;#include &amp;lt;REG51.H&amp;gt; \nsbit CLK=P1^0; \nsbit RST=P1^1; \nsbit CW=P1^2; \nsbit HF=P1^3; \nsbit EN=P1^4; \nsbit ROT1A=P2^0; \nsbit ROT1B=P2^1; \nsbit ROT1I=P2^2; \nsbit ROT2A=P2^3; \nsbit ROT2B=P2^4; \nsbit ROT2I=P2^5; \nsbit PWMCW=P2^6; \nsbit PWMCCW=P2^7; \nint COUNT=150;  \/\/external interrupt 0 count\/\/ \nint TIMECOUNT=180; \/\/TIMER 1 interrupt count\/\/ \nint X=1; \nbit PWMCLKW; \n \nvoid SMOOTHING(); \nvoid TAPERING(); \nvoid ORIGINALPOSITION(); \nvoid RUNSTEPPER(int,float,float); \nvoid RUNDC(int,int,float,int); \nvoid ORIGINALPOSITION(); \nvoid STOPSTEPPER(); \nvoid STOPDC(); \n \n \n \nvoid main(void) \n{   HF=0; \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt; SCON=0x52; \n TMOD=0x20; \n TH1=-3; \n TR1=1; \n               IT0=1; \n while(1) \n   \n { while(RI!=1); \n  TR1=0; \n  RI=0; \n  ACC=SBUF; \n \n  if(ACC==1) \n   SMOOTHING(); \n  else \n   TAPERING(); \n \n  TMOD=0x20; \n  TH1=-3; \n  TR1=1; \n } \n} \n \n \n \n \nvoid SMOOTHING() \n{ \n RUNSTEPPER(1,8,80); \n RUNDC(1,3,150,0); \n ORIGINALPOSITION(); \n return; \n \n} \n \n \nvoid ORIGINALPOSITION() \n{ \n RUNSTEPPER(0,8,80); \n RUNDC(0,3,150,0); \n return; \n \n} \n \nvoid TAPERING() \n \n{  \n SMOOTHING(); \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt; RUNSTEPPER(0,8,80); \n RUNSTEPPER(1,.4,20); \n return; \n} \n \nvoid RUNSTEPPER(CW,float SPEED,float DISTANCE) \n { \n float CALDISTANCE=0; \n float RESOLUTION=4\/2500; \n EN=1; \n if(SPEED==8) \n  \n {  \n  TMOD=0x01;  \/\/timer 0 mode 1\/\/ \n  TH0=0xFB; \n  TL0=0x1E; \n  IE=0x82; \n  TR0=1; \n \n } \n \n else  \n \n {  \n  TMOD=0x11; \n  TH1=0xEC; \n  TL1=0x78; \n  TH0=0x9E; \n  TL0=0x58; \n  IE=0x8B; \n  TR0=1; \n  RUNDC(1,3,150,1); \n } \n  \n \n if(CW==0) \n     \n { \n  while(CALDISTANCE&amp;lt;DISTANCE) \n  \n  { \n   while(ROT1A==0 &amp;amp;&amp;amp; ROT1B==0); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   while(ROT1A==1 &amp;amp;&amp;amp; ROT1B==0); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   while(ROT1A==1 &amp;amp;&amp;amp; ROT1B==1); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   while(ROT1A==0 &amp;amp;&amp;amp; ROT1B==1); \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt;   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   } \n    \n    \n \n   } \n \n   else \n   { \n  while(CALDISTANCE&amp;lt;DISTANCE) \n  \n  { \n   while(ROT1B==0 &amp;amp;&amp;amp; ROT1A==0); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   while(ROT1B==1 &amp;amp;&amp;amp; ROT1A==0); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   while(ROT1B==1 &amp;amp;&amp;amp; ROT1A==1); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   while(ROT1B==0 &amp;amp;&amp;amp; ROT1A==1); \n   CALDISTANCE=CALDISTANCE+RESOLUTION; \n   } \n    \n    } \n    \n   STOPSTEPPER(); \n   \/\/if (SPEED==.4) \n    \/\/STOPDC(); \n  } \n \n \n    \n \n void STOPSTEPPER() \n {  \n EN=0; \n  \n }   \n \n \nvoid RUNDC(int DIRECTION,int SPEED,float DISTANCE,int TAP) \n \n{  \n float CALDISTANCE=0; \n    float RESOLUTION=4\/2500; \n \n if(TAP==1) \n { \n  TR1=1; \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt;  return; \n } \n else \n { \n  TMOD=0x10; \n  TH1=0xEC; \n  TL1=0x78; \n  IE=0x84; \n  TR1=1; \n \n  if (DIRECTION==0) \n  { \n   PWMCLKW=1; \n \n   while(CALDISTANCE&amp;lt;DISTANCE) \n  \n   { \n    while(ROT2A==0 &amp;amp;&amp;amp; ROT2B==0); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    while(ROT2A==1 &amp;amp;&amp;amp; ROT2B==0); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    while(ROT2A==1 &amp;amp;&amp;amp; ROT2B==1); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    while(ROT2A==0 &amp;amp;&amp;amp; ROT2B==1); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    } \n    \n    \n \n    } \n \n   else \n    { \n   while(CALDISTANCE&amp;lt;DISTANCE) \n  \n   { \n    while(ROT2B==0 &amp;amp;&amp;amp; ROT2A==0); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    while(ROT2B==1 &amp;amp;&amp;amp; ROT2A==0); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    while(ROT2B==1 &amp;amp;&amp;amp; ROT2A==1); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    while(ROT2B==0 &amp;amp;&amp;amp; ROT2A==1); \n    CALDISTANCE=CALDISTANCE+RESOLUTION; \n    } \n    \n      } \n \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt;   STOPDC(); \n   \n } \n \n return; \n} \n \n \nvoid T0ISR(void) interrupt 1 \n{ \n TF0=0; \n TR0=0; \n CLK=~CLK; \n TH0=0xFB; \n TL0=0x1E; \n TR0=1; \n} \n \nvoid EX0ISR(void) interrupt 0 \n{ \n COUNT=COUNT-3; \n if(COUNT&amp;lt;=0) \n {  \n  COUNT=150; \n  STOPDC(); \n } \n return; \n} \n \nvoid T1ISR(void) interrupt 3 \n{ \n TF1=0; \n TR1=0; \n TH1=0xEC; \n TL1=0x78; \n TIMECOUNT=TIMECOUNT-1; \n \n if(TIMECOUNT&amp;lt;=0) \n { \n  if(PWMCLKW==1) \n   PWMCW=~PWMCW; \n  else \n   PWMCCW=~PWMCCW; \n } \n \n if(X==1) \n  { \n   TIMECOUNT=20; \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;div style=\&quot;page-break-before:always; page-break-after:always\&quot;&gt;&lt;div&gt;&lt;p&gt;   X=0; \n   \n  } \n else \n  { \n   TIMECOUNT=180; \n   X=1; \n  } \n \n  TR1=1; \n  return; \n} \n \nvoid STOPDC(void) \n{  \n PWMCW=0; \n PWMCCW=0; \n \n return; \n} \n \n \n&lt;\/p&gt;\n&lt;p&gt;Docsity.com&lt;\/p&gt;\n\n&lt;\/div&gt;&lt;\/div&gt;\n&lt;\/body&gt;&lt;\/html&gt;&quot;,&quot;canEdit&quot;:false,&quot;canDelete&quot;:false,&quot;userVote&quot;:false,&quot;previewLimit&quot;:25,&quot;advEnabled&quot;:true,&quot;totalVotes&quot;:0,&quot;title&quot;:&quot;Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report, Degree thesis for Microcontrollers. Ankit Institute of Technology and Science&quot;}" data-translations="[]" data-navigation="{&quot;\/it\/appunti\/upload-multiplo\/&quot;:&quot;\/en\/dashboard\/share\/documents\/&quot;,&quot;\/it\/search\/related\/&quot;:&quot;\/en\/search\/?q=Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report&amp;noaccuracy=1&amp;resources=1&quot;,&quot;\/it\/pag\/terms-and-conditions&quot;:&quot;\/en\/pag\/terms-and-conditions\/&quot;}" data-locale="en"><div class="docsity-document-view" data-reactroot="" data-reactid="1"><header class="docsity-document-view__preview" data-reactid="2"><div class="dsy-segment-basic" data-reactid="3"><div class="dsy-resource-document-spotlight" data-reactid="4"><figure class="dsy-resource-document-spotlight__thumbnail" data-reactid="5"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Development_of_Control_System_for_Computer_Controlled_Lathe_.jpg" alt="Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report, Degree thesis for Microcontrollers. Ankit Institute of Technology and Science" data-reactid="6"><div class="dsy-resource-document-spotlight__thumbnail__author" data-reactid="7"><a href="https://www.docsity.com/en/users/profile/booby/" class="dsy-resource-document-spotlight__thumbnail__author__avatar" data-reactid="8"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/321028_i.jpg" alt="booby" data-reactid="9"></a><div class="dsy-resource-document-spotlight__thumbnail__author__content" data-reactid="10"><a href="https://www.docsity.com/en/users/profile/booby/" data-reactid="11">booby</a><span class="dsy-resource-document-spotlight__thumbnail__author__content__submission-date" data-reactid="12">4 July 2012</span></div></div></figure><div class="dsy-resource-document-spotlight__content" data-reactid="13"><h1 class="dsy-resource-document-spotlight__content__title" data-reactid="14">Development
+ of Control System for Computer Controlled Lathe Machine-Microcontroller
+ and Assembly Language-Project Report, Degree thesis for 
+Microcontrollers. Ankit Institute of Technology and Science</h1><div class="dsy-resource-document-spotlight__content__info" data-reactid="15"><div data-reactid="16"><span data-reactid="17">Ankit Institute of Technology and Science</span></div><div class="dsy-resource-document-spotlight__content__info__categories" data-reactid="18"><a href="https://www.docsity.com/en/subjects/microcontrollers/" data-reactid="19">Microcontrollers,</a><a href="https://www.docsity.com/en/faculty/engineering/" data-reactid="20">Engineering</a></div></div><div class="dsy-resource-document-spotlight__content__stats" data-reactid="21"><div class="dsy-resource-document-spotlight__content__stats__file" data-reactid="22">PDF (384 KB)</div><div class="dsy-resource-document-spotlight__content__stats__pages" data-reactid="23"><span class="dsy-resource-document-spotlight__content__stats__pages__value" data-reactid="24">10 pages</span></div><div class="dsy-resource-document-spotlight__content__stats__download" data-reactid="25"><span class="dsy-resource-document-spotlight__content__stats__download__value" data-reactid="26">4</span><span class="dsy-resource-document-spotlight__content__stats__download__description" data-reactid="27">Number of download</span></div><div class="dsy-resource-document-spotlight__content__stats__views" data-reactid="28"><span class="dsy-resource-document-spotlight__content__stats__views__value" data-reactid="29">1000+</span><span class="dsy-resource-document-spotlight__content__stats__views__description" data-reactid="30">Number of visits</span></div><div class="dsy-resource-document-spotlight__content__stats__comments" data-reactid="31"><span class="dsy-resource-document-spotlight__content__stats__comments__value" data-reactid="32">1</span><span class="dsy-resource-document-spotlight__content__stats__comments__description" data-reactid="33">Number of comments</span></div></div><div class="dsy-resource-document-spotlight__content__description" data-reactid="34"><div class="dsy-resource-document-spotlight__content__description__title" data-reactid="35">Description</div><div class="dsy-resource-document-spotlight__content__description__text" data-reactid="36"><span data-reactid="37">This
+ is project report by a student to fulfil requirement of course 
+Microcontroller and Assembly Language at Ankit Institute of Technology 
+and Science. It contains CNC, Lathe, Machine, Control, System, 
+Controlled, Electr...</span></div></div><button class="dsy-resource-document-spotlight__content__show" data-reactid="38"><span class="dsy-resource-document-spotlight__content__show__icon" data-reactid="39"></span></button><div class="dsy-resource-document-spotlight__content__actions" data-reactid="40"><div class="dsy-resource-document-spotlight__content__actions__group" data-reactid="41"><div data-reactid="42"><button class="dsy-resource-document-spotlight__content__actions__favorite" data-reactid="43"><i class="fa fa-heart-o" data-reactid="44"></i><div class="dsy-resource-document-spotlight__content__actions__favorite__description" data-reactid="45">Add to favourites</div></button></div><div data-reactid="46"><button class="dsy-resource-document-spotlight__content__actions__comment" data-reactid="47"><span class="dsy-resource-document-spotlight__content__actions__comment__icon" data-reactid="48"></span><span data-reactid="49">Comment</span></button></div><div data-reactid="50"><button class="dsy-resource-document-spotlight__content__actions__reporting" data-reactid="51"><span class="dsy-resource-document-spotlight__content__actions__reporting__icon" data-reactid="52"></span><div class="dsy-resource-document-spotlight__content__actions__reporting__description" data-reactid="53">Report document</div></button></div></div><div class="dsy-resource-document-spotlight__content__actions__group" data-reactid="54"><div data-reactid="55"><div class="dsy-download-action" data-reactid="56"><div class="dsy-download-action__points" data-reactid="57"><span class="dsy-points dsy-points--points" data-reactid="58"><span class="dsy-points__points" data-reactid="59">20</span><!-- react-text: 60 -->points<!-- /react-text --></span><div class="dsy-download-action__points__description" data-reactid="61"><div data-reactid="62"><div data-reactid="63"><div data-reactid="64"><!-- react-text: 65 -->Download points needed to download<!-- /react-text --><div data-reactid="66">this document</div></div></div></div></div></div><a href="file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm#" class="dsy-download-action__button" data-reactid="67">Download the document</a></div></div></div></div></div></div></div></header><div class="dsy-aside-layout" data-reactid="68"><main class="dsy-aside-layout__main" data-reactid="69"><div class="player-desktop" data-reactid="70"><div class="docsity-document-player" data-reactid="71"><div class="docsity-document-player__header" data-reactid="72"><span class="docsity-document-player__header__preview" data-reactid="73"><span data-reactid="74"></span><span class="docsity-document-player__header__preview__title" data-reactid="75">Preview</span><span data-reactid="76">10 pages / 10</span></span><div class="docsity-document-player__header__controls" data-reactid="77"><button class="docsity-document-player__header__controls__zoom" data-reactid="78"><i class="fa fa-search-plus" data-reactid="79"></i></button><button class="docsity-document-player__header__controls__zoom" data-reactid="80"><i class="fa fa-search-minus" data-reactid="81"></i></button><button class="docsity-document-player__header__controls__zoom" data-reactid="82"><i class="fa fa-arrows-h" data-reactid="83"></i></button></div></div><div style="position:relative;overflow:hidden;width:100%;height:80vh;" data-reactid="84"><div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:scroll;-webkit-overflow-scrolling:touch;margin-right:-17px;margin-bottom:-17px;" data-reactid="85"><div class="docsity-document-player__content" style="width:100%;margin:0 auto;" data-reactid="86"><div data-reactid="87"><div class="docsity-document-player__content__pages" data-reactid="88"><div class="docsity-document-player__content__pages__page" data-reactid="89"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/ccd6f8e8d0a820bd6e69af88a0c9d9ef.png" data-reactid="90"></div><div class="docsity-document-player__content__pages__page" data-reactid="91"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/aa21d2ae4c307a8f62edd61a89cf1bf3.png" data-reactid="92"></div><div class="docsity-document-player__content__pages__page" data-reactid="93"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/e1b44bfe6c0af8d1eb9fd0bb5e81d053.png" data-reactid="94"></div></div></div></div></div><div style="position:absolute;height:6px;right:2px;bottom:2px;left:2px;border-radius:3px;" data-reactid="97"><div style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;" data-reactid="98"></div></div><div style="position:absolute;width:6px;right:2px;bottom:2px;top:2px;border-radius:3px;" data-reactid="99"><div style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 106px; transform: translateY(0px);" data-reactid="100"></div></div></div><figure class="docsity-document-player__message docsity-document-player__message--info" data-reactid="101"><figcaption class="docsity-document-player__message__content" data-reactid="102"><div class="docsity-document-player__message__content__text" data-reactid="103"><div class="docsity-document-player__message__content__text__title" data-reactid="104"><span data-reactid="105"></span></div></div><a href="file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm#" class="docsity-document-player__message__content__button" data-reactid="106">Download the document</a></figcaption></figure></div></div><div class="player-mobile" data-reactid="107"><div class="docsity-document-player-light" data-reactid="108"><div class="docsity-document-player-light__page" data-reactid="109"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/ccd6f8e8d0a820bd6e69af88a0c9d9ef.png" data-reactid="110"><figure class="docsity-document-player-light__page__message docsity-document-player-light__page__message--info" data-reactid="111"><figcaption class="docsity-document-player-light__page__message__content" data-reactid="112"><div class="docsity-document-player-light__page__message__content__text" data-reactid="113"><div class="docsity-document-player-light__page__message__content__text__title" data-reactid="114"><span data-reactid="115"></span></div></div><a href="file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm#" class="docsity-document-player-light__page__message__content__button" data-reactid="116">Download the document</a></figcaption></figure></div><div class="docsity-document-player-light__page" data-reactid="117"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/aa21d2ae4c307a8f62edd61a89cf1bf3.png" data-reactid="118"><figure class="docsity-document-player-light__page__message docsity-document-player-light__page__message--info" data-reactid="119"><figcaption class="docsity-document-player-light__page__message__content" data-reactid="120"><div class="docsity-document-player-light__page__message__content__text" data-reactid="121"><div class="docsity-document-player-light__page__message__content__text__title" data-reactid="122"><span data-reactid="123"></span></div></div><a href="file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm#" class="docsity-document-player-light__page__message__content__button" data-reactid="124">Download the document</a></figcaption></figure></div><div class="docsity-document-player-light__page" data-reactid="125"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/e1b44bfe6c0af8d1eb9fd0bb5e81d053.png" data-reactid="126"><figure class="docsity-document-player-light__page__message docsity-document-player-light__page__message--info" data-reactid="127"><figcaption class="docsity-document-player-light__page__message__content" data-reactid="128"><div class="docsity-document-player-light__page__message__content__text" data-reactid="129"><div class="docsity-document-player-light__page__message__content__text__title" data-reactid="130"><span data-reactid="131"></span></div></div><a href="file:///E:/Shared%20docs/Lathe/Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity.htm#" class="docsity-document-player-light__page__message__content__button" data-reactid="132">Download the document</a></figcaption></figure></div><div class="docsity-document-player-light__load-more" data-reactid="135"><button class="dsy-button dsy-button--plain" data-reactid="136">Load more</button></div></div></div><div class="dsy-aside-layout__primary" data-reactid="137"><div class="docsity-document-extract" data-reactid="138"><div class="docsity-document-extract__header" data-reactid="139"><div class="docsity-document-extract__header__search" data-reactid="140"><h1 class="docsity-document-extract__header__search__title" data-reactid="141">Search in the document preview</h1><form data-reactid="142"><div class="dsy-action-input dsy-action-input--fluid dsy-action-input--light" data-reactid="143"><div class="dsy-action-input__input" data-reactid="144"><input placeholder="Search keyword..." data-reactid="145" type="text"><button class="dsy-action-input__action" type="button" data-reactid="146"><i class="fa fa-search" data-reactid="147"></i></button></div></div></form></div></div><div style="position:relative;overflow:hidden;width:100%;height:80vh;" data-reactid="148"><div style="position:absolute;top:0;left:0;right:0;bottom:0;overflow:scroll;-webkit-overflow-scrolling:touch;margin-right:-17px;margin-bottom:-17px;" data-reactid="149"><div class="docsity-document-extract__content" data-reactid="150"><div class="docsity-document-extract__content__page" data-reactid="151">
+
+
+
+
+<div><div><p> 
+</p>
+<p><b>DEVELOPMENT OF THE CONTROL SYSTEM FOR THE 
+</b></p>
+<p><b>COMPUTER CONTROLLED LATHE MACHINE 
+</b></p>
+<p><b> 
+</b></p>
+<p><b> 
+</b></p>
+<p><b> 
+</b></p>
+<p><b>CNC Lathe Machine</b> 
+</p>
+<p>CNC lathe machine is computer controlled and can be programmed to do a variety of different 
+</p>
+<p>things such as sanding, cutting and drilling. Its huge draw is that it cuts production time down and 
+</p>
+<p>brings profitability to the business. The modern CNC lathe machine is a combination of a computer 
+</p>
+<p>with a lathe machine in which the controller converts each digital signal into the desired action. 
+</p>
+<p><b>Control System for Computer Controlled Lathe Machine 
+</b></p>
+<p>There are generally three axis in which tool move to do job; x-axis which is left to right, y-axis which 
+</p>
+<p>is front and back and z- axis which is up and down. In this project the control strategy is to control 
+</p>
+<p>the x axis motion and y axis motion of the tool. The control of the motion of tool is done by two 
+</p>
+<p>different motors. One is DC motor which is used for x axis motion control and other is stepper 
+</p>
+<p>motor which is used for y axis motion control. 
+</p>
+<p><b><i>Control of X-axis Motion 
+</i></b></p>
+<p>The control of x axis motion of the tool is done by DC motor. DC motor is a device which takes the 
+</p>
+<p>electrical energy and converts it into mechanical energy. In the conventional lathe machine, the 
+</p>
+<p>motion of tool is controlled by operator who moves the tool in x axis by hand wheel with his full 
+</p>
+<p>power. To move the tool in left and right, high torque is required. In order to achieve this high value 
+</p>
+<p>of torque, DC motor is used which provide more torque. 
+</p>
+<p><b><i>Control of Y-axis Motion 
+</i></b></p>
+<p>The control of y axis motion is done by stepper motor. Stepper motor is a kind of DC motor which 
+</p>
+<p>gives the output in steps. There are two type of stepper motor unipolar and bipolar stepper motor. 
+</p>
+<p>Bipolar stepper gives more torque then the unipolar stepper motor. In this experimental project 
+</p>
+<p>Bipolar stepper motor is used to control y-axis motion of the tool. The stepper shown in the Figure 
+</p>
+<p>2-6 is used in this project. The rating of the bipolar stepper motor is given below 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p>1. Voltage = 3.6 volts 2. Current = 4 amperes 3. Torque = 7.44 Nm 
+</p>
+<p><b>Overall Electrical Control System 
+</b></p>
+<p>For the controlling of the x axis and y axis motion of the tool through motors, it is necessary to 
+</p>
+<p>develop the motor control cards. These motor control cards are used for driving motors in open as 
+</p>
+<p>well as close loop form. The overall electrical control system for computer controlled lathe machine 
+</p>
+<p>is shown below in figure. 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p>As shown in the above figure there are three portion of the electrical control system. First consists 
+</p>
+<p>of computer (PC) which is giving and taking instruction from maser control card. 
+</p>
+<p><b>Motor Drive 
+</b></p>
+<p><b>DC Motor Drive  
+</b></p>
+<p>This is the future work of our project. 
+</p>
+<p><b>Bipolar Stepper Motor Driving Circuit 
+</b></p>
+<p>Following components are used for stepper motor control, 
+</p>
+<p>1) L297 stepper motor driver IC 
+</p>
+<p>2) L298 dual H bridge IC 
+</p>
+<p>3) 4A diodes 
+</p>
+<p>The circuit for driving stepper motor is given below, 
+</p>
+<p>MASTER 
+</p>
+<p>CONTROL 
+</p>
+<p>CARD 
+</p>
+<p> 
+</p>
+<p>PC 
+</p>
+<p>SLAVE 
+</p>
+<p>CONTROL CARD 
+</p>
+<p>SLAVE 
+</p>
+<p>CONTROL CARD 
+</p>
+<p> 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p> 
+</p>
+<p><b>CIRCUIT OPERATION 
+</b> 
+The L297 is intended for use with a dual bridge driver, quad darlington array or discrete power devices 
+</p>
+<p>in step motor driving applications. It receives step clock, direction and mode signals from the systems 
+</p>
+<p>controller (usually a microcomputer chip) and generates control signals for the power stage. 
+</p>
+<p>The principal functions are a translator, which generates the motor phase sequences, and a dual PWM 
+</p>
+<p>chopper circuit which regulates the current in the motor windings. The translator generates three 
+</p>
+<p>different sequences, selected by the HALF/FULL input. These are normal (two phases energised), wave 
+</p>
+<p>drive (one phase energised) and half-step (alternately one phase energised/two phases energised). Two 
+</p>
+<p>inhibit signals are also generated by the L297 in half step and wave drive modes. These signals, which 
+</p>
+<p>connect directly to the L298’s enable inputs, are intended to speed current decay when a winding is de-
+</p>
+<p>energised.     When the L297 is used to drive a unipolar motor the chopper acts on these lines. 
+</p>
+<p>An input called CONTROL determines whether the chopper will act on the phase lines ABCD or the 
+inhibit lines INH1 and INH2. When the phase lines are chopped the non-active phase line of each pair 
+</p>
+<p>(AB or CD) is activated (rather than interrupting the line then active). In L297 + L298 configurations this 
+</p>
+<p>technique reduces dissipation in the load current sense resistors. A common on-chip oscillator drives the 
+dual chopper. It supplies pulses at the chopper rate which set the two flip-flops FF1 and FF2. When the 
+current in a winding reaches the programmed peak value the voltage across the sense resistor 
+(connected to one of the sense inputs SENS1 or SENS2) equals Vref and the corresponding comparator 
+resets its flip flop, interrupting the drive current until the next oscillator pulse arrives. The peak current 
+for both windings is programmed by a voltage divider on the Vref input. Ground noise problems in 
+multiple configurations can be avoided by synchronising the chopper oscillators. This is done by 
+connecting all the SYNC pins together, mounting the oscillator RC network on one device only and 
+grounding the OSC pin on all other devices. 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p> 
+</p>
+<p>PROJECT CODE 
+</p>
+<p>#include &lt;REG51.H&gt; 
+sbit CLK=P1^0; 
+sbit RST=P1^1; 
+sbit CW=P1^2; 
+sbit HF=P1^3; 
+sbit EN=P1^4; 
+sbit ROT1A=P2^0; 
+sbit ROT1B=P2^1; 
+sbit ROT1I=P2^2; 
+sbit ROT2A=P2^3; 
+sbit ROT2B=P2^4; 
+sbit ROT2I=P2^5; 
+sbit PWMCW=P2^6; 
+sbit PWMCCW=P2^7; 
+int COUNT=150;  //external interrupt 0 count// 
+int TIMECOUNT=180; //TIMER 1 interrupt count// 
+int X=1; 
+bit PWMCLKW; 
+ 
+void SMOOTHING(); 
+void TAPERING(); 
+void ORIGINALPOSITION(); 
+void RUNSTEPPER(int,float,float); 
+void RUNDC(int,int,float,int); 
+void ORIGINALPOSITION(); 
+void STOPSTEPPER(); 
+void STOPDC(); 
+ 
+ 
+ 
+void main(void) 
+{   HF=0; 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p> SCON=0x52; 
+ TMOD=0x20; 
+ TH1=-3; 
+ TR1=1; 
+               IT0=1; 
+ while(1) 
+   
+ { while(RI!=1); 
+  TR1=0; 
+  RI=0; 
+  ACC=SBUF; 
+ 
+  if(ACC==1) 
+   SMOOTHING(); 
+  else 
+   TAPERING(); 
+ 
+  TMOD=0x20; 
+  TH1=-3; 
+  TR1=1; 
+ } 
+} 
+ 
+ 
+ 
+ 
+void SMOOTHING() 
+{ 
+ RUNSTEPPER(1,8,80); 
+ RUNDC(1,3,150,0); 
+ ORIGINALPOSITION(); 
+ return; 
+ 
+} 
+ 
+ 
+void ORIGINALPOSITION() 
+{ 
+ RUNSTEPPER(0,8,80); 
+ RUNDC(0,3,150,0); 
+ return; 
+ 
+} 
+ 
+void TAPERING() 
+ 
+{  
+ SMOOTHING(); 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p> RUNSTEPPER(0,8,80); 
+ RUNSTEPPER(1,.4,20); 
+ return; 
+} 
+ 
+void RUNSTEPPER(CW,float SPEED,float DISTANCE) 
+ { 
+ float CALDISTANCE=0; 
+ float RESOLUTION=4/2500; 
+ EN=1; 
+ if(SPEED==8) 
+  
+ {  
+  TMOD=0x01;  //timer 0 mode 1// 
+  TH0=0xFB; 
+  TL0=0x1E; 
+  IE=0x82; 
+  TR0=1; 
+ 
+ } 
+ 
+ else  
+ 
+ {  
+  TMOD=0x11; 
+  TH1=0xEC; 
+  TL1=0x78; 
+  TH0=0x9E; 
+  TL0=0x58; 
+  IE=0x8B; 
+  TR0=1; 
+  RUNDC(1,3,150,1); 
+ } 
+  
+ 
+ if(CW==0) 
+     
+ { 
+  while(CALDISTANCE&lt;DISTANCE) 
+  
+  { 
+   while(ROT1A==0 &amp;&amp; ROT1B==0); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   while(ROT1A==1 &amp;&amp; ROT1B==0); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   while(ROT1A==1 &amp;&amp; ROT1B==1); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   while(ROT1A==0 &amp;&amp; ROT1B==1); 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p>   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   } 
+    
+    
+ 
+   } 
+ 
+   else 
+   { 
+  while(CALDISTANCE&lt;DISTANCE) 
+  
+  { 
+   while(ROT1B==0 &amp;&amp; ROT1A==0); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   while(ROT1B==1 &amp;&amp; ROT1A==0); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   while(ROT1B==1 &amp;&amp; ROT1A==1); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   while(ROT1B==0 &amp;&amp; ROT1A==1); 
+   CALDISTANCE=CALDISTANCE+RESOLUTION; 
+   } 
+    
+    } 
+    
+   STOPSTEPPER(); 
+   //if (SPEED==.4) 
+    //STOPDC(); 
+  } 
+ 
+ 
+    
+ 
+ void STOPSTEPPER() 
+ {  
+ EN=0; 
+  
+ }   
+ 
+ 
+void RUNDC(int DIRECTION,int SPEED,float DISTANCE,int TAP) 
+ 
+{  
+ float CALDISTANCE=0; 
+    float RESOLUTION=4/2500; 
+ 
+ if(TAP==1) 
+ { 
+  TR1=1; 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p>  return; 
+ } 
+ else 
+ { 
+  TMOD=0x10; 
+  TH1=0xEC; 
+  TL1=0x78; 
+  IE=0x84; 
+  TR1=1; 
+ 
+  if (DIRECTION==0) 
+  { 
+   PWMCLKW=1; 
+ 
+   while(CALDISTANCE&lt;DISTANCE) 
+  
+   { 
+    while(ROT2A==0 &amp;&amp; ROT2B==0); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    while(ROT2A==1 &amp;&amp; ROT2B==0); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    while(ROT2A==1 &amp;&amp; ROT2B==1); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    while(ROT2A==0 &amp;&amp; ROT2B==1); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    } 
+    
+    
+ 
+    } 
+ 
+   else 
+    { 
+   while(CALDISTANCE&lt;DISTANCE) 
+  
+   { 
+    while(ROT2B==0 &amp;&amp; ROT2A==0); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    while(ROT2B==1 &amp;&amp; ROT2A==0); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    while(ROT2B==1 &amp;&amp; ROT2A==1); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    while(ROT2B==0 &amp;&amp; ROT2A==1); 
+    CALDISTANCE=CALDISTANCE+RESOLUTION; 
+    } 
+    
+      } 
+ 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p>   STOPDC(); 
+   
+ } 
+ 
+ return; 
+} 
+ 
+ 
+void T0ISR(void) interrupt 1 
+{ 
+ TF0=0; 
+ TR0=0; 
+ CLK=~CLK; 
+ TH0=0xFB; 
+ TL0=0x1E; 
+ TR0=1; 
+} 
+ 
+void EX0ISR(void) interrupt 0 
+{ 
+ COUNT=COUNT-3; 
+ if(COUNT&lt;=0) 
+ {  
+  COUNT=150; 
+  STOPDC(); 
+ } 
+ return; 
+} 
+ 
+void T1ISR(void) interrupt 3 
+{ 
+ TF1=0; 
+ TR1=0; 
+ TH1=0xEC; 
+ TL1=0x78; 
+ TIMECOUNT=TIMECOUNT-1; 
+ 
+ if(TIMECOUNT&lt;=0) 
+ { 
+  if(PWMCLKW==1) 
+   PWMCW=~PWMCW; 
+  else 
+   PWMCCW=~PWMCCW; 
+ } 
+ 
+ if(X==1) 
+  { 
+   TIMECOUNT=20; 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+<div><div><p>   X=0; 
+   
+  } 
+ else 
+  { 
+   TIMECOUNT=180; 
+   X=1; 
+  } 
+ 
+  TR1=1; 
+  return; 
+} 
+ 
+void STOPDC(void) 
+{  
+ PWMCW=0; 
+ PWMCCW=0; 
+ 
+ return; 
+} 
+ 
+ 
+</p>
+<p>Docsity.com</p>
+
+</div></div>
+</div></div></div><div style="position:absolute;height:6px;right:2px;bottom:2px;left:2px;border-radius:3px;" data-reactid="152"><div style="position: relative; display: block; height: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); width: 0px;" data-reactid="153"></div></div><div style="position:absolute;width:6px;right:2px;bottom:2px;top:2px;border-radius:3px;" data-reactid="154"><div style="position: relative; display: block; width: 100%; cursor: pointer; border-radius: inherit; background-color: rgba(0, 0, 0, 0.2); height: 70px; transform: translateY(0px);" data-reactid="155"></div></div></div></div></div><div class="dsy-aside-layout__primary" data-reactid="156"><div class="docsity-document-comments" data-reactid="157"><div class="docsity-document-comments__header" data-reactid="158">comments (1)</div><div class="docsity-document-comments__content" data-reactid="159"><div class="docsity-document-comments__content__view" id="comments" data-reactid="160"><form action="file:///E:/Shared%20docs/Lathe/function(e)%7Breturn%20t.docsityAPI.postDocumentComment(e.did,e.content)%7D" method="POST" class="docsity-document-comments__form" data-reactid="161"><input name="did" data-reactid="162" value="" type="hidden"><div class="docsity-document-comments__form__text docsity-document-comments__form__text--required docsity-document-comments__form__text--fluid" data-reactid="163"><textarea name="content" placeholder="write your comment here" data-reactid="164"></textarea></div><div class="docsity-document-comments__form__action" data-reactid="165"><button class="dsy-button" data-reactid="166">Comment</button></div></form><div class="dsy-resources-list" data-reactid="167"><div class="dsy-resources-list__item" data-reactid="168"><div class="dsy-user-action dsy-user-action--comment" data-reactid="169"><div class="dsy-user-action__author" data-reactid="170"><span class="dsy-user-action__author__avatar" data-reactid="171"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/default_6_i.png" data-reactid="172"></span><div class="dsy-user-action__author__header" data-reactid="173"><div class="dsy-user-action__author__info" data-reactid="174"><a href="https://www.docsity.com/en/users/profile/peymanc_12/" class="dsy-user-action__author__username" data-reactid="175">peymanc_12</a></div><div class="dsy-user-action__author__action" data-reactid="176"></div></div></div><div class="dsy-user-action__content" data-reactid="177"><div class="dsy-user-action__content__icon" data-reactid="178"></div><div class="dsy-user-action__text" data-reactid="179">This is Perfect</div></div></div></div></div><div class="docsity-document-comments__content__view__pagination" data-reactid="180"><noscript class="dsy-pagination" data-reactid="181"></noscript></div></div></div></div></div></main><aside class="dsy-aside-layout__aside" data-reactid="182"><div class="dsy-aside-layout__primary dsy-aside-layout__primary--condensed" data-reactid="183"><div class="docsity-adv" data-reactid="184"><ins class="adsbygoogle" data-ad-client="ca-pub-5016218198171959" data-ad-slot="7152799719" data-ad-width="300" data-ad-height="250" data-reactid="185"></ins></div></div><div class="dsy-aside-layout__primary" data-reactid="186"><div class="dsy-segment-resources" data-reactid="187"><div class="dsy-segment-resources__header" data-reactid="188">Related Notes</div><div class="dsy-segment-resources__resources" data-reactid="189"><div class="dsy-segment-resources__resources__item" data-reactid="190"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="191"><a href="https://www.docsity.com/en/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report/77866/" class="dsy-resource-document__thumbnail" data-reactid="192"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Development_of_Control_System_for_Computer_Controlled_Lathe_.jpg" alt="Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report" data-reactid="193"></a><div class="dsy-resource-document__content" data-reactid="194"><a href="https://www.docsity.com/en/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report/77866/" class="dsy-resource-document__content__title" data-reactid="195">Development of Control System for Computer Controlled Lathe Machine-Mi...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="196"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="197"><a href="https://www.docsity.com/en/speed-control-of-brushed-d-c-motor-microcontroller-and-assembly-language-project-report/77876/" class="dsy-resource-document__thumbnail" data-reactid="198"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Speed_Control_of_Brushed_D_C__Motor-Microcontroller_and_Asse.jpg" alt="Speed Control of Brushed D.C. Motor-Microcontroller and Assembly Language-Project Report" data-reactid="199"></a><div class="dsy-resource-document__content" data-reactid="200"><a href="https://www.docsity.com/en/speed-control-of-brushed-d-c-motor-microcontroller-and-assembly-language-project-report/77876/" class="dsy-resource-document__content__title" data-reactid="201">Speed Control of Brushed D.C. Motor-Microcontroller and Assembly Langu...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="202"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="203"><a href="https://www.docsity.com/en/feedback-d-c-motor-control-system-microcontroller-and-assembly-language-project-report/77868/" class="dsy-resource-document__thumbnail" data-reactid="204"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Feedback_D_C__Motor_Control_System-Microcontroller_and_Assem.jpg" alt="Feedback D.C. Motor Control System-Microcontroller and Assembly Language-Project Report" data-reactid="205"></a><div class="dsy-resource-document__content" data-reactid="206"><a href="https://www.docsity.com/en/feedback-d-c-motor-control-system-microcontroller-and-assembly-language-project-report/77868/" class="dsy-resource-document__content__title" data-reactid="207">Feedback D.C. Motor Control System-Microcontroller and Assembly Langua...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="208"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="209"><a href="https://www.docsity.com/en/automatic-pcb-drill-machine-microcontroller-and-assembly-language-project-report/77857/" class="dsy-resource-document__thumbnail" data-reactid="210"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Automatic_PCB_Drill_Machine-Microcontroller_and_Assembly_Lan.jpg" alt="Automatic PCB Drill Machine-Microcontroller and Assembly Language-Project Report" data-reactid="211"></a><div class="dsy-resource-document__content" data-reactid="212"><a href="https://www.docsity.com/en/automatic-pcb-drill-machine-microcontroller-and-assembly-language-project-report/77857/" class="dsy-resource-document__content__title" data-reactid="213">Automatic PCB Drill Machine-Microcontroller and Assembly Language-Proj...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="214"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="215"><a href="https://www.docsity.com/en/sensorless-control-of-bldc-motor-microcontroller-and-assembly-language-project-report/78107/" class="dsy-resource-document__thumbnail" data-reactid="216"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Sensorless_Control_of_BLDC_Motor-Microcontroller_and_Assembl.jpg" alt="Sensorless Control of BLDC Motor-Microcontroller and Assembly language-Project Report" data-reactid="217"></a><div class="dsy-resource-document__content" data-reactid="218"><a href="https://www.docsity.com/en/sensorless-control-of-bldc-motor-microcontroller-and-assembly-language-project-report/78107/" class="dsy-resource-document__content__title" data-reactid="219">Sensorless Control of BLDC Motor-Microcontroller and Assembly language...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="220"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="221"><a href="https://www.docsity.com/en/fluid-flow-measurement-system-microcontroller-and-assembly-language-project-report/77870/" class="dsy-resource-document__thumbnail" data-reactid="222"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Fluid_Flow_Measurement_System-Microcontroller_and_Assembly_L.jpg" alt="Fluid Flow Measurement System-Microcontroller and Assembly Language-Project Report" data-reactid="223"></a><div class="dsy-resource-document__content" data-reactid="224"><a href="https://www.docsity.com/en/fluid-flow-measurement-system-microcontroller-and-assembly-language-project-report/77870/" class="dsy-resource-document__content__title" data-reactid="225">Fluid Flow Measurement System-Microcontroller and Assembly Language-Pr...</a></div></div></div></div><div class="dsy-segment-resources__footer" data-reactid="226"><a href="https://www.docsity.com/en/search/?q=Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report&amp;noaccuracy=1&amp;resources=1" class="dsy-button dsy-button--ghost" data-reactid="227">Load more</a></div></div></div><div class="dsy-aside-layout__secondary" data-reactid="228"><div class="dsy-segment-full dsy-segment-full--spaced" data-reactid="229"><div class="dsy-segment-full__header" data-reactid="230">Share</div><div class="dsy-segment-full__content" data-reactid="231"><div class="dsy-buttons-list" data-reactid="232"><div class="dsy-buttons-list__item" data-reactid="233"><button class="dsy-button dsy-button--vertical dsy-button--facebook" data-reactid="234"><i class="fa fa-facebook" data-reactid="235"></i></button></div><div class="dsy-buttons-list__item" data-reactid="236"><button class="dsy-button dsy-button--vertical dsy-button--twitter" data-reactid="237"><i class="fa fa-twitter" data-reactid="238"></i></button></div><div class="dsy-buttons-list__item" data-reactid="239"><button class="dsy-button dsy-button--vertical dsy-button--gplus" data-reactid="240"><i class="fa fa-google-plus" data-reactid="241"></i></button></div></div><div class="docsity-document__embed" data-reactid="242"><p data-reactid="243">Embed this document on your website</p><div class="dsy-input dsy-input--fluid" data-reactid="244"><textarea name="embed" data-reactid="245">&lt;iframe
+ 
+src="https://www.docsity.com/en/docs/embed-player/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report/"
+ width="383px" height="550px"&gt;&lt;/iframe&gt;</textarea></div></div></div></div><div class="dsy-segment-resources" data-reactid="246"><div class="dsy-segment-resources__header" data-reactid="247">from the same user</div><div class="dsy-segment-resources__resources" data-reactid="248"><div class="dsy-segment-resources__resources__item" data-reactid="249"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="250"><a href="https://www.docsity.com/en/vital-signs-microcontroller-and-assembly-language-project-report/77878/" class="dsy-resource-document__thumbnail" data-reactid="251"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Vital_Signs-Microcontroller_and_Assembly_Language-Project_Re.jpg" alt="Vital Signs-Microcontroller and Assembly Language-Project Report" data-reactid="252"></a><div class="dsy-resource-document__content" data-reactid="253"><a href="https://www.docsity.com/en/vital-signs-microcontroller-and-assembly-language-project-report/77878/" class="dsy-resource-document__content__title" data-reactid="254">Vital Signs-Microcontroller and Assembly Language-Project Report</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="255"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="256"><a href="https://www.docsity.com/en/temperature-pressuer-heartbeat-microcontroller-and-assembly-language-project-report/77877/" class="dsy-resource-document__thumbnail" data-reactid="257"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Temperature__Pressuer__Heartbeat-Microcontroller_and_Assembl.jpg" alt="Temperature, Pressuer ,Heartbeat-Microcontroller and Assembly Language-Project Report" data-reactid="258"></a><div class="dsy-resource-document__content" data-reactid="259"><a href="https://www.docsity.com/en/temperature-pressuer-heartbeat-microcontroller-and-assembly-language-project-report/77877/" class="dsy-resource-document__content__title" data-reactid="260">Temperature, Pressuer ,Heartbeat-Microcontroller and Assembly Language...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="261"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="262"><a href="https://www.docsity.com/en/speed-control-of-brushed-d-c-motor-microcontroller-and-assembly-language-project-report/77876/" class="dsy-resource-document__thumbnail" data-reactid="263"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Speed_Control_of_Brushed_D_C__Motor-Microcontroller_and_Asse.jpg" alt="Speed Control of Brushed D.C. Motor-Microcontroller and Assembly Language-Project Report" data-reactid="264"></a><div class="dsy-resource-document__content" data-reactid="265"><a href="https://www.docsity.com/en/speed-control-of-brushed-d-c-motor-microcontroller-and-assembly-language-project-report/77876/" class="dsy-resource-document__content__title" data-reactid="266">Speed Control of Brushed D.C. Motor-Microcontroller and Assembly Langu...</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="267"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="268"><a href="https://www.docsity.com/en/simulation-of-d-c-motor-drive/77875/" class="dsy-resource-document__thumbnail" data-reactid="269"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Simulation_of_D_C__Motor_Drive_pdf.jpg" alt="Simulation of D.C. Motor Drive" data-reactid="270"></a><div class="dsy-resource-document__content" data-reactid="271"><a href="https://www.docsity.com/en/simulation-of-d-c-motor-drive/77875/" class="dsy-resource-document__content__title" data-reactid="272">Simulation of D.C. Motor Drive</a></div></div></div><div class="dsy-segment-resources__resources__item" data-reactid="273"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="274"><a href="https://www.docsity.com/en/online-programming-capable-card-microcontroller-and-assembly-language-project-report/77874/" class="dsy-resource-document__thumbnail" data-reactid="275"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Online_Programming_Capable_Card-Microcontroller_and_Assembly.jpg" alt="Online Programming Capable Card-Microcontroller and Assembly Language-Project Report" data-reactid="276"></a><div class="dsy-resource-document__content" data-reactid="277"><a href="https://www.docsity.com/en/online-programming-capable-card-microcontroller-and-assembly-language-project-report/77874/" class="dsy-resource-document__content__title" data-reactid="278">Online Programming Capable Card-Microcontroller and Assembly Language-...</a></div></div></div></div></div></div></aside></div><div data-reactid="279"><div class="dsy-dimmer" data-reactid="280"></div><div class="dsy-modal-basic" data-reactid="281"><div class="dsy-modal-basic__view" data-reactid="282"><div class="dsy-modal-basic__view__close" data-reactid="283"><i class="fa fa-times" data-reactid="284"></i></div><h1 class="dsy-modal-basic__view__title" data-reactid="285">Send a report about this document</h1><div data-reactid="286"><div data-reactid="287"><span data-reactid="288"><form action="file:///E:/Shared%20docs/Lathe/function(e)%7Breturn%20t.docsityAPI.documentReport(e.document,e.reason,e.report)%7D" method="POST" class="dsy-form" data-reactid="289"><input name="document" data-reactid="290" value="" type="hidden"><div class="dsy-radio-buttons dsy-radio-buttons--vertical" data-reactid="291"><label class="dsy-radio-buttons__option" data-reactid="292">Copyright infringement</label><label class="dsy-radio-buttons__option" data-reactid="293">The user has uploaded a document of mine</label><label class="dsy-radio-buttons__option" data-reactid="294">This document has been duplicated</label><label class="dsy-radio-buttons__option" data-reactid="295">Document not appropriate</label><input name="reason" data-reactid="296" value="" type="hidden"></div><div class="dsy-input dsy-input--required dsy-input--fluid" data-reactid="297"><textarea name="report" placeholder="Leave a message" data-reactid="298"></textarea></div><div class="dsy-form__submit" data-reactid="299"><button type="submit" class="dsy-button" data-reactid="300">Send report</button></div></form></span><span style="display:none;" data-reactid="301"><div data-reactid="302"><p data-reactid="303">We will solve the problem as soon as possible</p></div></span></div></div></div></div><div class="docsity-no-points-modal" data-reactid="304"><div class="docsity-no-points-modal__view" data-reactid="305"><div class="docsity-no-points-modal__view__close" data-reactid="306"><i class="fa fa-times" data-reactid="307"></i></div><div class="docsity-no-points-modal__view__slogan" data-reactid="308"><div class="docsity-no-points-modal__view__slogan__text" data-reactid="309"><p class="docsity-no-points-modal__view__slogan__text__subtitle" data-reactid="310">You have 0 download points</p><h1 class="docsity-no-points-modal__view__slogan__text__title" data-reactid="311">To download this document you need 20 download points</h1></div></div><div class="docsity-no-points-modal__view__content" data-reactid="312"><div class="docsity-no-points-modal__view__content__action docsity-no-points-modal__view__content__action--centered" data-reactid="313"><p data-reactid="314">Upload documents and be accredited with points in 48 hours</p><div data-reactid="315"><a href="https://www.docsity.com/en/dashboard/share/documents/" class="docsity-no-points-modal__view__content__action__upload" data-reactid="316">Upload files</a></div></div></div></div></div><div class="docsity-download-modal" data-reactid="317"><div class="docsity-download-modal__view" data-reactid="318"><div class="docsity-download-modal__view__close" data-reactid="319"><i class="fa fa-times" data-reactid="320"></i></div><div class="docsity-download-modal__view__slogan" data-reactid="321"><div class="docsity-download-modal__view__slogan__text" data-reactid="322"><div class="docsity-download-modal__view__slogan__icon" data-reactid="323"></div><h1 class="docsity-download-modal__view__slogan__text__title" data-reactid="324">Super-download is now active!</h1><p data-reactid="325">Download using 20 download points</p></div></div><div class="docsity-download-modal__view__content" data-reactid="326"><div class="dsy-resource-document dsy-resource-document--tiny" data-reactid="327"><a href="https://www.docsity.com/en/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report/77866/" class="dsy-resource-document__thumbnail" data-reactid="328"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/Development_of_Control_System_for_Computer_Controlled_Lathe_.jpg" alt="Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report, Degree thesis for Microcontrollers. Ankit Institute of Technology and Science" data-reactid="329"></a><div class="dsy-resource-document__content" data-reactid="330"><a href="https://www.docsity.com/en/development-of-control-system-for-computer-controlled-lathe-machine-microcontroller-and-assembly-language-project-report/77866/" class="dsy-resource-document__content__title" data-reactid="331">Development of Control System for Computer Controlled Lathe Machine-Mi...</a></div></div><div class="docsity-download-modal__view__content__download" data-reactid="332"><button class="dsy-button" data-reactid="333">Download now</button></div></div></div></div><div class="docsity-share-document-modal" data-reactid="334"><div class="docsity-share-document-modal__view" data-reactid="335"><div class="docsity-share-document-modal__view__close" data-reactid="336"><i class="fa fa-times" data-reactid="337"></i></div><div class="docsity-share-document-modal__view__slogan" data-reactid="338"><div class="docsity-share-document-modal__view__slogan__text" data-reactid="339"><h1 class="docsity-share-document-modal__view__slogan__text__title" data-reactid="340">Help another student! Share the document</h1><div class="docsity-share-document-modal__view__slogan__text__buttons" data-reactid="341"><div class="docsity-share-document-modal__view__slogan__text__buttons__item" data-reactid="342"><button class="dsy-button dsy-button--vertical dsy-button--facebook" data-reactid="343"><i class="fa fa-facebook" data-reactid="344"></i></button></div><div class="docsity-share-document-modal__view__slogan__text__buttons__item" data-reactid="345"><button class="dsy-button dsy-button--vertical dsy-button--twitter" data-reactid="346"><i class="fa fa-twitter" data-reactid="347"></i></button></div></div></div></div><div class="docsity-share-document-modal__view__content" data-reactid="348"><div class="docsity-share-document-modal__view__content__actions" data-reactid="349"><div class="docsity-share-document-modal__view__content__actions__action" data-reactid="350"><div data-reactid="351">How do you rate this document?</div><div class="dsy-buttons-list" data-reactid="352"><div class="dsy-buttons-list__item" data-reactid="353"><button class="dsy-button dsy-button--plain dsy-button--vertical" data-reactid="354"><i class="fa fa-thumbs-o-up" data-reactid="355"></i></button></div><div class="dsy-buttons-list__item" data-reactid="356"><button class="dsy-button dsy-button--plain dsy-button--vertical" data-reactid="357"><i class="fa fa-thumbs-o-down" data-reactid="358"></i></button></div></div></div><div class="docsity-share-document-modal__view__content__actions__action" data-reactid="359"><div data-reactid="360">Find similar document</div><div data-reactid="361"><a href="https://www.docsity.com/en/search/?q=Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report&amp;noaccuracy=1&amp;resources=1" class="docsity-share-document-modal__view__content__actions__action__search" data-reactid="362">Go to</a></div></div></div><form action="file:///E:/Shared%20docs/Lathe/function(e)%7Breturn%20t.docsityAPI.postDocumentComment(e.did,e.content)%7D" method="POST" class="docsity-share-document-modal__view__content__form" data-reactid="363"><input name="did" data-reactid="364" value="" type="hidden"><div class="docsity-share-document-modal__view__content__form__text docsity-share-document-modal__view__content__form__text--required docsity-share-document-modal__view__content__form__text--fluid" data-reactid="365"><textarea name="content" placeholder="write your comment here" data-reactid="366"></textarea></div><div class="docsity-share-document-modal__view__content__form__action" data-reactid="367"><button class="dsy-button" data-reactid="368">Comment</button></div></form></div></div></div></div></div></div>			</div>
+		</div>
+	</div>
+</div>
+		</div>
+
+									
+	
+	
+			<footer class="dsy-style-patch dsy-js-footer" data-props="{&quot;hasTutoring&quot;:false,&quot;hasStore&quot;:false,&quot;hasQuestions&quot;:true,&quot;hasNews&quot;:true}" data-translations="[]" data-navigation="{&quot;\/it\/&quot;:&quot;\/en\/&quot;,&quot;\/it\/pag\/il-progetto\/&quot;:&quot;\/en\/pag\/the-project\/&quot;,&quot;\/it\/pag\/chi-siamo\/&quot;:&quot;\/en\/pag\/who-we-are\/&quot;,&quot;\/it\/contatti\/&quot;:&quot;\/en\/contact\/&quot;,&quot;\/it\/dashboard\/documenti\/&quot;:&quot;\/en\/dashboard\/documents\/&quot;,&quot;\/it\/pag\/cookie-policy&quot;:&quot;\/en\/pag\/cookie-policy\/&quot;,&quot;\/it\/pag\/terms-and-conditions&quot;:&quot;\/en\/pag\/terms-and-conditions\/&quot;,&quot;\/it\/pag\/privacy&quot;:&quot;\/en\/pag\/privacy\/&quot;,&quot;\/it\/dashboard\/domande\/&quot;:&quot;\/en\/dashboard\/answers\/&quot;,&quot;\/it\/notizie\/&quot;:&quot;\/en\/news\/&quot;}" data-locale="en"><div class="docsity-footer" data-reactroot="" data-reactid="1" data-react-checksum="-1924986028"><div class="docsity-footer__container" data-reactid="2"><a class="docsity-footer__logo" href="https://www.docsity.com/en/" data-reactid="3"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/docsity.svg" alt="docsity" data-reactid="4"></a><nav class="docsity-footer__links" data-reactid="5"><a href="https://www.docsity.com/en/pag/the-project/" class="docsity-footer__links__link" data-reactid="6">The Project</a><a href="https://www.docsity.com/en/pag/who-we-are/" class="docsity-footer__links__link" data-reactid="7">The team</a><a href="https://www.docsity.com/en/contact/" class="docsity-footer__links__link" data-reactid="8">Contact</a><a href="https://www.docsity.com/en/dashboard/documents/" class="docsity-footer__links__link" data-reactid="9">Documents</a><a href="https://www.docsity.com/en/dashboard/answers/" class="docsity-footer__links__link" data-reactid="10">Questions</a><a href="https://www.docsity.com/en/news/" class="docsity-footer__links__link" data-reactid="11">Blog</a><a href="https://www.docsity.com/en/pag/cookie-policy/" class="docsity-footer__links__link" data-reactid="12">Cookie Policy</a><a href="https://www.docsity.com/en/pag/terms-and-conditions/" class="docsity-footer__links__link" data-reactid="13">Terms of Use</a><a href="https://www.docsity.com/en/pag/privacy/" class="docsity-footer__links__link" data-reactid="14">Privacy</a></nav><div class="docsity-footer__credits" data-reactid="15"><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/colosseo.svg" alt="colosseo" data-reactid="16"><div class="docsity-footer__credits__text" data-reactid="17">Made with love in Rome and Turin</div><img src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/mole.svg" alt="mole" data-reactid="18"></div></div></div></footer>		
+							
+				
+		
+		
+					<div class="dsy docsity-modal complete-profile-modal" data-steps-data="{&quot;complete&quot;:{&quot;values&quot;:{&quot;gender&quot;:null,&quot;country_id&quot;:{&quot;data&quot;:2,&quot;value&quot;:&quot;India&quot;},&quot;username&quot;:&quot;vaibhavi-patil&quot;,&quot;high_school_year&quot;:null},&quot;formData&quot;:{&quot;fromSocial&quot;:true},&quot;typology&quot;:&quot;university&quot;,&quot;termsOfServiceUrl&quot;:&quot;\/en\/pag\/terms-and-conditions\/&quot;,&quot;privacyPolicyUrl&quot;:&quot;\/en\/pag\/privacy\/&quot;},&quot;ready-go&quot;:{&quot;premiumUrl&quot;:null,&quot;pointsUrl&quot;:&quot;\/en\/dashboard\/share\/documents\/&quot;},&quot;how-it-works&quot;:{&quot;points&quot;:[&quot;&lt;strong&gt;Share contents&lt;\/strong&gt; and earn \&quot;download points\&quot;&quot;,&quot;&lt;strong&gt;Download study documents&lt;\/strong&gt; in every subject and field of study&quot;,&quot;Ask questions &lt;strong&gt;to the community and receive answers&lt;\/strong&gt;&quot;,&quot;And much, much more...&quot;],&quot;videoUrl&quot;:&quot;https:\/\/www.youtube.com\/watch?v=TZq6znxCPQ0&quot;},&quot;tutoring&quot;:{&quot;userId&quot;:4176905,&quot;tutoringOfferUrl&quot;:&quot;\/it\/tutoring\/prepaids\/&quot;,&quot;likeRequested&quot;:false}}" data-show-complete="true" data-show-tutoring="false" data-closable="true" data-lang="en" data-guest="true" data-country="2" style="display: block;">
+	<div class="dsy dimmer"></div>
+	<div class="content">
+					<i class="close icon"></i>
+				<script id="complete-profile-translations" type="application/json">
+			{"Corso":"Course of Study","Facolt\u00e0":"Major","Femmina":"Female","Genitore":"Parent","In che ambito insegna?":"Who do you teach to?","Inserisci la tua professione":"Job","Inserisci un ambito professionale":"Your professional area","Liceale":"High School","Liceo":"High School","Maschio":"Male","Master":"Master","Mio figlio\/a studia":"My son\/daughter studies","Next":"Next","Post Laurea":"Postgraduate","Primo":"First","Professione":"Job","Professionista":"Professional","Professore":"Professor","Quarto":"Fourth","Quinto":"Fifth","Scegli dalla lista":"Choose from the list","Secondo":"Second","Seleziona":"Select","Seleziona l'anno":"Select the year","Selezionare l'ambito":"Select the area","Seleziona tipologia":"Select typology","Sesso":"Gender","Specifica il tuo master":"Type of Master?","Stato":"Country","Terzo":"Third","Tipo di liceo":"High School typology","undefined":"undefined","Universit\u00e0":"University","Universitario":"University","Username":"Username","Completa la registrazione":"Complete your registration","Come funziona":"How it works","Per favore specifica un valore":"Please specify a value","Per favore specifica un valore esistente":"Please specify an existing value","Per favore acconsenti ai termini del servizio":"Please accept the terms of service","Prefisso":"Prefisso","Telefono":"Phone Number","Carica appunti":"Upload study notes","Scegli un abbonamento":"Choose a subscription","Pronto? Cominciamo!":"Ready? Go!","Chiudi":"Close","I'm interested in a commercial offer":"I'm interested in a commercial offer","Not interested":"Not interested","Per utilizzare i contenuti del sito":"To access Docsity's contents","Accetto le condizioni di utilizzo e confermo di aver letto la normativa sull'utilizzo dei dati di docsity. Presto il consenso al trattamento dei dati personali, secondo i termini e per le finalit\u00e0 indicate nella predetta informativa. Le impostazioni potranno essere liberamente modificate anche dopo la registrazione.":"I agree to the terms and conditions of the website. I also confirm that I read and I agree with the Privacy policy concerning, among others, how data are used by the website.","Termini del servizio":"Terms of service","Informativa sulla privacy":"Privacy policy","Indietro":"Back","Salta":"Skip","e guadagna punti download (24\/48 ore)":"and earn download points (24\/48h)","Docsity: il tuo supporto allo studio a 360\u00b0":"Docsity: find and share quality study contents","Prosegui":"Continue","Si sono verificati alcuni errori, clicca per espandere":"One or more errors occurred, click to expand","Nome Liceo":"High School Name","Scuola Media":"Middle School","Nome Scuola Media":"Middle School Name","Studente Universitario":"University Student","Studente Liceale":"High School Student","Che tipo di utente sei?":"Select a Usertype","Abbiamo bisogno di alcune informazioni in pi\u00f9, per favore compilale per accedere a tutte le funzionalit\u00e0!":"We are missing some of your info, please fill them in in order to access all the features!","Completa la registrazione per accedere a Docsity":"Complete your profile and access to Docsity"}		</script>
+		<div class="complete-profile-wrapper"><div data-reactroot="" class="complete-profile"><header><div class="wizard"><div class="current step">Complete your registration</div><div class="step">How it works</div><div class="step">Ready? Go!</div><div class="progress-bar"><div class="progress"></div></div></div></header><main><div class="profile-container"><h3 class="ui center aligned thin header"><!-- react-text: 12 -->						1. <!-- /react-text --><!-- react-text: 13 -->Complete your profile and access to Docsity<!-- /react-text --></h3><div class="type-selection"><div class="ui field"><label>Select a Usertype*</label><div class="ui selection dropdown" style="display: none;"><input name="typology" value="" type="hidden"><div class="text">University Student</div><i class="dropdown icon"></i><div class="menu"><div class="item active" data-value="university">University Student</div><div class="item" data-value="highschool">High School Student</div><div class="item" data-value="professor">Professor</div><div class="item" data-value="postgraduate">Postgraduate</div><div class="item" data-value="professional">Professional</div></div></div><div class="ui icon fa fa-circle-o-notch fa-spin"></div></div></div><form class="ui form segment error"><div class="ui error message"><ul class="collapsed list"><li><strong>One or more errors occurred, click to expand</strong><!-- react-text: 86 -->							(<!-- /react-text --><!-- react-text: 87 -->3<!-- /react-text --><!-- react-text: 88 -->)<!-- /react-text --></li><li>Anno di nascita: Please specify a value</li><li>University: Please specify a value</li><li>Major: Please specify a value</li></ul></div><div class="ui four fields"><div class="ui dsy field"><div class="ui right icon input"><input name="username" placeholder="Username" value="vaibhavi-patil" type="text"><i class="icon fa fa-user"></i></div></div><div class="dsy ui fluid field"><div class="ui right icon input"><input name="country_id" placeholder="Country" autocomplete="off" value="India" type="text"><i class="icon fa fa-globe"></i></div><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></div><div class="ui field"><div class="ui selection dropdown fluid" style="display: none;"><input name="gender" value="female" type="hidden"><div class="text">Female</div><i class="dropdown icon"></i><div class="menu ui transition hidden"><div class="item" data-value="male">Male</div><div class="item active" data-value="female">Female</div></div></div><div class="ui icon fa fa-circle-o-notch fa-spin"></div></div><div class="dsy ui fluid field error"><div class="ui right icon input"><input name="birth_date" placeholder="Anno di nascita" autocomplete="off" type="text"><i class="icon fa fa-birthday-cake"></i></div><div class="autocomplete-suggestions" style="position: absolute; max-height: 300px; z-index: 9999; width: 186px; display: none;"><div class="autocomplete-suggestion" data-index="0">2005</div><div class="autocomplete-suggestion" data-index="1">2004</div><div class="autocomplete-suggestion" data-index="2">2003</div><div class="autocomplete-suggestion" data-index="3">2002</div><div class="autocomplete-suggestion" data-index="4">2001</div><div class="autocomplete-suggestion" data-index="5">2000</div><div class="autocomplete-suggestion" data-index="6">1999</div><div class="autocomplete-suggestion" data-index="7">1998</div><div class="autocomplete-suggestion" data-index="8">1997</div><div class="autocomplete-suggestion" data-index="9">1996</div><div class="autocomplete-suggestion" data-index="10">1995</div><div class="autocomplete-suggestion" data-index="11">1994</div><div class="autocomplete-suggestion" data-index="12">1993</div><div class="autocomplete-suggestion" data-index="13">1992</div><div class="autocomplete-suggestion" data-index="14">1991</div><div class="autocomplete-suggestion" data-index="15">1990</div><div class="autocomplete-suggestion" data-index="16">1989</div><div class="autocomplete-suggestion" data-index="17">1988</div><div class="autocomplete-suggestion" data-index="18">1987</div><div class="autocomplete-suggestion" data-index="19">1986</div><div class="autocomplete-suggestion" data-index="20">1985</div><div class="autocomplete-suggestion" data-index="21">1984</div><div class="autocomplete-suggestion" data-index="22">1983</div><div class="autocomplete-suggestion" data-index="23">1982</div><div class="autocomplete-suggestion" data-index="24">1981</div><div class="autocomplete-suggestion" data-index="25">1980</div><div class="autocomplete-suggestion" data-index="26">1979</div><div class="autocomplete-suggestion" data-index="27">1978</div><div class="autocomplete-suggestion" data-index="28">1977</div><div class="autocomplete-suggestion" data-index="29">1976</div><div class="autocomplete-suggestion" data-index="30">1975</div><div class="autocomplete-suggestion" data-index="31">1974</div><div class="autocomplete-suggestion" data-index="32">1973</div><div class="autocomplete-suggestion" data-index="33">1972</div><div class="autocomplete-suggestion" data-index="34">1971</div><div class="autocomplete-suggestion" data-index="35">1970</div><div class="autocomplete-suggestion" data-index="36">1969</div><div class="autocomplete-suggestion" data-index="37">1968</div><div class="autocomplete-suggestion" data-index="38">1967</div><div class="autocomplete-suggestion" data-index="39">1966</div><div class="autocomplete-suggestion" data-index="40">1965</div><div class="autocomplete-suggestion" data-index="41">1964</div><div class="autocomplete-suggestion" data-index="42">1963</div><div class="autocomplete-suggestion" data-index="43">1962</div><div class="autocomplete-suggestion" data-index="44">1961</div><div class="autocomplete-suggestion" data-index="45">1960</div><div class="autocomplete-suggestion" data-index="46">1959</div><div class="autocomplete-suggestion" data-index="47">1958</div><div class="autocomplete-suggestion" data-index="48">1957</div><div class="autocomplete-suggestion" data-index="49">1956</div><div class="autocomplete-suggestion" data-index="50">1955</div><div class="autocomplete-suggestion" data-index="51">1954</div><div class="autocomplete-suggestion" data-index="52">1953</div><div class="autocomplete-suggestion" data-index="53">1952</div><div class="autocomplete-suggestion" data-index="54">1951</div><div class="autocomplete-suggestion" data-index="55">1950</div><div class="autocomplete-suggestion" data-index="56">1949</div><div class="autocomplete-suggestion" data-index="57">1948</div><div class="autocomplete-suggestion" data-index="58">1947</div><div class="autocomplete-suggestion" data-index="59">1946</div><div class="autocomplete-suggestion" data-index="60">1945</div><div class="autocomplete-suggestion" data-index="61">1944</div><div class="autocomplete-suggestion" data-index="62">1943</div><div class="autocomplete-suggestion" data-index="63">1942</div><div class="autocomplete-suggestion" data-index="64">1941</div><div class="autocomplete-suggestion" data-index="65">1940</div><div class="autocomplete-suggestion" data-index="66">1939</div><div class="autocomplete-suggestion" data-index="67">1938</div><div class="autocomplete-suggestion" data-index="68">1937</div><div class="autocomplete-suggestion" data-index="69">1936</div><div class="autocomplete-suggestion" data-index="70">1935</div><div class="autocomplete-suggestion" data-index="71">1934</div><div class="autocomplete-suggestion" data-index="72">1933</div><div class="autocomplete-suggestion" data-index="73">1932</div><div class="autocomplete-suggestion" data-index="74">1931</div><div class="autocomplete-suggestion" data-index="75">1930</div><div class="autocomplete-suggestion" data-index="76">1929</div><div class="autocomplete-suggestion" data-index="77">1928</div><div class="autocomplete-suggestion" data-index="78">1927</div><div class="autocomplete-suggestion" data-index="79">1926</div><div class="autocomplete-suggestion" data-index="80">1925</div><div class="autocomplete-suggestion" data-index="81">1924</div><div class="autocomplete-suggestion" data-index="82">1923</div><div class="autocomplete-suggestion" data-index="83">1922</div><div class="autocomplete-suggestion" data-index="84">1921</div><div class="autocomplete-suggestion" data-index="85">1920</div><div class="autocomplete-suggestion" data-index="86">1919</div><div class="autocomplete-suggestion" data-index="87">1918</div><div class="autocomplete-suggestion" data-index="88">1917</div><div class="autocomplete-suggestion" data-index="89">1916</div><div class="autocomplete-suggestion" data-index="90">1915</div><div class="autocomplete-suggestion" data-index="91">1914</div><div class="autocomplete-suggestion" data-index="92">1913</div><div class="autocomplete-suggestion" data-index="93">1912</div><div class="autocomplete-suggestion" data-index="94">1911</div><div class="autocomplete-suggestion" data-index="95">1910</div><div class="autocomplete-suggestion" data-index="96">1909</div><div class="autocomplete-suggestion" data-index="97">1908</div><div class="autocomplete-suggestion" data-index="98">1907</div><div class="autocomplete-suggestion" data-index="99">1906</div><div class="autocomplete-suggestion" data-index="100">1905</div></div></div></div><div class="ui four fields"><div class="dsy ui fluid field error"><div class="ui right icon input"><input name="university_id" placeholder="University" autocomplete="off" type="text"><i class="icon fa fa-bank"></i></div><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></div><div class="dsy ui fluid field error"><div class="ui right icon input"><input name="faculty_id" placeholder="Major" autocomplete="off" type="text"><i class="icon fa fa-mortar-board"></i></div><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></div><div class="dsy ui fluid field"><div class="ui right icon input"><input name="course_id" placeholder="Course of Study" autocomplete="off" type="text"><i class="icon fa fa-book"></i></div><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div></div></div></form><div class="ui checkbox terms" style="display: none;"><input name="terms" value="on" checked="checked" type="checkbox"><label><!-- react-text: 66 -->I
+ agree to the terms and conditions of the website. I also confirm that I
+ read and I agree with the Privacy policy concerning, among others, how 
+data are used by the website.<!-- /react-text --><a class="ui terms-of-service text" href="https://www.docsity.com/en/pag/terms-and-conditions/" target="_blank">Terms of service</a><!-- react-text: 68 --> -<!-- /react-text --><a class="ui privacy-policy text" href="https://www.docsity.com/en/pag/privacy/" target="_blank">Privacy policy</a></label></div><div class="ui icon fa fa-circle-o-notch fa-spin"></div></div></main><footer><button class="ui button green"><!-- react-text: 72 -->Continue<!-- /react-text --></button></footer></div></div>
+	</div>
+</div>
+		
+		
+<div class="ui small modal docsity-modal" id="phone-confirm">
+	<div class="header">
+		<h4 class="ui header">
+			Complete your booking by confirming your mobile number		</h4>
+		<i class="close icon"></i>
+	</div>
+	<div class="content">
+		<form method="POST" data-ajax="1" class="ui form formTutorIdentify">
+			<div class="content-field">
+	<div class="field">
+		<label>
+							<strong>
+					1. Enter your mobile number				</strong>
+					</label>
+		<div class="phone-input">
+			<div>
+				<input name="phoneprefix" value="+39">
+			</div>
+			<div class="ui left big labeled icon input">
+									<input name="telephone" placeholder="Phone" type="text">
+					<i class="phone icon"></i>
+							</div>
+		</div>
+	</div>
+	<div class="field custom-field">
+							<a class="ui small green icon button requestVerification">
+									Send verification code							</a>
+			</div>
+</div>
+	<div class="ui horizontal icon divider">
+		<i class="down icon"></i>
+	</div>
+	<div class="content-field last-field">
+		<div class="field">
+			<label>
+									<strong>
+						2. Enter the verification code sent via SMS					</strong>
+							</label>
+			<div class="ui left big labeled icon input">
+				<input name="telephone_verification" placeholder="Verification code" type="text">
+				<i class="code icon"></i>
+			</div>
+		</div>
+	</div>
+<input name="request_verification" value="0" type="hidden">
+
+			<div class="custom-field">
+				<button type="submit" class="ui small green button">
+					Confirm and book				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+				<div class="device-xs visible-xs"></div>
+<div class="device-sm visible-sm"></div>
+<div class="device-md visible-md"></div>
+<div class="device-lg visible-lg"></div>
+
+<div class="modal fade" id="avatarUploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				 <h4 class="modal-title"></h4>
+
+			</div>
+			<div class="modal-body"><div class="te"><i class="fa fa-spinner fa-spin"></i></div></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<audio id="notification-sound">
+			<source src="Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity_files/notification.mp3" type="audio/mpeg">
+			<source src="Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity_files/notification.oga" type="audio/ogg">
+			<source src="Development%20of%20Control%20System%20for%20Computer%20Controlled%20Lathe%20Machine-Microcontroller%20and%20Assembly%20Language-Project%20Report%20-%20Docsity_files/notification.wav" type="audio/wav">
+		</audio>
+
+		
+		
+
+	<script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/vendor_early.js.download"></script>
+
+			<script>
+			jQuery.ajax({
+				dataType: 'script',
+				cache   : true,
+				url     : "\/public\/vendor.js?v=1507815589644"			}).done(function(script, textStatus) {
+				if (textStatus == "success") {
+					console.info('Vendor loaded');
+					window.docsityVendorLoaded = true;
+					$('body').trigger('vendorLoaded');
+					kendo.culture('en');
+				} else {
+					console.error("Error loading vendor package!");
+				}
+			});
+		</script>
+	
+	
+<!-- Script generati per il gruppo 'js-core-documents-view' -->
+
+<script>
+	/**if ($("html.js.rgba.backgroundsize.borderradius.boxshadow.textshadow.opacity.cssgradients.fontface.video.audio.localstorage").size() > 0) {
+		$("#incompatible-browser-error-message").remove();
+	}**/
+</script>
+
+<script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/raven.js.download"></script>
+<script>
+	Raven.config(
+		"http:\/\/8d9b3ee1e05c469bae660f20d01868d8@sentry.docsity.com\/2",
+			{
+				release: "0.51.10",
+							shouldSendCallback: function(data) {
+					var sampleRate = 10;
+					var shouldSend = (Math.random() * 100 < sampleRate);
+
+					if (!shouldSend) {
+						console.log("Not sending error to Sentry");
+					}
+
+					return shouldSend;
+				}
+						}
+		).install();
+
+		Raven.setUserContext({"id":4176905,"lang":"en","username":"vaibhavi-patil","userType":"university","guest":true,"lastLogin":{"date":"2017-11-04 06:23:45.000000","timezone_type":3,"timezone":"Europe\/Rome"}});
+	
+	Raven.setExtraContext({
+		modernizer: window.jQuery ? jQuery("html").attr("class") : "No jQuery loaded",
+		localStorage: window.localStorage ? window.localStorage : false
+	});
+
+	$(document).ajaxError(function(event, jqXHR, ajaxSettings, thrownError) {
+		var message = ajaxSettings.url + " - " + (thrownError || jqXHR.statusText);
+
+		Raven.captureMessage(message, {
+			extra: {
+				type: ajaxSettings.type,
+				url: ajaxSettings.url,
+				data: ajaxSettings.data,
+				status: jqXHR.status,
+				error: (thrownError || jqXHR.statusText),
+				response: jqXHR.responseText ? jqXHR.responseText.substring(0, 100) : "No response"
+			}
+		});
+	});
+</script>
+
+<script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/index.js.download"></script>
+<script src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/app.js.download"></script>
+
+<script type="text/javascript" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/index_002.js.download"></script>
+
+
+<div id="fb-root" class=" fb_reset fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border: medium none;" src="./Development of Control System for Computer Controlled Lathe Machine-Microcontroller and Assembly Language-Project Report - Docsity_files/BbnCpbXY9X8.html" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId  : "172543956200745",
+			xfbml  : true,
+			version: 'v2.3'
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+	!function(d,s,id){
+		var js,fjs=d.getElementsByTagName(s)[0],
+		p=/^http:/.test(d.location)?'http':'https';
+		if(!d.getElementById(id)) {
+			js=d.createElement(s);
+			js.id=id;
+			js.src=p+'://platform.twitter.com/widgets.js';
+			fjs.parentNode.insertBefore(js,fjs);
+		}
+	}(document, 'script', 'twitter-wjs');
+</script>
+
+
+		
+	
+
+</body></html>
